@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Version: $Id: Group.xml,v 1.4 2007/01/16 18:41:20 tdanard Exp $ -->
+<ldapsource-node xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="../../../../../schemas/ldapsourcenode.xsd">
+	<dn>dc=mydomain,dc=mycompany,dc=com</dn>
+	<object-class>group</object-class>
+	<object-category />
+	<attribute name="GID">cn</attribute>
+	<attribute name="DisplayName">cn</attribute>
+	<attribute name="DistinguishedName">distinguishedName</attribute>
+	<attribute name="Member">member</attribute>
+	<attribute name="Description">description</attribute>
+	<attribute name="Manager">managedBy</attribute>
+	<attribute name="GroupType">groupType</attribute>
+</ldapsource-node>

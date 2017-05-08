@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Version: $Id: AccountRoleXref.hbm.xml,v 1.3 2007/08/01 19:39:23 tdanard Exp $ -->
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping
+	package="com.corendal.netapps.framework.core.writedatamappings">
+	<class name="DefaultAccountRoleXrefMapping"
+		table="account_role_xref">
+		<id column="id" name="Id" type="string" />
+
+		<property column="role_id" length="36" name="RoleId"
+			not-null="true" type="string" />
+		<property column="enabled_flag" length="1" name="EnabledFlag"
+			not-null="true" type="string" />
+		<property column="entity_id" length="36" name="EntityId"
+			not-null="false" type="string" />
+		<property column="account_id" length="255" name="AccountId"
+			not-null="true" type="string" />
+		<property column="record_id" length="255" name="RecordId"
+			not-null="false" type="string" />
+	</class>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractAccountRoleXref.findEnabledByAccountAndRolePrimaryKeys">
+		<![CDATA[
+    from DefaultAccountRoleXrefMapping
+    where AccountId = :accountId
+    and RoleId = :roleId
+    order by Id asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractAccountRoleXref.findEnabledByEntityAndRecordAndRolePrimaryKeys">
+		<![CDATA[
+    from DefaultAccountRoleXrefMapping
+    where EntityId = :entityId
+    and RecordId = :recordId
+    and RoleId = :roleId
+    order by Id asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.helpdesk.writedatabeans.AbstractNativeGroupMembership.findEnabledByGroupPrimaryKey">
+		<![CDATA[
+    from DefaultAccountRoleXrefMapping
+    where RecordId = :recordId
+    and RoleId = :roleId
+    and EntityId = :entityId
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.helpdesk.writedatabeans.AbstractNativeGroupMembership.loadByGroupAndMemberPrimaryKeys">
+		<![CDATA[
+    from DefaultAccountRoleXrefMapping
+    where RecordId = :recordId
+    and AccountId = :accountId
+    and EntityId = :entityId
+    and RoleId = :roleId
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractAccount.removeDuplicateRoles">
+		<![CDATA[
+    from DefaultAccountRoleXrefMapping
+    where AccountId = :accountId
+    order by RoleId asc, EntityId asc, RecordId asc, Id asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatafactories.AccountRoleXrefFactory.getSingleAccountId">
+		<![CDATA[
+    from DefaultAccountRoleXrefMapping
+    where RecordId = :recordId
+    and EntityId = :entityId
+    and RoleId = :roleId
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.readdatabeans.AbstractRole.findEnabledByRecordAndAccountPrimaryKeys">
+		<![CDATA[
+    from DefaultAccountRoleXrefMapping
+    where RecordId = :recordId
+    and AccountId = :accountId
+    order by RoleId asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatafactories.AccountRoleXrefFactory.remove3">
+		<![CDATA[
+    delete DefaultAccountRoleXrefMapping
+    where RecordId = :recordId
+    and EntityId = :entityId
+    and RoleId = :roleId
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatafactories.AccountRoleXrefFactory.remove4">
+		<![CDATA[
+    delete DefaultAccountRoleXrefMapping
+    where RecordId = :recordId
+    and EntityId = :entityId
+    and RoleId = :roleId
+    and AccountId = :accountId
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatafactories.AccountRoleXrefFactory.removeAll">
+		<![CDATA[
+    delete DefaultAccountRoleXrefMapping
+    where RecordId = :recordId
+    and EntityId = :entityId
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractAccount.findEnabledByRolePrimaryKey">
+		<![CDATA[
+    select distinct AccountId from DefaultAccountRoleXrefMapping
+    where RoleId = :roleId
+    and EnabledFlag = :enabledFlag
+    order by AccountId asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractAccount.findEnabledByRecordAndRolePrimaryKeys">
+		<![CDATA[
+    select distinct AccountId from DefaultAccountRoleXrefMapping
+    where RoleId = :roleId
+    and RecordId = :recordId
+    and EnabledFlag = :enabledFlag
+    order by AccountId asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.readdatabeans.AbstractRole.findEnabledByAccountPrimaryKey">
+		<![CDATA[
+    select distinct RoleId from DefaultAccountRoleXrefMapping
+    where AccountId = :accountId
+    order by RoleId asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatafactories.AccountRoleXrefFactory.getMultipleAccountPrimaryKeys">
+		<![CDATA[
+    select distinct AccountId from DefaultAccountRoleXrefMapping
+    where RecordId = :recordId
+    and EntityId = :entityId
+    and RoleId = :roleId
+    order by AccountId asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractAccount.replace">
+		<![CDATA[
+    update DefaultAccountRoleXrefMapping
+    set AccountId = :newAccountId
+    where AccountId = :oldAccountId
+]]>
+	</query>
+</hibernate-mapping>

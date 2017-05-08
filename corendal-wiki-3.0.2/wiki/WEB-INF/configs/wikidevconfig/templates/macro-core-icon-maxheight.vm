@@ -1,0 +1,8 @@
+## file: macro-core-icon-maxheight.vm
+##
+## Displays an icon with a width and a 100% height
+#macro(iconmaxheight $si $width $alc)
+#set ($height = "100%")
+#icon($si $width $height $alc)
+#end
+## end of template. keep the empty line after this line.

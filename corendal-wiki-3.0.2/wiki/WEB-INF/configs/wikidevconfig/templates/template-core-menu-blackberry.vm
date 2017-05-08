@@ -1,0 +1,140 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($rm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultRequestManager"))
+#set ($am = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultAccessManager"))
+#set ($clrm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultColorManager"))
+#set ($icnm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultIconManager"))
+#set ($lclm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultLocaleManager"))
+#set ($stlm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultStyleManager"))
+#set ($cfgm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultConfigManager"))
+#set ($vm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultVariantManager"))
+
+##
+## get the writers used in this template
+##
+#set ($pws = $alc.getWriterSet())
+#set ($miw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultMenuItemWriter"))
+#set ($pw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultPageWriter"))
+#set ($lw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultLinkWriter"))
+
+##
+## get the location of the images folder
+##
+#set ($prop =  $cfgm.getStandardPropertySet())
+#set ($imagesFolder = $prop.getImagesFolder())
+
+##
+## get the current locale
+##
+#set ($currentLocale = $lclm.getPrimaryStandardLocale())
+
+##
+## get the styles used in this template
+##
+#set ($signInLinkStyle = $stlm.getSignInLinkStandardStyle())
+#set ($searchButtonStyle = $stlm.getSearchButtonStandardStyle())
+
+##
+## get the icons used in this template
+##
+#if ($currentLocale.getDirection().equals("LTR"))
+#set ($menuSelectedFirstIcon = $icnm.getMenuSelectedFirstLTRStandardIcon())
+#set ($menuFirstIcon = $icnm.getMenuFirstLTRStandardIcon())
+#set ($menuSelectedLeftIcon = $icnm.getMenuSelectedLeftLTRStandardIcon())
+#set ($menuSelectedRightIcon = $icnm.getMenuSelectedRightLTRStandardIcon())
+#set ($menuRightIcon = $icnm.getMenuRightLTRStandardIcon())
+#set ($menuSelectedMiddleTopIcon = $icnm.getMenuSelectedMiddleTopLTRStandardIcon())
+#set ($menuSelectedLastIcon = $icnm.getMenuSelectedLastLTRStandardIcon())
+#set ($menuLastIcon = $icnm.getMenuLastLTRStandardIcon())
+#else
+#set ($menuSelectedFirstIcon = $icnm.getMenuSelectedFirstRTLStandardIcon())
+#set ($menuFirstIcon = $icnm.getMenuFirstRTLStandardIcon())
+#set ($menuSelectedLeftIcon = $icnm.getMenuSelectedLeftRTLStandardIcon())
+#set ($menuSelectedRightIcon = $icnm.getMenuSelectedRightRTLStandardIcon())
+#set ($menuRightIcon = $icnm.getMenuRightRTLStandardIcon())
+#set ($menuSelectedMiddleTopIcon = $icnm.getMenuSelectedMiddleTopRTLStandardIcon())
+#set ($menuSelectedLastIcon = $icnm.getMenuSelectedLastRTLStandardIcon())
+#set ($menuLastIcon = $icnm.getMenuLastRTLStandardIcon())
+#end
+
+#set ($spacerIcon = $icnm.getSpacerStandardIcon())
+#set ($menuSelectedMiddleTopIcon = $icnm.getMenuSelectedMiddleTopStandardIcon())
+#set ($menuMiddleTopIcon = $icnm.getMenuMiddleTopStandardIcon())
+#set ($menuSelectedMiddleBottomIcon = $icnm.getMenuSelectedMiddleBottomStandardIcon())
+#set ($menuMiddleBottomIcon = $icnm.getMenuMiddleBottomStandardIcon())
+#set ($menuBackgroundIcon = $icnm.getMenuBackgroundStandardIcon())
+#set ($menuSelectedBackgroundIcon = $icnm.getMenuSelectedBackgroundStandardIcon())
+#set ($menuBarBackgroundIcon = $icnm.getMenuBarBackgroundStandardIcon())
+
+
+
+##
+## get the colors used in this template
+##
+#set ($menuItemColor = $clrm.getMenuItemStandardColor())
+#set ($pageMenuColor = $clrm.getPageMenuStandardColor())
+#set ($menuSelectedItemColor = $clrm.getMenuSelectedItemStandardColor())
+
+##
+## get the standard page
+##
+#set ($page = $rm.getStandardPage())
+
+##
+## get the current menu item
+##
+#set ($currentMenuItem = $sm.getCurrentMenuItem())
+
+##
+## print a comment
+##
+#set ($smPk = $sm.getPrimaryKey())
+<!-- start of the menu id $smPk.toString() -->@NOEOLAFTERTHIS
+
+##
+## set the isPreviousSelected boolean
+##
+#set ($isPreviousSelected = "FALSE")
+
+##
+## set other variables
+##
+#set ($menuItems = $sm.getMenuItems())
+#set ($size = $menuItems.size())
+#set ($sizeMinusOne = $size - 1)
+
+##
+## print the first line
+##
+#if ($size >1)
+#foreach($i in [0..$sizeMinusOne])
+#set ($smi = $menuItems.get($i))
+#if ($i > 0)
+&nbsp;|&nbsp;@NOEOLAFTERTHIS
+#end
+$miw.getHTML($smi, $currentMenuItem)@NOEOLAFTERTHIS
+#end
+#end
+
+##
+## print the sign-in link
+##
+#set ($signPage = $am.getSignStandardPage())
+#if ($am.getIsAuthenticationLinkPrinted())
+#if ($signPage)
+&nbsp;|&nbsp;@NOEOLAFTERTHIS
+$lw.getNonBreakableLinkHTML($signPage.getDefaultLocationWithReferer(), $signPage.getCurrentLinkTitleEncoded(), $signPage.getNameHTML(), $signPage.getAccessKeyEncoded())@NOEOLAFTERTHIS
+#end		
+#end
+
+##
+## make a break
+##
+#if ($rm.getIsUserAgentCompatibleWithXHTML())
+<br />
+#else
+<br>
+#end
+## end of template. keep the empty line after this line.

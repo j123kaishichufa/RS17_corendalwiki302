@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Version: $Id: ResponseLog.hbm.xml,v 1.4 2007/11/14 19:48:41 tdanard Exp $ -->
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping
+	package="com.corendal.netapps.framework.core.writedatamappings">
+	<class name="DefaultResponseLogMapping" table="response_log">
+		<id column="id" name="Id" type="string" />
+
+		<property column="page_id" length="36" name="PageId"
+			not-null="true" type="string" />
+		<property column="timestamp" length="19" name="Timestamp"
+			not-null="true" type="timestamp" />
+		<property column="complete_time" length="11" name="CompleteTime"
+			not-null="true" type="long" />
+		<property column="response_cod" length="11" name="ResponseCode"
+			not-null="true" type="integer" />
+		<property column="response_log_typ_id" length="36"
+			name="ResponseLogTypeId" not-null="true" type="string" />
+		<property column="enabled_flag" length="1" name="EnabledFlag"
+			not-null="true" type="string" />
+	</class>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractResponseLog.findEnabledByBoundCreatedDate">
+		<![CDATA[
+    from DefaultResponseLogMapping
+    where Timestamp >= :timestampFrom
+    and Timestamp < :timestampTo
+    and EnabledFlag = :enabledFlag
+    order by Timestamp asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractResponseLog.findEnabledByLowerBoundCreatedDate">
+		<![CDATA[
+    from DefaultResponseLogMapping
+    where Timestamp >= :timestampFrom
+    and EnabledFlag = :enabledFlag
+    order by Timestamp asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractResponseLog.findEnabledByUpperBoundCreatedDate">
+		<![CDATA[
+    from DefaultResponseLogMapping
+    where Timestamp < :timestampTo
+    and EnabledFlag = :enabledFlag
+    order by Timestamp asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractResponseLog.findEnabledByBoundCompleteTime">
+		<![CDATA[
+    from DefaultResponseLogMapping
+    where CompleteTime >= :completeTimeFrom
+    and CompleteTime < :completeTimeTo
+    and EnabledFlag = :enabledFlag
+    order by Timestamp asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractResponseLog.findEnabledByLowerBoundCompleteTime">
+		<![CDATA[
+    from DefaultResponseLogMapping
+    where CompleteTime >= :completeTimeFrom
+    and EnabledFlag = :enabledFlag
+    order by Timestamp asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractResponseLog.findEnabledByUpperBoundCompleteTime">
+		<![CDATA[
+    from DefaultResponseLogMapping
+    where CompleteTime < :completeTimeTo
+    and EnabledFlag = :enabledFlag
+    order by Timestamp asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractResponseLog.findEnabledByTypePrimaryKey">
+		<![CDATA[
+    from DefaultResponseLogMapping
+    where ResponseLogTypeId like :responseLogTypeId
+    and EnabledFlag = :enabledFlag
+    order by Timestamp asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractResponseLog.findEnabledByPagePrimaryKey">
+		<![CDATA[
+    from DefaultResponseLogMapping
+    where PageId like :pageId
+    and EnabledFlag = :enabledFlag
+    order by Timestamp asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractResponseLog.findEnabledByResponseCode">
+		<![CDATA[
+    from DefaultResponseLogMapping
+    where ResponseCode = :responseCode
+    and EnabledFlag = :enabledFlag
+    order by Timestamp asc
+]]>
+	</query>
+</hibernate-mapping>

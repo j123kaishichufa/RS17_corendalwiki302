@@ -1,0 +1,35 @@
+<!-- start of vertical form layout -->
+##
+## start the table. in case the layout is in debug mode, the border is 1
+## pixel wide
+##
+#if ($sfb.getIsDebugLayout())
+<table summary="" border="1" cellpadding="0" cellspacing="0">
+#else
+<table summary="" cellpadding="0" cellspacing="0" border="0">
+#end
+
+
+##
+## display each canvas
+##
+
+#foreach ($i in [0..$maxCanvasType])
+#set ($colspan = $sfb.getColspan($i))
+#if ($colspan > 0)
+<tr>
+<td>@NOEOLAFTERTHIS
+<!-- $i -->@NOEOLAFTERTHIS
+$sfb.getCanvasHTML($i)@NOEOLAFTERTHIS
+<!-- /$i -->@NOEOLAFTERTHIS
+</td>
+</tr>
+#end
+#end
+
+##
+## end the table
+##
+</table>@NOEOLAFTERTHIS
+<!-- end of vertical form layout -->
+## end of template. keep the empty line after this line.

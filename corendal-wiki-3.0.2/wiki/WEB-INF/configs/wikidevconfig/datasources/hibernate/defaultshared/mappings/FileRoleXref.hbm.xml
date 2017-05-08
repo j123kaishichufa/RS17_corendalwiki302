@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Version: $Id: FileRoleXref.hbm.xml,v 1.7 2007/11/13 23:38:15 tdanard Exp $ -->
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping
+	package="com.corendal.netapps.framework.core.writedatamappings">
+	<class name="DefaultFileRoleXrefMapping"
+		table="file_obj_role_xref">
+		<id column="id" name="Id" type="string" />
+
+		<property column="role_id" length="36" name="RoleId"
+			not-null="true" type="string" />
+		<property column="enabled_flag" length="1" name="EnabledFlag"
+			not-null="true" type="string" />
+		<property column="file_obj_id" length="36" name="FileId"
+			not-null="true" type="string" />
+		<property column="entity_id" length="36" name="EntityId"
+			not-null="false" type="string" />
+		<property column="record_id" length="255" name="RecordId"
+			not-null="false" type="string" />
+	</class>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractStoredFileRoleXref.findEnabledByStoredFileAndRolePrimaryKeys">
+		<![CDATA[
+    from DefaultFileRoleXrefMapping
+    where FileId = :fileId
+    and RoleId = :roleId
+    order by Id asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractStoredFileRoleXref.findEnabledByRolePrimaryKeys">
+		<![CDATA[
+    from DefaultFileRoleXrefMapping
+    where RoleId = :roleId
+    order by Id asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractStoredFileRoleXref.findEnabledByStoredFilePrimaryKey">
+		<![CDATA[
+    from DefaultFileRoleXrefMapping
+    where FileId = :fileId
+    order by Id asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatafactories.StoredFileRoleXrefFactory.getSingleStoredFileId">
+		<![CDATA[
+    from DefaultFileRoleXrefMapping
+    where RecordId = :recordId
+    and RoleId = :roleId
+    and EntityId = :entityId
+    order by FileId asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatafactories.StoredFileRoleXrefFactory.remove">
+		<![CDATA[
+    delete DefaultFileRoleXrefMapping
+    where RecordId = :recordId
+    and EntityId = :entityId
+    and RoleId = :roleId
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatafactories.StoredFileRoleXrefFactory.removeAll">
+		<![CDATA[
+    delete DefaultFileRoleXrefMapping
+    where RecordId = :recordId
+    and EntityId = :entityId
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractStoredFile.findEnabledByRolePrimaryKey">
+		<![CDATA[
+    select distinct FileId from DefaultFileRoleXrefMapping
+    where RoleId = :roleId
+    and EnabledFlag = :enabledFlag
+    order by FileId asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatafactories.StoredFileRoleXrefFactory.getMultipleStoredFilePrimaryKeys">
+		<![CDATA[
+    select distinct FileId from DefaultFileRoleXrefMapping
+    where RecordId = :recordId
+    and EntityId = :entityId
+    and RoleId = :roleId
+]]>
+	</query>
+		<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractStoredFileRoleXref.findEnabledSystemFiles">
+		<![CDATA[
+    from DefaultFileRoleXrefMapping
+    where EntityId is null and RecordId is null
+    and EnabledFlag = :enabledFlag
+]]>
+	</query>
+</hibernate-mapping>

@@ -1,0 +1,31 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($cm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultContentManager"))
+#set ($icnm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultIconManager"))
+
+##
+## get the icons used in this template
+##
+#set ($spacerIcon = $icnm.getSpacerStandardIcon())
+
+##
+## get the tab
+##
+#set ($menu = $cm.getStandardMenu())
+#set ($menuItem = $menu.getCurrentMenuItem())
+#set ($tabItems = $menuItem.getTabItems())
+
+##
+## print the body sizer
+##
+<td>@NOEOLAFTERTHIS
+#set ($tabItemsSize = $tabItems.size())
+#if ($tabItemsSize > 0)
+#icon($spacerIcon 1 350 $alc)@NOEOLAFTERTHIS
+#else
+#icon($spacerIcon 1 373 $alc)@NOEOLAFTERTHIS
+#end
+</td>
+## end of template. keep the empty line after this line.

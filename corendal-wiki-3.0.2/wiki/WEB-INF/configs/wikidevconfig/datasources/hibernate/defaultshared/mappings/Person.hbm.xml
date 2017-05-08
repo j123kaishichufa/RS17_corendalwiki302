@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Version: $Id: Person.hbm.xml,v 1.6 2007/08/01 19:39:22 tdanard Exp $ -->
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping
+	package="com.corendal.netapps.framework.core.writedatamappings">
+	<class name="DefaultPersonMapping" table="person">
+		<id column="id" name="Id" type="string" />
+
+		<property column="middle_initial" length="1"
+			name="MiddleInitial" not-null="false" type="string" />
+		<property column="enabled_flag" length="1" name="EnabledFlag"
+			not-null="true" type="string" />
+		<property column="last_nam" length="255" name="LastName"
+			not-null="false" type="string" />
+		<property column="job_title" length="255" name="JobTitle"
+			not-null="false" type="string" />
+		<property column="dob" length="10" name="Dob" not-null="false"
+			type="date" />
+		<property column="first_nam" length="255" name="FirstName"
+			not-null="false" type="string" />
+		<property column="email_address" length="255"
+			name="EmailAddress" not-null="false" type="string" />
+		<property column="display_nam" length="255" name="DisplayName"
+			not-null="false" type="string" />
+	</class>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractPerson.findEnabledByLastName">
+		<![CDATA[
+    from DefaultPersonMapping
+    where upper(LastName) like upper(:lastName)
+    and EnabledFlag = :enabledFlag
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractPerson.findEnabledByFirstName">
+		<![CDATA[
+    from DefaultPersonMapping
+    where upper(FirstName) like upper(:firstName)
+    and EnabledFlag = :enabledFlag
+]]>
+	</query>
+</hibernate-mapping>
+
+

@@ -1,0 +1,81 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($icnm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultIconManager"))
+
+##
+## get the icons used in this template
+##
+#set ($spacerIcon = $icnm.getSpacerStandardIcon())
+
+##
+## get the writers used in this template
+##
+#set ($pws = $alc.getWriterSet())
+#set ($mw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultMessageWriter"))
+
+##
+## get the various attributes of the message
+##
+#set ($sfmBlockType = $sfm.getBlockType())
+#set ($sfmStyle = $sfm.getStandardStyle())
+
+##
+## get the the associated field
+##
+#set ($sff = $sfm.getStandardFormField())
+#if ($sff)
+#set ($sffType = $sff.getType())
+#end
+
+##
+## get the associated message
+##
+#set ($sm = $sfm.getStandardMessage())
+#set ($smType = $sm.getType())
+
+##
+## print the message inside of a table
+##
+<table summary="" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td valign="top">@NOEOLAFTERTHIS
+
+##
+## make this message a label if necessary (start)
+##
+#if (($sff) && (!($sffType.equals("PRINTONLY"))))
+<label for="$sff.getUniqueId()">@NOEOLAFTERTHIS
+#end
+
+##
+## print the message
+##
+#if (($smType.equals("DSP")) || ($sfmBlockType.equals("SMALL")))
+<span class="$sfmStyle.getName()">@NOEOLAFTERTHIS
+$sm.getCurrentMessageHTML()@NOEOLAFTERTHIS
+</span>@NOEOLAFTERTHIS
+#else
+$mw.getStartHTML()@NOEOLAFTERTHIS
+$mw.getWithIconHTMLNoTable($sm)@NOEOLAFTERTHIS
+$mw.getEndHTML()@NOEOLAFTERTHIS
+#end
+
+##
+## make this message a label if necessary (end)
+##
+#if (($sff) && (!($sffType.equals("PRINTONLY"))))
+</label>@NOEOLAFTERTHIS
+#end
+
+##
+## end the table
+##
+</td>
+<td>@NOEOLAFTERTHIS
+#icon($spacerIcon 1 19 $alc)@NOEOLAFTERTHIS
+</td>
+</tr>
+</table>
+## end of template. keep the empty line after this line.

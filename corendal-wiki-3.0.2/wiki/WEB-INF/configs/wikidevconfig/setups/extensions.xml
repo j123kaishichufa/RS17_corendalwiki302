@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Version: $Id: extensions.xml,v 1.4 2007/12/27 23:30:31 tdanard Exp $ -->
+<extensions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="../../schemas/extensions.xsd">
+	<extension disposition="attachment" enabled-flag="Y" export-flag="N"
+		export-order="0" id="CORE-EXTN-1" mime-type="text/plain">
+		<name>TXT</name>
+		<description>Text</description>
+	</extension>
+	<extension disposition="attachment" enabled-flag="Y" export-flag="N"
+		export-order="0" id="CORE-EXTN-10" mime-type="application/zip">
+		<name>ZIP</name>
+		<description>Zip</description>
+	</extension>
+	<extension disposition="attachment" enabled-flag="Y" export-flag="N"
+		export-order="0" id="CORE-EXTN-11"
+		mime-type="application/mspublisher">
+		<name>PUB</name>
+		<description>Publisher</description>
+	</extension>
+	<extension disposition="attachment" enabled-flag="Y" export-flag="N"
+		export-order="0" id="CORE-EXTN-12" mime-type="application/pdf">
+		<name>PDF</name>
+		<description>Acrobat PDF</description>
+	</extension>
+	<extension disposition="inline" enabled-flag="Y" export-flag="N"
+		export-order="0" id="CORE-EXTN-13" mime-type="image/gif">
+		<name>GIF</name>
+		<description>GIF Image</description>
+	</extension>
+	<extension disposition="inline" enabled-flag="Y" export-flag="N"
+		export-order="0" id="CORE-EXTN-14" mime-type="image/jpeg">
+		<name>JPG</name>
+		<description>JPEG Image</description>
+	</extension>
+	<extension disposition="inline" enabled-flag="Y" export-flag="N"
+		export-order="0" id="CORE-EXTN-15" mime-type="image/bmp">
+		<name>BMP</name>
+		<description>Bitmap Image</description>
+	</extension>
+	<extension disposition="attachment" enabled-flag="Y" export-flag="N"
+		export-order="0" id="CORE-EXTN-16" mime-type="audio/wav">
+		<name>WAV</name>
+		<description>Wave Sound</description>
+	</extension>
+	<extension disposition="attachment" enabled-flag="Y" export-flag="N"
+		export-order="0" id="CORE-EXTN-17" mime-type="application/msword">
+		<name>DOC</name>
+		<description>Word</description>
+	</extension>
+	<extension disposition="inline" enabled-flag="Y" export-flag="N"
+		export-order="0" id="CORE-EXTN-18"
+		mime-type="application/x-shockwave-flash">
+		<name>SWF</name>
+		<description>Flash</description>
+	</extension>
+	<extension disposition="inline" enabled-flag="Y" export-flag="N"
+		export-order="0" id="CORE-EXTN-19" mime-type="image/png">
+		<name>PNG</name>
+		<description>Portable Network Graphics</description>
+	</extension>
+	<extension disposition="attachment" enabled-flag="Y" export-flag="N"
+		export-order="0" id="CORE-EXTN-20" mime-type="text/x-vcard">
+		<name>VCF</name>
+		<description>VCard Format</description>
+	</extension>
+	<extension disposition="attachment" enabled-flag="Y" export-flag="N"
+		export-order="0" id="CORE-EXTN-2" mime-type="text/html">
+		<name>ENC</name>
+		<description>Encoded</description>
+	</extension>
+	<extension disposition="attachment" enabled-flag="Y" export-flag="N"
+		export-order="0" id="CORE-EXTN-3" mime-type="text/html">
+		<name>HTML</name>
+		<description>Hypertext Markup Language</description>
+	</extension>
+	<extension disposition="attachment" enabled-flag="Y" export-flag="Y"
+		export-order="1" id="CORE-EXTN-4"
+		mime-type="application/vnd.ms-excel">
+		<name>XLS</name>
+		<description>Excel</description>
+	</extension>
+	<extension disposition="attachment" enabled-flag="Y" export-flag="Y"
+		export-order="2" id="CORE-EXTN-5" mime-type="text/xml">
+		<name>XML</name>
+		<description>Extensible Markup Language</description>
+	</extension>
+	<extension disposition="attachment" enabled-flag="Y" export-flag="N"
+		export-order="0" id="CORE-EXTN-6" mime-type="application/rtf">
+		<name>RTF</name>
+		<description>Rich Text Format</description>
+	</extension>
+	<extension disposition="attachment" enabled-flag="Y" export-flag="N"
+		export-order="0" id="CORE-EXTN-7" mime-type="application/x-unknown">
+		<name>UNK</name>
+		<description>Unknown Format</description>
+	</extension>
+	<extension disposition="attachment" enabled-flag="Y" export-flag="N"
+		export-order="0" id="CORE-EXTN-8"
+		mime-type="application/mspowerpoint">
+		<name>PPT</name>
+		<description>Powerpoint</description>
+	</extension>
+	<extension disposition="attachment" enabled-flag="Y" export-flag="N"
+		export-order="0" id="CORE-EXTN-9" mime-type="application/msaccess">
+		<name>MDB</name>
+		<description>Access</description>
+	</extension>
+</extensions>

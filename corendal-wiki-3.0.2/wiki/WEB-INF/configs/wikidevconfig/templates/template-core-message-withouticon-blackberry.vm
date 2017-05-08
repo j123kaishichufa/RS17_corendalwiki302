@@ -1,0 +1,16 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($rm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultRequestManager"))
+
+##
+## print the message
+##
+$sm.getCurrentMessageHTML()@NOEOLAFTERTHIS
+#if ($rm.getIsUserAgentCompatibleWithXHTML())
+<br />@NOEOLAFTERTHIS
+#else
+<br>@NOEOLAFTERTHIS
+#end
+## end of template. keep the empty line after this line.

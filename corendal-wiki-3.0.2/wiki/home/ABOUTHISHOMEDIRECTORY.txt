@@ -1,0 +1,8 @@
+$Id: ABOUTHISHOMEDIRECTORY.txt,v 1.1 2005/09/14 00:15:50 tdanard Exp $
+
+This "home" directory stores nothing.
+It should not be empty so that it can be copied when the
+application is archived in a zip file.
+
+If the "home" directory is not present when the servlet container starts,
+the redirect from "/" to "/home" will not work.

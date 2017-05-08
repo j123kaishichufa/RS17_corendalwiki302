@@ -1,0 +1,47 @@
+## file: macro-core-icon.vm
+##
+## Displays an icon with a width and an height
+#macro(icon $si $width $height $alc)
+## @param si
+##            standard icon
+## @param width
+##            an int specifying the width of the icon
+## @param height
+##            an int specifying the height of the icon
+## @param alc
+##            current tier context
+
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($rm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultRequestManager"))
+
+##
+## get the location of the icon
+##
+#set ($location = $si.getDefaultLocation())
+##
+## get the title of the icon
+##
+#set ($titleEncoded = $si.getTitleEncoded())
+
+##
+## HTML code is different depending on XHTML or HTML code
+##
+#if ($titleEncoded)
+#if ($rm.getIsUserAgentCompatibleWithXHTML())
+<img src="$location" width="$width" height="$height" alt="$titleEncoded" align="bottom" border="0" />@NOEOLAFTERTHIS
+#else
+<img src="$location" width="$width" height="$height" alt="$titleEncoded" align="bottom" border="0">@NOEOLAFTERTHIS
+#end
+#else
+#if ($rm.getIsUserAgentCompatibleWithXHTML())
+<img src="$location" width="$width" height="$height" alt="" align="bottom" border="0" />@NOEOLAFTERTHIS
+#else
+<img src="$location" width="$width" height="$height" alt="" align="bottom" border="0">@NOEOLAFTERTHIS
+#end
+#end
+
+#end
+## end of template. keep the empty line after this line.

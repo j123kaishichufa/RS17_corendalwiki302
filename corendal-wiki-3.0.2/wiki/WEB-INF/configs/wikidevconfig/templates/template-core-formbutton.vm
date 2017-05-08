@@ -1,0 +1,77 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($rm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultRequestManager"))
+
+##
+## set various button variables
+##
+#set ($sfbButton = $sfb.getStandardButton())
+#set ($sfbStyle = $sfb.getStandardStyle())
+
+##
+## print the button
+##
+#if ($sfb.getDetectorName())
+#if ($rm.getIsUserAgentCompatibleWithXHTML())
+#if ($sfb.getOnSubmitScript())
+#if ($sfb.getTabIndex() >= 0)
+<input type="submit" name="$sfb.getParameterName()" value="$sfbButton.getNameEncoded()" title="$sfbButton.getDescriptionEncoded()" class="$sfbStyle.getName()" onclick="$sfb.getOnSubmitScript()" tabindex="$sfb.getTabIndex()" />
+#else
+<input type="submit" name="$sfb.getParameterName()" value="$sfbButton.getNameEncoded()" title="$sfbButton.getDescriptionEncoded()" class="$sfbStyle.getName()" onclick="$sfb.getOnSubmitScript()" />
+#end
+#else
+#if ($sfb.getTabIndex() >= 0)
+<input type="submit" name="$sfb.getParameterName()" value="$sfbButton.getNameEncoded()" title="$sfbButton.getDescriptionEncoded()" class="$sfbStyle.getName()" tabindex="$sfb.getTabIndex()" />
+#else
+<input type="submit" name="$sfb.getParameterName()" value="$sfbButton.getNameEncoded()" title="$sfbButton.getDescriptionEncoded()" class="$sfbStyle.getName()" />
+#end
+#end
+#else
+#if ($sfb.getOnSubmitScript())
+#if ($sfb.getTabIndex() >= 0)
+<input type="submit" name="$sfb.getParameterName()" value="$sfbButton.getNameEncoded()" title="$sfbButton.getDescriptionEncoded()" class="$sfbStyle.getName()" onclick="$sfb.getOnSubmitScript()" tabindex="$sfb.getTabIndex()">
+#else
+<input type="submit" name="$sfb.getParameterName()" value="$sfbButton.getNameEncoded()" title="$sfbButton.getDescriptionEncoded()" class="$sfbStyle.getName()" onclick="$sfb.getOnSubmitScript()" />
+#end
+#else
+#if ($sfb.getTabIndex() >= 0)
+<input type="submit" name="$sfb.getParameterName()" value="$sfbButton.getNameEncoded()" title="$sfbButton.getDescriptionEncoded()" class="$sfbStyle.getName()" tabindex="$sfb.getTabIndex()">
+#else
+<input type="submit" name="$sfb.getParameterName()" value="$sfbButton.getNameEncoded()" title="$sfbButton.getDescriptionEncoded()" class="$sfbStyle.getName()" />
+#end
+#end
+#end
+#else
+#if ($rm.getIsUserAgentCompatibleWithXHTML())
+#if ($sfb.getOnSubmitScript())
+#if ($sfb.getTabIndex() >= 0)
+<input type="submit" value="$sfbButton.getNameEncoded()" title="$sfbButton.getDescriptionEncoded()" class="$sfbStyle.getName()" onclick="$sfb.getOnSubmitScript()" tabindex="$sfb.getTabIndex()" />
+#else
+<input type="submit" value="$sfbButton.getNameEncoded()" title="$sfbButton.getDescriptionEncoded()" class="$sfbStyle.getName()" onclick="$sfb.getOnSubmitScript()" />
+#end
+#else
+#if ($sfb.getTabIndex() >= 0)
+<input type="submit" value="$sfbButton.getNameEncoded()" title="$sfbButton.getDescriptionEncoded()" class="$sfbStyle.getName()" tabindex="$sfb.getTabIndex()" />
+#else
+<input type="submit" value="$sfbButton.getNameEncoded()" title="$sfbButton.getDescriptionEncoded()" class="$sfbStyle.getName()" />
+#end
+#end
+#else
+#if ($sfb.getOnSubmitScript())
+#if ($sfb.getTabIndex() >= 0)
+<input type="submit" value="$sfbButton.getNameEncoded()" title="$sfbButton.getDescriptionEncoded()" class="$sfbStyle.getName()" onclick="$sfb.getOnSubmitScript()" tabindex="$sfb.getTabIndex()">
+#else
+<input type="submit" value="$sfbButton.getNameEncoded()" title="$sfbButton.getDescriptionEncoded()" class="$sfbStyle.getName()" onclick="$sfb.getOnSubmitScript()" />
+#end
+#else
+#if ($sfb.getTabIndex() >= 0)
+<input type="submit" value="$sfbButton.getNameEncoded()" title="$sfbButton.getDescriptionEncoded()" class="$sfbStyle.getName()" tabindex="$sfb.getTabIndex()">
+#else
+<input type="submit" value="$sfbButton.getNameEncoded()" title="$sfbButton.getDescriptionEncoded()" class="$sfbStyle.getName()" />
+#end
+#end
+#end
+#end
+## end of template. keep the empty line after this line.

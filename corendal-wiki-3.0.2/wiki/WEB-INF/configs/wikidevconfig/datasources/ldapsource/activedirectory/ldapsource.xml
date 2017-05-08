@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Version: $Id: ldapsource.xml,v 1.10 2008/01/24 22:08:00 tdanard Exp $ -->
+<ldapsource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../../schemas/ldapsource.xsd">
+    <property name="java.naming.provider.url">ldap://mydomaincontroller.mydomain.mycompany.com:389</property>
+    <property name="java.naming.factory.initial">com.sun.jndi.ldap.LdapCtxFactory</property>
+    <property name="java.naming.security.authentication">simple</property>
+    <property name="java.naming.security.principal">myserviceaccount@mydomain.mycompany.com</property>
+    <property name="java.naming.security.credentials">myservicepassword</property>
+    <property name="com.sun.jndi.ldap.connect.pool">true</property>
+</ldapsource>

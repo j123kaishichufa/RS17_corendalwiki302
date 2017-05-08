@@ -1,0 +1,260 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Version: $Id: EntryLog.hbm.xml,v 1.11 2008/01/28 17:08:02 tdanard Exp $ -->
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping
+	package="com.corendal.netapps.framework.core.writedatamappings">
+	<class name="DefaultEntryLogMapping" table="entry_log">
+		<id column="id" name="Id" type="string" />
+
+		<property column="proxy_account_id" length="255"
+			name="ProxyAccountId" not-null="false" type="string" />
+		<property column="client_address" length="255"
+			name="ClientAddress" not-null="false" type="string" />
+		<property column="actual_account_id" length="255"
+			name="ActualAccountId" not-null="false" type="string" />
+		<property column="enabled_flag" length="1" name="EnabledFlag"
+			not-null="true" type="string" />
+		<property column="session_obj_id" length="36" name="SessionId"
+			not-null="false" type="string" />
+		<property column="timestamp" length="19" name="Timestamp"
+			not-null="true" type="timestamp" />
+		<property column="typ_id" length="36" name="TypeId"
+			not-null="true" type="string" />
+		<property column="entity_id" length="36" name="EntityId"
+			not-null="true" type="string" />
+		<property column="server_address" length="255"
+			name="ServerAddress" not-null="false" type="string" />
+		<property column="record_id" length="255" name="RecordId"
+			not-null="true" type="string" />
+	</class>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractEntryLog.findByLowerBoundTimestampAndEntityIdAndTypeId">
+		<![CDATA[
+    from DefaultEntryLogMapping
+    where Timestamp > :timestamp
+    and EntityId = :entityId
+    and TypeId = :typeId
+    order by Timestamp asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.databeans.AbstractWriteDataBean.populateFirstEntryLog">
+		<![CDATA[
+    from DefaultEntryLogMapping
+    where EntityId = :entityId
+    and RecordId = :recordId
+    and TypeId = :typeId
+    and EnabledFlag = :enabledFlag
+    order by Timestamp asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.databeans.AbstractWriteDataBean.populateLastEntryLog">
+		<![CDATA[
+    from DefaultEntryLogMapping
+    where EntityId = :entityId
+    and RecordId = :recordId
+    and ((TypeId = :typeId1) or (TypeId = :typeId2))
+    and EnabledFlag = :enabledFlag
+    order by Timestamp desc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.databeans.AbstractWriteDataBean.getFirstEntryLogTimestamp.1">
+		<![CDATA[
+    from DefaultEntryLogMapping
+    where EntityId = :entityId
+    and RecordId = :recordId
+    and Timestamp >= :timestamp
+    and EnabledFlag = :enabledFlag   
+    order by Timestamp asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.databeans.AbstractWriteDataBean.getFirstEntryLogTimestamp.2">
+		<![CDATA[
+    from DefaultEntryLogMapping
+    where EntityId = :entityId
+    and RecordId = :recordId
+	and TypeId = :typeId
+    and Timestamp >= :timestamp
+    and EnabledFlag = :enabledFlag   
+    order by Timestamp asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.databeans.AbstractWriteDataBean.getLastEntryLogTimestamp.1">
+		<![CDATA[
+    from DefaultEntryLogMapping
+    where EntityId = :entityId
+    and RecordId = :recordId
+    and Timestamp < :timestamp
+    and EnabledFlag = :enabledFlag   
+    order by Timestamp desc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.databeans.AbstractWriteDataBean.getLastEntryLogTimestamp.2">
+		<![CDATA[
+    from DefaultEntryLogMapping
+    where EntityId = :entityId
+    and RecordId = :recordId
+	and TypeId = :typeId
+    and Timestamp < :timestamp
+    and EnabledFlag = :enabledFlag   
+    order by Timestamp desc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.databeans.AbstractWriteDataBean.purgeDuplicateEntryLogs">
+		<![CDATA[
+    from DefaultEntryLogMapping
+    where Timestamp >= :startTimestamp
+    and Timestamp < :endTimestamp
+    order by EntityId asc, RecordId asc, Timestamp asc, TypeId asc, 
+    ClientAddress asc, ServerAddress asc, SessionId asc, ActualAccountId asc,
+    ProxyAccountId asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.databeans.AbstractWriteDataBean.addEntryLog">
+		<![CDATA[
+    delete DefaultEntryLogMapping
+    where EntityId = :entityId
+    and RecordId = :recordId
+	and TypeId = :typeId
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.databeans.AbstractWriteDataBean.purgeIntermediateEntryLogs.2">
+		<![CDATA[
+    delete DefaultEntryLogMapping
+    where Timestamp >= :startTimestamp
+    and Timestamp < :endTimestamp
+    and RecordId = :recordId
+	and EntityId = :entityId
+	and ((TypeId = :typeId1) or (TypeId = :typeId2))
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.databeans.AbstractWriteDataBean.purgeIntermediateEntryLogs.1">
+		<![CDATA[
+    select distinct EntityId, RecordId from DefaultEntryLogMapping
+    where Timestamp >= :startTimestamp
+    and Timestamp < :endTimestamp
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractEntryLog.findEnabledByEntityPrimaryKey">
+		<![CDATA[
+    from DefaultEntryLogMapping
+    where EntityId like :entityId
+    and EnabledFlag = :enabledFlag
+    order by Timestamp asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractEntryLog.findEnabledByRecordPrimaryKey">
+		<![CDATA[
+    from DefaultEntryLogMapping
+    where RecordId like :recordId
+    and EnabledFlag = :enabledFlag
+    order by Timestamp asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractEntryLog.findEnabledByTypePrimaryKey">
+		<![CDATA[
+    from DefaultEntryLogMapping
+    where TypeId like :typeId
+    and EnabledFlag = :enabledFlag
+    order by Timestamp asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractEntryLog.findEnabledBySessionPrimaryKey">
+		<![CDATA[
+    from DefaultEntryLogMapping
+    where SessionId like :sessionId
+    and EnabledFlag = :enabledFlag
+    order by Timestamp asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractEntryLog.findEnabledByClientAddressPrimaryKey">
+		<![CDATA[
+    from DefaultEntryLogMapping
+    where ClientAddress like :clientAddress
+    and EnabledFlag = :enabledFlag
+    order by Timestamp asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractEntryLog.findEnabledByServerAddressPrimaryKey">
+		<![CDATA[
+    from DefaultEntryLogMapping
+    where ServerAddress like :serverAddress
+    and EnabledFlag = :enabledFlag
+    order by Timestamp asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractEntryLog.findEnabledByActualAccountPrimaryKey">
+		<![CDATA[
+    from DefaultEntryLogMapping
+    where ActualAccountId like :actualAccountId
+    and EnabledFlag = :enabledFlag
+    order by Timestamp asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractEntryLog.findEnabledByProxyAccountPrimaryKey">
+		<![CDATA[
+    from DefaultEntryLogMapping
+    where ProxyAccountId like :proxyAccountId
+    and EnabledFlag = :enabledFlag
+    order by Timestamp asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractEntryLog.findEnabledByBoundCreatedDate">
+		<![CDATA[
+    from DefaultEntryLogMapping
+    where Timestamp >= :timestampFrom
+    and Timestamp < :timestampTo
+    and EnabledFlag = :enabledFlag
+    order by Timestamp asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractEntryLog.findEnabledByLowerBoundCreatedDate">
+		<![CDATA[
+    from DefaultEntryLogMapping
+    where Timestamp >= :timestampFrom
+    and EnabledFlag = :enabledFlag
+    order by Timestamp asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractEntryLog.findEnabledByUpperBoundCreatedDate">
+		<![CDATA[
+    from DefaultEntryLogMapping
+    where Timestamp < :timestampTo
+    and EnabledFlag = :enabledFlag
+    order by Timestamp asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractEntryLog.findEnabledByEntityAndRecordPrimaryKeys">
+		<![CDATA[
+    from DefaultEntryLogMapping
+    where EntityId = :entityId
+    and RecordId = :recordId
+    and EnabledFlag = :enabledFlag
+    order by Timestamp asc
+]]>
+	</query>
+</hibernate-mapping>

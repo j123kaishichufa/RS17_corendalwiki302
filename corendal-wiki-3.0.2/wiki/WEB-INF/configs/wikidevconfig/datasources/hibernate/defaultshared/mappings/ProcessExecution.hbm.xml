@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Version: $Id: ProcessExecution.hbm.xml,v 1.1 2007/08/01 19:39:22 tdanard Exp $ -->
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping
+	package="com.corendal.netapps.framework.workflow.writedatamappings">
+	<class name="DefaultProcessExecutionMapping" table="process_exe">
+		<id column="id" name="Id" type="string" />
+
+		<property column="record_id" length="255" name="RecordId"
+			not-null="true" type="string" />
+		<property column="entity_id" length="36" name="EntityId"
+			not-null="true" type="string" />
+		<property column="process_def_version_id" length="36"
+			name="ProcessDefVersionId" not-null="true" type="string" />
+		<property column="active_flag" length="1" name="ActiveFlag"
+			not-null="true" type="string" />
+		<property column="enabled_flag" length="1" name="EnabledFlag"
+			not-null="true" type="string" />
+	</class>
+	<query
+		name="com.corendal.netapps.framework.workflow.writedatabeans.AbstractProcessExecution.loadByEntityAndRecordIds">
+		<![CDATA[
+    from DefaultProcessExecutionMapping
+    where RecordId = :recordId
+    and EntityId = :entityId
+    and EnabledFlag = :enabledFlag
+    order by Id asc
+]]>
+	</query>
+</hibernate-mapping>

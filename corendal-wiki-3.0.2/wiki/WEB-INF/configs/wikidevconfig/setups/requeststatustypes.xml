@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Version: $Id: requeststatustypes.xml,v 1.3 2006/07/17 02:23:36 tdanard Exp $ -->
+<requeststatustypes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../schemas/requeststatustypes.xsd">
+    <requeststatustype enabled-flag="Y" id="WIKI-REQS-1" order="1">
+        <name>Pending Approval</name>
+        <description>
+            The approver must review the request
+        </description>
+        <comment />
+    </requeststatustype>
+    <requeststatustype enabled-flag="Y" id="WIKI-REQS-2" order="2">
+        <name>Approved</name>
+        <description>
+            The approver has reviewed and accepted the request
+        </description>
+        <comment />
+    </requeststatustype>
+    <requeststatustype enabled-flag="Y" id="WIKI-REQS-3" order="3">
+        <name>Rejected</name>
+        <description>
+            The approver has reviewed and did not accept the request
+        </description>
+        <comment />
+    </requeststatustype>
+    <requeststatustype enabled-flag="Y" id="WIKI-REQS-4" order="4">
+        <name>Cancelled</name>
+        <description>
+            The request was removed before the approver could review it
+        </description>
+        <comment />
+    </requeststatustype>
+</requeststatustypes>

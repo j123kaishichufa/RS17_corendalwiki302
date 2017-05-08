@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Version: $Id: TabItem.xml,v 1.3 2006/07/17 02:23:36 tdanard Exp $ -->
+<xmlsource-mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="../../../../../schemas/xmlsourcemapping.xsd"
+	package="com.corendal.netapps.framework.core.readdatahandlers">
+	<class name="DefaultTabItemLoadHandler" collection="menus"
+		entity="menu">
+		<id attribute="id" name="Id" type="string" />
+
+	</class>
+	<query
+		name="com.corendal.netapps.framework.core.readdatabeans.AbstractTabItem.load">
+		<![CDATA[for $result in /menus/menu/menuitems/menuitem/tabitems/tabitem[@id = :id]
+		return <results>{$result}<menuitem id="{$result/ancestor::menuitem/@id}" /></results>]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.readdatabeans.AbstractTabItem.findByEnabledFlag">
+		<![CDATA[for $result in /menus/menu/menuitems/menuitem/tabitems/tabitem[@enabled-flag = :enabledFlag]
+		return $result]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.readdatabeans.AbstractTabItem.findEnabledByMenuItemPrimaryKey">
+		<![CDATA[for $result in /menus/menu/menuitems/menuitem[@id = :menuItemId]
+		return $result/tabitems/tabitem[@enabled-flag = "Y"]]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.readdatabeans.AbstractTabItem.findEnabledByPagePrimaryKey">
+		<![CDATA[for $result in /menus/menu/menuitems/menuitem/tabitems/tabitem[@page-id = :pageId and @enabled-flag = "Y"]
+		return $result]]>
+	</query>
+</xmlsource-mapping>

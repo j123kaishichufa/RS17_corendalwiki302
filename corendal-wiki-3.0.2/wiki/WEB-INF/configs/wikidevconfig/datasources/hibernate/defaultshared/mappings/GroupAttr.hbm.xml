@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Version: $Id: GroupAttr.hbm.xml,v 1.3 2007/08/01 19:39:22 tdanard Exp $ -->
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping
+	package="com.corendal.netapps.framework.helpdesk.writedatamappings">
+	<class name="DefaultGroupAttributeMapping" table="group_obj_attr">
+		<id column="id" name="Id" type="string" />
+
+		<property column="attr_value" name="AttributeValue"
+			not-null="false" type="string" />
+		<property column="attr_id" length="36" name="AttributeId"
+			not-null="true" type="string" />
+		<property column="enabled_flag" length="1" name="EnabledFlag"
+			not-null="true" type="string" />
+		<property column="group_obj_id" length="255" name="GroupId"
+			not-null="true" type="string" />
+	</class>
+	<query
+		name="com.corendal.netapps.framework.helpdesk.writedatabeans.AbstractGroup.getIntegerAttribute">
+		<![CDATA[
+    from DefaultGroupAttributeMapping
+    where AttributeId = :attributeId
+    and GroupId = :groupId
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.helpdesk.writedatabeans.AbstractGroup.getStringAttribute">
+		<![CDATA[
+    from DefaultGroupAttributeMapping
+    where AttributeId = :attributeId
+    and GroupId = :groupId
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.helpdesk.writedatabeans.AbstractGroup.storeIntegerAttribute">
+		<![CDATA[
+    delete DefaultGroupAttributeMapping
+    where AttributeId = :attributeId
+    and GroupId = :groupId
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.helpdesk.writedatabeans.AbstractGroup.storeStringAttribute">
+		<![CDATA[
+    delete DefaultGroupAttributeMapping
+    where AttributeId = :attributeId
+    and GroupId = :groupId
+]]>
+	</query>
+</hibernate-mapping>

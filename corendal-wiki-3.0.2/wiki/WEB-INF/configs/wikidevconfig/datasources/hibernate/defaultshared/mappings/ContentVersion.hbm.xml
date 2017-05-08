@@ -1,0 +1,164 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Version: $Id: ContentVersion.hbm.xml,v 1.5 2007/06/21 13:31:02 tdanard Exp $ -->
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.corendal.netapps.wiki.writedatamappings">
+	<class name="DefaultContentVersionMapping"
+		table="content_version">
+		<id column="id" name="Id" type="string" />
+
+		<property column="current_flag" length="1" name="CurrentFlag"
+			not-null="true" type="string" />
+		<property column="version_num" name="VersionNumber"
+			not-null="true" type="integer" />
+		<property column="version_info_id" length="36"
+			name="VersionInfoId" not-null="true" type="string" />
+		<property column="content_id" length="36" name="ContentId"
+			not-null="true" type="string" />
+		<property column="request_id" length="36" name="RequestId"
+			not-null="false" type="string" />
+		<property column="friendly_address" length="255"
+			name="FriendlyAddress" not-null="false" type="string" />
+		<property column="body" name="Body" not-null="false"
+			type="string" />
+		<property column="cmnt" name="Comment" not-null="false"
+			type="string" />
+		<property column="enabled_flag" length="1" name="EnabledFlag"
+			not-null="true" type="string" />
+	</class>
+	<query
+		name="com.corendal.netapps.wiki.writedatabeans.AbstractArticleVersion.findEnabledByArticlePrimaryKey">
+		<![CDATA[
+    from DefaultContentVersionMapping
+    where ContentId = :contentId
+    and EnabledFlag = :enabledFlag
+    order by VersionNumber asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.wiki.writedatabeans.AbstractImageVersion.findEnabledByImagePrimaryKey">
+		<![CDATA[
+    from DefaultContentVersionMapping
+    where ContentId = :contentId
+    and EnabledFlag = :enabledFlag
+    order by VersionNumber asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.wiki.writedatabeans.AbstractArticle.supersede">
+		<![CDATA[
+    update DefaultContentVersionMapping
+    set CurrentFlag = :currentFlag
+    where ContentId = :contentId
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.wiki.writedatabeans.AbstractArticle.storeComment">
+		<![CDATA[
+    update DefaultContentVersionMapping
+    set Comment = :comment
+    where ContentId = :contentId
+    and CurrentFlag = :currentFlag
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.wiki.writedatabeans.AbstractArticle.storeInfo">
+		<![CDATA[
+    update DefaultContentVersionMapping
+    set VersionInfoId = :versionInfoId
+    where ContentId = :contentId
+    and CurrentFlag = :currentFlag
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.wiki.writedatabeans.AbstractArticle.storeFriendlyAddress">
+		<![CDATA[
+    update DefaultContentVersionMapping
+    set FriendlyAddress = :friendlyAddress
+    where ContentId = :contentId
+    and CurrentFlag = :currentFlag
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.wiki.writedatabeans.AbstractArticle.remove.2">
+		<![CDATA[
+    delete DefaultContentVersionMapping
+    where ContentId = :contentId
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.wiki.writedatabeans.AbstractImage.supersede">
+		<![CDATA[
+    update DefaultContentVersionMapping
+    set CurrentFlag = :currentFlag
+    where ContentId = :contentId
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.wiki.writedatabeans.AbstractImage.storeInfo">
+		<![CDATA[
+    update DefaultContentVersionMapping
+    set VersionInfoId = :versionInfoId
+    where ContentId = :contentId
+    and CurrentFlag = :currentFlag
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.wiki.writedatabeans.AbstractImage.storeFriendlyAddress">
+		<![CDATA[
+    update DefaultContentVersionMapping
+    set FriendlyAddress = :friendlyAddress
+    where ContentId = :contentId
+    and CurrentFlag = :currentFlag
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.wiki.writedatabeans.AbstractImage.remove.2">
+		<![CDATA[
+    delete DefaultContentVersionMapping
+    where ContentId = :contentId
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.wiki.writedatabeans.AbstractImage.storeComment">
+		<![CDATA[
+    update DefaultContentVersionMapping
+    set Comment = :comment
+    where ContentId = :contentId
+    and CurrentFlag = :currentFlag
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.wiki.writedatabeans.AbstractImage.remove.3">
+		<![CDATA[
+    from DefaultContentVersionMapping
+    where ContentId = :contentId
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.wiki.writedatabeans.AbstractImage.getFirstRequestPrimaryKey">
+		<![CDATA[
+    from DefaultContentVersionMapping
+    where ContentId = :contentId
+    and VersionNumber = :versionNumber
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.wiki.writedatabeans.AbstractArticle.getFirstRequestPrimaryKey">
+		<![CDATA[
+    from DefaultContentVersionMapping
+    where ContentId = :contentId
+    and VersionNumber = :versionNumber
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.wiki.writedatabeans.AbstractContent.getFirstRequestPrimaryKey">
+		<![CDATA[
+    from DefaultContentVersionMapping
+    where ContentId = :contentId
+    and VersionNumber = :versionNumber
+]]>
+	</query>
+</hibernate-mapping>

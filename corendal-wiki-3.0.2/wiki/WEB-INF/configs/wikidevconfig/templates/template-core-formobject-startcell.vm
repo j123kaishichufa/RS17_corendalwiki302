@@ -1,0 +1,33 @@
+#set($align = $sfo.getAlign())
+#set($vAlign = $sfo.getVAlign())
+
+#if ($align.equals($currentLocale.getLeftAlign()))
+#if ($sfo.getColspan() == 1)
+#if ($sfo.getRowspan() == 1)
+<td valign="$vAlign">@NOEOLAFTERTHIS
+#else
+<td rowspan="$sfo.getRowspan()" valign="$vAlign">@NOEOLAFTERTHIS
+#end
+#else
+#if ($sfo.getRowspan() == 1)
+<td colspan="$sfo.getColspan()" valign="$vAlign">@NOEOLAFTERTHIS
+#else
+<td colspan="$sfo.getColspan()" rowspan="$sfo.getRowspan()" valign="$vAlign">@NOEOLAFTERTHIS
+#end
+#end
+#else
+#if ($sfo.getColspan() == 1)
+#if ($sfo.getRowspan() == 1)
+<td valign="$vAlign" align="$align">@NOEOLAFTERTHIS
+#else
+<td rowspan="$sfo.getRowspan()" valign="$vAlign" align="$align">@NOEOLAFTERTHIS
+#end
+#else
+#if ($sfo.getRowspan() == 1)
+<td colspan="$sfo.getColspan()" valign="$vAlign" align="$align">@NOEOLAFTERTHIS
+#else
+<td colspan="$sfo.getColspan()" rowspan="$sfo.getRowspan()" valign="$vAlign" align="$align">@NOEOLAFTERTHIS
+#end
+#end
+#end
+## end of template. keep the empty line after this line.

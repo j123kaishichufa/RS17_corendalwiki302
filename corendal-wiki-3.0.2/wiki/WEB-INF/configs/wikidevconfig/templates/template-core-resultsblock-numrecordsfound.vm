@@ -1,0 +1,58 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($rm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultRequestManager"))
+#set ($stlm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultStyleManager"))
+
+
+##
+## get the writers used in this template
+##
+#set ($pws = $alc.getWriterSet())
+#set ($lw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultLinkWriter"))
+#set ($pw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultPageWriter"))
+
+##
+## get the styles used in this template
+##
+#set ($regularTextStyle = $stlm.getRegularTextStandardStyle())
+
+##
+## get the requested page
+##
+#set ($page = $rm.getStandardPage())
+
+##
+## print the skip to export link
+##
+#if ((!($rm.getIsPrintableMode())) && ($srb.getType().equals("LARGE"))) 
+#if ((!($page)) || (!($page.getTemplateType().equals("FLOATING"))))
+#if ($srb.getRowsCount() > 0)
+$lw.getSkipToExportLinkHTML($srb)@NOEOLAFTERTHIS
+#end
+#end
+#end
+
+##
+## print the number of records found
+##
+<span class="$regularTextStyle.getName()">@NOEOLAFTERTHIS
+#if ($srb.getType().equals("SMALL"))
+$numEntitiesFoundBreakableHTML@NOEOLAFTERTHIS
+#else
+$numEntitiesFoundNonBreakableHTML@NOEOLAFTERTHIS
+#end
+</span>@NOEOLAFTERTHIS
+
+##
+## print the "fromto" message
+##
+#set ($pageSizePlusPageExcess = $srb.getPageSize() + $srb.getPageExcess())
+#if ((!($srb.getIsOnePageOnly())) && ($srb.getNumFound() > $pageSizePlusPageExcess))
+<span class="$regularTextStyle.getName()">@NOEOLAFTERTHIS
+&nbsp;@NOEOLAFTERTHIS
+$fromToHTML@NOEOLAFTERTHIS
+</span>
+#end
+## end of template. keep the empty line after this line.

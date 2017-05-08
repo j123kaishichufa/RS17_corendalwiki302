@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Version: $Id: ContentAccessLog.hbm.xml,v 1.2 2007/05/18 20:58:06 tdanard Exp $ -->
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.corendal.netapps.wiki.writedatamappings">
+	<class name="DefaultContentAccessLogMapping"
+		table="content_access_log">
+		<id column="id" name="Id" type="string" />
+
+		<property column="content_id" length="36" name="ContentId"
+			not-null="true" type="string" />
+		<property column="enabled_flag" length="1" name="EnabledFlag"
+			not-null="true" type="string" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Version: $Id: proxyemailprefs.xml,v 1.3 2006/07/17 02:23:36 tdanard Exp $ -->
+<proxyemailprefs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="../../schemas/proxyemailpref.xsd">
+	<proxyemailpref enabled-flag="Y" id="CORE-PEPF-1" order="1">
+		<name>Do NOT send a copy of my emails to this grantee</name>
+		<description />
+		<comment />
+	</proxyemailpref>
+	<proxyemailpref enabled-flag="Y" id="CORE-PEPF-2" order="2">
+		<name>Send a copy of my emails to this grantee</name>
+		<description />
+		<comment />
+	</proxyemailpref>
+</proxyemailprefs>

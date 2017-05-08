@@ -1,0 +1,53 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($stlm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultStyleManager"))
+
+##
+## get the writers used in this template
+##
+#set ($pws = $alc.getWriterSet())
+#set ($lw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultLinkWriter"))
+
+##
+## get the styles used in this template
+##
+#set ($regularTextStyle = $stlm.getRegularTextStandardStyle())
+
+##
+## get the value
+##
+#if ((!($valueHTML)) || ($valueHTML.equals("")))
+#set($valueHTML = "&nbsp;")
+#end
+
+##
+## start the cell
+##
+<td valign="top" rowspan="$rbc.getRowspan()" colspan="$rbc.getColspan()" align="$rbc.getAlign(field)">@NOEOLAFTERTHIS
+
+##
+## print the anchor
+##
+#if ($rbc.getRecordNumber() != 0)
+$lw.getSkipRecordsAnchorHTML($rbc)@NOEOLAFTERTHIS
+#end
+
+##
+## print the link
+##
+#if ($rbc.getSkipToRecordNumber() != 0)
+$lw.getSkipRecordsLinkHTML($rbc)@NOEOLAFTERTHIS
+#end
+
+##
+## print the value
+##
+<span class="$regularTextStyle.getName()">$valueHTML</span>@NOEOLAFTERTHIS
+
+##
+## close the cell
+##
+</td>
+## end of template. keep the empty line after this line.

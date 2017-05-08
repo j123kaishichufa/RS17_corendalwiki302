@@ -1,0 +1,83 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($clrm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultColorManager"))
+#set ($stlm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultStyleManager"))
+#set ($icnm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultIconManager"))
+
+##
+## get the writers used in this template
+##
+#set ($pws = $alc.getWriterSet())
+#set ($tiw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultTabItemWriter"))
+
+##
+## get the icons used in this template
+##
+#set ($spacerIcon = $icnm.getSpacerStandardIcon())
+
+##
+## get the colors used in this template
+##
+#set ($dottedLineColor = $clrm.getDottedLineStandardColor())
+#set ($tabColor = $clrm.getTabStandardColor())
+
+##
+## get the styles used in this template
+##
+#set ($tabItemStyle = $stlm.getTabItemStandardStyle())
+
+##
+## print a comment
+##
+#set ($menuItemPk = $smi.getPrimaryKey())
+<!-- start of tab id $menuItemPk.toString() -->
+
+##
+## print a spacer
+##
+#icon($spacerIcon 2 2 $alc)
+
+##
+## start a table
+##
+<table summary="" style="border-bottom: 1px dotted $dottedLineColor.getColor(); padding-bottom: 0px" cellpadding="0" cellspacing="0" width="100%">
+<tr bgcolor="$tabColor.getColor()">
+<td>@NOEOLAFTERTHIS
+<table summary="" cellpadding="0" cellspacing="0" border="0">
+<tr>
+
+##
+## print all tabs
+##
+#set ($currentSti = $smi.getCurrentTabItem())
+#set ($tabItems = $smi.getTabItems())
+#set ($tabItemsSize = $tabItems.size())
+#set ($tabItemsSizeMinusOne = $tabItemsSize - 1)
+#foreach ($i in [0..$tabItemsSizeMinusOne])
+#if ($i > 0)
+<td class="$tabItemStyle.getName()">@NOEOLAFTERTHIS
+#icon($spacerIcon 4 20 $alc)@NOEOLAFTERTHIS
+</td>
+<td class="$tabItemStyle.getName()">@NOEOLAFTERTHIS
+|@NOEOLAFTERTHIS
+</td>
+<td class="$tabItemStyle.getName()">@NOEOLAFTERTHIS
+#icon($spacerIcon 4 20 $alc)@NOEOLAFTERTHIS
+</td>
+#end
+
+#set ($sti = $tabItems.get($i))
+$tiw.getHTML($sti, $currentSti)
+
+#end
+
+</tr>
+</table>@NOEOLAFTERTHIS
+</td>
+</tr>
+</table>@NOEOLAFTERTHIS
+
+<!-- end of tab id $menuItemPk.toString() -->
+## end of template. keep the empty line after this line.

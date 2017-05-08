@@ -1,0 +1,88 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($icnm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultIconManager"))
+#set ($clrm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultColorManager"))
+#set ($cfgm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultConfigManager"))
+
+##
+## get the writers used in this template
+##
+#set ($pws = $alc.getWriterSet())
+#set ($lw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultLinkWriter"))
+
+##
+## get the icons to be used
+##
+#set ($spacerIcon = $icnm.getSpacerStandardIcon())
+
+##
+## get the color of dotted lines
+##
+#set ($dottedLineColor = $clrm.getDottedLineStandardColor())
+
+##
+## print the border
+##
+#set ($sbColor = $sb.getStandardColor())
+#set ($sbType = $sb.getType())
+#if ($sbType.equals("SMALL"))
+
+<table summary="" width="100%" border="0" cellpadding="0" cellspacing="0">
+
+<tr>
+
+#if (($sb.getVerticalOrder() == 1) && ($sb.getMaxWidth() > 0))
+#set ($width = $sb.getMaxWidth() + 15)
+<td width="$width" valign="top" bgcolor="$sbColor.getColor()">@NOEOLAFTERTHIS
+#else
+<td bgcolor="$sbColor.getColor()">@NOEOLAFTERTHIS
+#end
+#end
+
+##
+## print the block body
+##
+#if ($sb.getIsBlockSetVisible())
+##
+## print an anchor
+##
+$lw.getBlockTopAnchorHTML($sb)@NOEOLAFTERTHIS
+
+##
+## print the skip block link
+##
+$lw.getSkipBlockLinkHTML($sb)@NOEOLAFTERTHIS
+
+##
+## print the comment
+##
+#set ($blockPk = $sb.getPrimaryKey())
+<!-- start of the body for block id : $blockPk.toString() -->@NOEOLAFTERTHIS
+#end
+
+##
+## print a space before each block
+##
+#set ($sbType = $sb.getType())
+#if ($sbType.equals("SMALL"))
+#set ($minWidth = $sb.getMinWidth())
+#if ($minWidth > 0)
+#icon($spacerIcon $minWidth 6 $alc)@NOEOLAFTERTHIS
+#else
+#icon($spacerIcon 8 6 $alc)@NOEOLAFTERTHIS
+#end
+#else
+#if ($sb.getVerticalOrder() == 1)
+#icon($spacerIcon 8 6 $alc)@NOEOLAFTERTHIS
+#end
+#end
+
+#set ($sbType = $sb.getType())
+#if ($sbType.equals("SMALL"))
+<table summary="" width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>@NOEOLAFTERTHIS
+#end
+## end of template. keep the empty line after this line.

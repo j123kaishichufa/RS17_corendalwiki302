@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Version: $Id: menus.xml,v 1.7 2007/12/26 22:39:00 tdanard Exp $ -->
+<menus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="../../schemas/menus.xsd">
+	<menu id="CORE-MENU-1" enabled-flag="Y">
+		<menuitems>
+			<menuitem enabled-flag="Y" id="WIKI-MNIT-1" order="1"
+				page-id="CORE-PAGE-1">
+				<name>Home</name>
+				<description>Entry point of this site</description>
+			</menuitem>
+			<menuitem enabled-flag="Y" id="WIKI-MNIT-2" order="2"
+				page-id="WIKI-PAGE-1">
+				<name>Search</name>
+				<description>
+					To explore the content of this site
+				</description>
+				<tabitems>
+					<tabitem enabled-flag="Y" id="WIKI-TABI-1" order="1"
+						page-id="CORE-PAGE-10">
+						<name>Basic Search</name>
+						<description>
+							To search the entire site by content type
+							and by keyword
+						</description>
+					</tabitem>
+					<tabitem enabled-flag="Y" id="WIKI-TABI-2" order="2"
+						page-id="WIKI-PAGE-4">
+						<name>Advanced Search</name>
+						<description>
+							To search the content of this site using
+							advanced search criteria
+						</description>
+					</tabitem>
+				</tabitems>
+			</menuitem>
+			<menuitem enabled-flag="Y" id="WIKI-MNIT-5" order="3"
+				page-id="WIKI-PAGE-166">
+				<name>References</name>
+				<description>
+					To view and edit reference data used in this site
+				</description>
+			</menuitem>
+			<menuitem enabled-flag="Y" id="WIKI-MNIT-3" order="4"
+				page-id="WIKI-PAGE-2">
+				<name>My Tools</name>
+				<description>
+					To manage your account and associated tasks
+				</description>
+				<tabitems>
+					<tabitem enabled-flag="Y" id="WIKI-TABI-4" order="1"
+						page-id="CORE-PAGE-26">
+						<name>My Account</name>
+						<description>
+							Displays the contact information of your
+							user account
+						</description>
+					</tabitem>
+					<tabitem enabled-flag="Y" id="WIKI-TABI-6" order="2"
+						page-id="WIKI-PAGE-6">
+						<name>My Requests</name>
+						<description>
+							Lists the content requests you have
+							submitted and waiting for approval
+						</description>
+					</tabitem>
+					<tabitem enabled-flag="Y" id="WIKI-TABI-3" order="3"
+						page-id="WIKI-PAGE-46">
+						<name>My Approvals</name>
+						<description>
+							Lists the content requests waiting for
+							your approval
+						</description>
+					</tabitem>
+					<tabitem enabled-flag="Y" id="WIKI-TABI-7" order="4"
+						page-id="WIKI-PAGE-7">
+						<name>My Content</name>
+						<description>
+							Lists the content you are responsible for
+						</description>
+					</tabitem>
+					<tabitem enabled-flag="Y" id="WIKI-TABI-5" order="5"
+						page-id="WIKI-PAGE-48">
+						<name>My Subscriptions</name>
+						<description>
+							Lists the content you are subscribed to
+						</description>
+					</tabitem>
+					<tabitem enabled-flag="Y" id="WIKI-TABI-16"
+						order="6" page-id="HLPD-PAGE-72">
+						<name>My Proxies</name>
+						<description>
+							Lists the users you have granted
+							transaction privileges to, and the users you
+							can perform transactions for
+						</description>
+					</tabitem>
+					<tabitem enabled-flag="Y" id="WIKI-TABI-17"
+						order="7" page-id="HLPD-PAGE-70">
+						<name>My Groups</name>
+						<description>
+							Lists the groups you belong to and the
+							groups you manage
+						</description>
+					</tabitem>
+				</tabitems>
+			</menuitem>
+			<menuitem enabled-flag="Y" id="WIKI-MNIT-6" order="5"
+				page-id="ADMN-PAGE-93">
+				<name>Admin</name>
+				<description>
+					To view and edit administration data
+				</description>
+			</menuitem>
+			<menuitem enabled-flag="Y" id="WIKI-MNIT-4" order="6"
+				page-id="CORE-PAGE-15">
+				<name>Help</name>
+				<description>To get help about this site</description>
+				<tabitems>
+					<tabitem enabled-flag="Y" id="WIKI-TABI-10"
+						order="1" page-id="HLPD-PAGE-31">
+						<name>Help Desk</name>
+						<description>
+							To get help about this site from help desk
+							analysts
+						</description>
+					</tabitem>
+					<tabitem enabled-flag="Y" id="WIKI-TABI-9" order="2"
+						page-id="HLPD-PAGE-33">
+						<name>Release Notes</name>
+						<description>
+							Historical listing of new features and
+							modifications brought to this site
+						</description>
+					</tabitem>
+					<tabitem enabled-flag="Y" id="WIKI-TABI-8" order="3"
+						page-id="HLPD-PAGE-32">
+						<name>Online Help</name>
+						<description>
+							To get help about this site by reading user
+							documentation
+						</description>
+					</tabitem>
+					<tabitem enabled-flag="Y" id="WIKI-TABI-11"
+						order="4" page-id="CORE-PAGE-7">
+						<name>Site Index</name>
+						<description>
+							List of all screens accessible to all users
+							in this site
+						</description>
+					</tabitem>
+					<tabitem enabled-flag="Y" id="WIKI-TABI-12"
+						order="5" page-id="WIKI-PAGE-38">
+						<name>Site Map</name>
+						<description>
+							Hierarchical list of all screens accessible
+							to all users in this site
+						</description>
+					</tabitem>
+					<tabitem enabled-flag="Y" id="WIKI-TABI-13"
+						order="5" page-id="CORE-PAGE-16">
+						<name>Glossary</name>
+						<description>
+							Definition of most technical terms used in
+							this site
+						</description>
+					</tabitem>
+				</tabitems>
+			</menuitem>
+		</menuitems>
+	</menu>
+	<menu id="CORE-MENU-2" enabled-flag="Y">
+		<menuitems>
+			<menuitem enabled-flag="Y" id="WIKI-MNIT-21" order="1"
+				page-id="CORE-PAGE-12">
+				<name>By Default</name>
+				<description>
+					Terms are listed using a default order
+				</description>
+			</menuitem>
+			<menuitem enabled-flag="Y" id="WIKI-MNIT-22" order="2"
+				page-id="CORE-PAGE-13">
+				<name>Alphabetically</name>
+				<description>
+					Terms are listed alphabetically
+				</description>
+			</menuitem>
+		</menuitems>
+	</menu>
+	<menu id="CORE-MENU-3" enabled-flag="Y">
+		<menuitems>
+			<menuitem enabled-flag="Y" id="CORE-MNIT-31" order="1"
+				page-id="CORE-PAGE-27">
+				<name>Pick</name>
+				<description>
+					To select a date from the calendar
+				</description>
+			</menuitem>
+		</menuitems>
+	</menu>
+	<menu id="CORE-MENU-4" enabled-flag="Y">
+		<menuitems>
+			<menuitem enabled-flag="Y" id="CORE-MNIT-41" order="1"
+				page-id="CORE-PAGE-36">
+				<name>Search</name>
+				<description>
+					To look for a department
+				</description>
+			</menuitem>
+			<menuitem enabled-flag="Y" id="CORE-MNIT-42" order="2"
+				page-id="CORE-PAGE-37">
+				<name>Recent</name>
+				<description>Lists departments recently used</description>
+			</menuitem>
+			<menuitem enabled-flag="Y" id="CORE-MNIT-43" order="3"
+				page-id="CORE-PAGE-65">
+				<name>My Departments</name>
+				<description>
+					Lists departments you manage and departments you belong to
+				</description>
+			</menuitem>
+		</menuitems>
+	</menu>
+	<menu id="CORE-MENU-5" enabled-flag="Y">
+		<menuitems>
+			<menuitem enabled-flag="Y" id="CORE-MNIT-51" order="1"
+				page-id="CORE-PAGE-39">
+				<name>Search</name>
+				<description>
+					To look for multiple departments
+				</description>
+			</menuitem>
+			<menuitem enabled-flag="Y" id="CORE-MNIT-52" order="2"
+				page-id="CORE-PAGE-40">
+				<name>Recent</name>
+				<description>
+					Lists departments recently used
+				</description>
+			</menuitem>
+			<menuitem enabled-flag="Y" id="CORE-MNIT-53" order="3"
+				page-id="CORE-PAGE-66">
+				<name>My Departments</name>
+				<description>
+					Lists departments you manage and departments you belong to
+				</description>
+			</menuitem>
+		</menuitems>
+	</menu>
+	<menu id="CORE-MENU-6" enabled-flag="Y">
+		<menuitems>
+			<menuitem enabled-flag="Y" id="CORE-MNIT-61" order="1"
+				page-id="CORE-PAGE-46">
+				<name>Search</name>
+				<description>
+					To look for a building
+				</description>
+			</menuitem>
+			<menuitem enabled-flag="Y" id="CORE-MNIT-62" order="2"
+				page-id="CORE-PAGE-47">
+				<name>Recent</name>
+				<description>Lists buildings recently used</description>
+			</menuitem>
+		</menuitems>
+	</menu>
+	<menu id="CORE-MENU-7" enabled-flag="Y">
+		<menuitems>
+			<menuitem enabled-flag="Y" id="CORE-MNIT-71" order="1"
+				page-id="CORE-PAGE-49">
+				<name>Search</name>
+				<description>
+					To look for multiple buildings
+				</description>
+			</menuitem>
+			<menuitem enabled-flag="Y" id="CORE-MNIT-72" order="2"
+				page-id="CORE-PAGE-50">
+				<name>Recent</name>
+				<description>
+					Lists buildings recently used
+				</description>
+			</menuitem>
+		</menuitems>
+	</menu>
+	<menu id="CORE-MENU-8" enabled-flag="Y">
+		<menuitems>
+			<menuitem enabled-flag="Y" id="CORE-MNIT-81" order="1"
+				page-id="CORE-PAGE-46">
+				<name>Search</name>
+				<description>
+					To look for a company
+				</description>
+			</menuitem>
+			<menuitem enabled-flag="Y" id="CORE-MNIT-82" order="2"
+				page-id="CORE-PAGE-47">
+				<name>Recent</name>
+				<description>Lists companies recently used</description>
+			</menuitem>
+		</menuitems>
+	</menu>
+	<menu id="CORE-MENU-9" enabled-flag="Y">
+		<menuitems>
+			<menuitem enabled-flag="Y" id="CORE-MNIT-91" order="1"
+				page-id="CORE-PAGE-49">
+				<name>Search</name>
+				<description>
+					To look for multiple companies
+				</description>
+			</menuitem>
+			<menuitem enabled-flag="Y" id="CORE-MNIT-92" order="2"
+				page-id="CORE-PAGE-50">
+				<name>Recent</name>
+				<description>
+					Lists companies recently used
+				</description>
+			</menuitem>
+		</menuitems>
+	</menu>
+	<menu id="HLPD-MENU-3" enabled-flag="Y">
+		<menuitems>
+			<menuitem enabled-flag="Y" id="HLPD-MNIT-32" order="1"
+				page-id="HLPD-PAGE-18">
+				<name>Search</name>
+				<description>
+					To look for a user account listed in the directory
+				</description>
+			</menuitem>
+			<menuitem enabled-flag="Y" id="HLPD-MNIT-31" order="2"
+				page-id="HLPD-PAGE-19">
+				<name>Recent</name>
+				<description>
+					Lists user accounts recently used
+				</description>
+			</menuitem>
+		</menuitems>
+	</menu>
+	<menu id="HLPD-MENU-4" enabled-flag="Y">
+		<menuitems>
+			<menuitem enabled-flag="Y" id="HLPD-MNIT-42" order="1"
+				page-id="HLPD-PAGE-41">
+				<name>Search</name>
+				<description>
+					To look for a user group listed in the directory
+				</description>
+			</menuitem>
+			<menuitem enabled-flag="Y" id="HLPD-MNIT-41" order="2"
+				page-id="HLPD-PAGE-42">
+				<name>Recent</name>
+				<description>
+					Lists user groups recently used
+				</description>
+			</menuitem>
+			<menuitem enabled-flag="Y" id="HLPD-MNIT-43" order="3"
+				page-id="HLPD-PAGE-43">
+				<name>My Memberships</name>
+				<description>
+					Lists user groups you belong to
+				</description>
+			</menuitem>
+		</menuitems>
+	</menu>
+	<menu id="HLPD-MENU-5" enabled-flag="Y">
+		<menuitems>
+			<menuitem enabled-flag="Y" id="HLPD-MNIT-52" order="1"
+				page-id="HLPD-PAGE-45">
+				<name>Search</name>
+				<description>
+					To look for multiple user accounts listed in the
+					directory
+				</description>
+			</menuitem>
+			<menuitem enabled-flag="Y" id="HLPD-MNIT-51" order="2"
+				page-id="HLPD-PAGE-46">
+				<name>Recent</name>
+				<description>
+					Lists user accounts recently used
+				</description>
+			</menuitem>
+		</menuitems>
+	</menu>
+</menus>

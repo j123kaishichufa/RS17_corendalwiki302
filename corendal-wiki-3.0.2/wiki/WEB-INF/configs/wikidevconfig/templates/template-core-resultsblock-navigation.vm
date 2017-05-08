@@ -1,0 +1,160 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($rm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultRequestManager"))
+#set ($lclm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultLocaleManager"))
+#set ($stlm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultStyleManager"))
+#set ($icnm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultIconManager"))
+
+##
+## get the writers used in this template
+##
+#set ($pws = $alc.getWriterSet())
+#set ($lw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultLinkWriter"))
+#set ($rbw = $srb.getResultsBlockWriter())
+
+##
+## get the current page
+##
+#set ($page = $rm.getStandardPage())
+
+##
+## get the template type
+##
+#set ($templateType = $page.getTemplateType())
+
+##
+## get the icons used in this template
+##
+#set ($spacerIcon = $icnm.getSpacerStandardIcon())
+
+##
+## get the styles used in this template
+##
+#set ($regularTextStyle = $stlm.getRegularTextStandardStyle())
+
+##
+## get the current locale
+##
+#set ($currentLocale = $lclm.getPrimaryStandardLocale())
+
+##
+## set the current page
+##
+#set ($page = $rm.getStandardPage())
+
+##
+## set the results block type
+##
+#set ($type = $srb.getType())
+
+##
+## start the table
+##
+#set ($isCellDisplayed = "FALSE")
+<table summary="" cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+
+##
+## print the number of records found, the print link or the export form
+##
+#if ($isAboveResults)
+#set ($isCellDisplayed = "TRUE")
+<td valign="middle">@NOEOLAFTERTHIS
+$rbw.getNumberOfRecordsFoundNavigationHTML($srb, $isAboveResults)@NOEOLAFTERTHIS
+</td>
+#else
+
+##
+## print the print link or the export form
+##
+#if (($page)&& ($templateType.equals("FLOATING")))
+#if ($srb.getIsPrintLinkPrinted())
+#set ($isCellDisplayed = "TRUE")
+<td valign="middle" class="$regularTextStyle.getName()">@NOEOLAFTERTHIS
+$lw.getPrintLinkHTML()@NOEOLAFTERTHIS
+</td>
+#else
+#set ($isCellDisplayed = "TRUE")
+<td>@NOEOLAFTERTHIS
+#icon($spacerIcon 1 1 $alc)@NOEOLAFTERTHIS
+</td>
+#end
+#else
+#if ((!($rm.getIsPrintableMode())) && ($type.equals("LARGE")) && ($srb.getRowsCount() > 0))
+#set ($isCellDisplayed = "TRUE")
+<td valign="middle">@NOEOLAFTERTHIS
+$rbw.getExportFormNavigationHTML($srb, $isAboveResults)@NOEOLAFTERTHIS
+</td>
+#end
+#end
+#end
+
+##
+## print the previous next (including the separation)
+##
+#if (!($rm.getIsPrintableMode()))
+#if ($rbw.getIsPreviousNextNavigationPrinted($srb, $isAboveResults))
+
+##
+## print a space
+##
+#set ($isCellDisplayed = "TRUE")
+<td width="1000000">@NOEOLAFTERTHIS
+#icon($spacerIcon 10 1 $alc)@NOEOLAFTERTHIS
+</td>
+
+##
+## print the previous next navigation
+##
+#if ($isAboveResults)
+<td align="$currentLocale.getRightAlign()" valign="bottom">@NOEOLAFTERTHIS
+#else
+<td align="$currentLocale.getRightAlign()" valign="top">@NOEOLAFTERTHIS
+#end
+$rbw.getPreviousNextNavigationHTML($srb, $isAboveResults)@NOEOLAFTERTHIS
+</td>
+#end
+#end
+
+#if ($isCellDisplayed == "FALSE")
+<td width="1">@NOEOLAFTERTHIS
+#icon($spacerIcon 1 1 $alc)@NOEOLAFTERTHIS
+</td>
+#end
+
+##
+## end the table
+##
+</tr>
+</table>@NOEOLAFTERTHIS
+
+##
+## end the form
+##
+#if (!($isAboveResults))
+$srb.getFormEndHTML()@NOEOLAFTERTHIS
+#end
+
+##
+## print a space
+##
+#if (!($isAboveResults))
+<table summary="" cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+<td>@NOEOLAFTERTHIS
+#icon($spacerIcon 10 10 $alc)@NOEOLAFTERTHIS
+</td>
+</tr>
+</table>@NOEOLAFTERTHIS
+#end
+
+##
+## start the form
+##
+#if ($isAboveResults)
+$srb.getFormStartHTML()@NOEOLAFTERTHIS
+#end
+
+## end of template. keep the empty line after this line.

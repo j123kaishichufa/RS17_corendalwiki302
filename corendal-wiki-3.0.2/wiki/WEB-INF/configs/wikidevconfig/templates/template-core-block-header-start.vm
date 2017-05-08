@@ -1,0 +1,185 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($clrm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultColorManager"))
+#set ($icnm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultIconManager"))
+#set ($lclm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultLocaleManager"))
+#set ($cfgm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultConfigManager"))
+
+##
+## get the writers used in this template
+##
+#set ($pws = $alc.getWriterSet())
+#set ($bw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultBlockWriter"))
+
+##
+## get the location of the images folder
+##
+#set ($prop =  $cfgm.getStandardPropertySet())
+#set ($imagesFolder = $prop.getImagesFolder())
+
+##
+## get the current locale
+##
+#set ($currentLocale = $lclm.getPrimaryStandardLocale())
+
+##
+## get the icons to be used
+##
+#set ($spacerIcon = $icnm.getSpacerStandardIcon())
+
+#set ($currentDirection = $currentLocale.getDirection())
+#if ($currentDirection.equals("LTR"))
+#set ($whiteTabSelectedFirstIcon = $icnm.getWhiteTabSelectedFirstLTRStandardIcon())
+#set ($whiteTabFirstIcon = $icnm.getWhiteTabFirstLTRStandardIcon())
+#set ($whiteTabSelectedLeftIcon = $icnm.getWhiteTabSelectedLeftLTRStandardIcon())
+#set ($whiteTabSelectedRightIcon = $icnm.getWhiteTabSelectedRightLTRStandardIcon())
+#set ($whiteTabRightIcon = $icnm.getWhiteTabRightLTRStandardIcon())
+#set ($whiteTabSelectedlastIcon = $icnm.getWhiteTabSelectedLastLTRStandardIcon())        
+#set ($whiteTabLastIcon = $icnm.getWhiteTabLastLTRStandardIcon())
+#else
+#set ($whiteTabSelectedFirstIcon = $icnm.getWhiteTabSelectedFirstRTLStandardIcon())
+#set ($whiteTabFirstIcon = $icnm.getWhiteTabFirstRTLStandardIcon())
+#set ($whiteTabSelectedLeftIcon = $icnm.getWhiteTabSelectedLeftRTLStandardIcon())
+#set ($whiteTabSelectedRightIcon = $icnm.getWhiteTabSelectedRightRTLStandardIcon())
+#set ($whiteTabRightIcon = $icnm.getWhiteTabRightLTRStandardIcon())
+#set ($whiteTabSelectedlastIcon = $icnm.getWhiteTabSelectedLastRTLStandardIcon())
+#set ($whiteTabLastIcon = $icnm.getWhiteTabLastRTLStandardIcon())
+#end
+#set ($whiteTabMiddleTopIcon = $icnm.getWhiteTabMiddleTopStandardIcon())
+#set ($whiteTabSelectedMiddleTopIcon = $icnm.getWhiteTabSelectedMiddleTopStandardIcon())
+
+##
+## get the background colors to be used
+##
+#set ($tabColor = $clrm.getTabStandardColor())
+
+
+#set ($sbBlockSetSize = $sb.getBlocksSetSize())
+#set ($sbBlockSetSizeMinusOne = $sbBlockSetSize - 1)
+#set ($sbBlockSetSizeMinusTwo = $sbBlockSetSize - 2)
+
+
+##
+## print the header
+##
+#if ($sbBlockSetSize > 1)
+#if ($sb.getIsBlockSetVisible())
+
+##
+## start the table
+##
+<table summary="" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr bgcolor="$tabColor.getColor()">
+<td height="100%">@NOEOLAFTERTHIS
+<table summary="" border="0" cellpadding="0" cellspacing="0">
+<tr>
+
+##
+## print the first line
+##
+#foreach ($i in [0..$sbBlockSetSizeMinusTwo])
+<td rowspan="3">@NOEOLAFTERTHIS
+#if ($i == 0)
+#if ($sb.getCurrentOrderInBlockSet() == 0)
+#icon ($whiteTabSelectedFirstIcon $whiteTabSelectedFirstIcon.getWidth() $whiteTabSelectedFirstIcon.getHeight() $alc)@NOEOLAFTERTHIS
+#else
+#icon ($whiteTabFirstIcon $whiteTabFirstIcon.getWidth() $whiteTabFirstIcon.getHeight() $alc)@NOEOLAFTERTHIS
+#end
+#else
+#if ($sb.getCurrentOrderInBlockSet() == $i)
+#icon ($whiteTabSelectedLeftIcon $whiteTabSelectedLeftIcon.getWidth() $whiteTabSelectedLeftIcon.getHeight() $alc)@NOEOLAFTERTHIS
+#else
+#set ($iMinusOne = $i - 1)
+#if ($sb.getCurrentOrderInBlockSet() == ($iMinusOne))
+#icon($whiteTabSelectedRightIcon $whiteTabSelectedRightIcon.getWidth() $whiteTabSelectedRightIcon.getHeight() $alc)@NOEOLAFTERTHIS
+#else
+#icon($whiteTabRightIcon $whiteTabRightIcon.getWidth() $whiteTabRightIcon.getHeight() $alc)@NOEOLAFTERTHIS
+#end
+#end
+#end
+
+</td>
+<td valign="top">@NOEOLAFTERTHIS
+
+#if ($sb.getCurrentOrderInBlockSet() == $i)
+#iconmaxwidth($whiteTabSelectedMiddleTopIcon $whiteTabSelectedMiddleTopIcon.getHeight() $alc)@NOEOLAFTERTHIS
+#else
+#iconmaxwidth($whiteTabMiddleTopIcon $whiteTabMiddleTopIcon.getHeight() $alc)@NOEOLAFTERTHIS
+#end
+
+</td>
+#end
+
+<td rowspan="3">@NOEOLAFTERTHIS
+#if ($sb.getCurrentOrderInBlockSet() == $sbBlockSetSizeMinusOne)
+#icon($whiteTabSelectedLeftIcon $whiteTabSelectedLeftIcon.getWidth() $whiteTabSelectedLeftIcon.getHeight() $alc)@NOEOLAFTERTHIS
+#else
+#if ($sb.getCurrentOrderInBlockSet() == $sbBlockSetSizeMinusTwo)
+#icon($whiteTabSelectedRightIcon $whiteTabSelectedRightIcon.getWidth() $whiteTabSelectedRightIcon.getHeight() $alc)@NOEOLAFTERTHIS
+#else
+#icon($whiteTabRightIcon $whiteTabRightIcon.getWidth() $whiteTabRightIcon.getHeight() $alc)@NOEOLAFTERTHIS
+#end
+#end
+
+</td>
+<td valign="top">@NOEOLAFTERTHIS
+
+#if ($sb.getCurrentOrderInBlockSet() == $sbBlockSetSizeMinusOne)
+#iconmaxwidth($whiteTabSelectedMiddleTopIcon $whiteTabSelectedMiddleTopIcon.getHeight() $alc)@NOEOLAFTERTHIS
+</td>
+<td rowspan="3">@NOEOLAFTERTHIS
+#icon($whiteTabSelectedlastIcon $whiteTabSelectedlastIcon.getWidth() $whiteTabSelectedlastIcon.getHeight() $alc)@NOEOLAFTERTHIS
+#else
+#iconmaxwidth($whiteTabMiddleTopIcon $whiteTabMiddleTopIcon.getHeight() $alc)@NOEOLAFTERTHIS
+</td>
+<td rowspan="3">@NOEOLAFTERTHIS
+#icon($whiteTabLastIcon $whiteTabLastIcon.getWidth() $whiteTabLastIcon.getHeight() $alc)@NOEOLAFTERTHIS
+#end
+
+</td>
+
+<td width="1">@NOEOLAFTERTHIS
+#icon($spacerIcon 1 1 $alc)@NOEOLAFTERTHIS
+</td>
+
+<td width="1">@NOEOLAFTERTHIS
+#icon($spacerIcon 1 1 $alc)@NOEOLAFTERTHIS
+</td>
+</tr>
+
+##
+## start the second line
+##
+<tr>
+#end
+#else
+##
+## start the table
+##
+<table summary="" width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+#end
+
+#set ($sbType = $sb.getType())
+#if ($sbType.equals("SMALL"))
+<td width="100%">
+<table summary="" width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>@NOEOLAFTERTHIS
+<img src="$imagesFolder/framework/spacer.png" height="7" width="11" alt="" />@NOEOLAFTERTHIS
+</td>
+<td width="100%">@NOEOLAFTERTHIS
+<img src="$imagesFolder/framework/spacer.png" height="7" width="100%" alt="" />@NOEOLAFTERTHIS
+</td>
+<td>@NOEOLAFTERTHIS
+<img src="$imagesFolder/framework/spacer.png" height="7" width="11" alt="" />@NOEOLAFTERTHIS
+</td>
+</tr>
+<tr>
+<td width="11" height="100%">@NOEOLAFTERTHIS
+<img src="$imagesFolder/framework/spacer.png" height="100%" width="11" alt="" />@NOEOLAFTERTHIS
+</td>
+#end
+## end of template. keep the empty line after this line.

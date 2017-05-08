@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Version: $Id: Team.xml,v 1.1 2006/10/21 00:15:00 tdanard Exp $ -->
+<xmlsource-mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="../../../../../schemas/xmlsourcemapping.xsd"
+	package="com.corendal.netapps.framework.core.readdatahandlers">
+	<class name="DefaultTeamLoadHandler" collection="teams"
+		entity="team">
+		<id attribute="id" name="Id" type="string" />
+
+	</class>
+	<query
+		name="com.corendal.netapps.framework.core.readdatabeans.AbstractTeam.findByEnabledFlag">
+		<![CDATA[for $result in /teams/team[@enabled-flag =
+		:enabledFlag] order by $result/@search-order return $result]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.readdatabeans.AbstractTeam.findEnabledBySearchFlag">
+		<![CDATA[for $result in /teams/team[@enabled-flag ="Y" and @search-flag = :searchFlag]
+		order by $result/@search-order return $result]]>
+	</query>
+</xmlsource-mapping>

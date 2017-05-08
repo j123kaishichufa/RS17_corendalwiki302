@@ -1,0 +1,43 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($icnm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultIconManager"))
+
+##
+## get the icons used in this template
+##
+#set ($spacerIcon = $icnm.getSpacerStandardIcon())
+
+##
+## get the legend
+##
+#set ($legend = $sfb.getLegend($canvasType))
+
+##
+## print the fieldset
+##
+#if ($legend)
+<fieldset>
+
+
+##
+## print the legend
+##
+#if (!($legend.equals("")))
+<legend>$legend</legend>
+#end
+
+##
+## print a space
+##
+<table summary="" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>@NOEOLAFTERTHIS
+#icon ($spacerIcon 5 5 $alc)@NOEOLAFTERTHIS
+</td>
+</tr>
+</table>
+
+#end
+## end of template. keep the empty line after this line.

@@ -1,0 +1,26 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($icnm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultIconManager"))
+#set ($msgm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultMessageManager"))
+
+##
+## get the icons used in this template
+##
+#set ($printIcon = $icnm.getPrintStandardIcon())
+
+##
+## get the messages used in this template
+##
+#set ($printMessage = $msgm.getPrintStandardMessage())
+
+##
+## print the double link
+##
+<a href="javascript:print()">
+#icon ($printIcon $printIcon.getWidth() $printIcon.getHeight() $alc)
+</a>
+&nbsp;
+<a href="javascript:print()">$printMessage.getMessageHTML()</a>
+## end of template. keep the empty line after this line.

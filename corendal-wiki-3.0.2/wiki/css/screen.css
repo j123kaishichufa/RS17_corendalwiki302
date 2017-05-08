@@ -1,0 +1,134 @@
+.regular {BACKGROUND-COLOR: transparent; TEXT-DECORATION: none; FONT-SIZE: 70%; COLOR: #000000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.regular a:link{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-SIZE: 100%; COLOR: #4E335A; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.regular a:visited{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-SIZE: 100%; COLOR: #4E335A; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.regular a:hover{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-SIZE: 100%; COLOR: #CC0000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.portallink {CURSOR: help; BACKGROUND-COLOR: transparent; TEXT-DECORATION: none; FONT-SIZE: 70%; COLOR: #FFFFFF; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.portallink a:link{BACKGROUND-COLOR: transparent; TEXT-DECORATION: none; FONT-WEIGHT: bold; FONT-SIZE: 100%; COLOR: #FFFFFF; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.portallink a:visited{BACKGROUND-COLOR: transparent; TEXT-DECORATION: none; FONT-WEIGHT: bold; FONT-SIZE: 100%; COLOR: #FFFFFF; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.portallink a:hover{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-WEIGHT: bold; FONT-SIZE: 100%; COLOR: #CC0000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.searchfield {BACKGROUND-COLOR: #EEEEEE; FONT-SIZE: 70%; COLOR: #333333; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; BORDER: 1px solid}
+.searchbutton {CURSOR: help; BACKGROUND-COLOR: #9475A2; FONT-WEIGHT: bold; FONT-SIZE: 70%; COLOR: #FFFFFF; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; BORDER: 1px OUTSET #DDDDDD}
+.printableapplicationname {BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-WEIGHT: bold; FONT-SIZE: 70%; COLOR: #333333; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.numentitiesfound {CURSOR: help; BACKGROUND-COLOR: transparent; FONT-WEIGHT: bold; FONT-SIZE: 70%; COLOR: #000000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.entryfield {BACKGROUND-COLOR: #EEEEEE; FONT-SIZE: 70%; COLOR: #333333; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; BORDER: 1px solid}
+.entrybutton {CURSOR: help; BACKGROUND-COLOR: #9475A2; FONT-WEIGHT: bold; FONT-SIZE: 70%; COLOR: #FFFFFF; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; BORDER: 1px OUTSET #DDDDDD}
+.entrylabel {CURSOR: help; BACKGROUND-COLOR: transparent; FONT-WEIGHT: bold; FONT-SIZE: 70%; LINE-HEIGHT: 16px; COLOR: #000000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.entrylabel a:link{BACKGROUND-COLOR: transparent; FONT-WEIGHT: bold; FONT-SIZE: 100%; LINE-HEIGHT: 16px; COLOR: #000000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.entrylabel a:visited{BACKGROUND-COLOR: transparent; FONT-WEIGHT: bold; FONT-SIZE: 100%; LINE-HEIGHT: 16px; COLOR: #000000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.entrylabel a:hover{BACKGROUND-COLOR: transparent; FONT-WEIGHT: bold; FONT-SIZE: 100%; LINE-HEIGHT: 16px; COLOR: #CC0000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.signinlink {CURSOR: help; BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-WEIGHT: bold; FONT-SIZE: 70%; COLOR: #FFFFFF; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.signinlink a:link{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-WEIGHT: bold; FONT-SIZE: 100%; COLOR: #FFFFFF; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.signinlink a:visited{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-WEIGHT: bold; FONT-SIZE: 100%; COLOR: #FFFFFF; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.signinlink a:hover{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-WEIGHT: bold; FONT-SIZE: 100%; COLOR: #CC0000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.pagedescription {BACKGROUND-COLOR: transparent; FONT-SIZE: 70%; COLOR: #FFFFFF; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.activeentryformblocktitle {CURSOR: help; BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-WEIGHT: bold; FONT-SIZE: 70%; COLOR: #4E335A; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.activeentryformblocktitle a:link{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-WEIGHT: bold; FONT-SIZE: 100%; COLOR: #4E335A; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.activeentryformblocktitle a:visited{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-WEIGHT: bold; FONT-SIZE: 100%; COLOR: #4E335A; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.activeentryformblocktitle a:hover{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-WEIGHT: bold; FONT-SIZE: 100%; COLOR: #4E335A; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.message {BACKGROUND-COLOR: transparent; FONT-SIZE: 70%; COLOR: #333333; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.message a:link{BACKGROUND-COLOR: transparent; FONT-SIZE: 100%; COLOR: #000000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.message a:visited{BACKGROUND-COLOR: transparent; FONT-SIZE: 100%; COLOR: #000000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.message a:hover{BACKGROUND-COLOR: transparent; FONT-SIZE: 100%; COLOR: #000000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.displayonlyfield {BACKGROUND-COLOR: transparent; FONT-SIZE: 70%; COLOR: #333333; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.displayonlyfield a:link{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-SIZE: 100%; COLOR: #000000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.displayonlyfield a:visited{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-SIZE: 100%; COLOR: #000000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.displayonlyfield a:hover{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-SIZE: 100%; COLOR: #CC0000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.applicationname {BACKGROUND-COLOR: transparent; FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #FFFFFF; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.languageselect {BACKGROUND-COLOR: #000000; FONT-SIZE: 70%; COLOR: #FFFFFF; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.searchsitefield {BACKGROUND-COLOR: #EEEEEE; FONT-SIZE: 70%; COLOR: #333333; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.inactiveentryformblocktitle {CURSOR: help; BACKGROUND-COLOR: transparent; TEXT-DECORATION: none; FONT-WEIGHT: bold; FONT-SIZE: 70%; COLOR: #4E335A; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.inactiveentryformblocktitle a:link{BACKGROUND-COLOR: transparent; TEXT-DECORATION: none; FONT-WEIGHT: bold; FONT-SIZE: 100%; COLOR: #4E335A; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.inactiveentryformblocktitle a:visited{BACKGROUND-COLOR: transparent; TEXT-DECORATION: none; FONT-WEIGHT: bold; FONT-SIZE: 100%; COLOR: #4E335A; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.inactiveentryformblocktitle a:hover{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-WEIGHT: bold; FONT-SIZE: 100%; COLOR: #4E335A; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.sideblocktitle {CURSOR: help; BACKGROUND-COLOR: transparent; TEXT-DECORATION: none; FONT-WEIGHT: bold; FONT-SIZE: 70%; COLOR: #333333; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.columntitle {CURSOR: help; BACKGROUND-COLOR: transparent; TEXT-DECORATION: none; FONT-WEIGHT: bold; FONT-SIZE: 70%; COLOR: #111111; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.columntitle a:link{BACKGROUND-COLOR: transparent; TEXT-DECORATION: none; FONT-WEIGHT: bold; FONT-SIZE: 100%; COLOR: #111111; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.columntitle a:visited{BACKGROUND-COLOR: transparent; TEXT-DECORATION: none; FONT-WEIGHT: bold; FONT-SIZE: 100%; COLOR: #111111; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.columntitle a:hover{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-WEIGHT: bold; FONT-SIZE: 100%; COLOR: #111111; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.searchformbody {BACKGROUND-COLOR: transparent; FONT-SIZE: 70%; COLOR: #333333; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.searchformbody a:link{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-SIZE: 100%; COLOR: #000000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.searchformbody a:visited{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-SIZE: 100%; COLOR: #000000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.searchformbody a:hover{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-SIZE: 100%; COLOR: #CC0000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.inactivesearchformblocktitle {CURSOR: help; BACKGROUND-COLOR: transparent; TEXT-DECORATION: none; FONT-WEIGHT: bold; FONT-SIZE: 70%; COLOR: #4E335A; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.inactivesearchformblocktitle a:link{BACKGROUND-COLOR: transparent; TEXT-DECORATION: none; FONT-WEIGHT: bold; FONT-SIZE: 100%; COLOR: #4E335A; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.inactivesearchformblocktitle a:visited{BACKGROUND-COLOR: transparent; TEXT-DECORATION: none; FONT-WEIGHT: bold; FONT-SIZE: 100%; COLOR: #4E335A; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.inactivesearchformblocktitle a:hover{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-WEIGHT: bold; FONT-SIZE: 100%; COLOR: #4E335A; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.activesearchformblocktitle {CURSOR: help; BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-WEIGHT: bold; FONT-SIZE: 70%; COLOR: #4E335A; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.activesearchformblocktitle a:link{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-WEIGHT: bold; FONT-SIZE: 100%; COLOR: #4E335A; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.activesearchformblocktitle a:visited{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-WEIGHT: bold; FONT-SIZE: 100%; COLOR: #4E335A; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.activesearchformblocktitle a:hover{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-WEIGHT: bold; FONT-SIZE: 100%; COLOR: #4E335A; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.searchlabel {CURSOR: help; BACKGROUND-COLOR: transparent; FONT-WEIGHT: bold; FONT-SIZE: 70%; LINE-HEIGHT: 16px; COLOR: #000000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.searchlabel a:link{BACKGROUND-COLOR: transparent; FONT-WEIGHT: bold; FONT-SIZE: 100%; LINE-HEIGHT: 16px; COLOR: #000000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.searchlabel a:visited{BACKGROUND-COLOR: transparent; FONT-WEIGHT: bold; FONT-SIZE: 100%; LINE-HEIGHT: 16px; COLOR: #000000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.searchlabel a:hover{BACKGROUND-COLOR: transparent; FONT-WEIGHT: bold; FONT-SIZE: 100%; LINE-HEIGHT: 16px; COLOR: #CC0000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.listing {BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-SIZE: 70%; COLOR: #000000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.listing a:link{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-SIZE: 100%; COLOR: #4E335A; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.listing a:visited{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-SIZE: 100%; COLOR: #4E335A; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.listing a:hover{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-SIZE: 100%; COLOR: #CC0000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.selectedcolumntitle {CURSOR: help; BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-WEIGHT: bold; FONT-SIZE: 70%; COLOR: #111111; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.selectedcolumntitle a:link{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-WEIGHT: bold; FONT-SIZE: 100%; COLOR: #111111; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.selectedcolumntitle a:visited{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-WEIGHT: bold; FONT-SIZE: 100%; COLOR: #111111; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.selectedcolumntitle a:hover{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-WEIGHT: bold; FONT-SIZE: 100%; COLOR: #111111; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.selectedcurrenttabitem {CURSOR: help; BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #333333; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.selectedcurrenttabitem a:link{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #333333; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.selectedcurrenttabitem a:visited{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #333333; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.selectedcurrenttabitem a:hover{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #CC0000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.textvisibleonly {display:none}
+.textvisibleonly a:link{display:none}
+.textvisibleonly a:visited{display:none}
+.textvisibleonly a:hover{display:none}
+.pagetitle {CURSOR: help; BACKGROUND-COLOR: transparent; FONT-WEIGHT: bold; FONT-SIZE: 70%; COLOR: #FFFFFF; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.menuitem {CURSOR: help; BACKGROUND-COLOR: transparent; TEXT-DECORATION: none; FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #000000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.menuitem a:link{BACKGROUND-COLOR: transparent; TEXT-DECORATION: none; FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #000000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.menuitem a:visited{BACKGROUND-COLOR: transparent; TEXT-DECORATION: none; FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #000000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.menuitem a:hover{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #CC0000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.selectedmenuitem {CURSOR: help; BACKGROUND-COLOR: transparent; TEXT-DECORATION: none; FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #000000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.selectedmenuitem a:link{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #000000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.selectedmenuitem a:visited{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #000000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.selectedmenuitem a:hover{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #CC0000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.tabitem {CURSOR: help; BACKGROUND-COLOR: transparent; TEXT-DECORATION: none; FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #666666; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.tabitem a:link{BACKGROUND-COLOR: transparent; TEXT-DECORATION: none; FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #666666; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.tabitem a:visited{BACKGROUND-COLOR: transparent; TEXT-DECORATION: none; FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #666666; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.tabitem a:hover{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #CC0000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.selectedtabitem {CURSOR: help; BACKGROUND-COLOR: transparent; TEXT-DECORATION: none; FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #333333; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.selectedtabitem a:link{BACKGROUND-COLOR: transparent; TEXT-DECORATION: none; FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #333333; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.selectedtabitem a:visited{BACKGROUND-COLOR: transparent; TEXT-DECORATION: none; FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #333333; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.selectedtabitem a:hover{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #CC0000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.blocktitle {CURSOR: help; BACKGROUND-COLOR: transparent; TEXT-DECORATION: none; FONT-WEIGHT: bold; FONT-SIZE: 80%; COLOR: #4E335A; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.departmentname {BACKGROUND-COLOR: transparent; TEXT-DECORATION: none; FONT-SIZE: 70%; COLOR: #000000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.departmentname a:link{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-SIZE: 100%; COLOR: #043F35; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.departmentname a:visited{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-SIZE: 100%; COLOR: #043F35; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.departmentname a:hover{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-SIZE: 100%; COLOR: #CC0000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.departmentdescription {BACKGROUND-COLOR: transparent; TEXT-DECORATION: none; FONT-SIZE: 70%; COLOR: #000000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.departmentdescription a:link{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-SIZE: 100%; COLOR: #043F35; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.departmentdescription a:visited{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-SIZE: 100%; COLOR: #043F35; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.departmentdescription a:hover{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-SIZE: 100%; COLOR: #CC0000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.accountname {BACKGROUND-COLOR: transparent; TEXT-DECORATION: none; FONT-SIZE: 70%; COLOR: #000000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.accountname a:link{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-SIZE: 100%; COLOR: #4E335A; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.accountname a:visited{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-SIZE: 100%; COLOR: #4E335A; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.accountname a:hover{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-SIZE: 100%; COLOR: #CC0000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.accountdescription {BACKGROUND-COLOR: transparent; TEXT-DECORATION: none; FONT-SIZE: 70%; COLOR: #000000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.accountdescription a:link{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-SIZE: 100%; COLOR: #4E335A; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.accountdescription a:visited{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-SIZE: 100%; COLOR: #4E335A; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.accountdescription a:hover{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-SIZE: 100%; COLOR: #CC0000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.groupname {BACKGROUND-COLOR: transparent; TEXT-DECORATION: none; FONT-SIZE: 70%; COLOR: #000000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.groupname a:link{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-SIZE: 100%; COLOR: #4E335A; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.groupname a:visited{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-SIZE: 100%; COLOR: #4E335A; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.groupname a:hover{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-SIZE: 100%; COLOR: #CC0000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.groupdescription {BACKGROUND-COLOR: transparent; TEXT-DECORATION: none; FONT-SIZE: 70%; COLOR: #000000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.groupdescription a:link{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-SIZE: 100%; COLOR: #4E335A; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.groupdescription a:visited{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-SIZE: 100%; COLOR: #4E335A; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.groupdescription a:hover{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-SIZE: 100%; COLOR: #CC0000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.contentpath {BACKGROUND-COLOR: transparent; TEXT-DECORATION: none; FONT-SIZE: 70%; COLOR: #000000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.contentpath a:link{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-SIZE: 100%; COLOR: #4E335A; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.contentpath a:visited{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-SIZE: 100%; COLOR: #4E335A; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.contentpath a:hover{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-SIZE: 100%; COLOR: #CC0000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.contentdescription {BACKGROUND-COLOR: transparent; TEXT-DECORATION: none; FONT-SIZE: 70%; COLOR: #000000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.contentdescription a:link{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-SIZE: 100%; COLOR: #4E335A; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.contentdescription a:visited{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-SIZE: 100%; COLOR: #4E335A; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.contentdescription a:hover{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-SIZE: 100%; COLOR: #CC0000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.contenttitle {BACKGROUND-COLOR: transparent; FONT-WEIGHT: bold; TEXT-DECORATION: none; COLOR: #000000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.contentbody {BACKGROUND-COLOR: transparent; TEXT-DECORATION: none; FONT-SIZE: 70%; LINE-HEIGHT: 140%; COLOR: #000000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.contentbody a:link{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-SIZE: 100%; COLOR: #4E335A; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.contentbody a:visited{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-SIZE: 100%; COLOR: #4E335A; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.contentbody a:hover{BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline; FONT-SIZE: 100%; COLOR: #CC0000; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif}

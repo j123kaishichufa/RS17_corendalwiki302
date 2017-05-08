@@ -1,0 +1,131 @@
+##
+## consider a blank link title as null
+##
+#set ($modifiedLinkTitleEncoded = $linkTitleEncoded)
+#if ($linkTitleEncoded)
+#if ($linkTitleEncoded == "")
+#set ($modifiedLinkTitleEncoded = false)
+#end
+#end
+
+##
+## do not display a link when location is current
+##
+#set ($isCurrent = false)
+#if ($relativeLocation)
+#if ($relativeLocation == $defaultLocation)
+#set ($isCurrent = true)
+#end
+#end
+
+#if ($absoluteLocation)
+#if ($absoluteLocation == $defaultLocation)
+#set ($isCurrent = true)
+#end
+#end
+
+##
+## display the link
+##
+#if ($encodedLocation) 
+#if ($target) 
+#if ($onClick) 
+#if ($accessKeyEncoded) 
+#if ($modifiedLinkTitleEncoded)
+#if (!($target == "_blank"))
+<strong><a href="$encodedLocation" target="$target" onclick="$onClick" onkeypress="if (event.keyCode != 9) {$onClick}" accesskey="$accessKeyEncoded" title="$modifiedLinkTitleEncoded">$linkNameHTML</a></strong>@NOEOLAFTERTHIS
+#else
+<em><strong><a href="$encodedLocation" target="$target" onclick="$onClick" onkeypress="if (event.keyCode != 9) {$onClick}" accesskey="$accessKeyEncoded" title="$modifiedLinkTitleEncoded">$linkNameHTML</a></strong></em>@NOEOLAFTERTHIS
+#end
+#else
+#if (!($target == "_blank"))
+<strong><a href="$encodedLocation " target="$target" onclick="$onClick" onkeypress="if (event.keyCode != 9) {$onClick}" accesskey="$accessKeyEncoded">$linkNameHTML</a>@NOEOLAFTERTHIS
+#else
+<em><strong><a href="$encodedLocation " target="$target" onclick="$onClick" onkeypress="if (event.keyCode != 9) {$onClick}" accesskey="$accessKeyEncoded">$linkNameHTML</a></em>@NOEOLAFTERTHIS
+#end
+#end
+#else
+#if ($modifiedLinkTitleEncoded)
+#if (!($target == "_blank"))
+<strong><a href="$encodedLocation " target="$target" onclick="$onClick" onkeypress="if (event.keyCode != 9) {$onClick}" title="$modifiedLinkTitleEncoded">$linkNameHTML</a></strong>@NOEOLAFTERTHIS
+#else
+<em><strong><a href="$encodedLocation " target="$target" onclick="$onClick" onkeypress="if (event.keyCode != 9) {$onClick}" title="$modifiedLinkTitleEncoded">$linkNameHTML</a></strong></em>@NOEOLAFTERTHIS
+#end
+#else
+#if (!($target == "_blank"))
+<a href="$encodedLocation" target="$target" onclick="$onClick" onkeypress="if (event.keyCode != 9) {$onClick}">$linkNameHTML</a>@NOEOLAFTERTHIS
+#else
+<em><a href="$encodedLocation" target="$target" onclick="$onClick" onkeypress="if (event.keyCode != 9) {$onClick}">$linkNameHTML</a></em>@NOEOLAFTERTHIS
+#end
+#end
+#end
+#else
+#if ($accessKeyEncoded) 
+#if ($modifiedLinkTitleEncoded)
+#if (!($target == "_blank"))
+<strong><a href="$encodedLocation " target="$target" accesskey="$accessKeyEncoded " title="$modifiedLinkTitleEncoded ">$linkNameHTML</a></strong>@NOEOLAFTERTHIS
+#else
+<em><strong><a href="$encodedLocation " target="$target" accesskey="$accessKeyEncoded " title="$modifiedLinkTitleEncoded ">$linkNameHTML</a></strong></em>@NOEOLAFTERTHIS
+#end
+#else
+#if (!($target == "_blank"))
+<a href="$encodedLocation" target="$target" accesskey="$accessKeyEncoded">$linkNameHTML</a>@NOEOLAFTERTHIS
+#else
+<em><a href="$encodedLocation" target="$target" accesskey="$accessKeyEncoded">$linkNameHTML</a></em>@NOEOLAFTERTHIS
+#end
+#end
+#else
+#if ($modifiedLinkTitleEncoded)
+#if (!($target == "_blank")) 
+<strong><a href="$encodedLocation " target="$target" title="$modifiedLinkTitleEncoded">$linkNameHTML</a></strong>@NOEOLAFTERTHIS
+#else
+<em><strong><a href="$encodedLocation " target="$target" title="$modifiedLinkTitleEncoded">$linkNameHTML</a></strong></em>@NOEOLAFTERTHIS
+#end
+#else
+#if (!($target == "_blank")) 
+<a href="$encodedLocation" target="$target">$linkNameHTML</a>@NOEOLAFTERTHIS
+#else
+<em><a href="$encodedLocation" target="$target">$linkNameHTML</a></em>@NOEOLAFTERTHIS
+#end
+#end
+#end
+#end
+#else
+#if ($onClick) 
+#if ($accessKeyEncoded) 
+#if ($modifiedLinkTitleEncoded) 
+<strong><a href="$encodedLocation" onclick="$onClick" onkeypress="if (event.keyCode != 9) {$onClick}" accesskey="$accessKeyEncoded" title="$modifiedLinkTitleEncoded">$linkNameHTML</a></strong>@NOEOLAFTERTHIS
+#else
+<a href="$encodedLocation" onclick="$onClick" onkeypress="if (event.keyCode != 9) {$onClick}" accesskey="$accessKeyEncoded">$linkNameHTML</a>@NOEOLAFTERTHIS
+#end
+#else
+#if ($modifiedLinkTitleEncoded) 
+<strong><a href="$encodedLocation" onclick="$onClick" onkeypress="if (event.keyCode != 9) {$onClick}" title="$modifiedLinkTitleEncoded">$linkNameHTML</a></strong>@NOEOLAFTERTHIS
+#else
+<a href="$encodedLocation" onclick="$onClick" onkeypress="if (event.keyCode != 9) {$onClick}"> $linkNameHTML </a>@NOEOLAFTERTHIS
+#end
+#end
+#else
+#if ($accessKeyEncoded) 
+#if ($modifiedLinkTitleEncoded) 
+<strong><a href="$encodedLocation" accesskey="$accessKeyEncoded" title="$modifiedLinkTitleEncoded">$linkNameHTML</a></strong>@NOEOLAFTERTHIS
+#else
+<a href="$encodedLocation" accesskey="$accessKeyEncoded">$linkNameHTML</a>@NOEOLAFTERTHIS
+#end
+#else
+#if ($modifiedLinkTitleEncoded) 
+<strong><a href="$encodedLocation" title="$modifiedLinkTitleEncoded">$linkNameHTML</a></strong>@NOEOLAFTERTHIS
+#else
+<a href="$encodedLocation">$linkNameHTML</a>@NOEOLAFTERTHIS
+#end
+#end
+#end
+#end
+#else
+#if ($modifiedLinkTitleEncoded) 
+<strong><span title="$modifiedLinkTitleEncoded">$linkNameHTML</span></strong>@NOEOLAFTERTHIS
+#else
+$linkNameHTML
+#end
+#end
+## end of template. keep the empty line after this line.

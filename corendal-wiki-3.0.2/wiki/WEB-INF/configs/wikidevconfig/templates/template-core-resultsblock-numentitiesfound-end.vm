@@ -1,0 +1,16 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($stlm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultStyleManager"))
+
+##
+## get the styles used in this template
+##
+#set ($regularTextStyle = $stlm.getRegularTextStandardStyle())
+
+##
+## print the span
+##
+</span><span class="$regularTextStyle.getName()">
+## end of template. keep the empty line after this line.

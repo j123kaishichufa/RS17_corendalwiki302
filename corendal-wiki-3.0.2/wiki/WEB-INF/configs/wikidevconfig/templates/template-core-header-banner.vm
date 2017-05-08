@@ -1,0 +1,62 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($rm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultRequestManager"))
+#set ($stlm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultStyleManager"))
+#set ($lclm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultLocaleManager"))
+#set ($clrm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultColorManager"))
+#set ($icnm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultIconManager"))
+
+##
+## get the icons used in this template
+##
+#set ($spacerIcon = $icnm.getSpacerStandardIcon())
+
+##
+## get the colors used in this template
+##
+#set ($pageInfoColor = $clrm.getPageInfoStandardColor())
+
+##
+## get the styles used in this template
+##
+#set ($pageTitleStyle = $stlm.getPageTitleStandardStyle())
+#set ($pageDescriptionStyle = $stlm.getPageDescriptionStandardStyle())
+
+##
+## get the current page
+##
+#set ($page = $rm.getStandardPage())
+
+##
+## get the current locale
+##
+#set ($currentLocale = $lclm.getPrimaryStandardLocale())
+
+
+
+##
+## print the banner
+##
+#if ($page)
+#set ($nameHTML = $page.getNameHTML())
+
+#if ($nameHTML)
+#set ($shortDescriptionEncoded = $page.getCurrentShortDescriptionEncoded())
+#set ($longDescriptionHTML = $page.getCurrentLongDescriptionHTML())
+
+<table summary="" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="$currentLocale.getRightAlign()" bgcolor="$pageInfoColor.getColor()">@NOEOLAFTERTHIS
+<span title="$shortDescriptionEncoded" class="$pageTitleStyle.getName()">$nameHTML: </span><span class="$pageDescriptionStyle.getName()">$longDescriptionHTML.</span>@NOEOLAFTERTHIS
+</td>
+<td>@NOEOLAFTERTHIS
+#icon($spacerIcon 3 45 $alc)@NOEOLAFTERTHIS
+</td>
+</tr>
+</table>@NOEOLAFTERTHIS
+
+#end
+#end
+## end of template. keep the empty line after this line.

@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Version: $Id: ContentSubscription.hbm.xml,v 1.2 2007/04/06 15:48:41 tdanard Exp $ -->
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.corendal.netapps.wiki.writedatamappings">
+	<class name="DefaultContentSubscriptionMapping"
+		table="content_subscript">
+		<id column="id" name="Id" type="string" />
+
+		<property column="content_id" length="36" name="ContentId"
+			not-null="true" type="string" />
+		<property column="content_subscript_typ_id" length="36"
+			name="ContentSubscriptionTypeId" not-null="true" type="string" />
+		<property column="content_subscript_mod_id" length="36"
+			name="ContentSubscriptionModeId" not-null="true" type="string" />
+		<property column="ord" length="11" name="Order" not-null="true"
+			type="integer" />
+		<property column="enabled_flag" length="1" name="EnabledFlag"
+			not-null="true" type="string" />
+	</class>
+	<query
+		name="com.corendal.netapps.wiki.writedatabeans.AbstractContentSubscription.findEnabledByContentPrimaryKey">
+		<![CDATA[
+    from DefaultContentSubscriptionMapping
+    where ContentId = :contentId
+    and EnabledFlag = :enabledFlag
+    order by Order asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.wiki.writedatabeans.AbstractContentSubscription.findEnabledByContentAndTypePrimaryKeys">
+		<![CDATA[
+    from DefaultContentSubscriptionMapping
+    where ContentId = :contentId
+    and ContentSubscriptionTypeId = :contentSubscriptionTypeId
+    and EnabledFlag = :enabledFlag
+    order by Order asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.wiki.writedatabeans.AbstractContentSubscription.findEnabledByTypePrimaryKey">
+		<![CDATA[
+    from DefaultContentSubscriptionMapping
+    where ContentSubscriptionTypeId = :contentSubscriptionTypeId
+    and EnabledFlag = :enabledFlag
+    order by Order asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.wiki.writedatabeans.AbstractContentSubscription.findEnabledByModePrimaryKey">
+		<![CDATA[
+    from DefaultContentSubscriptionMapping
+    where ContentSubscriptionModeId = :contentSubscriptionModeId
+    and EnabledFlag = :enabledFlag
+    order by Order asc
+]]>
+	</query>
+</hibernate-mapping>

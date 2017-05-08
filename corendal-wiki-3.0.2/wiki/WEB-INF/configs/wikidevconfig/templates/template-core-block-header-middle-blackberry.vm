@@ -1,0 +1,74 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($stlm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultStyleManager"))
+#set ($rm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultRequestManager"))
+#set ($cfgm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultConfigManager"))
+
+##
+## get the writers used in this template
+##
+#set ($pws = $alc.getWriterSet())
+#set ($pw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultPageWriter"))
+#set ($lw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultLinkWriter"))
+
+##
+## get the location of the images folder
+##
+#set ($prop =  $cfgm.getStandardPropertySet())
+#set ($imagesFolder = $prop.getImagesFolder())
+
+##
+## get the styles used in this template
+##
+#set ($largeBlockTitleStyle = $stlm.getLargeBlockTitleStandardStyle())
+#set ($smallBlockTitleStyle = $stlm.getSmallBlockTitleStandardStyle())
+#set ($sbBlockTitleActiveStyle = $sb.getBlockTitleActiveStyle())
+#set ($sbBlockTitleInactiveStyle = $sb.getBlockTitleInactiveStyle())
+
+##
+## print the block
+##
+
+#set ($sbBlockSetSize = $sb.getBlocksSetSize())
+#if ($sbBlockSetSize > 1)
+#if ($sb.getIsBlockSetVisible())
+##
+## print the block title
+##
+#if (!($rm.getIsPrintableMode()))
+##
+## there are several blocks in the same blocks set, let's
+## print the title as a link
+##
+#if ($sb.getOrderInBlockSet() >= 1)
+&nbsp;|&nbsp;@NOEOLAFTERTHIS
+#end
+#if ($sb.getIsCurrentInBlockSet())
+$lw.getNonBreakableLinkHTML($queryString, $sb.getCurrentShortDescriptionEncoded(), $sb.getCurrentNameHTML(), null)@NOEOLAFTERTHIS
+#else
+$lw.getNonBreakableLinkHTML($queryString, $sb.getCurrentShortDescriptionEncoded(), $sb.getCurrentNameHTML(), null)@NOEOLAFTERTHIS
+#end
+
+#else
+##
+## there is only one block in the same blocks set, let's
+## print the title as text
+##
+<strong><span title="$sb.getCurrentShortDescriptionHTML()">$sb.getNonBreakableCurrentNameHTML()</span></strong>@NOEOLAFTERTHIS
+#end
+#end
+#else
+
+##
+## print the block name (with the page number when applicable)
+##
+#set ($sbType = $sb.getType())
+#if ($sbType.equals("LARGE"))
+<strong><span title="$sb.getCurrentShortDescriptionEncoded()">$sb.getNonBreakableCurrentNameHTML()</span></strong>@NOEOLAFTERTHIS
+#else
+<strong><span title="$sb.getCurrentShortDescriptionEncoded()">$sb.getCurrentNameHTML()</span></strong>@NOEOLAFTERTHIS
+#end
+#end 
+## end of template. keep the empty line after this line.

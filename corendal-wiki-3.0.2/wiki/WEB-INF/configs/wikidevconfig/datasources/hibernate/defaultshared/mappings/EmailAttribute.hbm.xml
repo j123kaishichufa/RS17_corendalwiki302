@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Version: $Id: EmailAttribute.hbm.xml,v 1.7 2007/12/28 01:12:55 tdanard Exp $ -->
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping
+	package="com.corendal.netapps.framework.core.writedatamappings">
+	<class name="DefaultEmailAttributeMapping" table="email_attr">
+		<id column="id" name="Id" type="string" />
+
+		<property column="attr_value" name="AttributeValue"
+			not-null="false" type="string" />
+		<property column="email_id" length="36" name="EmailId"
+			not-null="true" type="string" />
+		<property column="enabled_flag" length="1" name="EnabledFlag"
+			not-null="true" type="string" />
+		<property column="attr_id" length="36" name="AttributeId"
+			not-null="true" type="string" />
+	</class>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractEmail.load">
+		<![CDATA[
+    from DefaultEmailAttributeMapping
+    where AttributeId = :attributeId
+    and EmailId = :emailId
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractEmail.storeSubject">
+		<![CDATA[
+    delete DefaultEmailAttributeMapping
+    where AttributeId = :attributeId
+    and EmailId = :emailId
+]]>
+	</query>
+</hibernate-mapping>

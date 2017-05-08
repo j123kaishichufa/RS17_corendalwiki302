@@ -1,0 +1,28 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($stlm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultStyleManager"))
+
+##
+## get the writers used in this template
+##
+#set ($pws = $alc.getWriterSet())
+#set ($lw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultLinkWriter"))
+
+##
+## get the styles used in this template
+##
+#set ($menuItemStyle = $stlm.getMenuItemStandardStyle())
+#set ($menuSelectedItemStyle = $stlm.getMenuSelectedItemStandardStyle())
+
+##
+## write the menu item
+##
+#if ($isMenuItemSelected)
+<span class="$menuSelectedItemStyle.getName()">$lw.getNonBreakableLinkHTML($smi.getDefaultLocation(), $sp.getCurrentLinkTitleEncoded(), $smi.getNameHTML(), $sp.getAccessKeyEncoded())</span>
+#else
+<span class="$menuItemStyle.getName()">$lw.getNonBreakableLinkHTML($smi.getDefaultLocation(), $sp.getCurrentLinkTitleEncoded(), $smi.getNameHTML(), $sp.getAccessKeyEncoded())</span>
+#end
+
+## end of template. keep the empty line after this line.

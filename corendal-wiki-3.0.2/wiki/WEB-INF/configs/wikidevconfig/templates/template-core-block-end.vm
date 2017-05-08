@@ -1,0 +1,109 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($icnm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultIconManager"))
+#set ($lclm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultLocaleManager"))
+
+##
+## get the writers used in this template
+##
+#set ($pws = $alc.getWriterSet())
+#set ($lw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultLinkWriter"))
+
+
+##
+## get the current locale
+##
+#set ($currentLocale = $lclm.getPrimaryStandardLocale())
+
+##
+## get the icons to be used
+##
+#set ($currentDirection = $currentLocale.getDirection())
+#if ($currentDirection.equals("LTR"))
+#set ($whiteTabTopRightCorner2Icon = $icnm.getWhiteTabTopRightCorner2LTRStandardIcon())
+#set ($whiteTabVerticalRightIcon = $icnm.getWhiteTabVerticalRightLTRStandardIcon())
+#set ($whiteTabBottomLeftCornerIcon = $icnm.getWhiteTabBottomLeftCornerLTRStandardIcon())
+#set ($whiteTabBottomRightCornerIcon = $icnm.getWhiteTabBottomRightCornerLTRStandardIcon())
+#else
+#set ($whiteTabTopRightCorner2Icon = $icnm.getWhiteTabTopRightCorner2RTLStandardIcon())
+#set ($whiteTabVerticalRightIcon = $icnm.getWhiteTabVerticalRightRTLStandardIcon())
+#set ($whiteTabBottomLeftCornerIcon = $icnm.getWhiteTabBottomLeftCornerRTLStandardIcon())
+#set ($whiteTabBottomRightCornerIcon = $icnm.getWhiteTabBottomRightCornerRTLStandardIcon())
+#end
+#set ($whiteTabBottomIcon =  $icnm.getWhiteTabBottomStandardIcon())
+#set ($spacerIcon = $icnm.getSpacerStandardIcon())
+
+##
+## print the block body
+##
+#if ($sb.getIsBlockSetVisible())
+#if ($sb.getBlocksSetSize() > 1)
+##
+## finish the tab border
+##
+</td>
+<td height="100%" valign="top" align="$currentLocale.getRightAlign()" style="background-image: url($whiteTabVerticalRightIcon.getDefaultLocation()); background-repeat: repeat-y; background-position: bottom right;">@NOEOLAFTERTHIS
+#icon ($whiteTabTopRightCorner2Icon $whiteTabTopRightCorner2Icon.getWidth() $whiteTabTopRightCorner2Icon.getHeight() $alc)@NOEOLAFTERTHIS
+#if ($rm.getIsUserAgentCompatibleWithXHTML())
+<br />@NOEOLAFTERTHIS
+#else
+<br>@NOEOLAFTERTHIS
+#end
+
+#iconmaxheight ($whiteTabVerticalRightIcon $whiteTabVerticalRightIcon.getWidth() $alc)@NOEOLAFTERTHIS
+
+</td>
+</tr>
+<tr>
+<td>@NOEOLAFTERTHIS
+#icon($whiteTabBottomLeftCornerIcon $whiteTabBottomLeftCornerIcon.getWidth() $whiteTabBottomLeftCornerIcon.getHeight() $alc)@NOEOLAFTERTHIS
+</td>
+
+#set ($colspan = ($sb.getBlocksSetSize() * 2) + 1)
+<td colspan="$colspan" valign="bottom">@NOEOLAFTERTHIS
+#iconmaxwidth($whiteTabBottomIcon $whiteTabBottomIcon.getHeight() $alc)@NOEOLAFTERTHIS
+</td>
+<td>@NOEOLAFTERTHIS
+#icon($whiteTabBottomRightCornerIcon $whiteTabBottomRightCornerIcon.getWidth() $whiteTabBottomRightCornerIcon.getHeight() $alc)@NOEOLAFTERTHIS
+</td>
+
+##
+## close the table
+##
+</tr>
+</table>@NOEOLAFTERTHIS
+</td>
+</tr>
+</table>@NOEOLAFTERTHIS
+#end
+#end
+
+#set ($sbType = $sb.getType())
+#if ($sbType.equals("SMALL"))
+</td>
+</tr>
+</table>
+#end
+
+
+##
+## print an anchor
+##
+$lw.getBlockBottomAnchorHTML($sb)@NOEOLAFTERTHIS
+
+##
+## print the block
+##
+#set ($sbType = $sb.getType())
+#set ($sbColor = $sb.getStandardColor())
+#if ($sbType.equals("SMALL"))
+</td>
+</tr>
+</table>@NOEOLAFTERTHIS
+#end
+
+#set ($blockPk = $sb.getPrimaryKey())
+<!-- end of the body for block id : $blockPk.toString() -->
+## end of template. keep the empty line after this line.

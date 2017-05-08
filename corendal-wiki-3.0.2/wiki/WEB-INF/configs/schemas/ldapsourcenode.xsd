@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Version: $Id: ldapsourcenode.xsd,v 1.1 2006/07/08 21:15:56 tdanard Exp $ -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="ldapsource-node">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="dn"/>
+        <xs:element minOccurs="0" ref="preferred-domain"/>
+        <xs:element ref="object-class"/>
+        <xs:element minOccurs="0" ref="object-category"/>
+        <xs:element maxOccurs="unbounded" ref="attribute"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dn" type="xs:string"/>
+  <xs:element name="preferred-domain" type="xs:string"/>
+  <xs:element name="object-class" type="xs:NCName"/>
+  <xs:element name="object-category" type="xs:string"/>
+  <xs:element name="attribute">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:NCName">
+          <xs:attribute name="name" use="required" type="xs:NCName"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

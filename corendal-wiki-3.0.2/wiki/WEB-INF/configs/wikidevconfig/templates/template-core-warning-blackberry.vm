@@ -1,0 +1,67 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($clrm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultColorManager"))
+#set ($icnm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultIconManager"))
+#set ($stlm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultStyleManager"))
+#set ($rm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultRequestManager"))
+
+##
+## get the writers used in this template
+##
+#set ($pws = $alc.getWriterSet())
+#set ($ww = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultWarningWriter"))
+
+##
+## get the current page
+##
+#set ($page = $rm.getStandardPage())
+
+##
+## get the template type
+##
+#set ($templateType = $page.getTemplateType())
+
+##
+## get the icons used in this template
+##
+#set ($spacerIcon = $icnm.getSpacerStandardIcon())
+
+##
+## get the styles used in this template
+##
+#set ($regularTextStyle = $stlm.getRegularTextStandardStyle())
+
+##
+## get the colors used in this template
+##
+#set ($warningColor = $clrm.getWarningStandardColor())
+
+##
+## get the applicable warnings
+##
+#set ($applicableWarnings = $ww.getApplicableWarnings())
+
+##
+## verify that warnings must be displayed
+##
+#set ($size = $applicableWarnings.size())
+#if (($size > 0) && (!($rm.getIsPrintableMode())))
+
+##
+## print each warning in the HTML format
+##
+#set ($sizeMinusOne = $size - 1)
+#foreach ($i in [0..$sizeMinusOne])
+#set ($currentWarning = $applicableWarnings.get($i))
+$currentWarning.getContentHTML()@NOEOLAFTERTHIS
+#if ($rm.getIsUserAgentCompatibleWithXHTML())@NOEOLAFTERTHIS
+<br />@NOEOLAFTERTHIS
+#else
+<br>@NOEOLAFTERTHIS
+#end
+#end
+
+#end
+## end of template. keep the empty line after this line.

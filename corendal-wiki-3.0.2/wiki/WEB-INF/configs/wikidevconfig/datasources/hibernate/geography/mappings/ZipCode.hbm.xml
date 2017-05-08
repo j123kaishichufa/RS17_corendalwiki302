@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Version: $Id: ZipCode.hbm.xml,v 1.3 2007/08/01 19:39:22 tdanard Exp $ -->
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping
+	package="com.corendal.netapps.framework.core.writedatamappings">
+	<class name="DefaultZipCodeMapping" table="zip_cod">
+		<id column="id" name="Id" type="string" />
+
+		<property column="state_id" length="36" name="StateId"
+			not-null="false" type="string" />
+		<property column="cod_2" length="255" name="Code2"
+			not-null="false" type="string" />
+		<property column="country_id" length="36" name="CountryId"
+			not-null="false" type="string" />
+		<property column="enabled_flag" length="1" name="EnabledFlag"
+			not-null="true" type="string" />
+		<property column="cod_1" length="255" name="Code1"
+			not-null="true" type="string" />
+	</class>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractZipCode.findEnabledByCode1">
+		<![CDATA[
+    from DefaultZipCodeMapping
+    where Code1 = :code1
+    and EnabledFlag = :enabledFlag
+    order by Id asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractZipCode.findEnabledByCode2">
+		<![CDATA[
+    from DefaultZipCodeMapping
+    where Code2 = :code2
+    and EnabledFlag = :enabledFlag
+    order by Id asc
+]]>
+	</query>
+</hibernate-mapping>

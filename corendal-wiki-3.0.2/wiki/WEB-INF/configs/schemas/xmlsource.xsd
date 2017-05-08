@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Version: $Id: xmlsource.xsd,v 1.2 2006/12/13 05:00:58 tdanard Exp $ -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="xmlsource">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="driver-url"/>
+        <xs:element ref="driver-user"/>
+        <xs:element ref="driver-password"/>
+        <xs:element ref="driver-class"/>
+        <xs:element ref="driver-collection-prefix"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="driver-url" type="xs:anyURI"/>
+  <xs:element name="driver-user" type="xs:NCName"/>
+  <xs:element name="driver-password" type="xs:string"/>
+  <xs:element name="driver-class" type="xs:NCName"/>
+  <xs:element name="driver-collection-prefix" type="xs:NCName"/>
+</xs:schema>

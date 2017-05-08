@@ -1,0 +1,79 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($clrm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultColorManager"))
+#set ($icnm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultIconManager"))
+#set ($stlm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultStyleManager"))
+#set ($rm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultRequestManager"))
+
+##
+## get the writers used in this template
+##
+#set ($pws = $alc.getWriterSet())
+#set ($ww = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultWarningWriter"))
+
+##
+## get the current page
+##
+#set ($page = $rm.getStandardPage())
+
+##
+## get the template type
+##
+#set ($templateType = $page.getTemplateType())
+
+##
+## get the icons used in this template
+##
+#set ($spacerIcon = $icnm.getSpacerStandardIcon())
+
+##
+## get the styles used in this template
+##
+#set ($regularTextStyle = $stlm.getRegularTextStandardStyle())
+
+##
+## get the colors used in this template
+##
+#set ($warningColor = $clrm.getWarningStandardColor())
+
+##
+## get the applicable warnings
+##
+#set ($applicableWarnings = $ww.getApplicableWarnings())
+
+##
+## verify that warnings must be displayed
+##
+#set ($size = $applicableWarnings.size())
+#if (($size > 0) && (!($rm.getIsPrintableMode())))
+
+##
+## start the table
+##
+<table summary="" cellpadding="0" cellspacing="0" border="0" width="100%">
+
+##
+## print each warning in the HTML format
+##
+#set ($sizeMinusOne = $size - 1)
+#foreach ($i in [0..$sizeMinusOne])
+#set ($currentWarning = $applicableWarnings.get($i))
+<tr class="$regularTextStyle.getName()">
+<td bgcolor="$warningColor.getColor()">@NOEOLAFTERTHIS
+$currentWarning.getContentHTML()@NOEOLAFTERTHIS
+</td>
+<td bgcolor="$warningColor.getColor()">@NOEOLAFTERTHIS
+#icon($spacerIcon 1 15 $alc)@NOEOLAFTERTHIS
+</td>
+</tr>
+#end
+
+##
+## end the table
+##
+</table>
+
+#end
+## end of template. keep the empty line after this line.

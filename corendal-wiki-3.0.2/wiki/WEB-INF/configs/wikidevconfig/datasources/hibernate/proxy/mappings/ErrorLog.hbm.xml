@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Version: $Id: ErrorLog.hbm.xml,v 1.4 2007/11/14 19:48:40 tdanard Exp $ -->
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping
+	package="com.corendal.netapps.framework.core.writedatamappings">
+	<class name="DefaultErrorLogMapping" table="error_log">
+		<id column="id" name="Id" type="string" />
+
+		<property column="enabled_flag" length="1" name="EnabledFlag"
+			not-null="true" type="string" />
+		<property column="class_nam" length="255" name="ClassName"
+			not-null="true" type="string" />
+		<property column="timestamp" length="19" name="Timestamp"
+			not-null="true" type="timestamp" />
+		<property column="entity_id" length="36" name="EntityId"
+			not-null="false" type="string" />
+		<property column="stack_trace" name="StackTrace"
+			not-null="false" type="text" />
+		<property column="record_id" length="255" name="RecordId"
+			not-null="false" type="string" />
+	</class>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractErrorLog.findByEnabledFlag">
+		<![CDATA[
+    from DefaultErrorLogMapping
+    where EnabledFlag = :enabledFlag
+    order by Id asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractErrorLog.findEnabledByEntityPrimaryKey">
+		<![CDATA[
+    from DefaultErrorLogMapping
+    where EntityId like :entityId
+    and EnabledFlag = :enabledFlag
+    order by Timestamp asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractErrorLog.findEnabledByRecordPrimaryKey">
+		<![CDATA[
+    from DefaultErrorLogMapping
+    where RecordId like :recordId
+    and EnabledFlag = :enabledFlag
+    order by Timestamp asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractErrorLog.findEnabledByClassName">
+		<![CDATA[
+    from DefaultErrorLogMapping
+    where ClassName like :className
+    and EnabledFlag = :enabledFlag
+    order by Timestamp asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractErrorLog.findEnabledByBoundCreatedDate">
+		<![CDATA[
+    from DefaultErrorLogMapping
+    where Timestamp >= :timestampFrom
+    and Timestamp < :timestampTo
+    and EnabledFlag = :enabledFlag
+    order by Timestamp asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractErrorLog.findEnabledByLowerBoundCreatedDate">
+		<![CDATA[
+    from DefaultErrorLogMapping
+    where Timestamp >= :timestampFrom
+    and EnabledFlag = :enabledFlag
+    order by Timestamp asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractErrorLog.findEnabledByUpperBoundCreatedDate">
+		<![CDATA[
+    from DefaultErrorLogMapping
+    where Timestamp < :timestampTo
+    and EnabledFlag = :enabledFlag
+    order by Timestamp asc
+]]>
+	</query>
+</hibernate-mapping>

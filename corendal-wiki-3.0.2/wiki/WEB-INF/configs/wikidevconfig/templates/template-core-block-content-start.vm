@@ -1,0 +1,52 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($cfgm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultConfigManager"))
+
+##
+## get the location of the images folder
+##
+#set ($prop =  $cfgm.getStandardPropertySet())
+#set ($imagesFolder = $prop.getImagesFolder())
+
+#set ($sbPk = $sb.getPrimaryKey())
+#set ($sbType = $sb.getType())
+
+##
+## start the master table
+##
+#set ($sbColor = $sb.getStandardColor())
+
+#if ($sbType.equals("LARGE"))
+#if (($sb.getBlocksSetSize() > 1) && ($sb.getStandardColor())) 
+<table summary="" border="0" cellpadding="0" cellspacing="0" bgcolor="$sbColor.getColor()" width="100%">
+#else
+<table summary="" border="0" cellpadding="0" cellspacing="0" width="100%">
+#end
+<tr>
+
+##
+## start the content cell
+##
+<td valign="top" align="$sb.getAlign()">
+#else
+<table summary="" width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>@NOEOLAFTERTHIS
+<img src="$imagesFolder/framework/spacer.png" height="7" width="11" alt="" />@NOEOLAFTERTHIS
+</td>
+<td width="100%">@NOEOLAFTERTHIS
+<img src="$imagesFolder/framework/spacer.png" height="7" width="100%" alt="" />@NOEOLAFTERTHIS
+</td>
+<td>@NOEOLAFTERTHIS
+<img src="$imagesFolder/framework/spacer.png" height="7" width="11" alt="" />@NOEOLAFTERTHIS
+</td>
+</tr>
+<tr>
+<td width="11" height="100%">@NOEOLAFTERTHIS
+<img src="$imagesFolder/framework/spacer.png" height="100%" width="11" alt="" />@NOEOLAFTERTHIS
+</td>
+<td valign="top" align="$sb.getAlign()">
+#end
+## end of template. keep the empty line after this line.

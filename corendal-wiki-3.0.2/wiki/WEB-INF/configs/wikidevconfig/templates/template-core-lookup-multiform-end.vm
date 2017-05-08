@@ -1,0 +1,20 @@
+##
+## end the cell
+##
+</td>
+
+##
+## end the second line
+##
+</tr>
+
+##
+## end the table
+##
+</table>@NOEOLAFTERTHIS
+
+##
+## end the form
+##
+</form>
+## end of template. keep the empty line after this line.

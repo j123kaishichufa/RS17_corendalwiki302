@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Version: $Id: Session.hbm.xml,v 1.1 2006/07/17 02:23:35 tdanard Exp $ -->
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping
+	package="com.corendal.netapps.framework.core.writedatamappings">
+	<class name="DefaultSessionMapping" table="session_obj">
+		<id column="id" name="Id" type="string" />
+
+		<property column="enabled_flag" length="1" name="EnabledFlag"
+			not-null="true" type="string" />
+		<property column="last_timestamp" length="19" name="LastTimestamp"
+			not-null="true" type="timestamp" />
+	</class>
+</hibernate-mapping>

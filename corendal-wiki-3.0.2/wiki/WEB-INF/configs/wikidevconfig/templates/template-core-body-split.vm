@@ -1,0 +1,25 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($icnm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultIconManager"))
+
+##
+## get the icons used in this template
+##
+#set ($spacerIcon = $icnm.getSpacerStandardIcon())
+
+##
+## print a space
+##
+<td>@NOEOLAFTERTHIS
+#icon($spacerIcon 5 5 $alc)@NOEOLAFTERTHIS
+</td>
+
+##
+## print a vertical line
+##
+<td style="border-left: 1px dotted #CCCCCC" width="1" height="100%" valign="top" bgcolor="#FFFFFF">@NOEOLAFTERTHIS
+&nbsp;@NOEOLAFTERTHIS
+</td>
+## end of template. keep the empty line after this line.

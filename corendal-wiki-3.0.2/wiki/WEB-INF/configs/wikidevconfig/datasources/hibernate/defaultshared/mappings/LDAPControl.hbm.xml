@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Version: $Id: LDAPControl.hbm.xml,v 1.6 2007/12/18 19:25:39 tdanard Exp $ -->
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping
+	package="com.corendal.netapps.framework.core.writedatamappings">
+	<class name="DefaultLDAPControlMapping" table="ldap_control">
+		<id column="id" name="Id" type="string" />
+
+		<property column="ldap_ou" length="255" name="LDAPOu"
+			not-null="false" type="string" />
+		<property column="enabled_flag" length="1" name="EnabledFlag"
+			not-null="true" type="string" />
+		<property column="ldap_domain" length="255" name="LDAPDomain"
+			not-null="false" type="string" />
+	</class>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractLDAPControl.findByEnabledFlag">
+		<![CDATA[
+    from DefaultLDAPControlMapping
+    where EnabledFlag like :enabledFlag
+    order by Id asc
+]]>
+	</query>
+		<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractLDAPControl.findEnabledByName">
+		<![CDATA[
+    from DefaultLDAPControlMapping
+    where upper(LDAPOu) like upper(:name)
+    and EnabledFlag = :enabledFlag
+    order by Id asc
+]]>
+	</query>
+</hibernate-mapping>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Version: $Id: currentconfig.xsd,v 1.5 2007/02/16 23:40:12 tdanard Exp $ -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified">
+	<xs:element name="current-config">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="current-config-name" />
+				<xs:element ref="build" />
+				<xs:element ref="folder" />
+				<xs:element minOccurs="0" ref="current-config-variants" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="current-config-name" type="xs:string" />
+	<xs:element name="build" type="xs:string" />
+	<xs:element name="folder" type="xs:NCName" />
+	<xs:element name="current-config-variants">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" ref="prompt" />
+				<xs:element minOccurs="0" ref="title" />
+				<xs:element minOccurs="0" ref="button" />
+				<xs:element maxOccurs="unbounded"
+					ref="current-config-variant" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="prompt" type="xs:NCName" />
+	<xs:element name="title" type="xs:string" />
+	<xs:element name="button" type="xs:string" />
+	<xs:element name="current-config-variant">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="name" />
+				<xs:element ref="description" />
+				<xs:element ref="prefix" />
+				<xs:element ref="variant-folder" />
+				<xs:element minOccurs="0" ref="pattern" />
+				<xs:element minOccurs="0" ref="group" />
+			</xs:sequence>
+			<xs:attribute name="standalone-flag" use="required"
+				type="xs:NCName" />
+			<xs:attribute name="default-flag" use="required"
+				type="xs:NCName" />
+			<xs:attribute name="enabled-flag" use="required"
+				type="xs:NCName" />
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="description" type="xs:string" />
+	<xs:element name="prefix" type="xs:string" />
+	<xs:element name="variant-folder" type="xs:NCName" />
+	<xs:element name="pattern" type="xs:string" />
+	<xs:element name="group" type="xs:string" />
+	<xs:element name="name" type="xs:string" />
+</xs:schema>

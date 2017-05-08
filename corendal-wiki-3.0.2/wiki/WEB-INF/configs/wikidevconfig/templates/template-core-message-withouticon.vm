@@ -1,0 +1,25 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($stlm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultStyleManager"))
+
+##
+## get the styles used in this template
+##
+#set ($messageStyle = $stlm.getMessageStandardStyle())
+
+##
+## print the message
+##
+<tr>
+<td class="$messageStyle.getName()">@NOEOLAFTERTHIS
+
+#if ($sm.getReferenceNumber())
+<strong>$sm.getReferenceNumber():</strong>
+#end
+
+$sm.getCurrentMessageHTML()@NOEOLAFTERTHIS
+</td>
+</tr>
+## end of template. keep the empty line after this line.

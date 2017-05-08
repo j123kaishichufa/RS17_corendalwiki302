@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Version: $Id: ContentAccessDay.hbm.xml,v 1.3 2007/06/21 14:21:14 tdanard Exp $ -->
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.corendal.netapps.wiki.writedatamappings">
+	<class name="DefaultContentAccessDayMapping"
+		table="content_access_day">
+		<id column="id" name="Id" type="string" />
+
+		<property column="content_id" length="36" name="ContentId"
+			not-null="true" type="string" />
+		<property column="access_date" name="AccessDate" not-null="true"
+			type="date" />
+		<property column="access_num" name="AccessNumber"
+			not-null="true" type="integer" />
+		<property column="access_rank" name="AccessRank"
+			not-null="false" type="integer" />
+		<property column="enabled_flag" length="1" name="EnabledFlag"
+			not-null="true" type="string" />
+	</class>
+	<query
+		name="com.corendal.netapps.wiki.writedatabeans.AbstractContentAccessDay.findByContentPrimaryKey">
+		<![CDATA[
+    from DefaultContentAccessDayMapping
+    where ContentId = :contentId
+    order by AccessDate asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.wiki.writedatafactories.ContentAccessDayFactory.refresh">
+		<![CDATA[
+    select max(AccessDate) from DefaultContentAccessDayMapping
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.wiki.writedatafactories.ContentAccessPeriodFactory.refresh.2">
+		<![CDATA[
+    select max(AccessDate) from DefaultContentAccessDayMapping
+]]>
+	</query>
+</hibernate-mapping>

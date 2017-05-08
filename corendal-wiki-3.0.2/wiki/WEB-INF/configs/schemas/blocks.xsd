@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Version: $Id: blocks.xsd,v 1.3 2007/07/19 16:08:10 tdanard Exp $ -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified">
+	<xs:element name="blocks">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element maxOccurs="unbounded" ref="block" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="block">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="name" />
+				<xs:element ref="description" />
+				<xs:element ref="comment" />
+				<xs:element ref="invite" />
+				<xs:element ref="class" />
+			</xs:sequence>
+			<xs:attribute name="auth-required-flag" use="required"
+				type="xs:NCName" />
+			<xs:attribute name="enabled-flag" use="required"
+				type="xs:NCName" />
+			<xs:attribute name="id" use="required" type="xs:NCName" />
+			<xs:attribute name="portlet-flag" use="required"
+				type="xs:NCName" />
+			<xs:attribute name="printable-flag" use="required"
+				type="xs:NCName" />
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="name" type="xs:string" />
+	<xs:element name="description" type="xs:string" />
+	<xs:element name="comment" type="xs:string" />
+	<xs:element name="invite" type="xs:string" />
+	<xs:element name="class">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" ref="templateblock-template" />
+				<xs:element minOccurs="0" ref="messagesblock-messages" />
+				<xs:element minOccurs="0" ref="pagesblock-parameters" />
+				<xs:element minOccurs="0" ref="pagesblock-pages" />
+			</xs:sequence>
+			<xs:attribute name="name" use="required" />
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="messagesblock-messages">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element maxOccurs="unbounded"
+					ref="messagesblock-message" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="messagesblock-message">
+		<xs:complexType>
+			<xs:attribute name="message-id" use="required"
+				type="xs:NCName" />
+			<xs:attribute name="order" use="required" type="xs:integer" />
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="pagesblock-parameters">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element maxOccurs="unbounded"
+					ref="pagesblock-parameter" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="pagesblock-parameter">
+		<xs:complexType>
+			<xs:attribute name="name" use="required" type="xs:NCName" />
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="pagesblock-pages">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element maxOccurs="unbounded" ref="pagesblock-page" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="pagesblock-page">
+		<xs:complexType>
+			<xs:attribute name="order" use="required" type="xs:integer" />
+			<xs:attribute name="page-id" use="required"
+				type="xs:NCName" />
+			<xs:attribute name="current-icon-id" use="required"
+				type="xs:NCName" />
+			<xs:attribute name="icon-id" use="required"
+				type="xs:NCName" />
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="templateblock-template">
+		<xs:complexType>
+			<xs:attribute name="template" use="required"
+				type="xs:NCName" />
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

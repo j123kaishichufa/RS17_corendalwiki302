@@ -1,0 +1,7 @@
+#set ($sfbColor = $sfb.getStandardColor())
+#if ($sfb.getBlocksSetSize() > 1)
+<tr bgcolor="$sfbColor.getColor()">
+#else
+<tr>
+#end
+## end of template. keep the empty line after this line.

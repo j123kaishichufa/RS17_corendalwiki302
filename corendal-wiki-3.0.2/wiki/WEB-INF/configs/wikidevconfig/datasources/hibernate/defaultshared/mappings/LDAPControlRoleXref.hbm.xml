@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Version: $Id: LDAPControlRoleXref.hbm.xml,v 1.6 2007/11/13 23:38:15 tdanard Exp $ -->
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping
+	package="com.corendal.netapps.framework.core.writedatamappings">
+	<class name="DefaultLDAPControlRoleXrefMapping"
+		table="ldap_control_role_xref">
+		<id column="id" name="Id" type="string" />
+
+		<property column="role_id" length="36" name="RoleId"
+			not-null="true" type="string" />
+		<property column="enabled_flag" length="1" name="EnabledFlag"
+			not-null="true" type="string" />
+		<property column="entity_id" length="36" name="EntityId"
+			not-null="false" type="string" />
+		<property column="ldap_control_id" length="255"
+			name="LDAPControlId" not-null="true" type="string" />
+		<property column="record_id" length="255" name="RecordId"
+			not-null="false" type="string" />
+	</class>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractLDAPControlRoleXref.findEnabledByLDAPControlAndRolePrimaryKeys">
+		<![CDATA[
+    from DefaultLDAPControlRoleXrefMapping
+    where LDAPControlId = :ldapControlId
+    and RoleId = :roleId
+    order by Id asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractLDAPControlRoleXref.findEnabledByEntityAndRecordAndRolePrimaryKeys">
+		<![CDATA[
+    from DefaultLDAPControlRoleXrefMapping
+    where EntityId = :entityId
+    and RecordId = :recordId
+    and RoleId = :roleId
+    order by Id asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatafactories.LDAPControlRoleXrefFactory.getSingleLDAPControlId">
+		<![CDATA[
+    from DefaultLDAPControlRoleXrefMapping
+    where EntityId = :entityId
+    and RecordId = :recordId
+    and RoleId = :roleId
+    order by LDAPControlId asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatafactories.LDAPControlRoleXrefFactory.remove">
+		<![CDATA[
+    delete DefaultLDAPControlRoleXrefMapping
+    where RecordId = :recordId
+    and EntityId = :entityId
+    and RoleId = :roleId
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatafactories.LDAPControlRoleXrefFactory.removeAll">
+		<![CDATA[
+    delete DefaultLDAPControlRoleXrefMapping
+    where RecordId = :recordId
+    and EntityId = :entityId
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractLDAPControl.findEnabledByRolePrimaryKey">
+		<![CDATA[
+    select distinct LDAPControlId from DefaultLDAPControlRoleXrefMapping
+    where RoleId = :roleId
+    and EnabledFlag = :enabledFlag
+    order by LDAPControlId
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatafactories.LDAPControlRoleXrefFactory.getMultipleLDAPControlPrimaryKeys">
+		<![CDATA[
+    select distinct LDAPControlId from DefaultLDAPControlRoleXrefMapping
+    where RecordId = :recordId
+    and EntityId = :entityId
+    and RoleId = :roleId
+]]>
+	</query>
+		<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractLDAPControlRoleXref.findEnabledSystemLDAPControls">
+		<![CDATA[
+    from DefaultLDAPControlRoleXrefMapping
+    where EntityId is null and RecordId is null
+    and EnabledFlag = :enabledFlag
+]]>
+	</query>
+</hibernate-mapping>

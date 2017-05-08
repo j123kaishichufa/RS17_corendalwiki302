@@ -1,0 +1,57 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($stlm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultStyleManager"))
+#set ($icnm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultIconManager"))
+#set ($msgm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultMessageManager"))
+
+##
+## get the icons used in this template
+##
+#set ($errorMessageIcon = $icnm.getErrorMessageStandardIcon())
+#set ($validationMessageIcon = $icnm.getValidationMessageStandardIcon())
+#set ($infoMessageIcon = $icnm.getInfoMessageStandardIcon())
+#set ($spacerIcon = $icnm.getSpacerStandardIcon())
+
+##
+## get the styles used in this template
+##
+#set ($messageStyle = $stlm.getMessageStandardStyle())
+
+##
+## print the icon
+##
+<tr>
+#set($type = $sm.getType())
+#if ($type.equals("VLD"))
+<td>@NOEOLAFTERTHIS
+#icon ($validationMessageIcon $validationMessageIcon.getWidth() $validationMessageIcon.getHeight() $alc)@NOEOLAFTERTHIS
+</td>
+#else
+#if ($type.equals("ERR"))
+<td>@NOEOLAFTERTHIS
+#icon ($errorMessageIcon $errorMessageIcon.getWidth() $errorMessageIcon.getHeight() $alc)@NOEOLAFTERTHIS
+</td>
+#else
+#if ($type.equals("INF"))
+<td>@NOEOLAFTERTHIS
+#icon ($infoMessageIcon $infoMessageIcon.getWidth() $infoMessageIcon.getHeight() $alc)@NOEOLAFTERTHIS
+</td>
+#end
+#end
+#end
+
+##
+## print the message
+##
+<td class="$messageStyle.getName()">@NOEOLAFTERTHIS
+
+#if ($sm.getReferenceNumber())
+<strong>$sm.getReferenceNumber():</strong>
+#end
+
+$sm.getCurrentMessageHTML()@NOEOLAFTERTHIS
+</td>
+</tr>
+## end of template. keep the empty line after this line.

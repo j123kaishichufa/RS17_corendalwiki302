@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Version: $Id: Country.hbm.xml,v 1.4 2007/08/01 19:39:22 tdanard Exp $ -->
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping
+	package="com.corendal.netapps.framework.core.writedatamappings">
+	<class name="DefaultCountryMapping" table="country">
+		<id column="id" name="Id" type="string" />
+
+		<property column="cod" length="255" name="Code" not-null="false"
+			type="string" />
+		<property column="enabled_flag" length="1" name="EnabledFlag"
+			not-null="true" type="string" />
+		<property column="nam" length="255" name="Name" not-null="false"
+			type="string" />
+	</class>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractCountry.findEnabledByName">
+		<![CDATA[
+    from DefaultCountryMapping
+    where upper(Name) like upper(:name) 
+    and EnabledFlag = :enabledFlag
+    order by Id asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractCountry.findEnabledByCode">
+		<![CDATA[
+    from DefaultCountryMapping
+    where Code = :code 
+    and EnabledFlag = :enabledFlag
+    order by Name asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractNativeAccount.findEnabledByMainCountry.1">
+		<![CDATA[
+    from DefaultCountryMapping
+    where Name like :name
+    and EnabledFlag = :enabledFlag
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractPerson.findEnabledByMainCountry.1">
+		<![CDATA[
+    from DefaultCountryMapping
+    where Name like :name
+    and EnabledFlag = :enabledFlag
+]]>
+	</query>
+</hibernate-mapping>

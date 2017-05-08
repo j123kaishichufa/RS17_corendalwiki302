@@ -1,0 +1,3259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Version: $Id: fields.xml,v 1.32 2008/11/04 22:43:27 tdanard Exp $ -->
+<fields xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="../../schemas/fields.xsd">
+	<field display-entry-size="20" display-search-size="20"
+		enabled-flag="Y" entity-id="CORE-ENTY-8" id="CORE-FILD-1"
+		indexed-flag="N" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Language</contextual-name>
+		<full-name>Language</full-name>
+		<xml-contextual-name>language</xml-contextual-name>
+		<xml-full-name>language</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Customization of this site based upon your geographical or
+			cultural region
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="20" display-search-size="20"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-15"
+		indexed-flag="N" max-entry-size="255" max-search-size="255"
+		type="VARCHAR">
+		<contextual-name>Login</contextual-name>
+		<full-name>User Account Login</full-name>
+		<xml-contextual-name>login</xml-contextual-name>
+		<xml-full-name>account-login</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Unique identifier of a user account for this site
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="20" display-search-size="20"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-16"
+		indexed-flag="N" max-entry-size="20" max-search-size="20"
+		type="VARCHAR">
+		<contextual-name>Password</contextual-name>
+		<full-name>User Account Password</full-name>
+		<xml-contextual-name>password</xml-contextual-name>
+		<xml-full-name>account-password</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Secret sequence of characters required for access to this
+			site
+		</description>
+		<comment>
+			A password is personal, and must be at least 6 characters
+			long to be valid
+		</comment>
+		<access-key />
+	</field>
+	<field display-entry-size="20" display-search-size="20"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-17"
+		indexed-flag="N" max-entry-size="20" max-search-size="20"
+		type="VARCHAR">
+		<contextual-name>Enable auto log in</contextual-name>
+		<full-name>User Account Enable auto log in</full-name>
+		<xml-contextual-name>auto-sign-in</xml-contextual-name>
+		<xml-full-name>account-auto-sign-in</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Automatically signs you in next time you connect to this
+			server
+		</description>
+		<comment>
+			This option should be used only if you are not using a
+			public computer
+		</comment>
+		<access-key />
+	</field>
+	<field display-entry-size="20" display-search-size="20"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-18"
+		indexed-flag="N" max-entry-size="20" max-search-size="20"
+		type="VARCHAR">
+		<contextual-name>Old Password</contextual-name>
+		<full-name>Old User Account Password</full-name>
+		<xml-contextual-name>old-password</xml-contextual-name>
+		<xml-full-name>account-old-password</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Current secret sequence of characters required for access to
+			this site
+		</description>
+		<comment>
+			A password is personal, and must be at least 6 characters
+			long to be valid
+		</comment>
+		<access-key />
+	</field>
+	<field display-entry-size="20" display-search-size="20"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-19"
+		indexed-flag="N" max-entry-size="20" max-search-size="20"
+		type="VARCHAR">
+		<contextual-name>New Password</contextual-name>
+		<full-name>New User Account Password</full-name>
+		<xml-contextual-name>new-password</xml-contextual-name>
+		<xml-full-name>account-new-password</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			New secret sequence of characters required for access to
+			this site
+		</description>
+		<comment>
+			A password is personal, and must be at least 6 characters
+			long to be valid
+		</comment>
+		<access-key />
+	</field>
+	<field display-entry-size="20" display-search-size="20"
+		enabled-flag="Y" entity-id="CORE-ENTY-8" id="CORE-FILD-2"
+		indexed-flag="N" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name />
+		<full-name />
+		<xml-contextual-name>empty</xml-contextual-name>
+		<xml-full-name>empty</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description />
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="20" display-search-size="20"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-20"
+		indexed-flag="N" max-entry-size="20" max-search-size="20"
+		type="VARCHAR">
+		<contextual-name>Repeat New Password</contextual-name>
+		<full-name>Repeat New User Account Password</full-name>
+		<xml-contextual-name>new-password</xml-contextual-name>
+		<xml-full-name>account-new-password</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			New secret sequence of characters required for access to
+			this site
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="30" display-search-size="30"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-21"
+		indexed-flag="N" max-entry-size="30" max-search-size="30"
+		type="VARCHAR">
+		<contextual-name>First Name</contextual-name>
+		<full-name>User Account First Name</full-name>
+		<xml-contextual-name>first-name</xml-contextual-name>
+		<xml-full-name>account-first-name</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			The name that stands first in a full name
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="0" display-search-size="0"
+		enabled-flag="Y" entity-id="CORE-ENTY-8" id="CORE-FILD-213"
+		indexed-flag="N" max-entry-size="0" max-search-size="0"
+		type="VARCHAR">
+		<contextual-name>Name</contextual-name>
+		<full-name>Match Name</full-name>
+		<xml-contextual-name>name</xml-contextual-name>
+		<xml-full-name>match-name</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Name of the match</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="0" display-search-size="0"
+		enabled-flag="Y" entity-id="CORE-ENTY-8" id="CORE-FILD-214"
+		indexed-flag="N" max-entry-size="0" max-search-size="0"
+		type="VARCHAR">
+		<contextual-name>Description</contextual-name>
+		<full-name>Match Description</full-name>
+		<xml-contextual-name>description</xml-contextual-name>
+		<xml-full-name>match-description</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Detailed description or preview of the match
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="0" display-search-size="0"
+		enabled-flag="Y" entity-id="CORE-ENTY-4" id="CORE-FILD-219"
+		indexed-flag="N" max-entry-size="0" max-search-size="0"
+		type="VARCHAR">
+		<contextual-name>Name</contextual-name>
+		<full-name>Term Name</full-name>
+		<xml-contextual-name>name</xml-contextual-name>
+		<xml-full-name>term-name</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Word or expression used</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="30" display-search-size="30"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-22"
+		indexed-flag="N" max-entry-size="30" max-search-size="30"
+		type="VARCHAR">
+		<contextual-name>Last Name</contextual-name>
+		<full-name>User Account Last Name</full-name>
+		<xml-contextual-name>last-name</xml-contextual-name>
+		<xml-full-name>account-last-name</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			The name that stands last in a full name
+		</description>
+		<comment>The last name is also called surname</comment>
+		<access-key />
+	</field>
+	<field display-entry-size="0" display-search-size="0"
+		enabled-flag="Y" entity-id="CORE-ENTY-4" id="CORE-FILD-220"
+		indexed-flag="N" max-entry-size="0" max-search-size="0"
+		type="VARCHAR">
+		<contextual-name>Description</contextual-name>
+		<full-name>Term Description</full-name>
+		<xml-contextual-name>description</xml-contextual-name>
+		<xml-full-name>term-description</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Detailed explanation of a word or expression
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="0" display-search-size="0"
+		enabled-flag="Y" entity-id="CORE-ENTY-6" id="CORE-FILD-226"
+		indexed-flag="N" max-entry-size="0" max-search-size="0"
+		type="VARCHAR">
+		<contextual-name>Name</contextual-name>
+		<full-name>Screen Name</full-name>
+		<xml-contextual-name>name</xml-contextual-name>
+		<xml-full-name>screen-name</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Name of the screen, as displayed in the header
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="0" display-search-size="0"
+		enabled-flag="Y" entity-id="CORE-ENTY-6" id="CORE-FILD-227"
+		indexed-flag="N" max-entry-size="0" max-search-size="0"
+		type="VARCHAR">
+		<contextual-name>Description</contextual-name>
+		<full-name>Screen Description</full-name>
+		<xml-contextual-name>description</xml-contextual-name>
+		<xml-full-name>screen-description</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Detailed explanation of the function of the screen
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="30" display-search-size="30"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-23"
+		indexed-flag="N" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Email Address</contextual-name>
+		<full-name>User Account Email Address</full-name>
+		<xml-contextual-name>email-address</xml-contextual-name>
+		<xml-full-name>account-email-address</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Mailbox used to send and receive electronic messages
+		</description>
+		<comment>
+			This mailbox is the recipient of system notifications and
+			subscriptions
+		</comment>
+		<access-key />
+	</field>
+	<field display-entry-size="50" display-search-size="50"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-24"
+		indexed-flag="N" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Address</contextual-name>
+		<full-name>User Account Address</full-name>
+		<xml-contextual-name>address-line-1</xml-contextual-name>
+		<xml-full-name>account-address-line-1</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Permanent postal address</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="50" display-search-size="50"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-25"
+		indexed-flag="N" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Address (line 2)</contextual-name>
+		<full-name>User Account Address (line 2)</full-name>
+		<xml-contextual-name>address-line-2</xml-contextual-name>
+		<xml-full-name>account-address-line-2</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Permanent postal address (line 2)</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="50" display-search-size="50"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-26"
+		indexed-flag="N" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Address (line 3)</contextual-name>
+		<full-name>User Account Address (line 3)</full-name>
+		<xml-contextual-name>address-line-3</xml-contextual-name>
+		<xml-full-name>account-address-line-3</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Permanent postal address (line 3)</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="50" display-search-size="50"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-27"
+		indexed-flag="N" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Address (line 4)</contextual-name>
+		<full-name>User Account Address (line 4)</full-name>
+		<xml-contextual-name>address-line-4</xml-contextual-name>
+		<xml-full-name>account-address-line-4</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Permanent postal address (line 4)</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="6" display-search-size="6"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-28"
+		indexed-flag="N" max-entry-size="10" max-search-size="10"
+		type="VARCHAR">
+		<contextual-name>ZIP Code</contextual-name>
+		<full-name>User Account ZIP Code</full-name>
+		<xml-contextual-name>zip-code</xml-contextual-name>
+		<xml-full-name>account-zip-code</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Number that identifies each postal delivery area
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="30" display-search-size="30"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-29"
+		indexed-flag="N" max-entry-size="30" max-search-size="30"
+		type="VARCHAR">
+		<contextual-name>City</contextual-name>
+		<full-name>User Account City</full-name>
+		<xml-contextual-name>city</xml-contextual-name>
+		<xml-full-name>account-city</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Municipality associated with the postal delivery area
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="3" display-search-size="3"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-30"
+		indexed-flag="N" max-entry-size="3" max-search-size="3"
+		type="VARCHAR">
+		<contextual-name>State</contextual-name>
+		<full-name>User Account State</full-name>
+		<xml-contextual-name>state</xml-contextual-name>
+		<xml-full-name>account-state</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Constituent unit of the United States or Canada
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="20" display-search-size="20"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-31"
+		indexed-flag="N" max-entry-size="20" max-search-size="20"
+		type="VARCHAR">
+		<contextual-name>Office Phone Number</contextual-name>
+		<full-name>User Account Office Phone Number</full-name>
+		<xml-contextual-name>phone-number</xml-contextual-name>
+		<xml-full-name>account-phone-number</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Office phone number of a person
+		</description>
+		<comment>
+			This number should include the extension when applicable
+		</comment>
+		<access-key />
+	</field>
+	<field display-entry-size="40" display-search-size="40"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-32"
+		indexed-flag="N" max-entry-size="40" max-search-size="40"
+		type="VARCHAR">
+		<contextual-name>Country</contextual-name>
+		<full-name>User Account Country</full-name>
+		<xml-contextual-name>country</xml-contextual-name>
+		<xml-full-name>account-country</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Land or territory name</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="20" display-search-size="20"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-33"
+		indexed-flag="N" max-entry-size="20" max-search-size="20"
+		type="VARCHAR">
+		<contextual-name>Repeat Password</contextual-name>
+		<full-name>Repeat User Account Password</full-name>
+		<xml-contextual-name>password</xml-contextual-name>
+		<xml-full-name>account-password</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Secret sequence of characters required for access to this
+			site
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="1" display-search-size="1"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-34"
+		indexed-flag="N" max-entry-size="1" max-search-size="1"
+		type="VARCHAR">
+		<contextual-name>Initial</contextual-name>
+		<full-name>User Account Initial</full-name>
+		<xml-contextual-name>middleinitial</xml-contextual-name>
+		<xml-full-name>account-middleinitial</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Initial of the middle name</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="3" display-search-size="5"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-35"
+		indexed-flag="N" max-entry-size="3" max-search-size="5"
+		type="INTEGER">
+		<contextual-name>Page #</contextual-name>
+		<full-name>Page #</full-name>
+		<xml-contextual-name>pagenumber</xml-contextual-name>
+		<xml-full-name>search-pagenumber</xml-full-name>
+		<vcard-name />
+		<preferred-name>pnum</preferred-name>
+		<description>
+			Index number of the results page to display
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="3" display-search-size="5"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-36"
+		indexed-flag="N" max-entry-size="3" max-search-size="5"
+		type="VARCHAR">
+		<contextual-name>One Page Only</contextual-name>
+		<full-name>One Page Only</full-name>
+		<xml-contextual-name>onepageonly</xml-contextual-name>
+		<xml-full-name>search-onepageonly</xml-full-name>
+		<vcard-name />
+		<preferred-name>op</preferred-name>
+		<description>
+			Displays all results in one page as opposed to several
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="3" display-search-size="5"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-37"
+		indexed-flag="N" max-entry-size="3" max-search-size="5"
+		type="INTEGER">
+		<contextual-name>Page Size</contextual-name>
+		<full-name>Page Size</full-name>
+		<xml-contextual-name>pagesize</xml-contextual-name>
+		<xml-full-name>search-pagesize</xml-full-name>
+		<vcard-name />
+		<preferred-name>psiz</preferred-name>
+		<description>Maximum number of records per page</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="3" display-search-size="3"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-38"
+		indexed-flag="N" max-entry-size="3" max-search-size="3"
+		type="VARCHAR">
+		<contextual-name>Format</contextual-name>
+		<full-name>Format</full-name>
+		<xml-contextual-name>pageformat</xml-contextual-name>
+		<xml-full-name>search-pageformat</xml-full-name>
+		<vcard-name />
+		<preferred-name>pfmt</preferred-name>
+		<description>
+			Export format of the results to be used by another
+			application
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="3" display-search-size="5"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-39"
+		indexed-flag="N" max-entry-size="3" max-search-size="5"
+		type="INTEGER">
+		<contextual-name>Sort by</contextual-name>
+		<full-name>Sort by</full-name>
+		<xml-contextual-name>sortascby</xml-contextual-name>
+		<xml-full-name>search-sortascby</xml-full-name>
+		<vcard-name />
+		<preferred-name>sasc</preferred-name>
+		<description>Column to sort the results by</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="25" display-search-size="25"
+		enabled-flag="Y" entity-id="CORE-ENTY-8" id="CORE-FILD-40"
+		indexed-flag="N" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Search</contextual-name>
+		<full-name>Search</full-name>
+		<xml-contextual-name>site-keyword</xml-contextual-name>
+		<xml-full-name>search-site-keyword</xml-full-name>
+		<vcard-name />
+		<preferred-name>skwd</preferred-name>
+		<description>
+			To search this site, enter a keyword (at least 2 characters)
+			and press Enter
+		</description>
+		<comment>
+			This search applies to all content, not only static content,
+			but dynamic content as well
+		</comment>
+		<access-key>S</access-key>
+	</field>
+	<field display-entry-size="15" display-search-size="15"
+		enabled-flag="Y" entity-id="CORE-ENTY-6" id="CORE-FILD-41"
+		indexed-flag="N" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Keyword</contextual-name>
+		<full-name>Keyword</full-name>
+		<xml-contextual-name>entity-keyword</xml-contextual-name>
+		<xml-full-name>search-entity-keyword</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Significant word used as an index to content (at least 2
+			characters)
+		</description>
+		<comment>
+			If two keywords are entered, the results matching both
+			keywords will be listed first
+		</comment>
+		<access-key>K</access-key>
+	</field>
+	<field display-entry-size="15" display-search-size="15"
+		enabled-flag="Y" entity-id="CORE-ENTY-6" id="CORE-FILD-42"
+		indexed-flag="N" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Type of content</contextual-name>
+		<full-name>Type of content</full-name>
+		<xml-contextual-name>content-type</xml-contextual-name>
+		<xml-full-name>search-content-type</xml-full-name>
+		<vcard-name />
+		<preferred-name>sctt</preferred-name>
+		<description>
+			Category of material being searched for
+		</description>
+		<comment>
+			Several types of content can be selected for searching
+		</comment>
+		<access-key />
+	</field>
+	<field display-entry-size="3" display-search-size="5"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-43"
+		indexed-flag="N" max-entry-size="3" max-search-size="5"
+		type="INTEGER">
+		<contextual-name>Sort by</contextual-name>
+		<full-name>Sort by</full-name>
+		<xml-contextual-name>sortdescby</xml-contextual-name>
+		<xml-full-name>search-sortdescby</xml-full-name>
+		<vcard-name />
+		<preferred-name>sdesc</preferred-name>
+		<description>Column to sort the results by</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="2" display-search-size="2"
+		enabled-flag="Y" entity-id="CORE-ENTY-39" id="CORE-FILD-44"
+		indexed-flag="N" max-entry-size="2" max-search-size="2"
+		type="INTEGER">
+		<contextual-name>Session Time Out</contextual-name>
+		<full-name>Session Time Out Preference</full-name>
+		<xml-contextual-name>session-time-out</xml-contextual-name>
+		<xml-full-name>preference-session-time-out</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			<![CDATA[Minimum inactivity time span before a user's authentication expires]]>
+		</description>
+		<comment>Default session time out is 30 minutes</comment>
+		<access-key />
+	</field>
+	<field display-entry-size="20" display-search-size="20"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-45"
+		indexed-flag="N" max-entry-size="20" max-search-size="20"
+		type="VARCHAR">
+		<contextual-name>Fax Number</contextual-name>
+		<full-name>User Account Fax Number</full-name>
+		<xml-contextual-name>fax</xml-contextual-name>
+		<xml-full-name>account-fax</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Fax number of a person
+		</description>
+		<comment>
+			This number should include the extension when applicable
+		</comment>
+		<access-key />
+	</field>
+	<field display-entry-size="20" display-search-size="20"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-46"
+		indexed-flag="N" max-entry-size="20" max-search-size="20"
+		type="VARCHAR">
+		<contextual-name>Company Cell Phone Number</contextual-name>
+		<full-name>User Account Company Cell Phone Number</full-name>
+		<xml-contextual-name>company-cell-phone-number</xml-contextual-name>
+		<xml-full-name>account-company-cell-phone-number</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Company cell phone number of a person
+		</description>
+		<comment>
+			This number should include the extension when applicable
+		</comment>
+		<access-key />
+	</field>
+	<field display-entry-size="30" display-search-size="30"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-47"
+		indexed-flag="N" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Position Title</contextual-name>
+		<full-name>User Account Position Title</full-name>
+		<xml-contextual-name>title</xml-contextual-name>
+		<xml-full-name>account-title</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Generic job description</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="25" display-search-size="25"
+		enabled-flag="Y" entity-id="CORE-ENTY-8" id="CORE-FILD-48"
+		indexed-flag="N" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Require all keywords</contextual-name>
+		<full-name>Require all keywords</full-name>
+		<xml-contextual-name>require-all-keywords</xml-contextual-name>
+		<xml-full-name>search-require-all-keywords</xml-full-name>
+		<vcard-name />
+		<preferred-name>reqak</preferred-name>
+		<description>
+			Eliminates the results not containing all keywords entered
+		</description>
+		<comment>
+			When this option is not checked, all results matching at
+			least one of the keywords are listed
+		</comment>
+		<access-key />
+	</field>
+	<field display-entry-size="30" display-search-size="30"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-49"
+		indexed-flag="N" max-entry-size="30" max-search-size="30"
+		type="VARCHAR">
+		<contextual-name>Country of Residence</contextual-name>
+		<full-name>User Account Country of Residence</full-name>
+		<xml-contextual-name>country-of-residence</xml-contextual-name>
+		<xml-full-name>account-country-of-residence</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Country where a user resides</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="20" display-search-size="20"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-5"
+		indexed-flag="N" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Name or Login</contextual-name>
+		<full-name>User Account Name or Login</full-name>
+		<xml-contextual-name>name-or-login</xml-contextual-name>
+		<xml-full-name>account-name-or-login</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Full name, first name, last name or login of a user account
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="11" display-search-size="11"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-50"
+		indexed-flag="N" max-entry-size="11" max-search-size="11"
+		type="VARCHAR">
+		<contextual-name>Social Security Number</contextual-name>
+		<full-name>User Account Social Security Number</full-name>
+		<xml-contextual-name>
+			social-security-number
+		</xml-contextual-name>
+		<xml-full-name>account-social-security-number</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Unique identifier of a person, as assigned by the country of
+			residence
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="20" display-search-size="20"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-51"
+		indexed-flag="N" max-entry-size="20" max-search-size="20"
+		type="VARCHAR">
+		<contextual-name>Phone Number</contextual-name>
+		<full-name>User Account Phone Number</full-name>
+		<xml-contextual-name>main-phone-number</xml-contextual-name>
+		<xml-full-name>account-main-phone-number</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Main phone number of a person</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="20" display-search-size="20"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-52"
+		indexed-flag="N" max-entry-size="20" max-search-size="20"
+		type="VARCHAR">
+		<contextual-name>Alternative Phone Number</contextual-name>
+		<full-name>User Account Alternative Phone Number</full-name>
+		<xml-contextual-name>
+			alternative-phone-number
+		</xml-contextual-name>
+		<xml-full-name>account-alternative-phone-number</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Alternative phone number of a person</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="20" display-search-size="20"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-53"
+		indexed-flag="N" max-entry-size="20" max-search-size="20"
+		type="VARCHAR">
+		<contextual-name>Pager Number</contextual-name>
+		<full-name>User Account Pager Number</full-name>
+		<xml-contextual-name>
+			pager-number
+		</xml-contextual-name>
+		<xml-full-name>account-pager-number</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Pager number of a person</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="20" display-search-size="20"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-54"
+		indexed-flag="N" max-entry-size="20" max-search-size="20"
+		type="VARCHAR">
+		<contextual-name>Home Phone Number</contextual-name>
+		<full-name>User Account Home Phone Number</full-name>
+		<xml-contextual-name>
+			home-phone-number
+		</xml-contextual-name>
+		<xml-full-name>account-home-phone-number</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Home phone number of a person</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="20" display-search-size="20"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-55"
+		indexed-flag="N" max-entry-size="20" max-search-size="20"
+		type="VARCHAR">
+		<contextual-name>Building</contextual-name>
+		<full-name>User Account Building</full-name>
+		<xml-contextual-name>
+			building
+		</xml-contextual-name>
+		<xml-full-name>account-building</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Building of a person, specified by a town abbreviation and a building name when applicable</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="20" display-search-size="20"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-56"
+		indexed-flag="N" max-entry-size="20" max-search-size="20"
+		type="VARCHAR">
+		<contextual-name>Room</contextual-name>
+		<full-name>User Account Room</full-name>
+		<xml-contextual-name>
+			room
+		</xml-contextual-name>
+		<xml-full-name>account-room</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Room of a person in the specified building</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="30" display-search-size="30"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-57"
+		indexed-flag="N" max-entry-size="60" max-search-size="60"
+		type="VARCHAR">
+		<contextual-name>Department</contextual-name>
+		<full-name>User Account Department</full-name>
+		<xml-contextual-name>
+			department
+		</xml-contextual-name>
+		<xml-full-name>account-department</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Department of a person</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="20" display-search-size="20"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-58"
+		indexed-flag="N" max-entry-size="20" max-search-size="20"
+		type="VARCHAR">
+		<contextual-name>Company</contextual-name>
+		<full-name>User Account Company</full-name>
+		<xml-contextual-name>company</xml-contextual-name>
+		<xml-full-name>account-company</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Master organizational entity</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="50" display-search-size="40"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-59"
+		indexed-flag="N" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Template</contextual-name>
+		<full-name>User Account Template</full-name>
+		<xml-contextual-name>template</xml-contextual-name>
+		<xml-full-name>account-template</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			User account to use as template to populate fields that are
+			not in this form
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="50" display-search-size="40"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-60"
+		indexed-flag="N" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Photo</contextual-name>
+		<full-name>User Account Photo</full-name>
+		<xml-contextual-name>photo</xml-contextual-name>
+		<xml-full-name>account-photo</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			A face picture of the person associated with an account
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="50" display-search-size="40"
+		enabled-flag="Y" entity-id="CORE-ENTY-66" id="CORE-FILD-61"
+		indexed-flag="N" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Name</contextual-name>
+		<full-name>Department Name</full-name>
+		<xml-contextual-name>name</xml-contextual-name>
+		<xml-full-name>department-name</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Name of a department, as defined by Human Resources
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="50" display-search-size="40"
+		enabled-flag="Y" entity-id="CORE-ENTY-66" id="CORE-FILD-62"
+		indexed-flag="N" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Manager</contextual-name>
+		<full-name>Department Manager</full-name>
+		<xml-contextual-name>manager</xml-contextual-name>
+		<xml-full-name>department-manager</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Person responsible for a department</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="50" display-search-size="40"
+		enabled-flag="Y" entity-id="CORE-ENTY-62" id="CORE-FILD-63"
+		indexed-flag="N" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Name</contextual-name>
+		<full-name>Building Name</full-name>
+		<xml-contextual-name>name</xml-contextual-name>
+		<xml-full-name>building-name</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Name of a building</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="50" display-search-size="40"
+		enabled-flag="Y" entity-id="CORE-ENTY-63" id="CORE-FILD-64"
+		indexed-flag="N" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Name</contextual-name>
+		<full-name>Company Name</full-name>
+		<xml-contextual-name>name</xml-contextual-name>
+		<xml-full-name>company-name</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Name of a company</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="20" display-search-size="20"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-66"
+		indexed-flag="N" max-entry-size="20" max-search-size="20"
+		type="VARCHAR">
+		<contextual-name>Organizational Unit</contextual-name>
+		<full-name>User Account Organizational Unit</full-name>
+		<xml-contextual-name>organizational-unit</xml-contextual-name>
+		<xml-full-name>account-organizational-unit</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Unique internal identifier representing the organizational
+			unit of an account in Active Directory
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="20" display-search-size="20"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-67"
+		indexed-flag="N" max-entry-size="20" max-search-size="20"
+		type="VARCHAR">
+		<contextual-name>Domain</contextual-name>
+		<full-name>User Account Domain</full-name>
+		<xml-contextual-name>domain</xml-contextual-name>
+		<xml-full-name>account-domain</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Unique internal identifier representing the domain of an
+			account in Active Directory
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="12" display-search-size="12"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-68"
+		indexed-flag="N" max-entry-size="255" max-search-size="255"
+		type="VARCHAR">
+		<contextual-name>Employee ID</contextual-name>
+		<full-name>Account Employee ID</full-name>
+		<xml-contextual-name>employee-id</xml-contextual-name>
+		<xml-full-name>account-employee-id</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Unique identifier of a user account as defined by Human
+			Resources
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="30" display-search-size="30"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-69"
+		indexed-flag="N" max-entry-size="255" max-search-size="255"
+		type="VARCHAR">
+		<contextual-name>Employee Type</contextual-name>
+		<full-name>Account Employee Type</full-name>
+		<xml-contextual-name>employee-type</xml-contextual-name>
+		<xml-full-name>account-employee-type</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Type of a user account as defined by Human Resources, such
+			as Employee, Contractor, Client or Partner
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="30" display-search-size="30"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-70"
+		indexed-flag="N" max-entry-size="255" max-search-size="255"
+		type="VARCHAR">
+		<contextual-name>Team</contextual-name>
+		<full-name>Account Team</full-name>
+		<xml-contextual-name>team</xml-contextual-name>
+		<xml-full-name>account-team</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Team of a user account as reported by its supervisor
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="30" display-search-size="30"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-71"
+		indexed-flag="N" max-entry-size="255" max-search-size="255"
+		type="VARCHAR">
+		<contextual-name>Enabled</contextual-name>
+		<full-name>Account Enabled</full-name>
+		<xml-contextual-name>enabled</xml-contextual-name>
+		<xml-full-name>account-enabled</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Indicates whether an account is enabled or disabled
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="10" display-search-size="10"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-72"
+		indexed-flag="N" max-entry-size="9" max-search-size="9" type="DATE">
+		<contextual-name>Account Expiration Date</contextual-name>
+		<full-name>Account Expiration Date</full-name>
+		<xml-contextual-name>expiration-date</xml-contextual-name>
+		<xml-full-name>account-expiration-date</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Date an account is set to expire</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="30" display-search-size="30"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-73"
+		indexed-flag="N" max-entry-size="255" max-search-size="255"
+		type="INTEGER">
+		<contextual-name>Logon Count</contextual-name>
+		<full-name>Account Logon Count</full-name>
+		<xml-contextual-name>logon-count</xml-contextual-name>
+		<xml-full-name>account-logon-count</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Number of times an account has logged to the domain server
+			queried by this application
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="10" display-search-size="10"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-74"
+		indexed-flag="N" max-entry-size="9" max-search-size="9" type="DATE">
+		<contextual-name>Last Password Date</contextual-name>
+		<full-name>Account Last Password Date</full-name>
+		<xml-contextual-name>last-password-date</xml-contextual-name>
+		<xml-full-name>account-last-password-date</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Last date a password has been set for an account
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="30" display-search-size="30"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-75"
+		indexed-flag="N" max-entry-size="255" max-search-size="255"
+		type="INTEGER">
+		<contextual-name>Bad Password Count</contextual-name>
+		<full-name>Account Bad Password Count</full-name>
+		<xml-contextual-name>bad-password-count</xml-contextual-name>
+		<xml-full-name>account-bad-password-count</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Number of times an incorrect password has been entered since
+			the last successful logon for an account
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="10" display-search-size="10"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-76"
+		indexed-flag="N" max-entry-size="9" max-search-size="9" type="DATE">
+		<contextual-name>Bad Password Date</contextual-name>
+		<full-name>Account Bad Password Date</full-name>
+		<xml-contextual-name>bad-password-date</xml-contextual-name>
+		<xml-full-name>account-bad-password-date</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Last time an incorrect password has been entered for an
+			account
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="10" display-search-size="10"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-77"
+		indexed-flag="N" max-entry-size="9" max-search-size="9" type="DATE">
+		<contextual-name>Server Last Logon Date</contextual-name>
+		<full-name>Account Server Last Logon Date</full-name>
+		<xml-contextual-name>server-logon-date</xml-contextual-name>
+		<xml-full-name>account-server-logon-date</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Last date an account has logged on to the server queried by
+			this application
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="30" display-search-size="30"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-78"
+		indexed-flag="N" max-entry-size="255" max-search-size="255"
+		type="VARCHAR">
+		<contextual-name>Domain Server</contextual-name>
+		<full-name>Account Domain Server</full-name>
+		<xml-contextual-name>domain-server</xml-contextual-name>
+		<xml-full-name>account-domain-server</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Name of the server where the directory containing this
+			account is being queried
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="10" display-search-size="10"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-79"
+		indexed-flag="N" max-entry-size="9" max-search-size="9" type="DATE">
+		<contextual-name>Domain Last Logon Date</contextual-name>
+		<full-name>Account Domain Last Logon Date</full-name>
+		<xml-contextual-name>logon-date</xml-contextual-name>
+		<xml-full-name>account-logon-date</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Last date an account has logged on to the domain queried by
+			this application
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="30" display-search-size="30"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-80"
+		indexed-flag="N" max-entry-size="255" max-search-size="255"
+		type="VARCHAR">
+		<contextual-name>Distinguished Name</contextual-name>
+		<full-name>Account Distinguished Name</full-name>
+		<xml-contextual-name>distinguished-name</xml-contextual-name>
+		<xml-full-name>account-distinguished-name</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Internal unique name of an account
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="30" display-search-size="30"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-81"
+		indexed-flag="N" max-entry-size="255" max-search-size="255"
+		type="VARCHAR">
+		<contextual-name>Proxy Address</contextual-name>
+		<full-name>Account Proxy Address</full-name>
+		<xml-contextual-name>proxy-address</xml-contextual-name>
+		<xml-full-name>account-proxy-address</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>All proxy addresses of an account</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="30" display-search-size="30"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-82"
+		indexed-flag="N" max-entry-size="255" max-search-size="255"
+		type="VARCHAR">
+		<contextual-name>Legacy Exchange DN</contextual-name>
+		<full-name>Account Legacy Exchange DN</full-name>
+		<xml-contextual-name>legacy-exchange-dn</xml-contextual-name>
+		<xml-full-name>account-legacy-exchange-dn</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>All legacy exchange distinguished names of an account</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="30" display-search-size="30"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-83"
+		indexed-flag="N" max-entry-size="255" max-search-size="255"
+		type="VARCHAR">
+		<contextual-name>Show In Address Book</contextual-name>
+		<full-name>Account Show In Address Book</full-name>
+		<xml-contextual-name>show-in-address-book</xml-contextual-name>
+		<xml-full-name>account-show-in-address-book</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>All show in address books of an account</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="30" display-search-size="30"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-84"
+		indexed-flag="N" max-entry-size="255" max-search-size="255"
+		type="VARCHAR">
+		<contextual-name>Target Address</contextual-name>
+		<full-name>Account Target Address</full-name>
+		<xml-contextual-name>target-address</xml-contextual-name>
+		<xml-full-name>account-target-address</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>All target addresses of an account</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="80" display-search-size="80"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-85"
+		indexed-flag="N" max-entry-size="255" max-search-size="255"
+		type="VARCHAR">
+		<contextual-name>Description</contextual-name>
+		<full-name>Account Description</full-name>
+		<xml-contextual-name>description</xml-contextual-name>
+		<xml-full-name>account-description</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Description of an account</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="50" display-search-size="40"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-86"
+		indexed-flag="N" max-entry-size="255" max-search-size="255"
+		type="VARCHAR">
+		<contextual-name>Assistant</contextual-name>
+		<full-name>Account Assistant</full-name>
+		<xml-contextual-name>assistant</xml-contextual-name>
+		<xml-full-name>account-assistant</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Personal assistant of an account</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="20" display-search-size="20"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-87"
+		indexed-flag="N" max-entry-size="255" max-search-size="255"
+		type="VARCHAR">
+		<contextual-name>Assistant Phone Number</contextual-name>
+		<full-name>Account Assistant Phone Number</full-name>
+		<xml-contextual-name>assistant-phone-number</xml-contextual-name>
+		<xml-full-name>account-assistant-phone-number</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Phone number of an assistant of an account</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="20" display-search-size="20"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-88"
+		indexed-flag="N" max-entry-size="255" max-search-size="255"
+		type="VARCHAR">
+		<contextual-name>Expire this user's password</contextual-name>
+		<full-name>Account Expire this user's password now</full-name>
+		<xml-contextual-name>expire-password-now</xml-contextual-name>
+		<xml-full-name>account-expire-password-now</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Indicates whether the password of this user should be expired immediately</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="3" display-search-size="3"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-89"
+		indexed-flag="N" max-entry-size="3" max-search-size="3"
+		type="VARCHAR">
+		<contextual-name>Archiving Enabled</contextual-name>
+		<full-name>Account Archiving Enabled</full-name>
+		<xml-contextual-name>archiving-enabled</xml-contextual-name>
+		<xml-full-name>account-archiving-enabled</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Indicates whether communicator archiving is enabled for an account</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="5" display-search-size="5"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-90"
+		indexed-flag="N" max-entry-size="5" max-search-size="5"
+		type="VARCHAR">
+		<contextual-name>Option Flags</contextual-name>
+		<full-name>Account Option Flags</full-name>
+		<xml-contextual-name>option-flags</xml-contextual-name>
+		<xml-full-name>account-option-flags</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Communicator option flags associated with an account</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="120" display-search-size="120"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-91"
+		indexed-flag="N" max-entry-size="255" max-search-size="255"
+		type="VARCHAR">
+		<contextual-name>Primary Home Server</contextual-name>
+		<full-name>Account Primary Home Server</full-name>
+		<xml-contextual-name>primary-home-server</xml-contextual-name>
+		<xml-full-name>account-primary-home-server</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Communicator primary home server associated with an account</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="120" display-search-size="120"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-92"
+		indexed-flag="N" max-entry-size="255" max-search-size="255"
+		type="VARCHAR">
+		<contextual-name>Primary User Address</contextual-name>
+		<full-name>Account Primary User Address</full-name>
+		<xml-contextual-name>primary-user-address</xml-contextual-name>
+		<xml-full-name>account-primary-user-address</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Communicator primary user address associated with an account</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="7" display-search-size="7"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-93"
+		indexed-flag="N" max-entry-size="7" max-search-size="7"
+		type="VARCHAR">
+		<contextual-name>User Enabled</contextual-name>
+		<full-name>Account User Enabled</full-name>
+		<xml-contextual-name>user-enabled</xml-contextual-name>
+		<xml-full-name>account-user-enabled</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Communicator user enabled associated with an account</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="7" display-search-size="7"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-94"
+		indexed-flag="N" max-entry-size="7" max-search-size="7"
+		type="VARCHAR">
+		<contextual-name>Logon Script</contextual-name>
+		<full-name>Account Logon Script</full-name>
+		<xml-contextual-name>logon-script</xml-contextual-name>
+		<xml-full-name>account-logon-script</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Logon script associated with an account</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="30" display-search-size="30"
+		enabled-flag="Y" entity-id="CORE-ENTY-51" id="ADMN-FILD-65"
+		indexed-flag="N" max-entry-size="255" max-search-size="255"
+		type="VARCHAR">
+		<contextual-name>Warning</contextual-name>
+		<full-name>Warning Content</full-name>
+		<xml-contextual-name>warning</xml-contextual-name>
+		<xml-full-name>warning-content</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Content of a warning message</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="10" display-search-size="10"
+		enabled-flag="Y" entity-id="CORE-ENTY-51" id="ADMN-FILD-66"
+		indexed-flag="N" max-entry-size="9" max-search-size="9" type="DATE">
+		<contextual-name>Start Time</contextual-name>
+		<full-name>Warning Start Time</full-name>
+		<xml-contextual-name>start-time</xml-contextual-name>
+		<xml-full-name>warning-start-time</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Start time of a warning</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="10" display-search-size="10"
+		enabled-flag="Y" entity-id="CORE-ENTY-51" id="ADMN-FILD-67"
+		indexed-flag="N" max-entry-size="9" max-search-size="9" type="DATE">
+		<contextual-name>End Time</contextual-name>
+		<full-name>Warning End Time</full-name>
+		<xml-contextual-name>end-time</xml-contextual-name>
+		<xml-full-name>warning-end-time</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>End time of a warning</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="30" display-search-size="30"
+		enabled-flag="Y" entity-id="CORE-ENTY-71" id="ADMN-FILD-68"
+		indexed-flag="N" max-entry-size="255" max-search-size="255"
+		type="VARCHAR">
+		<contextual-name>Name</contextual-name>
+		<full-name>Data Source Name</full-name>
+		<xml-contextual-name>name</xml-contextual-name>
+		<xml-full-name>data-source-name</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Name of a data source</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="20" display-search-size="20"
+		enabled-flag="Y" entity-id="CORE-ENTY-71" id="ADMN-FILD-69"
+		indexed-flag="N" max-entry-size="255" max-search-size="255"
+		type="VARCHAR">
+		<contextual-name>Type</contextual-name>
+		<full-name>Data Source Type</full-name>
+		<xml-contextual-name>type</xml-contextual-name>
+		<xml-full-name>data-source-type</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Type of a data source</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="40" display-search-size="40"
+		enabled-flag="Y" entity-id="CORE-ENTY-71" id="ADMN-FILD-70"
+		indexed-flag="N" max-entry-size="255" max-search-size="255"
+		type="VARCHAR">
+		<contextual-name>Connection URL</contextual-name>
+		<full-name>Data Source Connection URL</full-name>
+		<xml-contextual-name>connection-url</xml-contextual-name>
+		<xml-full-name>data-source-connection-url</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Connection URL of a data source</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="200" display-search-size="200"
+		enabled-flag="Y" entity-id="CORE-ENTY-31" id="ADMN-FILD-71"
+		indexed-flag="N" max-entry-size="255" max-search-size="255"
+		type="VARCHAR">
+		<contextual-name>Stack Trace</contextual-name>
+		<full-name>Error Log Stack Trace</full-name>
+		<xml-contextual-name>stack-trace</xml-contextual-name>
+		<xml-full-name>error-log-stack-trace</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Stack traced of an error log</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="30" display-search-size="30"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="ADMN-FILD-80"
+		indexed-flag="N" max-entry-size="255" max-search-size="255"
+		type="VARCHAR">
+		<contextual-name>Batch</contextual-name>
+		<full-name>Batch</full-name>
+		<xml-contextual-name>batch</xml-contextual-name>
+		<xml-full-name>batch-batch</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Command line of the batch being executed
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="10" display-search-size="10"
+		enabled-flag="Y" entity-id="CORE-ENTY-69" id="ADMN-FILD-81"
+		indexed-flag="N" max-entry-size="9" max-search-size="9" type="DATE">
+		<contextual-name>Start Date</contextual-name>
+		<full-name>Batch Start Date</full-name>
+		<xml-contextual-name>start-date</xml-contextual-name>
+		<xml-full-name>batch-start-date</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Date a batch was last reported to start
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="10" display-search-size="10"
+		enabled-flag="Y" entity-id="CORE-ENTY-69" id="ADMN-FILD-82"
+		indexed-flag="N" max-entry-size="9" max-search-size="9" type="DATE">
+		<contextual-name>End Date</contextual-name>
+		<full-name>Batch End Date</full-name>
+		<xml-contextual-name>end-date</xml-contextual-name>
+		<xml-full-name>batch-end-date</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Date a batch was last reported to end</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="60" display-search-size="60"
+		enabled-flag="Y" entity-id="CORE-ENTY-33" id="ADMN-FILD-83"
+		indexed-flag="N" max-entry-size="255" max-search-size="255"
+		type="VARCHAR">
+		<contextual-name>Subject</contextual-name>
+		<full-name>Email Subject</full-name>
+		<xml-contextual-name>subject</xml-contextual-name>
+		<xml-full-name>email-subject</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Subject of an email</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="200" display-search-size="200"
+		enabled-flag="Y" entity-id="CORE-ENTY-33" id="ADMN-FILD-72"
+		indexed-flag="N" max-entry-size="255" max-search-size="255"
+		type="VARCHAR">
+		<contextual-name>Body</contextual-name>
+		<full-name>Email Body</full-name>
+		<xml-contextual-name>body</xml-contextual-name>
+		<xml-full-name>email-body</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Body of an email</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="60" display-search-size="60"
+		enabled-flag="Y" entity-id="CORE-ENTY-33" id="ADMN-FILD-84"
+		indexed-flag="N" max-entry-size="255" max-search-size="255"
+		type="VARCHAR">
+		<contextual-name>From</contextual-name>
+		<full-name>Email From</full-name>
+		<xml-contextual-name>from</xml-contextual-name>
+		<xml-full-name>email-from</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Sender of an email</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="30" display-search-size="30"
+		enabled-flag="Y" entity-id="CORE-ENTY-33" id="ADMN-FILD-85"
+		indexed-flag="N" max-entry-size="255" max-search-size="255"
+		type="VARCHAR">
+		<contextual-name>To</contextual-name>
+		<full-name>Email To</full-name>
+		<xml-contextual-name>to</xml-contextual-name>
+		<xml-full-name>email-to</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Recipient of an email</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="30" display-search-size="30"
+		enabled-flag="Y" entity-id="CORE-ENTY-33" id="ADMN-FILD-86"
+		indexed-flag="N" max-entry-size="255" max-search-size="255"
+		type="VARCHAR">
+		<contextual-name>Cc</contextual-name>
+		<full-name>Email Cc</full-name>
+		<xml-contextual-name>cc</xml-contextual-name>
+		<xml-full-name>email-cc</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Carbon copy recipient of an email</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="10" display-search-size="10"
+		enabled-flag="Y" entity-id="CORE-ENTY-33" id="ADMN-FILD-87"
+		indexed-flag="N" max-entry-size="9" max-search-size="9" type="DATE">
+		<contextual-name>Send Date</contextual-name>
+		<full-name>Email Send Date</full-name>
+		<xml-contextual-name>send-date</xml-contextual-name>
+		<xml-full-name>email-send-date</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Date an email is scheduled to be sent</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="50" display-search-size="40"
+		enabled-flag="Y" entity-id="CORE-ENTY-33" id="ADMN-FILD-88"
+		indexed-flag="N" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Status</contextual-name>
+		<full-name>Email Status</full-name>
+		<xml-contextual-name>status</xml-contextual-name>
+		<xml-full-name>email-status</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Status of an email</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="30" display-search-size="30"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="ADMN-FILD-89"
+		indexed-flag="N" max-entry-size="255" max-search-size="255"
+		type="VARCHAR">
+		<contextual-name>System Role</contextual-name>
+		<full-name>Account System Role</full-name>
+		<xml-contextual-name>system-role</xml-contextual-name>
+		<xml-full-name>account-systen-role</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>A global role assigned to an account</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="30" display-search-size="30"
+		enabled-flag="Y" entity-id="HLPD-ENTY-1" id="ADMN-FILD-90"
+		indexed-flag="N" max-entry-size="255" max-search-size="255"
+		type="VARCHAR">
+		<contextual-name>System Role</contextual-name>
+		<full-name>Group System Role</full-name>
+		<xml-contextual-name>system-role</xml-contextual-name>
+		<xml-full-name>group-systen-role</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>A global role assigned to an group</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="16" display-search-size="16"
+		enabled-flag="Y" entity-id="CORE-ENTY-53" id="ADMN-FILD-91"
+		indexed-flag="N" max-entry-size="255" max-search-size="255"
+		type="VARCHAR">
+		<contextual-name>Entity Id</contextual-name>
+		<full-name>Entity Id</full-name>
+		<xml-contextual-name>entity-id</xml-contextual-name>
+		<xml-full-name>entity-id</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>An entity id assigned to a log</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="16" display-search-size="16"
+		enabled-flag="Y" entity-id="CORE-ENTY-53" id="ADMN-FILD-92"
+		indexed-flag="N" max-entry-size="255" max-search-size="255"
+		type="VARCHAR">
+		<contextual-name>Record Id</contextual-name>
+		<full-name>Record Id</full-name>
+		<xml-contextual-name>record-id</xml-contextual-name>
+		<xml-full-name>record-id</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>A record id assigned to a log</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="10" display-search-size="10"
+		enabled-flag="Y" entity-id="CORE-ENTY-53" id="ADMN-FILD-93"
+		indexed-flag="N" max-entry-size="9" max-search-size="9" type="DATE">
+		<contextual-name>Log Date</contextual-name>
+		<full-name>Log Date</full-name>
+		<xml-contextual-name>log-date</xml-contextual-name>
+		<xml-full-name>log-date</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Date a log is created in the database</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="16" display-search-size="16"
+		enabled-flag="Y" entity-id="CORE-ENTY-53" id="ADMN-FILD-94"
+		indexed-flag="N" max-entry-size="255" max-search-size="255"
+		type="VARCHAR">
+		<contextual-name>Type Id</contextual-name>
+		<full-name>Type Id</full-name>
+		<xml-contextual-name>type-id</xml-contextual-name>
+		<xml-full-name>type-id</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>A type id assigned to a log</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="30" display-search-size="30"
+		enabled-flag="Y" entity-id="CORE-ENTY-53" id="ADMN-FILD-95"
+		indexed-flag="N" max-entry-size="255" max-search-size="255"
+		type="VARCHAR">
+		<contextual-name>Client Address</contextual-name>
+		<full-name>Entry Log Client Address</full-name>
+		<xml-contextual-name>client-address</xml-contextual-name>
+		<xml-full-name>entry-log-client-address</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			A client address assigned to an entry log
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="30" display-search-size="30"
+		enabled-flag="Y" entity-id="CORE-ENTY-53" id="ADMN-FILD-96"
+		indexed-flag="N" max-entry-size="255" max-search-size="255"
+		type="VARCHAR">
+		<contextual-name>Server Address</contextual-name>
+		<full-name>Entry Log Server Address</full-name>
+		<xml-contextual-name>server-address</xml-contextual-name>
+		<xml-full-name>entry-log-server-address</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			A server address assigned to an entry log
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="30" display-search-size="30"
+		enabled-flag="Y" entity-id="CORE-ENTY-53" id="ADMN-FILD-97"
+		indexed-flag="N" max-entry-size="255" max-search-size="255"
+		type="VARCHAR">
+		<contextual-name>Session Id</contextual-name>
+		<full-name>Entry Log Session Id</full-name>
+		<xml-contextual-name>session-id</xml-contextual-name>
+		<xml-full-name>entry-log-session-id</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>A session id assigned to an entry log</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="30" display-search-size="30"
+		enabled-flag="Y" entity-id="CORE-ENTY-53" id="ADMN-FILD-98"
+		indexed-flag="N" max-entry-size="255" max-search-size="255"
+		type="VARCHAR">
+		<contextual-name>Actual Account Id</contextual-name>
+		<full-name>Entry Log Actual Account Id</full-name>
+		<xml-contextual-name>actual-account-id</xml-contextual-name>
+		<xml-full-name>entry-log-actual-account-id</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			An actual account id assigned to an entry log
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="30" display-search-size="30"
+		enabled-flag="Y" entity-id="CORE-ENTY-53" id="ADMN-FILD-99"
+		indexed-flag="N" max-entry-size="255" max-search-size="255"
+		type="VARCHAR">
+		<contextual-name>Proxy Account Id</contextual-name>
+		<full-name>Entry Log Proxy Account Id</full-name>
+		<xml-contextual-name>proxy-account-id</xml-contextual-name>
+		<xml-full-name>entry-log-proxy-account-id</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			A proxy account id assigned to an entry log
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="10" display-search-size="10"
+		enabled-flag="Y" entity-id="CORE-ENTY-53" id="ADMN-FILD-100"
+		indexed-flag="N" max-entry-size="9" max-search-size="9" type="DATE">
+		<contextual-name>Log Date From</contextual-name>
+		<full-name>Log Date From</full-name>
+		<xml-contextual-name>log-date-from</xml-contextual-name>
+		<xml-full-name>og-date-from</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Date that begins for searching a log</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="10" display-search-size="10"
+		enabled-flag="Y" entity-id="CORE-ENTY-53" id="ADMN-FILD-101"
+		indexed-flag="N" max-entry-size="9" max-search-size="9" type="DATE">
+		<contextual-name>Log Date To</contextual-name>
+		<full-name>Log Date To</full-name>
+		<xml-contextual-name>log-date-to</xml-contextual-name>
+		<xml-full-name>log-date-to</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Date that ends for searching a log</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="30" display-search-size="30"
+		enabled-flag="Y" entity-id="CORE-ENTY-31" id="ADMN-FILD-102"
+		indexed-flag="N" max-entry-size="255" max-search-size="255"
+		type="VARCHAR">
+		<contextual-name>Class Name</contextual-name>
+		<full-name>Error Log Class Name</full-name>
+		<xml-contextual-name>class-name</xml-contextual-name>
+		<xml-full-name>error-log-class-name</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>A class name assigned to an error log</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="16" display-search-size="16"
+		enabled-flag="Y" entity-id="CORE-ENTY-70" id="ADMN-FILD-103"
+		indexed-flag="N" max-entry-size="255" max-search-size="255"
+		type="VARCHAR">
+		<contextual-name>Page Id</contextual-name>
+		<full-name>Response Log Page Id</full-name>
+		<xml-contextual-name>page-id</xml-contextual-name>
+		<xml-full-name>response-log-page-id</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>A page id assigned to a response log</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="7" display-search-size="7"
+		enabled-flag="Y" entity-id="CORE-ENTY-70" id="ADMN-FILD-104"
+		indexed-flag="N" max-entry-size="100" max-search-size="100"
+		type="INTEGER">
+		<contextual-name>Complete Time</contextual-name>
+		<full-name>Response Log Complete Time</full-name>
+		<xml-contextual-name>complete-time</xml-contextual-name>
+		<xml-full-name>response-log-complete-time</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Time taken by completing a response log
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="3" display-search-size="3"
+		enabled-flag="Y" entity-id="CORE-ENTY-70" id="ADMN-FILD-105"
+		indexed-flag="N" max-entry-size="100" max-search-size="100"
+		type="INTEGER">
+		<contextual-name>Response Code</contextual-name>
+		<full-name>Response Code</full-name>
+		<xml-contextual-name>response-code</xml-contextual-name>
+		<xml-full-name>response-code</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>A code assigned to a response log</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="7" display-search-size="7"
+		enabled-flag="Y" entity-id="CORE-ENTY-70" id="ADMN-FILD-106"
+		indexed-flag="N" max-entry-size="100" max-search-size="100"
+		type="INTEGER">
+		<contextual-name>Complete Time From</contextual-name>
+		<full-name>Response Log Complete Time From</full-name>
+		<xml-contextual-name>complete-time-from</xml-contextual-name>
+		<xml-full-name>response-log-complete-time-from</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Minimum time taken by completing a response log
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="7" display-search-size="7"
+		enabled-flag="Y" entity-id="CORE-ENTY-70" id="ADMN-FILD-107"
+		indexed-flag="N" max-entry-size="255" max-search-size="255"
+		type="INTEGER">
+		<contextual-name>Complete Time To</contextual-name>
+		<full-name>Response Log Complete Time To</full-name>
+		<xml-contextual-name>complete-time-to</xml-contextual-name>
+		<xml-full-name>response-log-complete-time-to</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Maximum time taken by completing a response log
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="30" display-search-size="30"
+		enabled-flag="Y" entity-id="CORE-ENTY-32" id="ADMN-FILD-108"
+		indexed-flag="N" max-entry-size="255" max-search-size="255"
+		type="VARCHAR">
+		<contextual-name>Name</contextual-name>
+		<full-name>File Name</full-name>
+		<xml-contextual-name>name</xml-contextual-name>
+		<xml-full-name>file-name</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Name of a file</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="50" display-search-size="50"
+		enabled-flag="Y" entity-id="CORE-ENTY-32" id="ADMN-FILD-109"
+		indexed-flag="N" max-entry-size="100" max-search-size="100"
+		type="INTEGER">
+		<contextual-name>Size</contextual-name>
+		<full-name>File Size</full-name>
+		<xml-contextual-name>size</xml-contextual-name>
+		<xml-full-name>file-size</xml-full-name>
+		<vcard-name />
+		<preferred-name>filsiz</preferred-name>
+		<description>
+			Amount of disk space taken by a resource file
+		</description>
+		<comment>Size is expressed in bytes</comment>
+		<access-key />
+	</field>
+	<field display-entry-size="10" display-search-size="10"
+		enabled-flag="Y" entity-id="CORE-ENTY-32" id="ADMN-FILD-110"
+		indexed-flag="N" max-entry-size="9" max-search-size="9" type="DATE">
+		<contextual-name>Upload Date</contextual-name>
+		<full-name>File Upload Date</full-name>
+		<xml-contextual-name>upload-date</xml-contextual-name>
+		<xml-full-name>file-upload-date</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Date a file is uploaded to database</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="30" display-search-size="30"
+		enabled-flag="Y" entity-id="CORE-ENTY-32" id="ADMN-FILD-111"
+		indexed-flag="N" max-entry-size="255" max-search-size="255"
+		type="VARCHAR">
+		<contextual-name>System Role</contextual-name>
+		<full-name>File System Role</full-name>
+		<xml-contextual-name>system-role</xml-contextual-name>
+		<xml-full-name>file-system-role</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>A global role assigned to a file</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="30" display-search-size="30"
+		enabled-flag="Y" entity-id="CORE-ENTY-64" id="ADMN-FILD-112"
+		indexed-flag="N" max-entry-size="255" max-search-size="255"
+		type="VARCHAR">
+		<contextual-name>Organizational Unit</contextual-name>
+		<full-name>LDAP Control Organizational Unit</full-name>
+		<xml-contextual-name>Organizational_unit</xml-contextual-name>
+		<xml-full-name>ldap_control_rganizational_unit</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			A rganizational unit assigned to a LDAP control
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="30" display-search-size="30"
+		enabled-flag="Y" entity-id="CORE-ENTY-64" id="ADMN-FILD-113"
+		indexed-flag="N" max-entry-size="255" max-search-size="255"
+		type="VARCHAR">
+		<contextual-name>System Role</contextual-name>
+		<full-name>LDAP Control System Role</full-name>
+		<xml-contextual-name>system-role</xml-contextual-name>
+		<xml-full-name>ldap_control-system-role</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			A global role assigned to a LDAP control
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="10" display-search-size="10"
+		enabled-flag="Y" entity-id="CORE-ENTY-32" id="ADMN-FILD-114"
+		indexed-flag="N" max-entry-size="9" max-search-size="9" type="DATE">
+		<contextual-name>Upload Date From</contextual-name>
+		<full-name>Upload Date From</full-name>
+		<xml-contextual-name>upload-date-from</xml-contextual-name>
+		<xml-full-name>og-date-from</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Upload date that begins for searching a file</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="10" display-search-size="10"
+		enabled-flag="Y" entity-id="CORE-ENTY-32" id="ADMN-FILD-115"
+		indexed-flag="N" max-entry-size="9" max-search-size="9" type="DATE">
+		<contextual-name>Upload Date To</contextual-name>
+		<full-name>Upload Date To</full-name>
+		<xml-contextual-name>upload-date-to</xml-contextual-name>
+		<xml-full-name>upload-date-to</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Upload date that ends for searching a file</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="7" display-search-size="7"
+		enabled-flag="Y" entity-id="CORE-ENTY-32" id="ADMN-FILD-116"
+		indexed-flag="N" max-entry-size="100" max-search-size="100"
+		type="INTEGER">
+		<contextual-name>File Size From</contextual-name>
+		<full-name>File Size From</full-name>
+		<xml-contextual-name>file-size-from</xml-contextual-name>
+		<xml-full-name>file-size-from</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Minimum file size for searching a file
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="7" display-search-size="7"
+		enabled-flag="Y" entity-id="CORE-ENTY-32" id="ADMN-FILD-117"
+		indexed-flag="N" max-entry-size="255" max-search-size="255"
+		type="INTEGER">
+		<contextual-name>File Size To</contextual-name>
+		<full-name>File Size To</full-name>
+		<xml-contextual-name>file-size-to</xml-contextual-name>
+		<xml-full-name>file-size-to</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Maximum file size for searching a file
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="30" display-search-size="30"
+		enabled-flag="Y" entity-id="CORE-ENTY-64" id="ADMN-FILD-118"
+		indexed-flag="N" max-entry-size="255" max-search-size="255"
+		type="VARCHAR">
+		<contextual-name>Domain</contextual-name>
+		<full-name>LDAP Control Domain</full-name>
+		<xml-contextual-name>domain</xml-contextual-name>
+		<xml-full-name>ldap_control_domain</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>A domain assigned to a LDAP control</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="30" display-search-size="30"
+		enabled-flag="Y" entity-id="CORE-ENTY-32" id="ADMN-FILD-119"
+		indexed-flag="N" max-entry-size="255" max-search-size="255"
+		type="VARCHAR">
+		<contextual-name>File</contextual-name>
+		<full-name>File</full-name>
+		<xml-contextual-name>file</xml-contextual-name>
+		<xml-full-name>file</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>A stored file</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="30" display-search-size="40"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-6"
+		indexed-flag="N" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Full Name</contextual-name>
+		<full-name>User Account Full Name</full-name>
+		<xml-contextual-name>full-name</xml-contextual-name>
+		<xml-full-name>account-full-name</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Full name, including the first name, the middle initial, and
+			the last name
+		</description>
+		<comment>
+			When the last name is unknown, the login is used instead
+		</comment>
+		<access-key />
+	</field>
+	<field display-entry-size="50" display-search-size="40"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="CORE-FILD-7"
+		indexed-flag="N" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Supervisor</contextual-name>
+		<full-name>User Account Supervisor</full-name>
+		<xml-contextual-name>supervisor</xml-contextual-name>
+		<xml-full-name>account-supervisor</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			User acting as functional manager of another user
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="30" display-search-size="40"
+		enabled-flag="Y" entity-id="HLPD-ENTY-1" id="HLPD-FILD-1"
+		indexed-flag="N" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Name</contextual-name>
+		<full-name>User Group Name</full-name>
+		<xml-contextual-name>name</xml-contextual-name>
+		<xml-full-name>group-name</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Name of a user group</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="50" display-search-size="40"
+		enabled-flag="Y" entity-id="HLPD-ENTY-5" id="HLPD-FILD-10"
+		indexed-flag="N" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Email Option</contextual-name>
+		<full-name>Proxy Email Option</full-name>
+		<xml-contextual-name>email-copy</xml-contextual-name>
+		<xml-full-name>proxy-email-copy</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Indicates whether the grantee should receive a copy of all
+			automated emails received by the grantor
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="30" display-search-size="30"
+		enabled-flag="Y" entity-id="HLPD-ENTY-1" id="HLPD-FILD-11"
+		indexed-flag="N" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Cloned Memberships</contextual-name>
+		<full-name>Group Cloned Memberships</full-name>
+		<xml-contextual-name>cloned-memberships</xml-contextual-name>
+		<xml-full-name>group-cloned-memberships</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Group to copy initial memberships from
+		</description>
+		<comment>
+			After a group has been cloned, modifying the memberships of
+			the original group will not affect the memberships of the
+			cloned group
+		</comment>
+		<access-key />
+	</field>
+	<field display-entry-size="50" display-search-size="40"
+		enabled-flag="Y" entity-id="HLPD-ENTY-5" id="HLPD-FILD-12"
+		indexed-flag="N" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Read Option</contextual-name>
+		<full-name>Proxy Read Option</full-name>
+		<xml-contextual-name>read</xml-contextual-name>
+		<xml-full-name>proxy-read</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Indicates whether the grantee should be able to access items
+			you cannot modify
+		</description>
+		<comment>
+			By default, proxies are entered only to allow another person
+			to perform your transactions. This option extends the proxy
+			by allowing the grantee to have read-access to all your
+			resources, including sensitive resources that you do not own
+			or manage but that you have read-access to
+		</comment>
+		<access-key />
+	</field>
+	<field display-entry-size="60" display-search-size="40"
+		enabled-flag="Y" entity-id="HLPD-ENTY-1" id="HLPD-FILD-13"
+		indexed-flag="N" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Name</contextual-name>
+		<full-name>User Group Name</full-name>
+		<xml-contextual-name>name</xml-contextual-name>
+		<xml-full-name>group-name</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>User group assigned to a person</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="50" display-search-size="40"
+		enabled-flag="Y" entity-id="HLPD-ENTY-1" id="HLPD-FILD-14"
+		indexed-flag="N" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Names</contextual-name>
+		<full-name>User Group Names</full-name>
+		<xml-contextual-name>names</xml-contextual-name>
+		<xml-full-name>group-names</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>User groups assigned to a person</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="50" display-search-size="40"
+		enabled-flag="Y" entity-id="HLPD-ENTY-1" id="HLPD-FILD-15"
+		indexed-flag="N" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Template</contextual-name>
+		<full-name>User Group Template</full-name>
+		<xml-contextual-name>template</xml-contextual-name>
+		<xml-full-name>group-template</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			User group to use as template to populate fields that are
+			not in this form
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="0" display-search-size="0"
+		enabled-flag="Y" entity-id="HLPD-ENTY-1" id="HLPD-FILD-2"
+		indexed-flag="N" max-entry-size="0" max-search-size="0"
+		type="VARCHAR">
+		<contextual-name>Description</contextual-name>
+		<full-name>User Group Description</full-name>
+		<xml-contextual-name>description</xml-contextual-name>
+		<xml-full-name>group-description</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Description of a user group</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="30" display-search-size="30"
+		enabled-flag="Y" entity-id="CORE-ENTY-5" id="HLPD-FILD-222"
+		indexed-flag="N" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Name</contextual-name>
+		<full-name>Role Name</full-name>
+		<xml-contextual-name>name</xml-contextual-name>
+		<xml-full-name>role-name</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Name assigned to the responsibility or duty
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="0" display-search-size="0"
+		enabled-flag="Y" entity-id="CORE-ENTY-5" id="HLPD-FILD-223"
+		indexed-flag="N" max-entry-size="0" max-search-size="0"
+		type="VARCHAR">
+		<contextual-name>Description</contextual-name>
+		<full-name>Role Description</full-name>
+		<xml-contextual-name>description</xml-contextual-name>
+		<xml-full-name>role-description</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Complete description of the role, including duties and
+			responsibilities
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="30" display-search-size="30"
+		enabled-flag="Y" entity-id="CORE-ENTY-7" id="HLPD-FILD-224"
+		indexed-flag="N" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Name</contextual-name>
+		<full-name>Privilege Name</full-name>
+		<xml-contextual-name>name</xml-contextual-name>
+		<xml-full-name>privilege-name</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Name assigned to the right or advantage
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="0" display-search-size="0"
+		enabled-flag="Y" entity-id="CORE-ENTY-7" id="HLPD-FILD-225"
+		indexed-flag="N" max-entry-size="0" max-search-size="0"
+		type="VARCHAR">
+		<contextual-name>Description</contextual-name>
+		<full-name>Privilege Description</full-name>
+		<xml-contextual-name>description</xml-contextual-name>
+		<xml-full-name>privilege-description</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Complete description of the privilege</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="50" display-search-size="40"
+		enabled-flag="Y" entity-id="HLPD-ENTY-1" id="HLPD-FILD-3"
+		indexed-flag="N" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Owner</contextual-name>
+		<full-name>User Group Owner</full-name>
+		<xml-contextual-name>owner</xml-contextual-name>
+		<xml-full-name>group-owner</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Person responsible for keeping the members of a user group
+			up-to-date
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="50" display-search-size="40"
+		enabled-flag="Y" entity-id="HLPD-ENTY-1" id="HLPD-FILD-4"
+		indexed-flag="N" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Type</contextual-name>
+		<full-name>User Group Type</full-name>
+		<xml-contextual-name>type</xml-contextual-name>
+		<xml-full-name>group-type</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Type of a user group, public or personal
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="60" display-search-size="50"
+		enabled-flag="Y" entity-id="HLPD-ENTY-1" id="HLPD-FILD-5"
+		indexed-flag="N" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Name or Description</contextual-name>
+		<full-name>User Group Name or Description</full-name>
+		<xml-contextual-name>name-or-description</xml-contextual-name>
+		<xml-full-name>group-name-or-description</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Name or description of a user group</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="50" display-search-size="40"
+		enabled-flag="Y" entity-id="HLPD-ENTY-1" id="HLPD-FILD-6"
+		indexed-flag="N" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Member</contextual-name>
+		<full-name>User Group Member</full-name>
+		<xml-contextual-name>member</xml-contextual-name>
+		<xml-full-name>group-member</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Person belonging to a user group</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="50" display-search-size="40"
+		enabled-flag="Y" entity-id="HLPD-ENTY-1" id="HLPD-FILD-7"
+		indexed-flag="N" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Members</contextual-name>
+		<full-name>User Group Members</full-name>
+		<xml-contextual-name>members</xml-contextual-name>
+		<xml-full-name>group-members</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Persons belonging to a user group</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="50" display-search-size="40"
+		enabled-flag="Y" entity-id="HLPD-ENTY-5" id="HLPD-FILD-8"
+		indexed-flag="N" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Grantor</contextual-name>
+		<full-name>Proxy Grantor</full-name>
+		<xml-contextual-name>grantor</xml-contextual-name>
+		<xml-full-name>proxy-grantor</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Person granting its transaction privileges to another person
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="50" display-search-size="40"
+		enabled-flag="Y" entity-id="HLPD-ENTY-5" id="HLPD-FILD-9"
+		indexed-flag="N" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Grantee</contextual-name>
+		<full-name>Proxy Grantee</full-name>
+		<xml-contextual-name>grantee</xml-contextual-name>
+		<xml-full-name>proxy-grantee</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Person receiving transaction privileges from another person
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="60" display-search-size="30"
+		enabled-flag="Y" entity-id="WIKI-ENTY-5" id="WIKI-FILD-1"
+		indexed-flag="Y" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Name</contextual-name>
+		<full-name>Content Name</full-name>
+		<xml-contextual-name>name</xml-contextual-name>
+		<xml-full-name>content-name</xml-full-name>
+		<vcard-name />
+		<preferred-name>rnam</preferred-name>
+		<description>
+			Name of a piece of content, to be used for searches
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="50" display-search-size="50"
+		enabled-flag="Y" entity-id="WIKI-ENTY-5" id="WIKI-FILD-10"
+		indexed-flag="Y" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Parent Article</contextual-name>
+		<full-name>Content Parent Article</full-name>
+		<xml-contextual-name>parent-article</xml-contextual-name>
+		<xml-full-name>content-parent-article</xml-full-name>
+		<vcard-name />
+		<preferred-name>rpdr</preferred-name>
+		<description>
+			Article where a piece of content is accessible from
+		</description>
+		<comment>
+			A piece of content can reside in multiple articles. The
+			article where a piece of content is also maintained from is
+			the main parent article
+		</comment>
+		<access-key />
+	</field>
+	<field display-entry-size="50" display-search-size="50"
+		enabled-flag="Y" entity-id="WIKI-ENTY-4" id="WIKI-FILD-11"
+		indexed-flag="Y" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Initiator</contextual-name>
+		<full-name>Content Request Initiator</full-name>
+		<xml-contextual-name>requestor</xml-contextual-name>
+		<xml-full-name>content-request-requestor</xml-full-name>
+		<vcard-name />
+		<preferred-name>rrqreq</preferred-name>
+		<description>
+			Person who submitted a content request
+		</description>
+		<comment>Any user can submit a content request</comment>
+		<access-key />
+	</field>
+	<field display-entry-size="50" display-search-size="50"
+		enabled-flag="Y" entity-id="WIKI-ENTY-4" id="WIKI-FILD-12"
+		indexed-flag="Y" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Approver</contextual-name>
+		<full-name>Content Request Approver</full-name>
+		<xml-contextual-name>approver</xml-contextual-name>
+		<xml-full-name>content-request-approver</xml-full-name>
+		<vcard-name />
+		<preferred-name>rrqapp</preferred-name>
+		<description>
+			Person who is responsible for approving a content request
+		</description>
+		<comment>
+			This person is usually the editor of the parent article
+		</comment>
+		<access-key />
+	</field>
+	<field display-entry-size="50" display-search-size="50"
+		enabled-flag="Y" entity-id="WIKI-ENTY-4" id="WIKI-FILD-13"
+		indexed-flag="Y" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Type</contextual-name>
+		<full-name>Content Request Type</full-name>
+		<xml-contextual-name>type</xml-contextual-name>
+		<xml-full-name>content-request-type</xml-full-name>
+		<vcard-name />
+		<preferred-name>rrqtyp</preferred-name>
+		<description>
+			Type of modification requested by the user
+		</description>
+		<comment>
+			A user can request a piece of content to be added, updated
+			or removed from an article
+		</comment>
+		<access-key />
+	</field>
+	<field display-entry-size="50" display-search-size="50"
+		enabled-flag="Y" entity-id="WIKI-ENTY-4" id="WIKI-FILD-14"
+		indexed-flag="Y" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Status</contextual-name>
+		<full-name>Content Request Status</full-name>
+		<xml-contextual-name>status</xml-contextual-name>
+		<xml-full-name>content-request-status</xml-full-name>
+		<vcard-name />
+		<preferred-name>rrqstt</preferred-name>
+		<description>
+			Indicator of the actions left to be performed with a content
+			request
+		</description>
+		<comment>
+			<![CDATA[The four statuses of a content request are "pending", "approved", "rejected" and "cancelled"]]>
+		</comment>
+		<access-key />
+	</field>
+	<field display-entry-size="50" display-search-size="50"
+		enabled-flag="Y" entity-id="WIKI-ENTY-4" id="WIKI-FILD-15"
+		indexed-flag="Y" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Referenced Content</contextual-name>
+		<full-name>Content Request Referenced Content</full-name>
+		<xml-contextual-name>referenced-content</xml-contextual-name>
+		<xml-full-name>
+			content-request-referenced-content
+		</xml-full-name>
+		<vcard-name />
+		<preferred-name>rrqrrs</preferred-name>
+		<description>
+			Existing content to be added to an article as a reference
+		</description>
+		<comment>
+			Adding a piece of content as a reference does not transfer
+			any responsibility associated with the content
+		</comment>
+		<access-key />
+	</field>
+	<field display-entry-size="50" display-search-size="50"
+		enabled-flag="Y" entity-id="WIKI-ENTY-5" id="WIKI-FILD-16"
+		indexed-flag="Y" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Type</contextual-name>
+		<full-name>Content Type</full-name>
+		<xml-contextual-name>type</xml-contextual-name>
+		<xml-full-name>content-type</xml-full-name>
+		<vcard-name />
+		<preferred-name>rtyp</preferred-name>
+		<description>Type of a piece of content</description>
+		<comment>
+			Available content types are: Article, Image. References are
+			used when the same content is available from different
+			articles
+		</comment>
+		<access-key />
+	</field>
+	<field display-entry-size="10" display-search-size="10"
+		enabled-flag="Y" entity-id="WIKI-ENTY-5" id="WIKI-FILD-17"
+		indexed-flag="Y" max-entry-size="9" max-search-size="9" type="DATE">
+		<contextual-name>Created</contextual-name>
+		<full-name>Content Created</full-name>
+		<xml-contextual-name>created</xml-contextual-name>
+		<xml-full-name>content-created</xml-full-name>
+		<vcard-name />
+		<preferred-name>rcrt</preferred-name>
+		<description>Date a piece of content was created</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="10" display-search-size="10"
+		enabled-flag="Y" entity-id="WIKI-ENTY-5" id="WIKI-FILD-18"
+		indexed-flag="Y" max-entry-size="9" max-search-size="9" type="DATE">
+		<contextual-name>Modified</contextual-name>
+		<full-name>Content Modified</full-name>
+		<xml-contextual-name>modified</xml-contextual-name>
+		<xml-full-name>content-modified</xml-full-name>
+		<vcard-name />
+		<preferred-name>rmod</preferred-name>
+		<description>
+			Date a piece of content was last changed
+		</description>
+		<comment>
+			An article is considered modified only if its body has been
+			modified. An image is considered modified only if a new file
+			has been uploaded. Other changes do not impact this date
+		</comment>
+		<access-key />
+	</field>
+	<field display-entry-size="50" display-search-size="50"
+		enabled-flag="Y" entity-id="WIKI-ENTY-2" id="WIKI-FILD-19"
+		indexed-flag="Y" max-entry-size="100" max-search-size="100"
+		type="INTEGER">
+		<contextual-name>Size</contextual-name>
+		<full-name>Image Size</full-name>
+		<xml-contextual-name>size</xml-contextual-name>
+		<xml-full-name>image-size</xml-full-name>
+		<vcard-name />
+		<preferred-name>imgsiz</preferred-name>
+		<description>
+			Amount of disk space taken by an image file
+		</description>
+		<comment>
+			Size is expressed in Kilobytes or Megabytes. 1 Megabyte
+			represents about 1000 Kilobytes
+		</comment>
+		<access-key />
+	</field>
+	<field display-entry-size="60" display-search-size="30"
+		enabled-flag="Y" entity-id="WIKI-ENTY-5" id="WIKI-FILD-2"
+		indexed-flag="Y" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Description</contextual-name>
+		<full-name>Content Description</full-name>
+		<xml-contextual-name>description</xml-contextual-name>
+		<xml-full-name>content-description</xml-full-name>
+		<vcard-name />
+		<preferred-name>rdsc</preferred-name>
+		<description>
+			Description of a piece of content, to be used for searches
+		</description>
+		<comment>
+			It might also contain any information relevant to the end
+			user
+		</comment>
+		<access-key />
+	</field>
+	<field display-entry-size="50" display-search-size="50"
+		enabled-flag="Y" entity-id="WIKI-ENTY-1" id="WIKI-FILD-20"
+		indexed-flag="Y" max-entry-size="100" max-search-size="100"
+		type="INTEGER">
+		<contextual-name>Size</contextual-name>
+		<full-name>Article Size</full-name>
+		<xml-contextual-name>size</xml-contextual-name>
+		<xml-full-name>article-size</xml-full-name>
+		<vcard-name />
+		<preferred-name>dirsiz</preferred-name>
+		<description>
+			Number of articles or images related to an article
+		</description>
+		<comment>Sub-Related content is not counted</comment>
+		<access-key />
+	</field>
+	<field display-entry-size="50" display-search-size="50"
+		enabled-flag="Y" entity-id="WIKI-ENTY-5" id="WIKI-FILD-21"
+		indexed-flag="Y" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Full Address</contextual-name>
+		<full-name>Full Content Address</full-name>
+		<xml-contextual-name>address</xml-contextual-name>
+		<xml-full-name>content-address</xml-full-name>
+		<vcard-name />
+		<preferred-name>radd</preferred-name>
+		<description>
+			Address to type in your browser to download or view a piece
+			of content
+		</description>
+		<comment>This address usually starts with http://</comment>
+		<access-key />
+	</field>
+	<field display-entry-size="50" display-search-size="50"
+		enabled-flag="Y" entity-id="WIKI-ENTY-5" id="WIKI-FILD-22"
+		indexed-flag="Y" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Properties Address</contextual-name>
+		<full-name>Content Properties Address</full-name>
+		<xml-contextual-name>properties-address</xml-contextual-name>
+		<xml-full-name>content-properties-address</xml-full-name>
+		<vcard-name />
+		<preferred-name>rpad</preferred-name>
+		<description>
+			Address to type in your browser to view the properties of a
+			piece of content
+		</description>
+		<comment>This address usually starts with http://</comment>
+		<access-key />
+	</field>
+	<field display-entry-size="50" display-search-size="50"
+		enabled-flag="Y" entity-id="WIKI-ENTY-5" id="WIKI-FILD-23"
+		indexed-flag="Y" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Classification</contextual-name>
+		<full-name>Content Classification</full-name>
+		<xml-contextual-name>classification</xml-contextual-name>
+		<xml-full-name>content-classification</xml-full-name>
+		<vcard-name />
+		<preferred-name>rcls</preferred-name>
+		<description>
+			Security restrictions associated with a piece of content
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="50" display-search-size="50"
+		enabled-flag="Y" entity-id="WIKI-ENTY-5" id="WIKI-FILD-24"
+		indexed-flag="N" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Id</contextual-name>
+		<full-name>Content Id</full-name>
+		<xml-contextual-name>id</xml-contextual-name>
+		<xml-full-name>content-id</xml-full-name>
+		<vcard-name />
+		<preferred-name>rid</preferred-name>
+		<description>
+			Internal unique identifier of a piece of content
+		</description>
+		<comment>
+			The identifier of a piece of content is assigned when this
+			content is published to the wiki
+		</comment>
+		<access-key />
+	</field>
+	<field display-entry-size="10" display-search-size="10"
+		enabled-flag="Y" entity-id="WIKI-ENTY-4" id="WIKI-FILD-25"
+		indexed-flag="Y" max-entry-size="9" max-search-size="9"
+		type="DATE">
+		<contextual-name>Created</contextual-name>
+		<full-name>Content Request Created</full-name>
+		<xml-contextual-name>created</xml-contextual-name>
+		<xml-full-name>content-request-created</xml-full-name>
+		<vcard-name />
+		<preferred-name>rrqcrt</preferred-name>
+		<description>Date a content request was submitted</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="10" display-search-size="10"
+		enabled-flag="Y" entity-id="WIKI-ENTY-4" id="WIKI-FILD-26"
+		indexed-flag="Y" max-entry-size="9" max-search-size="9"
+		type="DATE">
+		<contextual-name>Modified</contextual-name>
+		<full-name>Content Request Modified</full-name>
+		<xml-contextual-name>modified</xml-contextual-name>
+		<xml-full-name>content-request-modified</xml-full-name>
+		<vcard-name />
+		<preferred-name>rrqmod</preferred-name>
+		<description>
+			Date a content request was last changed
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="50" display-search-size="50"
+		enabled-flag="Y" entity-id="WIKI-ENTY-12" id="WIKI-FILD-27"
+		indexed-flag="Y" max-entry-size="100" max-search-size="100"
+		type="INTEGER">
+		<contextual-name>Version #</contextual-name>
+		<full-name>Article Version #</full-name>
+		<xml-contextual-name>version-number</xml-contextual-name>
+		<xml-full-name>article-version-number</xml-full-name>
+		<vcard-name />
+		<preferred-name>docvnb</preferred-name>
+		<description>Variant number of an article</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="50" display-search-size="50"
+		enabled-flag="Y" entity-id="WIKI-ENTY-13" id="WIKI-FILD-28"
+		indexed-flag="Y" max-entry-size="100" max-search-size="100"
+		type="INTEGER">
+		<contextual-name>Version #</contextual-name>
+		<full-name>Image Version #</full-name>
+		<xml-contextual-name>version-number</xml-contextual-name>
+		<xml-full-name>image-version-number</xml-full-name>
+		<vcard-name />
+		<preferred-name>lnkvnb</preferred-name>
+		<description>Variant number of an image</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="10" display-search-size="10"
+		enabled-flag="Y" entity-id="WIKI-ENTY-14" id="WIKI-FILD-29"
+		indexed-flag="Y" max-entry-size="9" max-search-size="9"
+		type="DATE">
+		<contextual-name>Date</contextual-name>
+		<full-name>Statistic Access Date</full-name>
+		<xml-contextual-name>report-date</xml-contextual-name>
+		<xml-full-name>content-access-day-report-date</xml-full-name>
+		<vcard-name />
+		<preferred-name>racrdt</preferred-name>
+		<description>Day a piece of content was accessed</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="50" display-search-size="40"
+		enabled-flag="Y" entity-id="WIKI-ENTY-5" id="WIKI-FILD-3"
+		indexed-flag="Y" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Editor</contextual-name>
+		<full-name>Content Editor</full-name>
+		<xml-contextual-name>editor</xml-contextual-name>
+		<xml-full-name>content-editor</xml-full-name>
+		<vcard-name />
+		<preferred-name>redt</preferred-name>
+		<description>
+			Person responsible for the content of an article and all
+			associated content
+		</description>
+		<comment>
+			This person must ensure all content is ready for
+			publication, including conformity with standards. The editor
+			must also ensure that the content is relevant and up-to-date
+		</comment>
+		<access-key />
+	</field>
+	<field display-entry-size="50" display-search-size="50"
+		enabled-flag="Y" entity-id="WIKI-ENTY-14" id="WIKI-FILD-30"
+		indexed-flag="Y" max-entry-size="100" max-search-size="100"
+		type="INTEGER">
+		<contextual-name>Number of Hits</contextual-name>
+		<full-name>Statistic Number of Hits</full-name>
+		<xml-contextual-name>number-of-hits</xml-contextual-name>
+		<xml-full-name>content-access-day-number-of-hits</xml-full-name>
+		<vcard-name />
+		<preferred-name>racnbh</preferred-name>
+		<description>
+			Number of times a piece of content was accessed during a day
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="50" display-search-size="50"
+		enabled-flag="Y" entity-id="WIKI-ENTY-14" id="WIKI-FILD-31"
+		indexed-flag="Y" max-entry-size="100" max-search-size="100"
+		type="INTEGER">
+		<contextual-name>Rank</contextual-name>
+		<full-name>Statistic Rank</full-name>
+		<xml-contextual-name>rank</xml-contextual-name>
+		<xml-full-name>content-access-day-rank</xml-full-name>
+		<vcard-name />
+		<preferred-name>racrnk</preferred-name>
+		<description>
+			Relative standing of a piece of content during a day
+		</description>
+		<comment>
+			Ranks are computed independently for each content type
+			(article or image)
+		</comment>
+		<access-key />
+	</field>
+	<field display-entry-size="40" display-search-size="40"
+		enabled-flag="Y" entity-id="WIKI-ENTY-5" id="WIKI-FILD-32"
+		indexed-flag="Y" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Keyword</contextual-name>
+		<full-name>Content Keyword</full-name>
+		<xml-contextual-name>keyword</xml-contextual-name>
+		<xml-full-name>content-keyword</xml-full-name>
+		<vcard-name />
+		<preferred-name>rkwd</preferred-name>
+		<description>
+			Word in the name or description of a piece of content
+		</description>
+		<comment>1 character words are ignored in searches</comment>
+		<access-key />
+	</field>
+	<field display-entry-size="10" display-search-size="10"
+		enabled-flag="Y" entity-id="WIKI-ENTY-5" id="WIKI-FILD-33"
+		indexed-flag="N" max-entry-size="9" max-search-size="9" type="DATE">
+		<contextual-name>Created</contextual-name>
+		<full-name>Content Created</full-name>
+		<xml-contextual-name>created-from</xml-contextual-name>
+		<xml-full-name>content-created-from</xml-full-name>
+		<vcard-name />
+		<preferred-name>rctf</preferred-name>
+		<description>Date a piece of content was created</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="10" display-search-size="10"
+		enabled-flag="Y" entity-id="WIKI-ENTY-5" id="WIKI-FILD-34"
+		indexed-flag="N" max-entry-size="9" max-search-size="9" type="DATE">
+		<contextual-name>Created</contextual-name>
+		<full-name>Content Created</full-name>
+		<xml-contextual-name>created-to</xml-contextual-name>
+		<xml-full-name>content-created-to</xml-full-name>
+		<vcard-name />
+		<preferred-name>rctt</preferred-name>
+		<description>Date a piece of content was created</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="10" display-search-size="10"
+		enabled-flag="Y" entity-id="WIKI-ENTY-5" id="WIKI-FILD-35"
+		indexed-flag="N" max-entry-size="9" max-search-size="9" type="DATE">
+		<contextual-name>Modified</contextual-name>
+		<full-name>Content Modified</full-name>
+		<xml-contextual-name>modified-from</xml-contextual-name>
+		<xml-full-name>content-modified-from</xml-full-name>
+		<vcard-name />
+		<preferred-name>rmdf</preferred-name>
+		<description>
+			Date a piece of content was last changed
+		</description>
+		<comment>
+			An article is considered modified only if its body has been
+			modified. An image is considered modified only if a new file
+			has been uploaded. Other changes do not impact this date
+		</comment>
+		<access-key />
+	</field>
+	<field display-entry-size="10" display-search-size="10"
+		enabled-flag="Y" entity-id="WIKI-ENTY-5" id="WIKI-FILD-36"
+		indexed-flag="N" max-entry-size="9" max-search-size="9" type="DATE">
+		<contextual-name>Modified</contextual-name>
+		<full-name>Content Modified</full-name>
+		<xml-contextual-name>modified-to</xml-contextual-name>
+		<xml-full-name>content-modified-to</xml-full-name>
+		<vcard-name />
+		<preferred-name>rmdt</preferred-name>
+		<description>
+			Date a piece of content was last changed
+		</description>
+		<comment>
+			An article is considered modified only if its body has been
+			modified. An image is considered modified only if a new file
+			has been uploaded. Other changes do not impact this date
+		</comment>
+		<access-key />
+	</field>
+	<field display-entry-size="50" display-search-size="40"
+		enabled-flag="Y" entity-id="WIKI-ENTY-16" id="WIKI-FILD-37"
+		indexed-flag="N" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Subscriber</contextual-name>
+		<full-name>Content Individual Subscriber</full-name>
+		<xml-contextual-name>recipient</xml-contextual-name>
+		<xml-full-name>content-subscription-recipient</xml-full-name>
+		<vcard-name />
+		<preferred-name>rsbrec</preferred-name>
+		<description>
+			Recipient to send a notification to when a new version of a
+			piece of content is issued
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="30" display-search-size="30"
+		enabled-flag="Y" entity-id="WIKI-ENTY-5" id="WIKI-FILD-38"
+		indexed-flag="Y" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Associate Editors</contextual-name>
+		<full-name>Content Associate Editors</full-name>
+		<xml-contextual-name>associate-editors</xml-contextual-name>
+		<xml-full-name>content-associate-editors</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Group of users having the same editing privileges as the
+			editor
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="50" display-search-size="40"
+		enabled-flag="Y" entity-id="WIKI-ENTY-16" id="WIKI-FILD-39"
+		indexed-flag="Y" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Email Mode</contextual-name>
+		<full-name>Content Subscription Email Mode</full-name>
+		<xml-contextual-name>mode</xml-contextual-name>
+		<xml-full-name>content-subscription-mode</xml-full-name>
+		<vcard-name />
+		<preferred-name>rsbmod</preferred-name>
+		<description>
+			Frequency of the email notifications to be sent, immediate,
+			daily digest or weekly digest
+		</description>
+		<comment>
+			Digest notifications are compiled to minimize the number of
+			emails received by the subscriber
+		</comment>
+		<access-key />
+	</field>
+	<field display-entry-size="50" display-search-size="40"
+		enabled-flag="Y" entity-id="WIKI-ENTY-5" id="WIKI-FILD-4"
+		indexed-flag="Y" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Author</contextual-name>
+		<full-name>Content Author</full-name>
+		<xml-contextual-name>author</xml-contextual-name>
+		<xml-full-name>content-author</xml-full-name>
+		<vcard-name />
+		<preferred-name>raut</preferred-name>
+		<description>
+			Person who originated the content but not necessarily
+			entered it into this application
+		</description>
+		<comment>
+			This person is an alternate point of contact for the
+			material
+		</comment>
+		<access-key />
+	</field>
+	<field display-entry-size="50" display-search-size="40"
+		enabled-flag="Y" entity-id="WIKI-ENTY-16" id="WIKI-FILD-40"
+		indexed-flag="Y" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Type</contextual-name>
+		<full-name>Content Subscription Type</full-name>
+		<xml-contextual-name>type</xml-contextual-name>
+		<xml-full-name>content-subscription-type</xml-full-name>
+		<vcard-name />
+		<preferred-name>rsbtyp</preferred-name>
+		<description>
+			Type of subscription, individual or group
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="10" display-search-size="10"
+		enabled-flag="Y" entity-id="CORE-ENTY-2" id="WIKI-FILD-41"
+		indexed-flag="Y" max-entry-size="9" max-search-size="9"
+		type="DATE">
+		<contextual-name>Last Logged Access</contextual-name>
+		<full-name>Content Subscription Last Logged Access</full-name>
+		<xml-contextual-name>last-logged-access</xml-contextual-name>
+		<xml-full-name>account-last-logged-access</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Last time the subscriber was logged in and accessed the
+			content
+		</description>
+		<comment>
+			This date represents the last time the content was accessed
+			by a subscriber only if access to the content required
+			authentication
+		</comment>
+		<access-key />
+	</field>
+	<field display-entry-size="50" display-search-size="40"
+		enabled-flag="Y" entity-id="WIKI-ENTY-16" id="WIKI-FILD-42"
+		indexed-flag="Y" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Type</contextual-name>
+		<full-name>Subscriber Type</full-name>
+		<xml-contextual-name>type</xml-contextual-name>
+		<xml-full-name>subscriber-type</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Individual or group subscriber</description>
+		<comment>
+			When an account is both an individual and a group subscriber
+			of a piece of content, two notifications are sent
+		</comment>
+		<access-key />
+	</field>
+	<field display-entry-size="50" display-search-size="40"
+		enabled-flag="Y" entity-id="WIKI-ENTY-16" id="WIKI-FILD-43"
+		indexed-flag="Y" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Mode</contextual-name>
+		<full-name>Subscriber Mode</full-name>
+		<xml-contextual-name>mode</xml-contextual-name>
+		<xml-full-name>subscriber-mode</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Frequency of the email notifications received, immediate,
+			daily or weekly
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="50" display-search-size="40"
+		enabled-flag="Y" entity-id="WIKI-ENTY-5" id="WIKI-FILD-44"
+		indexed-flag="N" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>
+			Deny access to the members of this group
+		</contextual-name>
+		<full-name>Deny access to the members of this group</full-name>
+		<xml-contextual-name>access-group-denied</xml-contextual-name>
+		<xml-full-name>content-access-group-denied</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			When checked, this option prevents the members of an access
+			group from accessing the content
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="60" display-search-size="30"
+		enabled-flag="Y" entity-id="WIKI-ENTY-5" id="WIKI-FILD-45"
+		indexed-flag="Y" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Version Notes</contextual-name>
+		<full-name>Content Version Notes</full-name>
+		<xml-contextual-name>notes</xml-contextual-name>
+		<xml-full-name>content-notes</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Comment specific to a particular version of a piece of
+			content
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="60" display-search-size="30"
+		enabled-flag="Y" entity-id="WIKI-ENTY-5" id="WIKI-FILD-46"
+		indexed-flag="Y" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Editing Rule</contextual-name>
+		<full-name>Content Editing Rule</full-name>
+		<xml-contextual-name>editing-rule</xml-contextual-name>
+		<xml-full-name>content-editing-rule</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>
+			Indicates whether all authenticated users can submit content
+			requests
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="50" display-search-size="50"
+		enabled-flag="Y" entity-id="WIKI-ENTY-12" id="WIKI-FILD-47"
+		indexed-flag="Y" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Initiator</contextual-name>
+		<full-name>Article Version Initiator</full-name>
+		<xml-contextual-name>initiator</xml-contextual-name>
+		<xml-full-name>article-version-initiator</xml-full-name>
+		<vcard-name />
+		<preferred-name>artvinit</preferred-name>
+		<description>
+			Person who entered the new version of an article
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="50" display-search-size="50"
+		enabled-flag="Y" entity-id="WIKI-ENTY-13" id="WIKI-FILD-48"
+		indexed-flag="Y" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Initiator</contextual-name>
+		<full-name>Image Version Initiator</full-name>
+		<xml-contextual-name>initiator</xml-contextual-name>
+		<xml-full-name>image-version-initiator</xml-full-name>
+		<vcard-name />
+		<preferred-name>imgvinit</preferred-name>
+		<description>
+			Person who uploaded the new version of an image
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="30" display-search-size="30"
+		enabled-flag="Y" entity-id="WIKI-ENTY-5" id="WIKI-FILD-5"
+		indexed-flag="Y" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Friendly Address</contextual-name>
+		<full-name>Content Friendly Address</full-name>
+		<xml-contextual-name>friendly-address</xml-contextual-name>
+		<xml-full-name>content-friendly-address</xml-full-name>
+		<vcard-name />
+		<preferred-name>rfad</preferred-name>
+		<description>
+			Suffix of the easy-to-remember address of a piece of
+			content. Prefix is https://www.corendal.com/wiki/something/goto/ for
+			articles and https://www.corendal.com/wiki/something/gotoimage/ for images
+		</description>
+		<comment>
+			Friendly addresses must be unique within all wiki. Assign
+			friendly addresses to content you want to advertise in
+			internal business presentations
+		</comment>
+		<access-key />
+	</field>
+	<field display-entry-size="20" display-search-size="20"
+		enabled-flag="Y" entity-id="WIKI-ENTY-5" id="WIKI-FILD-6"
+		indexed-flag="Y" max-entry-size="20" max-search-size="20"
+		type="VARCHAR">
+		<contextual-name>Effective Immediately</contextual-name>
+		<full-name>Content Effective Immediately</full-name>
+		<xml-contextual-name>approve-request</xml-contextual-name>
+		<xml-full-name>content-approve-request</xml-full-name>
+		<vcard-name />
+		<preferred-name>rapr</preferred-name>
+		<description>
+			Applies the requested change to the wiki without submitting
+			a content request for approval
+		</description>
+		<comment>
+			You can add immediately a piece of content only if you are
+			the registered editor of the article where the content will
+			reside
+		</comment>
+		<access-key />
+	</field>
+	<field display-entry-size="50" display-search-size="50"
+		enabled-flag="Y" entity-id="WIKI-ENTY-2" id="WIKI-FILD-7"
+		indexed-flag="Y" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>File</contextual-name>
+		<full-name>Content File</full-name>
+		<xml-contextual-name>file</xml-contextual-name>
+		<xml-full-name>image-file</xml-full-name>
+		<vcard-name />
+		<preferred-name>imgfil</preferred-name>
+		<description>
+			Actual content article, as stored on disk
+		</description>
+		<comment />
+		<access-key />
+	</field>
+	<field display-entry-size="50" display-search-size="50"
+		enabled-flag="Y" entity-id="WIKI-ENTY-1" id="WIKI-FILD-8"
+		indexed-flag="Y" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Body</contextual-name>
+		<full-name>Article Body</full-name>
+		<xml-contextual-name>body</xml-contextual-name>
+		<xml-full-name>article-body</xml-full-name>
+		<vcard-name />
+		<preferred-name />
+		<description>Main content of an article</description>
+		<comment>
+			The content of an article is entered through a rich text
+			editor and is saved in the HTML format
+		</comment>
+		<access-key />
+	</field>
+	<field display-entry-size="50" display-search-size="50"
+		enabled-flag="Y" entity-id="WIKI-ENTY-5" id="WIKI-FILD-9"
+		indexed-flag="Y" max-entry-size="100" max-search-size="100"
+		type="VARCHAR">
+		<contextual-name>Path</contextual-name>
+		<full-name>Content Path</full-name>
+		<xml-contextual-name>path</xml-contextual-name>
+		<xml-full-name>content-path</xml-full-name>
+		<vcard-name />
+		<preferred-name>rpat</preferred-name>
+		<description>
+			Sequence of articles to browse in order to access a piece of
+			content
+		</description>
+		<comment>
+			As a piece of content can reside in multiple articles, a
+			piece of content can have several paths
+		</comment>
+		<access-key />
+	</field>
+</fields>

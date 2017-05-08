@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Version: $Id: Privilege.xml,v 1.3 2006/07/17 02:23:36 tdanard Exp $ -->
+<xmlsource-mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="../../../../../schemas/xmlsourcemapping.xsd"
+	package="com.corendal.netapps.framework.core.readdatahandlers">
+	<class name="DefaultPrivilegeLoadHandler" collection="privileges"
+		entity="privilege">
+		<id attribute="id" name="Id" type="string" />
+
+	</class>
+	<query
+		name="com.corendal.netapps.framework.core.readdatabeans.AbstractPrivilege.findByEnabledFlag">
+		<![CDATA[for $result in /privileges/privilege[@enabled-flag =
+		:enabledFlag] order by $result/@order return $result]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.readdatabeans.AbstractPrivilege.findEnabledByKeyword">
+		<![CDATA[for $result in /privileges/privilege[(name |= :keyword or
+		description |= :keyword or comment |= :keyword) and
+		(@enabled-flag = "Y")] order by $result/@order return $result]]>
+	</query>
+</xmlsource-mapping>

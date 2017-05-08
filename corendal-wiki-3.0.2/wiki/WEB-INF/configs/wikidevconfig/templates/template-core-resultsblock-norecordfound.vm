@@ -1,0 +1,19 @@
+##
+## get the writers used in this template
+##
+#set ($pws = $alc.getWriterSet())
+#set ($mw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultMessageWriter"))
+
+#set ($noRecordFoundMessage = $srb.getNoRecordFoundMessage())
+<tr>
+<td>@NOEOLAFTERTHIS
+$mw.getStartHTML()@NOEOLAFTERTHIS
+#if ($isIconHidden)
+$mw.getWithoutIconHTMLNoTable($noRecordFoundMessage)@NOEOLAFTERTHIS
+#else
+$mw.getWithIconHTMLNoTable($noRecordFoundMessage)@NOEOLAFTERTHIS
+#end
+$mw.getEndHTML()@NOEOLAFTERTHIS
+</td>
+</tr>
+## end of template. keep the empty line after this line.

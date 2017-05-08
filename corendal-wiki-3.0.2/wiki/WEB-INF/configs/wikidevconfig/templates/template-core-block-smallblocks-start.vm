@@ -1,0 +1,42 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($clrm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultColorManager"))
+
+##
+## get the color of dotted lines
+##
+#set ($dottedLineColor = $clrm.getDottedLineStandardColor())
+
+##
+## get the color of the table
+##
+#set ($bgTableColor = $clrm.getHomeBlock3StandardColor())
+
+#if ($sb.getVerticalSize() == 1)
+#set ($bgTableColor = $clrm.getHomeBlock1StandardColor())
+#end
+
+#if ($sb.getVerticalSize() == 2)
+#set ($bgTableColor = $clrm.getHomeBlock2StandardColor())
+#end
+
+##
+## add 25 pixels to the max width to take into account the two "15
+## and the 10 pixels" spacers
+##
+#set ($width = $sb.getMaxWidth())
+#if ($width > 0)
+#set ($width = $width + 25)
+#end
+
+##
+## start the cell
+##
+#if ($width > 0)
+<td width="$width" valign="top" bgcolor="$bgTableColor.getColor()">@NOEOLAFTERTHIS
+#else
+<td valign="top" bgcolor="$bgTableColor.getColor()">@NOEOLAFTERTHIS
+#end
+## end of template. keep the empty line after this line.

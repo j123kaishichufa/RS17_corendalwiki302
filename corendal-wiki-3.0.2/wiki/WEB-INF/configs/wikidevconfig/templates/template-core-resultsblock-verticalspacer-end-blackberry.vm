@@ -1,0 +1,33 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($icnm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultIconManager"))
+
+##
+## get the icons used in this template
+##
+#set ($spacerIcon = $icnm.getSpacerStandardIcon())
+
+##
+## end the content cell
+##
+</td>
+
+##
+## print the icon
+##
+#if ($srb.getType().equals("LARGE"))
+#if ($srb.getVerticalSize() == 1)
+<td width="1">@NOEOLAFTERTHIS
+</td>
+#end
+#end
+
+##
+## end the table
+##
+</tr>
+</table>
+## end of template. keep the empty line after this line.
+

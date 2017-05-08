@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Version: $Id: File.hbm.xml,v 1.11 2007/11/15 17:16:27 tdanard Exp $ -->
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping
+	package="com.corendal.netapps.framework.core.writedatamappings">
+	<class name="DefaultFileMapping" table="file_obj">
+		<id column="id" name="Id" type="string" />
+
+		<property column="extension_id" length="36" name="ExtensionId"
+			not-null="true" type="string" />
+		<property column="enabled_flag" length="1" name="EnabledFlag"
+			not-null="true" type="string" />
+		<property column="file_size" length="11" name="Size"
+			not-null="true" type="integer" />
+		<property column="nam" length="255" name="Name" not-null="true"
+			type="string" />
+	</class>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractStoredFile.findByEnabledFlag">
+		<![CDATA[
+    from DefaultFileMapping
+    where EnabledFlag = :enabledFlag
+    order by Id asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractStoredFile.findEnabledByBoundCreatedDate">
+		<![CDATA[
+    select distinct f.Id, el.Timestamp
+    from DefaultFileMapping f, DefaultEntryLogMapping el
+    where el.EntityId = :entityId
+    and el.RecordId = f.id
+    and el.TypeId = :typeId
+    and el.Timestamp >= :timestampFrom
+    and el.Timestamp < :timestampTo
+    and f.EnabledFlag = :enabledFlag
+    order by el.Timestamp desc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractStoredFile.findEnabledByLowerBoundCreatedDate">
+		<![CDATA[
+    select distinct f.Id, el.Timestamp
+    from DefaultFileMapping f, DefaultEntryLogMapping el
+    where el.EntityId = :entityId
+    and el.RecordId = f.id
+    and el.TypeId = :typeId
+    and el.Timestamp >= :timestampFrom
+    and f.EnabledFlag = :enabledFlag
+    order by el.Timestamp desc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractStoredFile.findEnabledByUpperBoundCreatedDate">
+		<![CDATA[
+    select distinct f.Id, el.Timestamp
+    from DefaultFileMapping f, DefaultEntryLogMapping el
+    where el.EntityId = :entityId
+    and el.RecordId = f.id
+    and el.TypeId = :typeId
+    and el.Timestamp < :timestampTo
+    and f.EnabledFlag = :enabledFlag
+    order by el.Timestamp desc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractStoredFile.findEnabledByBoundFileSize">
+		<![CDATA[
+    from DefaultFileMapping
+    where Size >= :sizeFrom
+    and Size < :sizeTo
+    and EnabledFlag = :enabledFlag
+    order by Id asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractStoredFile.findEnabledByLowerBoundFileSize">
+		<![CDATA[
+    from DefaultFileMapping
+    where Size >= :sizeFrom
+    and EnabledFlag = :enabledFlag
+    order by Id asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractStoredFile.findEnabledByUpperBoundFileSize">
+		<![CDATA[
+    from DefaultFileMapping
+    where Size < :sizeTo
+    and EnabledFlag = :enabledFlag
+    order by Id asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractStoredFile.findEnabledByName">
+		<![CDATA[
+    from DefaultFileMapping
+    where upper(Name) like upper(:name)
+    and EnabledFlag = :enabledFlag
+    order by Id asc
+]]>
+	</query>
+</hibernate-mapping>

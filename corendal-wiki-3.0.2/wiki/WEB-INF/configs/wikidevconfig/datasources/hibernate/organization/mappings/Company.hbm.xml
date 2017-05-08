@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Version: $Id: Company.hbm.xml,v 1.4 2007/08/01 19:39:23 tdanard Exp $ -->
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping
+	package="com.corendal.netapps.framework.core.writedatamappings">
+	<class name="DefaultCompanyMapping" table="company">
+		<id column="id" name="Id" type="string" />
+
+		<property column="cod" length="255" name="Code" not-null="false"
+			type="string" />
+		<property column="enabled_flag" length="1" name="EnabledFlag"
+			not-null="true" type="string" />
+		<property column="nam" length="255" name="Name" not-null="false"
+			type="string" />
+		<property column="company_typ_id" length="32" name="TypeId"
+			not-null="false" type="string" />
+	</class>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractCompany.findEnabledByNameAndTypePrimaryKey">
+		<![CDATA[
+    from DefaultCompanyMapping
+    where upper(Name) like upper(:name) 
+    and TypeId = :companyTypeId
+    and EnabledFlag = :enabledFlag
+    order by Id asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractCompany.findEnabledByCodeAndTypePrimaryKey">
+		<![CDATA[
+    from DefaultCompanyMapping
+    where Code = :code
+    and TypeId = :companyTypeId
+    and EnabledFlag = :enabledFlag
+    order by Id asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractCompany.findEnabledByName">
+		<![CDATA[
+    from DefaultCompanyMapping
+    where upper(Name) like upper(:name) 
+    and TypeId = :companyTypeId
+    and EnabledFlag = :enabledFlag
+    order by Id asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractCompany.findEnabledByCode">
+		<![CDATA[
+    from DefaultCompanyMapping
+    where Code like :code
+    and EnabledFlag = :enabledFlag
+    order by Id asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractCompany.findByEnabledFlag">
+		<![CDATA[
+    from DefaultCompanyMapping
+    where EnabledFlag = :enabledFlag
+    order by Id asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractCompany.findEnabledByTypePrimaryKey">
+		<![CDATA[
+    from DefaultCompanyMapping
+    where TypeId = :companyTypeId 
+    and EnabledFlag = :enabledFlag
+    order by Id asc
+]]>
+	</query>
+</hibernate-mapping>

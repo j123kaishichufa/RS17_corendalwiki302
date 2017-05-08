@@ -1,0 +1,18 @@
+##
+## get the writers used in this template
+##
+#set ($pws = $alc.getWriterSet())
+#set ($lw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultLinkWriter"))
+
+##
+## add the "content bottom" anchor
+##
+$lw.getContentBottomAnchorHTML()@NOEOLAFTERTHIS
+
+##
+## print the tag
+##
+</td>
+</tr>
+</table>@NOEOLAFTERTHIS
+</td>

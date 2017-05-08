@@ -1,0 +1,5324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<messages xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../schemas/messages.xsd">
+	<message enabled-flag="Y" id="CORE-MESG-1" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Copyright 2005 #CompanyName#. All rights reserved
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-10" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">Page #</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1001" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				One or several mandatory fields are not entered. The
+				missing fields are listed below
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1002" type="INF">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA["{1}" is missing]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1003" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The login entered does not match any known user account.
+				Logins are case-sensitive. Please enter a valid login
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1004" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The password entered is not valid for this login.
+				Passwords are case-sensitive. Please enter a valid
+				password
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1005" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				This user account has
+				expired. Access cannot be granted. Please contact
+				#HelpDeskName#
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1006" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The password proposed does not meet all required rules.
+				These rules are displayed on the right side of the
+				screen. Please use a valid password
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1007" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The new password must be entered twice, and the two
+				entries must be identical
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1008" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The login is already in use. Please choose another login
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1009" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The login proposed does not meet all required rules.
+				These rules are displayed on the right side of the
+				screen. Please use a valid login
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1010" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The email address is not valid. Please enter a valid
+				email address
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1011" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Your user account has been created. Please log in
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1013" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				This user account has been updated
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1014" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You have been authenticated as {1}
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1015" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The password of this user account has been changed
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1016" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You are required to log in for access
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1017" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Your request could not be completed
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1018" type="INF">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[The following error was detected: "{1}"]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1019" type="INF">
+		<contents>
+			<content extension-id="CORE-EXTN-1">{1}</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1020" type="INF">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				{1}. Please refine your search criteria
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1021" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You must fill the form before submitting it
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1022" type="INF">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				This export will take around {1}, press OK to continue
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1023" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You have been signed out
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1024" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You must select at least one type of content
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1025" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You cannot upload files larger than {1} Megabyte(s)
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1026" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[The format used for the "{1}" date is incorrect. Please use the DDMMMYYYY format. Example: 03SEP2004]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1027" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[The interval you entered for the "{1}" date is incorrect. The lower boundary must precede the upper boundary]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1028" type="INF">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA["{1}" is a common word and was not included in your search]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1029" type="INF">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Try alternate spellings or similar words, such as {1}
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1030" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Wildcards are not supported. Please use other search
+				criteria
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1031" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You do not have sufficient credentials to edit this
+				account
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1032" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The system has detected that you have submitted this
+				form twice. This can be caused by clicking a button
+				twice instead of once. Please submit this form again if
+				you did mean to submit this form twice
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1033" type="INF">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You must be authenticated to have access to this feature
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1034" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Some information used by this form has been modified
+				while you were filling it out. Please try again
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1035" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You do not have sufficient credentials to create a new
+				account
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1036" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The user account {1} has been created. You MUST also
+				create an account in Lotus Notes
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1037" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				No active directory account was found matching the
+				template name you entered. Please use the lookup
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1038" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				More than one active directory account matched the
+				template name you entered. Please use the lookup
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1039" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You have been authenticated as {1}. To use this site,
+				you must read and comply with the {2}
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1040" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The name "{1}" is already used in the "{2}"
+				organizational unit
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1041" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The supervisor must be an Active Directory user account
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1042" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You must select a building when searching by room
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1043" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The picture associated with an account must have the {1}
+				extension
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1044" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				No photo was uploaded. Use the BROWSE button to select a
+				picture file to upload
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1045" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The size of the picture associated with an account
+				cannot be greater than {1} bytes
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1046" type="INF">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Do you really want to remove this department ?
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1047" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You do not have sufficient credentials to edit this
+				department
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1048" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				"{1}" is a name that is already used by another
+				department
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1049" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The "{1}" department has been created
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1050" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				This department has been updated
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1051" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The "{1}" department has been removed
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1052" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You do not have sufficient credentials to add
+				departments
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1053" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The name of a department cannot contain a comma
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1054" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				There is no known account for the department manager
+				name you entered. Please use the lookup
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1055" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				There is more than one account for the department
+				manager name you entered. Please use the lookup
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1056" type="INF">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Do you really want to remove this building ?
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1057" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You do not have sufficient credentials to edit this
+				building
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1058" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				"{1}" is a name that is already used by another
+				building
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1059" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The "{1}" building has been created
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1060" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				This building has been updated
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1061" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The "{1}" building has been removed
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1062" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You do not have sufficient credentials to add
+				buildings
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1063" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The name of a building cannot contain a comma
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1066" type="INF">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Do you really want to remove this company ?
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1067" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You do not have sufficient credentials to edit this
+				company
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1068" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				"{1}" is a name that is already used by another
+				company
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1069" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The "{1}" company has been created
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1070" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				This company has been updated
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1071" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The "{1}" company has been removed
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1072" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You do not have sufficient credentials to add
+				companies
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1073" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The name of a company cannot contain a comma
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1083" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Access to this application is restricted for users
+				#UsersOutsideName#. For security reasons, you are
+				required to use the feedback link at the bottom of this
+				page to request access
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1084" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The user account {1} has been created
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1085" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The password of this user account has been changed
+				recently. It cannot be changed again for security
+				reasons. Contact #HelpDeskName# to have your password
+				changed
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1086" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The password of this user account has been expired
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1087" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				This user account has been disabled
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1088" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				This user account has been unlocked
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1089" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				This user account has been terminated
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1090" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The value entered for the {1} field is not a number
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1091" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You are not authorized to access this site
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1092" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-3">
+				<![CDATA[<font color="#FF0000">Use this feature ONLY IF the recipient has currently access to his/her email</font>]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1093" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">({1})</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-1094" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				An email has been sent to your mailbox with the contact
+				information of this user account. Follow the
+				instructions in this email to add this entry to your
+				address book
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-11" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">Display All</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-12" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Printable Version
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-13" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Display only {1} per page
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-14" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">{1} {2}/{3}</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-15" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">@ page {1}/{2}</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-2" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Compliance with Terms of Use is required
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-21" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">JAN</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-22" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">FEB</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-23" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">MAR</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-24" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">APR</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-25" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">MAY</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-26" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">JUN</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-27" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">JUL</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-28" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">AUG</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-29" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">SEP</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-3" type="INF">
+		<contents>
+			<content extension-id="CORE-EXTN-1">{1}</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-30" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">OCT</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-31" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">NOV</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-32" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">DEC</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-33" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				(authentication is mandatory)
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-34" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				(refine search)
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-35" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				(search results)
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-36" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">(search)</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-37" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">Print...</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-38" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Display {1} per page
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-39" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">minute</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-4" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">[{1} to {2}]</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-40" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">minutes</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-41" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">hour</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-42" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">hours</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-43" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Skip Navigation
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-44" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				DO NOT BOOKMARK THIS PAGE !
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-45" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Mandatory input
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-46" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">By {1} on {2}</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-47" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">to</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-5" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1" />
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-51" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">Sun</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-52" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">Mon</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-53" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">Tue</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-54" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">Wed</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-55" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">Thu</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-56" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">Fri</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-57" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">Sat</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-58" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">expired</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-59" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">disabled</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-6" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[<<First]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-60" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[Skip "{1}"]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-61" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Skip to {1} number {2}
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-62" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You will be signed out automatically after {1} minutes
+				of inactivity
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-63" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">Yes</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-64" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">No</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-65" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">year(s)</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-66" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">month(s)</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-67" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Created by {1} on {2}
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-68" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Last Modified by {1} on {2}
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-69" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">Skip to export</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-7" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[Last>>]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-70" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">Active</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-71" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">Inactive</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-72" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				dsmod user "{1}" -pwd "{2}" -s "{3}"
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-73" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				dsmod user "{1}" -s "{2}" -mustchpwd yes
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-74" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				dsmod group "{1}" -addmbr "{2}" -s "{3}"
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-75" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				dsmod group "{1}" -rmmbr "{2}" -s "{3}"
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-76" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				New Account for {1}
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-77" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+A new Active Directory account "{4}" has been created by {3} in the "{5}" organizational unit based upon the "{8}" template.
+
+This account belongs to the following groups:
+
+{6}
+
+
+
+
+If you do not wish to receive this notification, please contact #HelpDeskName#.]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-78" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-3">
+				<![CDATA[&nbsp;(Example: +1 281 123-4567)&nbsp;]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-79" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				{1} added to "{2}" group
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-80" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+{4} has been added by {3} to the "{5}" Active Directory group.
+
+
+
+
+If you do not wish to receive this notification, please contact #HelpDeskName#.]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-81" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				{1} removed from "{2}" group
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-82" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+{4} has been removed by {3} from the "{5}" Active Directory group.
+
+
+
+
+If you do not wish to receive this notification, please contact #HelpDeskName#.]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-83" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				(end of the day, leave blank for no expiration)
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-84" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Expiration date removed for {1}
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-85" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+The expiration date of the Active Directory account "{4}" has been removed by {3} in the "{5}" organizational unit. The previous expiration date was {8} (end of the day).
+
+
+
+If you do not wish to receive this notification, please contact #HelpDeskName#.]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-86" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Expiration date changed from {2} to {3} for {1}
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-87" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+The expiration date of the Active Directory account "{4}" has been changed by {3} in the "{5}" organizational unit. The previous expiration date was {8} (end of the day). The new expiration date is {9} (end of the day).
+
+
+
+If you do not wish to receive this notification, please contact #HelpDeskName#.]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-88" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Expiration date set to {2} for {1}
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-89" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+The expiration date of the Active Directory account "{4}" has been set by {3} in the "{5}" organizational unit. There was no expiration date previously set. The new expiration date is now {8} (end of the day).
+
+
+
+If you do not wish to receive this notification, please contact #HelpDeskName#.]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-90" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				New Contact for {1}
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-91" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+A new Active Directory contact "{4}" has been created by {3} in the "{5}" organizational unit based upon the "{8}" template.
+
+
+
+
+If you do not wish to receive this notification, please contact #HelpDeskName#.]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-92" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Expiration date removed for {1}
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-93" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+The expiration date of the Active Directory contact "{4}" has been removed by {3} in the "{5}" organizational unit. The previous expiration date was {8} (end of the day).
+
+
+
+If you do not wish to receive this notification, please contact #HelpDeskName#.]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-94" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Expiration date changed from {2} to {3} for {1}
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-95" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+The expiration date of the Active Directory contact "{4}" has been changed by {3} in the "{5}" organizational unit. The previous expiration date was {8} (end of the day). The new expiration date is {9} (end of the day).
+
+
+
+If you do not wish to receive this notification, please contact #HelpDeskName#.]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-96" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Expiration date set to {2} for {1}
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-97" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+The expiration date of the Active Directory contact "{4}" has been set by {3} in the "{5}" organizational unit. There was no expiration date previously set. The new expiration date is now {8} (end of the day).
+
+
+
+If you do not wish to receive this notification, please contact #HelpDeskName#.]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-98" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Password changed by {2} for {1}
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-99" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+The password of the Active Directory account "{4}" has been changed by {3} in the "{5}" organizational unit.
+
+
+
+If you do not wish to receive this notification, please contact #HelpDeskName#.]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-100" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You have changed your network password
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-101" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[Hello,
+
+You have changed your password to access the network.
+
+If you did perform this change, no action is required from you.
+
+If you didn't perform this change, contact #HelpDeskName# immediately as it may constitute a security breach.
+
+Thank you,
+
+
+This email was generated automatically by the #CompanyName# #PublicApplicationName# Application.]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-102" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Your network password has been changed by {1}
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-103" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[Hello,
+
+Your password to access the network has been changed by {3}.
+
+If you didn't request this change, contact #HelpDeskName# immediately as it may constitute a security breach.
+
+If you requested this, change this password immediately using the form accessible from this location:
+
+{4}
+
+Thank you,
+
+
+This email was generated automatically by the #CompanyName# #PublicApplicationName# Application.]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-104" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Password expired for {1}
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-105" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+The password of the Active Directory account "{4}" has been expired by {3} in the "{5}" organizational unit.
+
+
+
+If you do not wish to receive this notification, please contact #HelpDeskName#.]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-106" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Account disabled for {1}
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-107" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+The Active Directory account "{4}" has been disabled by {3} in the "{5}" organizational unit.
+
+
+
+If you do not wish to receive this notification, please contact #HelpDeskName#.]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-108" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Account unlocked for {1}
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-109" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+The Active Directory account "{4}" has been unlocked by {3} in the "{5}" organizational unit.
+
+
+
+If you do not wish to receive this notification, please contact #HelpDeskName#.]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-110" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">locked</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-111" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				password expired
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-112" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Do you really want to expire the password of this
+				account ?
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-113" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Do you really want to disable this account ?
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-114" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Do you really want to unlock this account ?
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-115" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Your network password will expire within 24 hours
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-116" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[Hello,
+
+Your network password for the login {5} was last set on {4}. It will expire within 24 hours.
+
+If you don't change your password immediately, you will be denied access to the network, and you will have to contact #HelpDeskName# to restore access.
+
+You can use the "Change Password" screen accessible from this location: {6}.
+
+If you routinely synchronize all your passwords, consider changing your Lotus Notes, iNotes and Oracle ERP passwords as well. 
+
+Thank you.
+
+
+This email was generated automatically by the #CompanyName# #PublicApplicationName# Application.]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-117" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Do you really want to terminate this account ?
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-118" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You have changed your #ExternalUsersApplicationName# password
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-119" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[Hello,
+
+You have changed your #ExternalUsersApplicationName# password.
+
+If you did perform this change, no action is required from you. 
+
+If you didn't perform this change, contact #HelpDeskName# immediately as it may constitute a security breach. Contact #CompanyName# #HelpDeskName# at #HelpDeskEmailAddress#, or #HelpDeskPhoneNumber# or #HelpDeskFreePhoneNumber1# or #HelpDeskFreePhoneNumber2#. Please have your login ID and project number ready for the technician.
+
+Thank you,
+
+
+This email was generated automatically by the #CompanyName# #PublicApplicationName# Application.]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-120" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Your #ExternalUsersApplicationName# password has been changed by #HelpDeskName#
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-121" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[Hello,
+
+Your password to access #ExternalUsersApplicationName# has been changed by {3}.
+
+If you didn't request this change, contact #HelpDeskName# immediately as it may constitute a security breach. Contact #CompanyName# #HelpDeskName# at #HelpDeskEmailAddress#, or #HelpDeskPhoneNumber# or #HelpDeskFreePhoneNumber1# or #HelpDeskFreePhoneNumber2#. Please have your login ID and project number ready for the technician.
+
+If you requested this, change this password immediately using the form accessible from this location:
+
+#ExternalUsersChangePasswordURL#
+
+Thank you,
+
+
+This email was generated automatically by the #CompanyName# #PublicApplicationName# Application.]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-122" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Your network password has been changed by {1}
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-123" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[Hello,
+
+Your password to access the network has been changed by {3}.
+
+Your new password is: {5}
+
+If you didn't request this change, contact #HelpDeskName# immediately as it may constitute a security breach.
+
+If you requested this, change this password immediately using the form accessible from this location:
+
+{4}
+
+Thank you,
+
+
+This email was generated automatically by the #CompanyName# #PublicApplicationName# Application.]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-124" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Your #ExternalUsersApplicationName# password has been changed by #HelpDeskName#
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-125" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[Hello,
+
+Your password to access #ExternalUsersApplicationName# has been changed by {3}.
+
+Your new password is: {5}
+
+If you didn't request this change, contact #HelpDeskName# immediately as it may constitute a security breach. Contact #CompanyName# #HelpDeskName# at #HelpDeskEmailAddress#, or #HelpDeskPhoneNumber# or #HelpDeskFreePhoneNumber1# or #HelpDeskFreePhoneNumber2#. Please have your login ID and project number ready for the technician.
+
+If you requested this, change this password immediately using the form accessible from this location:
+
+#ExternalUsersChangePasswordURL#
+
+Thank you,
+
+
+This email was generated automatically by the #CompanyName# #PublicApplicationName# Application.]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-126" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Contact information for {1}
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-127" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[The file attached to this email contains the contact information you requested for {3}.
+
+To add {3} to your address book from your Blackberry, follow these three steps:
+
+- scroll to the attachment below,
+- select "View Attachment" in the contextual menu,
+- then select "Add To Address Book" in the contextual menu.
+
+
+This email was generated automatically by the #CompanyName# #PublicApplicationName# Application.]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-8" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[<Prev]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="CORE-MESG-9" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[Next>]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-1" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				There is no known account for the owner name you entered. Please use the lookup
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-10" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				{1} is now part of the members list of this group
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-11" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				{1} is no longer part of the members list of this group
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-12" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You do not have sufficient credentials to edit this
+				group
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-13" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You do not have sufficient credentials to edit the
+				members of this group
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-14" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Enter one member per line. Each member can be identified
+				by its last name, full name or login.
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-15" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[There is no known account matching the member name "{1}"]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-16" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[There is more than one account matching the member name "{1}"]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-17" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The {1} you have entered are now part of the members
+				list
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-18" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The {1} you have entered are no longer part of the
+				members list
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-19" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You have already entered {1} as a grantee
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-2" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				There is more than one account for the owner name you
+				entered
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-20" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				{1} is now one of your grantees
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-21" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				There is no known account for the grantee name you
+				entered
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-22" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				There is more than one account for the grantee name you
+				entered
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-23" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Select one grantee to remove
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-24" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				{1} is no longer one of your grantees
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-25" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You cannot grant transaction privileges to yourself
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-26" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				This grant has been updated
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-27" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You do not have sufficient credentials to edit this
+				grant
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-28" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Select one group to remove
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-29" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[The "{1}" group has been removed]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-3" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[The "{1}" user group has been created. Enter a user name to add a member]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-30" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Select one group to edit
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-31" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Do you really want to remove this group ?
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-32" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				There is no known group for the cloned group name you
+				entered
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-33" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				There is more than one group for the cloned group name
+				you entered. Please use the lookup
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-34" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">{2}'s {1}</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-35" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				There is no account for the user name you entered. Please use the lookup
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-36" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				There is more than one account for the user name you
+				entered
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-37" type="INF">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				This reassignment cannot be rollbacked. Do you want to
+				continue ?
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-38" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				All roles and queues previously assigned to {1} are now
+				assigned to {2}
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-39" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The target user cannot be identical to the original user
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-4" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The user group name you have entered is already in use.
+				Choose another user group name
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-40" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">{1} of {2}</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-41" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				There is no account for the supervisor name you entered. Please use the lookup
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-42" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				There is more than one account for the supervisor name
+				you entered. Please use the lookup
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-43" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				A user cannot be its own supervisor
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-44" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				{1} already reports to you. Please review the
+				organization chart
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-45" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				{1} already reports to {2}. Please review the
+				organization chart
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-46" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">{1} of {2}</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-47" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Your preferences have been saved
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-48" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">minutes</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-49" type="INF">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Your account has been manually configured to have no
+				session time out. This preference cannot be modified
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-50" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The member you entered is not in Active Directory. You
+				cannot add accounts from other sources
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-51" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[The member "{1}" is not in Active Directory. You cannot add accounts from other sources]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-52" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[The owner "{1}" is not in Active Directory. You cannot assign accounts from other sources]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-53" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">{1} for {2}</content>
+		</contents>
+	</message>
+
+	<message enabled-flag="Y" id="HLPD-MESG-54" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Enter one group per line
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-55" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				There is no group for the group name you entered. Please use the lookup
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-56" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				There is more than one group for the group name you
+				entered
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-57" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The group you entered is not in Active Directory. You
+				cannot add groups from other sources
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-58" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				{1} is now part of the memberships list of this account
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-59" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				{1} is no longer part of the memberships list of this account
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-60" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The {1} you have entered are now part of the memberships
+				list of this account
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-61" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The {1} you have entered are no longer part of the
+				memberships list of this account
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-62" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				This account is already a member of {1}
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-63" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				This account is not a member of {1}
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-64" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You do not have sufficient credentials to edit the
+				memberships of this account
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-65" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				There is no known group for the template group name you
+				entered
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-66" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				There is more than one group for the template group name
+				you entered. Please use the lookup
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-67" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You do not have sufficient credentials to create a new
+				group
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-5" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				This user group has been updated
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-6" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				There is no known account for the member name you
+				entered
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-7" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				There is more than one account for the member name you
+				entered
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-8" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				{1} is already a member of this group
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="HLPD-MESG-9" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				{1} is not a member of this group
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-1" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1" />
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-3" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-3">
+				<![CDATA[For help regarding this application:
+<ul>
+<li>contact #HelpDeskName# by phone: #HelpDeskPhoneNumber#, or</li>
+<li>contact #HelpDeskName# by email: <a href="mailto:#HelpDeskEmailAddress#">#HelpDeskEmailAddress#</a></li>
+</ul>
+To facilitate the processing of your ticket, please specify that you are requesting assistance with the "#HelpDeskApplicationName#".]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-4" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-3">
+				<![CDATA[This application was first released on #ApplicationReleaseDate# by #CompanyName#.]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-5" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-3">
+				<![CDATA[1 character words are ignored.
+<br />&nbsp;<br />
+Use double quotes for a specific sequence of words.
+<br />&nbsp;<br />
+Do NOT use boolean operators (and, or) to combine words.
+<br />&nbsp;<br />
+Do NOT use partial words.]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-6" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-3">
+				<![CDATA[Online documentation can be downloaded from #UserDocumentationLocation#.
+<br />&nbsp;<br />
+To schedule training sessions, please contact #UserTrainingContact#.]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-41" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-3">
+				<![CDATA[<strong>ACCESS KEYS</strong>
+<br />&nbsp;<br />
+Some browsers support jumping to specific links by typing keys defined on the web site. You can press ALT + an access key. You need to press ENTER after pressing the access key to follow the link.
+<br />&nbsp;<br />
+All pages on this site define the following access keys:
+<ul>
+<li> Access key 1 - Home Page
+<li> Access key 2 - Skip Navigation (for text-only browsers)
+<li> Access key 3 - Site Index
+<li> Access key 4 - Search
+<li> Access key 5 - My Tools
+<li> Access key 6 - Help
+<li> Access key 7 - "Log in"  or "Sign out" (depending on context)
+<li> Access key 8 - View Glossary (when applicable)
+<li> Access key 9 - Feedback
+<li> Access key 0 - Accessibility Statement (this document)
+</ul>
+When a link has an access key, you can find the access key by moving your mouse over the link.
+<br />&nbsp;<br />
+<strong>PRINT</strong>
+<br />&nbsp;<br />
+Some blocks inside a page can be displayed independently, using the "Printable Version" link.
+<br />&nbsp;<br />
+<strong>FORMS AND GLOSSARY</strong>
+<br />&nbsp;<br />
+1. When you click on a label, the focus is automatically set to the associated field.
+<br />&nbsp;<br />
+2. A glossary is available in most pages, describing and explaining each data element or field of the current page.
+<br />&nbsp;<br />
+3. The focus is always set when forms are displayed in a page.
+<br />&nbsp;<br />
+4. The tabulation order is always consistent with the layout of the form. If your browser is not compatible with this feature, the default tabulation order is close to the desirable tabulation order.
+<br />&nbsp;<br />
+5. Some form labels have an underlined character. Press ALT in combination with this character to jump to the associated field.
+<br />&nbsp;<br />
+<strong>LINKS, TITLE ATTRIBUTES AND JAVASCRIPT</strong>
+<br />&nbsp;<br />
+1. Many links and labels have title attributes. Title attributes appear in a yellow box when you move your mouse over the link. They describe the link or label in greater detail, unless the description follows the link or label, or the context makes it obvious. The elements with a title attribute are highlighted in bold.
+<br />&nbsp;<br />
+2. The links opening a new window are highlighted in italic.
+<br />&nbsp;<br />
+3. For lookup windows, links are written in a way to allow non-Javascript browsers to browse their content. No Javascript is required in navigation drop-down menus.
+<br />&nbsp;<br />
+<strong>UNIFORM RESOURCE LOCATORS</strong>
+<br />&nbsp;<br />
+1. Most pages have a user-friendly address specifying their hierarchy and their content. Example: /references/termsofuse/.
+<br />&nbsp;<br />
+2. This site includes a mechanism to redirect the users to the most current location when a page has been moved.
+<br />&nbsp;<br />
+3. All pages are safe to bookmark unless specified otherwise.
+<br />&nbsp;<br />
+4. When the slash character is missing at the end of a URL, this slash is automatically added.
+<br />&nbsp;<br />
+<strong>IMAGES</strong>
+<br />&nbsp;<br />
+1. All content images used in this site include descriptive ALT attributes. Purely decorative graphics include empty ALT attributes.
+<br />&nbsp;<br />
+2. This site is not image-intensive. The size of each page is compatible with a dial-up connection.
+<br />&nbsp;<br />
+<strong>VISUAL DESIGN</strong>
+<br />&nbsp;<br />
+1. This site uses cascading style sheets for visual layout.
+<br />&nbsp;<br />
+2. This site uses relative font sizes, compatible with the user-specified "text size" option in visual browsers. However, some fonts have fixed sizes when they are directly associated with a graphical elements, such as menus and tabs.
+<br />&nbsp;<br />
+3. If your browser or browsing device does not support style sheets at all, the content of each page is still readable.
+<br />&nbsp;<br />
+<strong>COOKIES</strong>
+<br />&nbsp;<br />
+1. Cookies are not required to browse this site. URL-rewriting techniques are used instead when cookies are not available.
+<br />&nbsp;<br />
+2. The number of cookies sent to the client is minimal. See the privacy practices for more details regarding cookies.
+<br />&nbsp;<br />
+<strong>NAVIGATION</strong>
+<br />&nbsp;<br />
+Each page contains a "skip navigation" link allowing text-only users to go directly to the content of the page. This link is invisible to users with a graphical browser.
+<br />&nbsp;<br />
+<strong>STANDARDS COMPLIANCE</strong>
+<br />&nbsp;<br />
+All pages validate XHTML 1.0 Transitional.
+<br />&nbsp;<br />
+The style sheets used by this site follow the CSS format.
+<br />&nbsp;<br />
+Recommendations in U.S. Section 508 Guidelines and Web Content Accessibility Guidelines 1.0 are followed. Some screens
+may not follow these guidelines when not practical or to address compatibility issues.
+<br />&nbsp;<br />
+<strong>META INFORMATION</strong>
+<br />&nbsp;<br />
+The description and the copyright of each page are specified as META tags.]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-100" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[Approval requested for new reference to content "{1}"]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-101" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+A request for a new reference to the content "{4}" in the "{5}" article has been submitted by {3}. The description of this content is "{6}".
+
+You can view this content request and the associated content at the following location: {7}
+
+You are the editor of the "{5}" article and your action is required. You can either approve or reject this request.]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-102" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[Approval requested for removal of reference to content "{1}"]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-103" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+A request for removal of the reference to the content "{4}" in the "{5}" article has been submitted by {3}. The description of this content is "{6}".
+
+You can view this content request and the associated content at the following location: {7}
+
+You are the editor of the "{5}" article and your action is required. You can either approve or reject this request.]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-104" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[Request approved for new article "{1}"]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-105" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+Your request to add the article "{4}" to the "{5}" article has been approved by {3}. The description of this article is "{6}".
+
+This content is now available in the wiki, and is accessible from the following article: {7}
+
+The original content request can be viewed at the following location: {8}]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-106" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[Request approved for update of article "{1}"]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-107" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+Your request to edit the article "{4}" in the "{5}" article has been approved by {3}. The description of this article is "{6}".
+
+This updated content is accessible from the following article: {7}
+
+The original content request can be viewed at the following location: {8}]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-108" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[Request approved for removal of article "{1}"]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-109" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+Your request to remove the article "{4}" from the "{5}" article has been approved by {3}. The description of this article was "{6}".
+
+This content is no longer available in the wiki. It was accessible from the following article: {7}
+
+The original content request can be viewed at the following location: {8}]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-110" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[Request approved for new image "{1}"]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-111" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+Your request to add the image "{4}" to the "{5}" article has been approved by {3}. The description of this image is "{6}".
+
+This content is now available in the wiki, and is accessible from the following article: {7}
+
+The original content request can be viewed at the following location: {8}]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-112" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[Request approved for update of image "{1}"]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-113" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+Your request to edit the image "{4}" in the "{5}" article has been approved by {3}. The description of this image is "{6}".
+
+This updated content is accessible from the following article: {7}
+
+The original content request can be viewed at the following location: {8}]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-114" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[Request approved for removal of image "{1}"]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-115" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+Your request to remove the image "{4}" from the "{5}" article has been approved by {3}. The description of this image was "{6}".
+
+This content is no longer available in the wiki. It was accessible from the following article: {7}
+
+The original content request can be viewed at the following location: {8}]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-116" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[Request approved for new article "{1}"]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-117" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+Your request to add the related article "{4}" to the "{5}" article has been approved by {3}. The description of this related article is "{6}".
+
+This content is now available in the wiki, and is accessible from the following article: {7}
+
+The original content request can be viewed at the following location: {8}]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-118" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[Request approved for update of article "{1}"]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-119" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+Your request to edit the related article "{4}" in the "{5}" article has been approved by {3}. The description of this related article is "{6}".
+
+This updated content is accessible from the following article: {7}
+
+The original content request can be viewed at the following location: {8}]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-120" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[Request approved for removal of article "{1}"]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-121" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+Your request to remove the related article "{4}" from the "{5}" article has been approved by {3}. The description of this related article was "{6}".
+
+This content is no longer available in the wiki. It was accessible from the following article: {7}
+
+The original content request can be viewed at the following location: {8}]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-122" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[Request approved for new reference to content "{1}"]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-123" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+Your request to add a reference to the "{4}" content in the "{5}" article has been approved by {3}. The description of this content is "{6}".
+
+This content is now accessible from the following article: {7}
+
+The original content request can be viewed at the following location: {8}]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-124" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[Request approved for removal of reference to content "{1}"]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-125" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+Your request to remove the reference to the "{4}" content from the "{5}" article has been approved by {3}. The description of this content is "{6}".
+
+This content was accessible from the following article: {7}
+
+The original content request can be viewed at the following location: {8}]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-126" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[Request rejected for new article "{1}"]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-127" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+Your request to add the article "{4}" to the "{5}" article has been rejected by {3}. The description of this article was "{6}".
+
+The original content request can be viewed at the following location: {7}]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-128" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[Request rejected for update of article "{1}"]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-129" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+Your request to edit the article "{4}" in the "{5}" article has been rejected by {3}. The description of this article is "{6}".
+
+The original content request can be viewed at the following location: {7}]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-130" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[Request rejected for removal of article "{1}"]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-131" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+Your request to remove the article "{4}" from the "{5}" article has been rejected by {3}. The description of this article is "{6}".
+
+The original content request can be viewed at the following location: {7}]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-132" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[Request rejected for new image "{1}"]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-133" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+Your request to add the image "{4}" to the "{5}" article has been rejected by {3}. The description of this image was "{6}".
+
+The original content request can be viewed at the following location: {7}]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-134" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[Request rejected for update of image "{1}"]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-135" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+Your request to edit the image "{4}" in the "{5}" article has been rejected by {3}. The description of this image is "{6}".
+
+The original content request can be viewed at the following location: {7}]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-136" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[Request rejected for removal of image "{1}"]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-137" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+Your request to remove the image "{4}" from the "{5}" article has been rejected by {3}. The description of this image is "{6}".
+
+The original content request can be viewed at the following location: {7}]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-138" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[Request rejected for new article "{1}"]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-139" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+Your request to add the related article "{4}" to the "{5}" article has been rejected by {3}. The description of this related article is "{6}".
+
+The original content request can be viewed at the following location: {7}]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-140" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[Request rejected for update of article "{1}"]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-141" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+Your request to edit the related article "{4}" in the "{5}" article has been rejected by {3}. The description of this related article is "{6}".
+
+The original content request can be viewed at the following location: {7}]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-142" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[Request rejected for removal of article "{1}"]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-143" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+Your request to remove the related article "{4}" from the "{5}" article has been rejected by {3}. The description of this related article is "{6}".
+
+The original content request can be viewed at the following location: {7}]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-144" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[Request rejected for new reference to content "{1}"]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-145" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+Your request to add a reference to the "{4}" content in the "{5}" article has been rejected by {3}. The description of this content is "{6}".
+
+The original content request can be viewed at the following location: {7}]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-146" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[Request rejected for removal of reference to content "{1}"]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-147" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+Your request to remove the reference to the "{4}" content from the "{5}" article has been rejected by {3}. The description of this content is "{6}".
+
+The original content request can be viewed at the following location: {7}]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-148" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[Request cancelled for new article "{1}"]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-149" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+The request to add the article "{4}" to the "{5}" article has been cancelled by {3}. The description of this article was "{6}".
+
+You were the designated approver of this content request. It can be viewed at the following location: {7}]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-150" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[Request cancelled for update of article "{1}"]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-151" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+The request to edit the article "{4}" in the "{5}" article has been cancelled by {3}. The description of this article is "{6}".
+
+You were the designated approver of this content request. It can be viewed at the following location: {7}]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-152" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[Request cancelled for removal of article "{1}"]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-153" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+The request to remove the article "{4}" from the "{5}" article has been cancelled by {3}. The description of this article is "{6}".
+
+You were the designated approver of this content request. It can be viewed at the following location: {7}]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-154" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[Request cancelled for new image "{1}"]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-155" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+The request to add the image "{4}" to the "{5}" article has been cancelled by {3}. The description of this image was "{6}".
+
+You were the designated approver of this content request. It can be viewed at the following location: {7}]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-156" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[Request cancelled for update of image "{1}"]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-157" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+The request to edit the image "{4}" in the "{5}" article has been cancelled by {3}. The description of this image is "{6}".
+
+You were the designated approver of this content request. It can be viewed at the following location: {7}]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-158" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[Request cancelled for removal of image "{1}"]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-159" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+The request to remove the image "{4}" from the "{5}" article has been cancelled by {3}. The description of this image is "{6}".
+
+You were the designated approver of this content request. It can be viewed at the following location: {7}]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-160" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[Request cancelled for new article "{1}"]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-161" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+The request to add the related article "{4}" to the "{5}" article has been cancelled by {3}. The description of this related article was "{6}".
+
+You were the designated approver of this content request. It can be viewed at the following location: {7}]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-162" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[Request cancelled for update of article "{1}"]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-163" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+The request to edit the related article "{4}" in the "{5}" article has been cancelled by {3}. The description of this related article is "{6}".
+
+You were the designated approver of this content request. It can be viewed at the following location: {7}]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-164" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[Request cancelled for removal of article "{1}"]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-165" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+The request to remove the related article "{4}" from the "{5}" article has been cancelled by {3}. The description of this related article is "{6}".
+
+You were the designated approver of this content request. It can be viewed at the following location: {7}]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-166" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[Request cancelled for new reference to content "{1}"]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-167" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+The request to add a reference to the "{4}" content in the "{5}" article has been cancelled by {3}. The description of this content is "{6}".
+
+You were the designated approver of this content request. It can be viewed at the following location: {7}]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-168" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[Request cancelled for removal of reference to content "{1}"]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-169" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+The request to remove the reference to the "{4}" content from the "{5}" article has been cancelled by {3}. The description of this content is "{6}".
+
+You were the designated approver of this content request. It can be viewed at the following location: {7}]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-170" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You must select at least one type of content
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-171" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA["Modified" only applies to articles and Images. Please uncheck the "articles" type in your search criteria]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-172" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA["Author" only applies to articles. Please select only the "articles" type in your search criteria]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-173" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				There is no known account for the subscriber name you
+				entered
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-174" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				There is more than one account for the subscriber name
+				you entered. Please use the lookup
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-175" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				{1} has been added to the list of subscribers
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-176" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				{1} is already an individual subscriber of this article
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-177" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				{1} is already an individual subscriber of this image
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-178" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				{1} has been removed from the list of subscribers
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-179" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				{1} is not an individual subscriber of this article
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-180" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				{1} is not an individual subscriber of this image
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-181" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[You are already an individual subscriber of the "{1}" article]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-182" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[You are not an individual subscriber of the "{1}" article]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-183" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[You are already an individual subscriber of the "{1}" image]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-184" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[You are not an individual subscriber of the "{1}" image]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-185" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[There is no individual subscriber of the "{1}" article]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-186" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[There is no individual subscriber of the "{1}" image]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-187" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-3">
+				<![CDATA[<p>To add a subscription to an article or image, find this article or image, go to the associated properties screen and follow the "subscribe" link displayed. You will be notified automatically each time this content is modified.
+</p><p>
+If you want to stop receiving notifications for a particular piece of content, go to the associated properties screen and follow the "unsubscribe" link displayed.
+</p><p>
+If you were subscribed by an editor as part of a group, contact the editor of the content and ask to be removed from the list of subscribers.</p>]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-188" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[New version of article "{1}" issued]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-189" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+A new version of the article "{4}" has been issued by {3} in the "{5}" article. The version number is {6} and the description of this article is "{7}".
+
+You are a subscriber of this article. The latest version can be downloaded at the following location: {8}
+
+
+
+
+
+If you do not wish to receive these notifications in the future, unsubscribe using the screen accessible from the following location: {9}]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-190" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[New version of Image "{1}" issued]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-191" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+A new version of the image "{4}" has been issued by {3} in the "{5}" article. The version number is {6} and the description of this image is "{7}".
+
+You are a subscriber of this image. The latest version can be accessed from the following location: {8}
+
+
+
+
+
+If you do not wish to receive these notifications in the future, unsubscribe using the screen accessible from the following location: {9}]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-192" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				There is no known group for the associate editors group
+				name you entered. Please use the lookup
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-193" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				There is more than one group for the associate editors
+				group name you entered. Please use the lookup
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-194" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">New Group...</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-195" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You do not have sufficient credentials to access the
+				page or content you have requested
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-196" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				There is no known group for the access group name you
+				entered
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-197" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				There is more than one group for the access group name
+				you entered. Please use the lookup
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-198" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This article doesn't have any access group to remove]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-199" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The group you entered is already an access group of this
+				article
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-2" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1" />
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-200" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The group you entered is not an access group of this
+				article
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-201" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This image doesn't have any access group to remove]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-202" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The group you entered is already an access group of this
+				image
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-203" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The group you entered is not an access group of this
+				image
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-204" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This article doesn't have any access group to remove]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-205" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The group you entered is already an access group of this
+				article
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-206" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The group you entered is not an access group of this
+				article
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-207" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[The "{1}" group has been added to the access groups list]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-208" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[The "{1}" group has been removed from the access groups list]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-209" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You do not have sufficient credentials to edit the
+				access groups of this article
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-210" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You do not have sufficient credentials to edit the
+				access groups of this image
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-211" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You do not have sufficient credentials to edit the
+				access groups of this article
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-212" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Your request to remove {1} content has been sent and is
+				awaiting approvals by {2}. To list all your requests
+				pending approval, go to {3}
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-213" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The {1} content you selected have been removed from this
+				article
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-214" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				There is no known group for the subscriber name you
+				entered
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-215" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				There is more than one group for the subscriber name you
+				entered
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-216" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[The members of the "{1}" group have been added to the list of subscribers]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-217" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[The "{1}" group is already a subscriber of this article]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-218" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[The "{1}" group is already a subscriber of this image]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-219" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[The members of the "{1}" group have been removed from the list of subscribers]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-220" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[The "{1}" group is not a subscriber of this article]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-221" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[The "{1}" group is not a subscriber of this image]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-222" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[There is no group subscribed to the "{1}" article]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-223" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[There is no group subscribed to the "{1}" image]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-224" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[New version of article "{1}" issued]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-225" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+A new version of the article "{4}" has been issued by {3} in the "{5}" article. The version number is {6} and the description of this article is "{7}".
+
+You are the member of a group that has been subscribed to this article. The latest version can be downloaded at the following location: {8}
+
+
+
+
+
+If you do not wish to receive these notifications in the future, please contact the editor of this article: {9}. ]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-226" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[New version of Image "{1}" issued]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-227" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+A new version of the image "{4}" has been issued by {3} in the "{5}" article. The version number is {6} and the description of this image is "{7}".
+
+You are the member of a group that has been subscribed to this image. The latest version can be accessed from the following location: {8}
+
+
+
+
+
+If you do not wish to receive these notifications in the future, please contact the editor of this image: {9}. ]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-228" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Only the editor or associate editors of this article can
+				edit group subscriptions
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-229" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Only the editor or associate editors of this image can
+				edit group subscriptions
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-230" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Daily Subscription Report
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-231" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on your behalf.
+
+You are the subscriber of one or several content that have been modified during the last 24 hours.
+
+You have requested to be notified on a daily basis. Your digest report can be accessed from the following location: {4}.
+
+
+
+
+
+If you do not wish to receive these notifications in the future, unsubscribe to each content you are notified for, or contact the associated editors.]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-232" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Weekly Subscription Report
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-233" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on your behalf.
+
+You are the subscriber of one or several content that have been modified during the last 7 days.
+
+You have requested to be notified on a weekly basis. Your digest report can be accessed from the following location: {4}.
+
+
+
+
+
+If you do not wish to receive these notifications in the future, unsubscribe to each content you are notified for, or contact the associated editors.]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-234" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Daily Subscription Report
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-235" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on your behalf.
+
+You are the subscriber of one or several content that have been modified during the last 24 hours.
+
+Your account is a registered recipient of daily notifications for these content. Your daily digest report can be accessed from the following location: {4}.
+
+
+
+
+
+If you do not wish to receive these notifications in the future, please contact the editors of each content you are notified for.]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-236" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Weekly Subscription Report
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-237" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on your behalf.
+
+You are the subscriber of one or several content that have been modified during the last 7 days.
+
+Your account is a registered recipient of weekly notifications for these content. Your weekly digest report can be accessed from the following location: {4}.
+
+
+
+
+
+If you do not wish to receive these notifications in the future, please contact the editors of each content you are notified for.]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-238" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The {1} references to content you selected have been
+				added to this article
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-239" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Your request to add {1} references to content has been
+				sent and is awaiting approvals by {2}. To list all your
+				requests pending approval, go to {3}
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-240" type="INF">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				One subscriber has been notified
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-241" type="INF">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				{1} subscribers have been notified
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-242" type="INF">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[One subscriber has been notified. You can also {1} this version as "hot" and notify immediately all digest subscribers]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-243" type="INF">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[{1} subscribers have been notified. You can also {2} this version as "hot" and notify immediately all digest subscribers]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-244" type="INF">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[All subscribers of this content are digest subscribers. You can {1} this version as "hot" and notify immediately all digest subscribers]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-245" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">mark</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-246" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[New HOT version of article "{1}" issued]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-247" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+A new version of the article "{4}" has been issued by {3} in the "{5}" article. The version number is {6} and the description of this article is "{7}".
+
+You are a daily or weekly subscriber of this article or its parent article. The editor has requested this article to be sent immediately to all subscribers. The latest version can be downloaded at the following location: {8}
+
+
+
+
+
+If you do not wish to receive these notifications in the future, please contact the editor of this article: {9}. ]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-248" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[New HOT version of image "{1}" issued]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-249" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+A new version of the image "{4}" has been issued by {3} in the "{5}" article. The version number is {6} and the description of this image is "{7}".
+
+You are a daily or weekly subscriber of this image  or its parent article. The editor has requested this image to be sent immediately to all subscribers. The latest version can be downloaded at the following location: {8}
+
+
+
+
+
+If you do not wish to receive these notifications in the future, please contact the editor of this image: {9}. ]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-250" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				A notification has been sent to the digest subscriber of
+				this article
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-251" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				A notification has been sent to the {1} digest
+				subscribers of this article
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-252" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				A notification has been sent to the digest subscriber of
+				this image
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-253" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				A notification has been sent to the {1} digest
+				subscribers of this image
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-254" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">Allow</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-255" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">Deny</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-256" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The {1} content requests have been approved
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-257" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[The request for the content "{1}" has been approved]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-258" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The name of a piece of content cannot be all uppercase.
+				Please use mixed case
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-259" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The description of a piece of content cannot be all
+				uppercase. Please use mixed case
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-260" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The home page can only be edited by the system
+				administrator
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-261" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				This content request is no longer pending. It cannot be
+				approved, rejected or cancelled
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-262" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				One or several of the content requests you have selected
+				have changed status. Please change your selection
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-263" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				One or several of the article requests you have selected
+				use friendly addresses that are already in use or that
+				are conflicting. Please change your selection
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-264" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				One or several of the article removal requests you have
+				selected are for non-empty articles. Please change your
+				selection
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-265" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[The "{1}" article has been created. Please add access groups]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-266" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[The "{1}" article has been published in the requested article. Please add access groups]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-267" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[The "{1}" image has been added to the requested article. Please add access groups]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-268" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[The "{1}" article has been updated. Please note that no access group has been defined]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-269" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[The "{1}" article has been updated. Please note that no access group has been defined]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-270" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[The "{1}" image has been updated. Please note that no access group has been defined]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-271" type="INF">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				No content you are subscribed to on a daily basis has
+				been modified on {1}
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-272" type="INF">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				No content you are subscribed to on a weekly basis has
+				been modified between {1} and {2}
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-273" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You do not have sufficient credentials to update this
+				content request
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-274" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				No element of this content request can be updated
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-275" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">{2}'s {1}</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-276" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">{2}'s {1}</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-277" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">{2}'s {1}</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-278" type="INF">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The link you followed was associated with the version
+				number {1} of this article. The latest version number is
+				{2}. Please choose the version of the article you want
+				to download
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-279" type="INF">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The link you followed was associated with the version
+				number {1} of this image. The latest version number is
+				{2}. Please choose the version of the image you want to
+				follow
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-280" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You must select at least one article version to remove
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-281" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The version number {1} of this article has been removed
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-282" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The {1} versions of this article that you have selected
+				have been removed
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-283" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				There is only one version of this article. This version
+				cannot be removed. To remove this article, use Remove
+				Related Content in the parent article of this article
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-284" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You must be the editor or the associate editor of an
+				article to remove one of its versions
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-285" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You must select at least one image version to remove
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-286" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The version number {1} of this image has been removed
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-287" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The {1} versions of this image that you have selected
+				have been removed
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-288" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				There is only one version of this image. This version
+				cannot be removed. To remove this image, use Remove
+				Related Content in the parent article of this image
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-289" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You must be the editor or the associate editor of an
+				image to remove one of its versions
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-290" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[You are already an individual subscriber of the "{1}" article]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-291" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[You are not an individual subscriber of the "{1}" article]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-292" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[There is no individual subscriber of the "{1}" article]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-293" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				{1} is already an individual subscriber of this article
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-294" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				{1} is not an individual subscriber of this article
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-295" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Only the editor or associate editors of this article can
+				edit group subscriptions
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-296" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[There is no group subscribed to the "{1}" article]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-297" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[The "{1}" group is already a subscriber of this article]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-298" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[The "{1}" group is not a subscriber of this article]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-299" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You cannot remove all versions of an article. Uncheck at
+				least one version
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-300" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You cannot remove all versions of an image. Uncheck at
+				least one version
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-301" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[New version of article "{1}" issued]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-302" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+A new version of the article "{4}" has been issued by {3} in the "{5}" article. The version number is {6} and the description of this article is "{7}".
+
+You are a subscriber of the parent article of this article. The latest version can be downloaded at the following location: {8}
+
+
+
+
+
+If you do not wish to receive these notifications in the future, unsubscribe using the screen accessible from the following location: {9}]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-303" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[New version of Image "{1}" issued]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-304" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+A new version of the image "{4}" has been issued by {3} in the "{5}" article. The version number is {6} and the description of this image is "{7}".
+
+You are a subscriber of the parent article of this image. The latest version can be accessed from the following location: {8}
+
+
+
+
+
+If you do not wish to receive these notifications in the future, unsubscribe using the screen accessible from the following location: {9}]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-305" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[New version of article "{1}" issued]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-306" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+A new version of the article "{4}" has been issued by {3} in the "{5}" article. The version number is {6} and the description of this article is "{7}".
+
+You are the member of a group that has been subscribed to the parent article of this article. The latest version can be downloaded at the following location: {8}
+
+
+
+
+
+If you do not wish to receive these notifications in the future, please contact the editor of this article: {9}. ]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-307" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[New version of Image "{1}" issued]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-308" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+A new version of the image "{4}" has been issued by {3} in the "{5}" article. The version number is {6} and the description of this image is "{7}".
+
+You are the member of a group that has been subscribed to the parent article of this image. The latest version can be accessed from the following location: {8}
+
+
+
+
+
+If you do not wish to receive these notifications in the future, please contact the editor of this image: {9}. ]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-309" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+An article "{4}" has been uploaded by {3} for addition to the "{5}" article. The description of this article is "{6}".
+
+The notes associated with this version are "{8}".
+
+You can view this content request and the associated article at the following location: {7}
+
+You are the editor of the "{5}" article and your action is required. You can either approve or reject this request.]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-310" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+A request for update regarding the article "{4}" in the "{5}" article has been submitted by {3}. The current description of this article is "{6}".
+
+The notes associated with this version are "{8}".
+
+You can view this content request and the associated article at the following location: {7}
+
+You are the editor of the "{5}" article and your action is required. You can either approve or reject this request.]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-311" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+An image "{4}" has been entered by {3} for addition to the "{5}" article. The description of this image is "{6}".
+
+The notes associated with this version are "{8}".
+
+You can view this content request and the associated image at the following location: {7}
+
+You are the editor of the "{5}" article and your action is required. You can either approve or reject this request.]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-312" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+A request for update regarding the image "{4}" in the "{5}" article has been submitted by {3}. The current description of this image is "{6}".
+
+The notes associated with this version are "{8}".
+
+You can view this content request and the associated image at the following location: {7}
+
+You are the editor of the "{5}" article and your action is required. You can either approve or reject this request.]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-313" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+A new version of the article "{4}" has been issued by {3} in the "{5}" article. The version number is {6} and the description of this article is "{7}".
+
+The notes associated with this version are "{10}".
+
+You are a subscriber of this article. The latest version can be downloaded at the following location: {8}
+
+
+
+
+
+If you do not wish to receive these notifications in the future, unsubscribe using the screen accessible from the following location: {9}]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-314" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+A new version of the image "{4}" has been issued by {3} in the "{5}" article. The version number is {6} and the description of this image is "{7}".
+
+The notes associated with this version are "{10}".
+
+You are a subscriber of this image. The latest version can be accessed from the following location: {8}
+
+
+
+
+
+If you do not wish to receive these notifications in the future, unsubscribe using the screen accessible from the following location: {9}]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-315" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+A new version of the article "{4}" has been issued by {3} in the "{5}" article. The version number is {6} and the description of this article is "{7}".
+
+The notes associated with this version are "{10}".
+
+You are the member of a group that has been subscribed to this article. The latest version can be downloaded at the following location: {8}
+
+
+
+
+
+If you do not wish to receive these notifications in the future, please contact the editor of this article: {9}. ]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-316" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+A new version of the image "{4}" has been issued by {3} in the "{5}" article. The version number is {6} and the description of this image is "{7}".
+
+The notes associated with this version are "{10}".
+
+You are the member of a group that has been subscribed to this image. The latest version can be accessed from the following location: {8}
+
+
+
+
+
+If you do not wish to receive these notifications in the future, please contact the editor of this image: {9}. ]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-317" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+A new version of the article "{4}" has been issued by {3} in the "{5}" article. The version number is {6} and the description of this article is "{7}".
+
+The notes associated with this version are "{10}".
+
+You are a daily or weekly subscriber of this article or its parent article. The editor has requested this article to be sent immediately to all subscribers. The latest version can be downloaded at the following location: {8}
+
+
+
+
+
+If you do not wish to receive these notifications in the future, please contact the editor of this article: {9}. ]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-318" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+A new version of the image "{4}" has been issued by {3} in the "{5}" article. The version number is {6} and the description of this image is "{7}".
+
+The notes associated with this version are "{10}".
+
+You are a daily or weekly subscriber of this image  or its parent article. The editor has requested this image to be sent immediately to all subscribers. The latest version can be downloaded at the following location: {8}
+
+
+
+
+
+If you do not wish to receive these notifications in the future, please contact the editor of this image: {9}. ]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-319" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+A new version of the article "{4}" has been issued by {3} in the "{5}" article. The version number is {6} and the description of this article is "{7}".
+
+The notes associated with this version are "{10}".
+
+You are a subscriber of the parent article of this article. The latest version can be downloaded at the following location: {8}
+
+
+
+
+
+If you do not wish to receive these notifications in the future, unsubscribe using the screen accessible from the following location: {9}]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-320" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+A new version of the image "{4}" has been issued by {3} in the "{5}" article. The version number is {6} and the description of this image is "{7}".
+
+The notes associated with this version are "{10}".
+
+You are a subscriber of the parent article of this image. The latest version can be accessed from the following location: {8}
+
+
+
+
+
+If you do not wish to receive these notifications in the future, unsubscribe using the screen accessible from the following location: {9}]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-321" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+A new version of the article "{4}" has been issued by {3} in the "{5}" article. The version number is {6} and the description of this article is "{7}".
+
+The notes associated with this version are "{10}".
+
+You are the member of a group that has been subscribed to the parent article of this article. The latest version can be downloaded at the following location: {8}
+
+
+
+
+
+If you do not wish to receive these notifications in the future, please contact the editor of this article: {9}. ]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-322" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+A new version of the image "{4}" has been issued by {3} in the "{5}" article. The version number is {6} and the description of this image is "{7}".
+
+The notes associated with this version are "{10}".
+
+You are the member of a group that has been subscribed to the parent article of this image. The latest version can be accessed from the following location: {8}
+
+
+
+
+
+If you do not wish to receive these notifications in the future, please contact the editor of this image: {9}. ]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-323" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				referenced in {1}
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-324" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The editor of this article has disabled the option
+				allowing users to submit content requests. Please
+				contact the editor directly
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-325" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The editor of this article has disabled the option
+				allowing users to submit content requests. Please
+				contact the editor directly
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-326" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The editor of this image has disabled the option
+				allowing users to submit content requests. Please
+				contact the editor directly
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-327" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[The editor of the "{1}" content has disabled the option allowing users to submit content requests. Please contact the editor directly]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-328" type="INF">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[No result was found matching a name or a description. {1} matched your criteria when full text search was used. Use the "Full Text Results" tab to see these results]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-329" type="INF">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The URL of this article is {1}. Use this URL when
+				prompted to link to this article
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-330" type="INF">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The URL of this image is {1}. Use this URL when prompted
+				to include this image inside the body of an article
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-331" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You do not have sufficient credentials to access this
+				article
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-332" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You do not have sufficient credentials to this content
+				request
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-34" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				At least 6 characters in length
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-35" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				May not contain space characters
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-36" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				May not be identical to the login
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-37" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				At least 4 characters in length
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-38" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				May not contain space characters
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-39" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-3">
+				<![CDATA[Please refer to <a href="#LegalTermsPageURL#">#CompanyName# Legal Terms</a>]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-40" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-3">
+				<![CDATA[Please refer to <a href="#LegalTermsPageURL#">#CompanyName# Legal Terms</a>]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-42" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-3">
+				The page or resource you have requested is no longer
+				avalailable.
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-43" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				There is no known account for the editor name you
+				entered
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-44" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				There is more than one account for the editor name you
+				entered
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-45" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Your request for a new article has been sent and is
+				awaiting approval by {1}. To list all your requests
+				pending approval, go to {2}
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-46" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[The "{1}" article has been created and is displayed below]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-47" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				There is no known account for the author name you
+				entered
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-48" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				There is more than one account for the author name you
+				entered
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-49" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Your request for a new article has been sent and is
+				awaiting approval by {1}. To list all your requests
+				pending approval, go to {2}
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-50" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[The "{1}" article has been published]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-51" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Your request for a new image has been sent and is
+				awaiting approval by {1}. To list all your requests
+				pending approval, go to {2}
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-52" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[The "{1}" image has been added to this article]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-53" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				No file was uploaded. Use the BROWSE button to select a
+				file to upload
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-54" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You must enter a valid location
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-55" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You can only add content you have viewed or downloaded
+				recently. No applicable content was found in your recent
+				session history
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-56" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You must select at least one content to add
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-57" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Your request for a reference to a related article or
+				image has been sent and is awaiting approval by {1}. To
+				list all your requests pending approval, go to {2}
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-58" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[The reference to "{1}" has been added to this article]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-59" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You must select at least one content to remove
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-60" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Your request for a piece of content removal has been
+				sent and is awaiting approval by {1}. To list all your
+				requests pending approval, go to {2}
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-61" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[The "{1}" content has been removed from the related content of this article]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-62" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				An article must be empty to be removed
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-63" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				This content request has been approved
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-64" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				This content request has been rejected
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-65" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				This content request has been cancelled
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-66" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				This content request has been updated
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-67" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You must select one content to edit
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-68" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The related content of this article has been reorganized
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-69" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Only the editor of this article can reorganize its
+				content
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-70" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				A reference request cannot be edited
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-71" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[You are not the editor of the target parent article for this article, your request cannot be effective immediately. Change the parent article or unckeck "effective immediately"]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-72" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Your request for an article update has been sent and is
+				awaiting approval by {1}. To list all your requests
+				pending approval, go to {2}
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-73" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[The "{1}" article has been updated and is displayed below]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-74" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				This content request is no longer pending approval. It
+				cannot be edited
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-75" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[You are not the editor of the target parent article for this image, your request cannot be effective immediately. Change the parent article or unckeck "effective immediately"]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-76" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Your request for an image update has been sent and is
+				awaiting approval by {1}. To list all your requests
+				pending approval, go to {2}
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-77" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[The "{1}" image has been updated]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-78" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[You are not the editor of the target parent article for this article, your request cannot be effective immediately. Change the parent article or unckeck "effective immediately"]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-79" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Your request for an article update has been sent and is
+				awaiting approval by {1}. To list all your requests
+				pending approval, go to {2}
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-80" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[The "{1}" article has been updated]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-81" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The friendly address you have entered is already in use.
+				Choose another friendly address
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-82" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[Approval requested for new article "{1}"]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-83" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+An article "{4}" has been uploaded by {3} for addition to the "{5}" article. The description of this article is "{6}".
+
+You can view this content request and the associated article at the following location: {7}
+
+You are the editor of the "{5}" article and your action is required. You can either approve or reject this request.]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-84" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[Approval requested for update of article "{1}"]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-85" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+A request for update regarding the article "{4}" in the "{5}" article has been submitted by {3}. The current description of this article is "{6}".
+
+You can view this content request and the associated article at the following location: {7}
+
+You are the editor of the "{5}" article and your action is required. You can either approve or reject this request.]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-86" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[Approval requested for removal of article "{1}"]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-87" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+A request for removal regarding the article "{4}" in the "{5}" article has been submitted by {3}. The description of this article is "{6}".
+
+You can view this content request and the associated article at the following location: {7}
+
+You are the editor of the "{5}" article and your action is required. You can either approve or reject this request.]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-88" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[Approval requested for new image "{1}"]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-89" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+An image "{4}" has been entered by {3} for addition to the "{5}" article. The description of this image is "{6}".
+
+You can view this content request and the associated image at the following location: {7}
+
+You are the editor of the "{5}" article and your action is required. You can either approve or reject this request.]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-90" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[Approval requested for update of image "{1}"]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-91" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+A request for update regarding the image "{4}" in the "{5}" article has been submitted by {3}. The current description of this image is "{6}".
+
+You can view this content request and the associated image at the following location: {7}
+
+You are the editor of the "{5}" article and your action is required. You can either approve or reject this request.]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-92" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[Approval requested for removal of image "{1}"]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-93" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+A request for removal regarding the image "{4}" in the "{5}" article has been submitted by {3}. The description of this image is "{6}".
+
+You can view this content request and the associated image at the following location: {7}
+
+You are the editor of the "{5}" article and your action is required. You can either approve or reject this request.]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-94" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[Approval requested for new article "{1}"]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-95" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+A related article "{4}" has been submitted by {3} for addition to the "{5}" article. The description of this related article is "{6}".
+
+You can view this content request and the associated related article at the following location: {7}
+
+You are the editor of the "{5}" article and your action is required. You can either approve or reject this request.]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-96" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[Approval requested for update of article "{1}"]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-97" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+A request for update regarding the article "{4}" in the "{5}" article has been submitted by {3}. The current description of this article is "{6}".
+
+You can view this content request and the associated article at the following location: {7}
+
+You are the editor of the "{5}" article and your action is required. You can either approve or reject this request.]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-98" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[Approval requested for removal of article "{1}"]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="WIKI-MESG-99" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[This email was sent automatically by {1} {2} on behalf of {3}.
+
+A request for removal regarding the related article "{4}" in the "{5}" article has been submitted by {3}. The description of this related article is "{6}".
+
+You can view this content request and the associated related article at the following location: {7}
+
+You are the editor of the "{5}" article and your action is required. You can either approve or reject this request.]]>
+			</content>
+		</contents>
+	</message>
+		<message enabled-flag="Y" id="ADMN-MESG-1074" type="INF">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Are you sure you want to remove this warning?
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1075" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You do not have sufficient credentials to edit warnings
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1076" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				This warning has been created
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1077" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				This warning has been updated
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1078" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				This warning has been removed
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1079" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You do not have sufficient credentials to add a new
+				warning
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1080" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You do not have sufficient credentials to add a new
+				system account
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1081" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You do not have sufficient credentials to add a new
+				system group
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1082" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				This system account has been created
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1083" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				This system group has been created
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1084" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				This system account already exists
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1085" type="INF">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				Are you sure you want to disable this email?
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1086" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				This email has been disabled
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1087" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				This email has been updated and sent
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1088" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				This email has been updated
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1089" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You do not have sufficient credentials to edit emails
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1090" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You do not have sufficient credentials to view emails
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1091" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You do not have sufficient credentials to view warnings
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1092" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You do not have sufficient credentials to view system accounts
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1093" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You do not have sufficient credentials to view system groups
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1094" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[There is no known account matching the actual account name you entered. Please use the lookup]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1095" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[There is no known account matching the proxy account name you entered. Please use the lookup]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1096" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You do not have sufficient credentials to view entry
+				logs
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1097" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You do not have sufficient credentials to view error
+				logs
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1098" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You do not have sufficient credentials to view response
+				logs
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1099" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You do not have sufficient credentials to view data
+				sources
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1100" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[The format used for the "{1}" number is incorrect]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1101" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[The interval you entered for the "{1}" number is incorrect. The lower boundary must precede the upper boundary]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1102" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[(please enter time in milliseconds)]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1103" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[(response code is a 3 digit number. examples: 200, 302)]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1104" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You do not have sufficient credentials to view files
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1105" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You do not have sufficient credentials to view system
+				files
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1106" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You do not have sufficient credentials to view system
+				LDAP controls
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1107" type="DSP">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				<![CDATA[(please enter file size in bytes)]]>
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1109" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				More than one account matched the name you entered in
+				from field. Please use the lookup
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1110" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				No account was found matching the name you entered in
+				from field. Please use the lookup
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1111" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				No account was found matching the "{1}" recipient name you
+				entered. Please use the lookup
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1112" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				This role is invalid. Please select one from the list
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1113" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				No account was found matching the name you entered.
+				Please use the lookup
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1114" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				There are more than one account was found matching the
+				name you entered. Please use the lookup
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1115" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				No group was found matching the name you entered. Please
+				use the lookup
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1116" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				There are more than one group was found matching the
+				name you entered. Please use the lookup
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1117" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				This system group already exists
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1118" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You do not have sufficient credentials to add a new
+				system LDAP control
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1119" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				There are more than one LDAP control was found matching
+				the name you entered. Please change it
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1120" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				This system LDAP control already exists
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1121" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				This system LDAP control has been created
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1122" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				You do not have sufficient credentials to add a new
+				system file
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1123" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				No file was uploaded. Use the BROWSE button to select a
+			   file to upload
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1124" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				There are more than one file was found matching the name
+				you entered. Please use the BROWSE button to select a
+			   file to upload
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1125" type="ERR">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				This system file already exists
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1126" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				This system file has been created
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1127" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The system account "{1}" with role {2} has been removed
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1128" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The {1} system accounts you selected have been removed
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1129" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The system group "{1}" with role {2} has been removed
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1130" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The {1} system groups you selected have been removed
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1131" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The system file "{1}" with role {2} has been removed
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1132" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The {1} system files you selected have been removed
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1133" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The system LDAP control "{1}" with role {2} has been
+				removed
+			</content>
+		</contents>
+	</message>
+	<message enabled-flag="Y" id="ADMN-MESG-1134" type="VLD">
+		<contents>
+			<content extension-id="CORE-EXTN-1">
+				The {1} system LDAP controls you selected have been
+				removed
+			</content>
+		</contents>
+	</message>
+</messages>

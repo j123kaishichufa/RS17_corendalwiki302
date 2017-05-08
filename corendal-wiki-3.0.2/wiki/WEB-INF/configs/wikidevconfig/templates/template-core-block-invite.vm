@@ -1,0 +1,54 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($icnm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultIconManager"))
+#set ($stlm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultStyleManager"))
+
+##
+## get the icons used in this template
+##
+#set ($spacerIcon = $icnm.getSpacerStandardIcon())
+
+##
+## get the styles used in this template
+##
+#set ($regularTextStyle = $stlm.getRegularTextStandardStyle())
+
+##
+## print the invite
+##
+<table summary="" border="0" cellpadding="0" cellspacing="0" width="100%">
+#set ($sbColor = $sb.getStandardColor())
+#if ($sb.getBlocksSetSize() > 1)
+<tr bgcolor="$sbColor.getColor()">
+#else
+<tr>
+#end
+
+<td class="$regularTextStyle.getName()">@NOEOLAFTERTHIS
+$sb.getInviteHTML().@NOEOLAFTERTHIS
+</td>
+</tr>
+</table>@NOEOLAFTERTHIS
+
+##
+## print a space
+##
+#set ($sbType = $sb.getType())
+#if ($sbType.equals("SMALL"))
+<table summary="" border="0" cellpadding="0" cellspacing="0" width="100%">
+
+#if ($sb.getBlocksSetSize() > 1)
+<tr bgcolor="$sbColor.getColor()">
+#else
+<tr>
+#end
+
+<td width="3">@NOEOLAFTERTHIS
+#icon ($spacerIcon 3 3 $alc)@NOEOLAFTERTHIS
+</td>
+</tr>
+</table>
+#end
+## end of template. keep the empty line after this line.

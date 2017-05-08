@@ -1,0 +1,298 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($cm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultContentManager"))
+#set ($lclm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultLocaleManager"))
+#set ($stlm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultStyleManager"))
+#set ($icnm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultIconManager"))
+#set ($pagm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultPageManager"))
+#set ($msgm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultMessageManager"))
+#set ($rm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultRequestManager"))
+#set ($cfgm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultConfigManager"))
+#set ($am = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultAccessManager"))
+
+##
+## get the writers used in this template
+##
+#set ($pws = $alc.getWriterSet())
+#set ($lw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultLinkWriter"))
+#set ($pw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultPageWriter"))
+#set ($iw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultIconWriter"))
+#set ($hw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultHeaderWriter"))
+
+##
+## get the current page
+##
+#set ($page = $rm.getStandardPage())
+
+##
+## get the template type
+##
+#set ($templateType = $page.getTemplateType())
+
+##
+## get the location of the images folder
+##
+#set ($prop =  $cfgm.getStandardPropertySet())
+#set ($imagesFolder = $prop.getImagesFolder())
+
+##
+## get the location of the images folder
+##
+#set ($prop =  $cfgm.getStandardPropertySet())
+#set ($imagesFolder = $prop.getImagesFolder())
+
+##
+## get the current login
+##
+#set ($proxyLogin = $hw.getProxyLogin())
+#set ($actualLogin = $hw.getActualLogin())
+
+##
+## get the current date
+##
+#set ($currentDate = $hw.getCurrentDate())
+
+##
+## get the current locale
+##
+#set ($currentLocale = $lclm.getPrimaryStandardLocale())
+
+##
+## get the styles used in this template
+##
+#set ($regularTextStyle = $stlm.getRegularTextStandardStyle())
+
+##
+## get the pages used in this template
+##
+#set ($feedbackPage = $pagm.getFeedbackStandardPage())
+#set ($siteIndexPage = $pagm.getSiteIndexStandardPage())
+#set ($privacyPracticesPage = $pagm.getPrivacyPracticesStandardPage())
+#set ($termsOfUsePage = $pagm.getTermsOfUseStandardPage())
+#set ($accessibilityStatementPage = $pagm.getAccessibilityStatementStandardPage())
+
+##
+## get the icons used in this template
+##
+#set ($spacerIcon = $icnm.getSpacerStandardIcon())
+#set ($glossaryIcon = $icnm.getGlossaryStandardIcon())
+#set ($pixelIcon = $icnm.getPixelStandardIcon())
+
+##
+## get the messages used in this template
+##
+#set ($copyrightMessage = $msgm.getCopyrightStandardMessage())
+#set ($classificationMessage = $msgm.getClassificationStandardMessage())
+#set ($doNotBookmarkMessage = $msgm.getDoNotBookmarkStandardMessage())
+
+##
+## draw a line across the page
+##
+
+#if ((!($templateType.equals("FLOATING"))) && (!($rm.getIsPrintableMode())))
+#iconmaxwidth($spacerIcon 2 $alc)
+#iconmaxwidth($pixelIcon $pixelIcon.getHeight() $alc)
+#end
+
+##
+## get the glossary and the glossary icon
+##
+#set ($pg = $cm.getGlossary())
+
+##
+## draw a line across the page
+##
+#if (!($templateType.equals("FLOATING")))
+
+#if (!($rm.getIsPrintableMode()))
+
+<table summary="" cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+<td valign="bottom">@NOEOLAFTERTHIS
+
+#if (!($pg.getIsEmpty()))
+#set ($iconHTML = $iw.getHTML($glossaryIcon))
+
+<table summary="" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td valign="middle" class="$regularTextStyle.getName()">@NOEOLAFTERTHIS
+$lw.getBreakableFloatingLinkHTML($pg.getWindowName(), $pg.getWindowWidth(), $pg.getWindowHeight(), $pg.getDefaultLocation(), $pg.getLinkTitleEncoded(), $iconHTML, $pg.getAccessKeyEncoded())@NOEOLAFTERTHIS
+</td>
+<td valign="middle" class="$regularTextStyle.getName()">@NOEOLAFTERTHIS
+&nbsp;@NOEOLAFTERTHIS
+</td>
+<td valign="middle" class="$regularTextStyle.getName()">@NOEOLAFTERTHIS
+$lw.getNonBreakableFloatingLinkHTML($pg.getWindowName(), $pg.getWindowWidth(), $pg.getWindowHeight(), $pg.getDefaultLocation(), $pg.getLinkTitleEncoded(), $pg.getLinkNameHTML(), $pg.getAccessKeyEncoded())@NOEOLAFTERTHIS
+</td>
+</tr>
+</table>@NOEOLAFTERTHIS
+#end
+
+</td>
+
+<td align="center" valign="middle">@NOEOLAFTERTHIS
+
+<table summary="" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td>@NOEOLAFTERTHIS
+<span class="$regularTextStyle.getName()">@NOEOLAFTERTHIS
+$lw.getNonBreakableLinkHTML($feedbackPage.getDefaultLocation(), $feedbackPage.getCurrentLinkTitleEncoded(), $feedbackPage.getNameHTML(), $feedbackPage.getAccessKeyEncoded())@NOEOLAFTERTHIS
+</span>@NOEOLAFTERTHIS
+</td>
+<td>@NOEOLAFTERTHIS
+<span class="$regularTextStyle.getName()">@NOEOLAFTERTHIS
+&nbsp;|&nbsp;@NOEOLAFTERTHIS
+</span>@NOEOLAFTERTHIS
+</td>
+<td>@NOEOLAFTERTHIS
+<span class="$regularTextStyle.getName()">@NOEOLAFTERTHIS
+$lw.getNonBreakableLinkHTML($siteIndexPage.getDefaultLocation(), $siteIndexPage.getCurrentLinkTitleEncoded(), $siteIndexPage.getNameHTML(), $siteIndexPage.getAccessKeyEncoded())@NOEOLAFTERTHIS
+</span>@NOEOLAFTERTHIS
+</td>
+<td>@NOEOLAFTERTHIS
+<span class="$regularTextStyle.getName()">@NOEOLAFTERTHIS
+&nbsp;|&nbsp;@NOEOLAFTERTHIS
+</span>@NOEOLAFTERTHIS
+</td>
+<td>@NOEOLAFTERTHIS
+<span class="$regularTextStyle.getName()">@NOEOLAFTERTHIS
+$lw.getNonBreakableLinkHTML($privacyPracticesPage.getDefaultLocation(), $privacyPracticesPage.getCurrentLinkTitleEncoded(), $privacyPracticesPage.getNameHTML(), $privacyPracticesPage.getAccessKeyEncoded())@NOEOLAFTERTHIS
+</span>@NOEOLAFTERTHIS
+</td>
+<td>@NOEOLAFTERTHIS
+<span class="$regularTextStyle.getName()">@NOEOLAFTERTHIS
+&nbsp;|&nbsp;@NOEOLAFTERTHIS
+</span>@NOEOLAFTERTHIS
+</td>
+<td>@NOEOLAFTERTHIS
+<span class="$regularTextStyle.getName()">@NOEOLAFTERTHIS
+$lw.getNonBreakableLinkHTML($termsOfUsePage.getDefaultLocation(), $termsOfUsePage.getCurrentLinkTitleEncoded(), $termsOfUsePage.getNameHTML(), $termsOfUsePage.getAccessKeyEncoded())@NOEOLAFTERTHIS
+</span>@NOEOLAFTERTHIS
+</td>
+<td>@NOEOLAFTERTHIS
+<span class="$regularTextStyle.getName()">@NOEOLAFTERTHIS
+&nbsp;|&nbsp;@NOEOLAFTERTHIS
+</span>@NOEOLAFTERTHIS
+</td>
+<td>@NOEOLAFTERTHIS
+<span class="$regularTextStyle.getName()">@NOEOLAFTERTHIS
+$lw.getNonBreakableLinkHTML($accessibilityStatementPage.getDefaultLocation(), $accessibilityStatementPage.getCurrentLinkTitleEncoded(), $accessibilityStatementPage.getNameHTML(), $accessibilityStatementPage.getAccessKeyEncoded())@NOEOLAFTERTHIS
+</span>@NOEOLAFTERTHIS
+</td>
+</tr>
+</table>@NOEOLAFTERTHIS
+
+</td>
+
+<td rowspan="2" align="$currentLocale.getRightAlign()" valign="middle">@NOEOLAFTERTHIS
+#if ($proxyLogin)
+<span class="$regularTextStyle.getName()">@NOEOLAFTERTHIS
+#if ($am.getIsProxyPossible())
+#if ($am.getIsProxyUsed())
+$lw.getNonBreakableLinkHTML($am.getProxyPageDefaultLocation(), $actualLogin, $proxyLogin, null)@NOEOLAFTERTHIS
+#else
+$lw.getNonBreakableLinkHTML($am.getProxyPageDefaultLocation(), "", $proxyLogin, null)@NOEOLAFTERTHIS
+#end
+#else
+$proxyLogin@NOEOLAFTERTHIS
+#end
+</span>@NOEOLAFTERTHIS
+#else
+&nbsp;@NOEOLAFTERTHIS
+#end
+</td>
+</tr>
+<tr>
+
+<td>@NOEOLAFTERTHIS
+<span class="$regularTextStyle.getName()">@NOEOLAFTERTHIS
+$currentDate@NOEOLAFTERTHIS
+</span>@NOEOLAFTERTHIS
+</td>
+
+<td align="center" valign="bottom">@NOEOLAFTERTHIS
+<table summary="" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td align="center">@NOEOLAFTERTHIS
+<span class="$regularTextStyle.getName()">@NOEOLAFTERTHIS
+$copyrightMessage.getMessageHTML()@NOEOLAFTERTHIS
+</span>@NOEOLAFTERTHIS
+</td>
+<td align="center">@NOEOLAFTERTHIS
+<span class="$regularTextStyle.getName()">
+&nbsp;-&nbsp;@NOEOLAFTERTHIS
+</span>@NOEOLAFTERTHIS
+</td>
+
+<td align="center">@NOEOLAFTERTHIS
+<span class="$regularTextStyle.getName()">@NOEOLAFTERTHIS
+#if ($rm.getIsBookmarkable())
+$classificationMessage.getMessageHTML()@NOEOLAFTERTHIS
+#else
+$doNotBookmarkMessage.getMessageHTML()@NOEOLAFTERTHIS
+#end
+</span>@NOEOLAFTERTHIS
+</td>
+
+</tr>
+</table>@NOEOLAFTERTHIS
+
+</td>
+</tr>
+</table>@NOEOLAFTERTHIS
+
+#else
+
+<table summary="" cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+<td valign="top">@NOEOLAFTERTHIS
+<span class="$regularTextStyle.getName()">@NOEOLAFTERTHIS
+$currentDate@NOEOLAFTERTHIS
+</span>@NOEOLAFTERTHIS
+</td>
+<td align="center" valign="top">@NOEOLAFTERTHIS
+
+<table summary="" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td align="center">@NOEOLAFTERTHIS
+<span class="$regularTextStyle.getName()">@NOEOLAFTERTHIS
+$copyrightMessage.getMessageHTML()@NOEOLAFTERTHIS
+</span>@NOEOLAFTERTHIS
+</td>
+<td align="center">@NOEOLAFTERTHIS
+<span class="$regularTextStyle.getName()">
+&nbsp;-&nbsp;@NOEOLAFTERTHIS
+</span>@NOEOLAFTERTHIS
+</td>
+<td align="center">@NOEOLAFTERTHIS
+<span class="$regularTextStyle.getName()">@NOEOLAFTERTHIS
+$classificationMessage.getMessageHTML()@NOEOLAFTERTHIS
+</span>@NOEOLAFTERTHIS
+</td>
+</tr>
+</table>@NOEOLAFTERTHIS
+
+<td align="$currentLocale.getRightAlign()" valign="top">@NOEOLAFTERTHIS
+#if ($proxyLogin)
+<span class="$regularTextStyle.getName()">@NOEOLAFTERTHIS
+#if ($am.getIsProxyPossible())
+#if ($am.getIsProxyUsed())
+$lw.getNonBreakableLinkHTML($am.getProxyPageDefaultLocation(), $actualLogin, $proxyLogin, null)@NOEOLAFTERTHIS
+#else
+$lw.getNonBreakableLinkHTML($am.getProxyPageDefaultLocation(), "", $proxyLogin, null)@NOEOLAFTERTHIS
+#end
+#else
+$proxyLogin@NOEOLAFTERTHIS
+#end
+</span>@NOEOLAFTERTHIS
+#else
+&nbsp;@NOEOLAFTERTHIS
+#end
+</td>
+</tr>
+</table>@NOEOLAFTERTHIS
+#end
+#end
+## end of template. keep the empty line after this line.

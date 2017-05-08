@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Version: $Id: currentconfig.xml,v 1.26 2008/11/19 04:14:48 tdanard Exp $ -->
+<current-config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="./currentconfig.xsd">
+	<current-config-name>Wiki</current-config-name>
+	<build>$Name:  $</build>
+	<folder>wikidevconfig</folder>
+	<current-config-variants>
+		<current-config-variant standalone-flag="N" enabled-flag="Y"
+			default-flag="Y">
+			<name>Development</name>
+			<description>For Development</description>
+			<prefix>/</prefix>
+			<variant-folder>wikidevconfig</variant-folder>
+		</current-config-variant>
+	</current-config-variants>
+
+</current-config>

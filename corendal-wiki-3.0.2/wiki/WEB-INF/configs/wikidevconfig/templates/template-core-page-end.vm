@@ -1,0 +1,107 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($rm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultRequestManager"))
+#set ($cm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultContentManager"))
+#set ($rpm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultResponseManager"))
+
+##
+## get the writers used in this template
+##
+#set ($pws = $alc.getWriterSet())
+#set ($lw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultLinkWriter"))
+#set ($tw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultTimerWriter"))
+#set ($pw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultPageWriter"))
+#set ($sw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultScriptWriter"))
+
+##
+## set the timer
+##
+#set ($timer = $rpm.getTimer())
+
+##
+## set the current page
+##
+#set ($page = $rm.getStandardPage())
+#set ($pagePk = $page.getPrimaryKey())
+        
+##
+## define the javascript init() function
+##
+#if (!($rm.getIsPrintableMode()))
+
+##
+## start the script
+##
+<script type="text/javascript" language="javascript">
+
+#if ($rm.getIsUserAgentCompatibleWithXHTML())
+//<![CDATA[
+#else
+<!--
+#end
+
+function init() {
+
+##
+## write the init for the focus
+##
+#set ($focus = $cm.getFocus())
+$sw.getInitScript($focus)
+
+##
+## write all other inits
+##
+#set ($initCalls = $pw.getInitCalls())
+#set ($size = $initCalls.size())
+#if ($size > 0)
+#set ($sizeMinusOne = $size - 1)
+#foreach ($i in [0..$sizeMinusOne])
+$initCalls.get($i)
+#end
+#end
+
+##
+## end the script
+##
+}
+
+#if ($rm.getIsUserAgentCompatibleWithXHTML())
+//]]>
+#else
+// -->
+#end
+
+</script>
+#end
+
+##
+## add the "bottom" anchor
+##
+$lw.getBottomAnchorHTML()
+
+##
+## closes the body and the html page
+##
+</body>
+</html>
+
+##
+## print a comment specifying the page id and other variables
+##
+<!-- end of the page id : $pagePk.toString() -->
+<!-- request URL : $requestURL -->
+<!-- remote host : $remoteHost -->
+<!-- local host : $localHost -->
+<!-- mirror id : $mirrorId -->
+<!-- requested session id : $requestedSessionId -->
+<!-- used session id : $usedSessionId -->
+<!-- name : $nameHTML -->
+<!-- build : $build -->
+
+##
+## print the time spent
+##
+$tw.getHTML($timer)
+## end of template. keep the empty line after this line.

@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Version: $Id: ContentMap.hbm.xml,v 1.5 2007/06/21 13:42:51 tdanard Exp $ -->
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.corendal.netapps.wiki.writedatamappings">
+	<class name="DefaultContentMapMapping" table="content_map">
+		<id column="id" name="Id" type="string" />
+
+		<property column="parent_content_id" length="36"
+			name="ParentContentId" not-null="true" type="string" />
+		<property column="child_content_id" length="36"
+			name="ChildContentId" not-null="true" type="string" />
+		<property column="main_flag" length="1" name="MainFlag"
+			not-null="true" type="string" />
+		<property column="request_id" length="36" name="RequestId"
+			not-null="false" type="string" />
+		<property column="ord" length="11" name="Order" not-null="true"
+			type="integer" />
+		<property column="enabled_flag" length="1" name="EnabledFlag"
+			not-null="true" type="string" />
+	</class>
+	<query
+		name="com.corendal.netapps.wiki.writedatabeans.AbstractArticle.storeParentContent.1">
+		<![CDATA[
+    delete DefaultContentMapMapping
+    where ChildContentId = :childContentId
+    and MainFlag = :mainFlag
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.wiki.writedatabeans.AbstractArticle.storeParentContent.2">
+		<![CDATA[
+    delete DefaultContentMapMapping
+    where ParentContentId = :parentContentId
+    and ChildContentId = :childContentId
+    and MainFlag = :mainFlag
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.wiki.writedatabeans.AbstractArticle.remove.1">
+		<![CDATA[
+    delete DefaultContentMapMapping
+    where ChildContentId = :childContentId
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.wiki.writedatabeans.AbstractContent.removeReference">
+		<![CDATA[
+    delete DefaultContentMapMapping
+    where ChildContentId = :childContentId
+    and ParentContentId = :parentContentId
+    and MainFlag = :mainFlag
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.wiki.writedatabeans.AbstractContent.storeContentOrder">
+		<![CDATA[
+    update DefaultContentMapMapping
+    set ord = :ord
+    where ParentContentId = :parentContentId
+    and ChildContentId = :childContentId
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.wiki.writedatabeans.AbstractImage.storeParentContent.1">
+		<![CDATA[
+    delete DefaultContentMapMapping
+    where ChildContentId = :childContentId
+    and MainFlag = :mainFlag
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.wiki.writedatabeans.AbstractImage.storeParentContent.2">
+		<![CDATA[
+    delete DefaultContentMapMapping
+    where ParentContentId = :parentContentId
+    and ChildContentId = :childContentId
+    and MainFlag = :mainFlag
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.wiki.writedatabeans.AbstractImage.remove.1">
+		<![CDATA[
+    delete DefaultContentMapMapping
+    where ChildContentId = :childContentId
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.wiki.writedatabeans.AbstractImage.load">
+		<![CDATA[
+    from DefaultContentMapMapping
+    where ChildContentId = :childContentId
+    and MainFlag = :mainFlag
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.wiki.writedatabeans.AbstractArticle.load">
+		<![CDATA[
+    from DefaultContentMapMapping
+    where ChildContentId = :childContentId
+    and MainFlag = :mainFlag
+]]>
+	</query>
+</hibernate-mapping>

@@ -1,0 +1,22 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($icnm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultIconManager"))
+
+##
+## get the icons used in this template
+##
+#set ($spacerIcon = $icnm.getSpacerStandardIcon())
+
+##
+## print the space
+##
+<tbody>
+<tr>
+<td colspan="$colspan">@NOEOLAFTERTHIS
+#icon($spacerIcon 10 10 $alc)@NOEOLAFTERTHIS
+</td>
+</tr>
+</tbody>
+## end of template. keep the empty line after this line.

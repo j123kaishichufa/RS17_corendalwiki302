@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Version: $Id: Block.xml,v 1.4 2006/11/07 01:42:07 tdanard Exp $ -->
+<xmlsource-mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="../../../../../schemas/xmlsourcemapping.xsd"
+	package="com.corendal.netapps.framework.core.readdatahandlers">
+	<class name="DefaultBlockLoadHandler" collection="blocks"
+		entity="block">
+		<id attribute="id" name="Id" type="string" />
+
+	</class>
+	<query
+		name="com.corendal.netapps.framework.core.readdatabeans.AbstractBlock.findByEnabledFlag">
+		<![CDATA[for $result in /blocks/block[@enabled-flag = :enabledFlag]
+		return $result]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.readdatabeans.AbstractBlock.findEnabledByKeyword">
+		<![CDATA[for $result in /blocks/block[(name |= :keyword or description |=
+		:keyword or comment |= :keyword) and (@indexed-flag = "Y") and
+		(@enabled-flag = "Y")] return $result]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.readdatabeans.AbstractPage.findEnabledByBlockPrimaryKey">
+		<![CDATA[for $result in /blocks/block[@id = :blockId] return
+		$result/class/pagesblock-pages/pagesblock-page]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.readdatabeans.AbstractMessage.findEnabledByBlockPrimaryKey">
+		<![CDATA[for $result in /blocks/block[@id = :blockId] return
+		$result/class/messagesblock-messages/messagesblock-message]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.readdatabeans.AbstractBlockPageXref.load">
+		<![CDATA[for $result in /blocks/block[@id = :blockId] return
+		$result/class/pagesblock-pages/pagesblock-page[@page-id = :pageId]]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.readdatabeans.AbstractBlockPageXref.findEnabledByBlockPrimaryKey">
+		<![CDATA[for $result in /blocks/block[@id = :blockId] return
+		$result/class/pagesblock-pages/pagesblock-page]]>
+	</query>
+</xmlsource-mapping>

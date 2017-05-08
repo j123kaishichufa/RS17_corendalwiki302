@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Version: $Id: ProxyReadPref.xml,v 1.3 2006/07/17 02:23:37 tdanard Exp $ -->
+<xmlsource-mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="../../../../../schemas/xmlsourcemapping.xsd"
+	package="com.corendal.netapps.framework.helpdesk.readdatahandlers">
+	<class name="DefaultProxyReadPrefLoadHandler" collection="proxyreadprefs"
+		entity="proxyreadpref">
+		<id attribute="id" name="Id" type="string" />
+
+	</class>
+	<query
+		name="com.corendal.netapps.framework.helpdesk.readdatabeans.AbstractProxyReadPref.findByEnabledFlag">
+		<![CDATA[for $result in /proxyreadprefs/proxyreadpref[@enabled-flag =
+		:enabledFlag] order by $result/@order return $result]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.helpdesk.readdatabeans.AbstractProxyReadPref.findEnabledByKeyword">
+		<![CDATA[for $result in /proxyreadprefs/proxyreadpref[(name |= :keyword or
+		description |= :keyword or comment |= :keyword) and
+		(@enabled-flag = "Y")] order by $result/@order return $result]]>
+	</query>
+</xmlsource-mapping>

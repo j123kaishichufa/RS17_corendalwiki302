@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Version: $Id: GroupRoleXref.hbm.xml,v 1.7 2007/10/26 20:05:57 tdanard Exp $ -->
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!--     and GroupId = :groupId -->
+<hibernate-mapping
+	package="com.corendal.netapps.framework.helpdesk.writedatamappings">
+	<class name="DefaultGroupRoleXrefMapping"
+		table="group_obj_role_xref">
+		<id column="id" name="Id" type="string" />
+
+		<property column="group_obj_id" length="255" name="GroupId"
+			not-null="true" type="string" />
+		<property column="role_id" length="36" name="RoleId"
+			not-null="true" type="string" />
+		<property column="enabled_flag" length="1" name="EnabledFlag"
+			not-null="true" type="string" />
+		<property column="entity_id" length="36" name="EntityId"
+			not-null="false" type="string" />
+		<property column="record_id" length="255" name="RecordId"
+			not-null="false" type="string" />
+	</class>
+	<query
+		name="com.corendal.netapps.framework.helpdesk.writedatabeans.AbstractGroupRoleXref.findEnabledByEntityAndRecordAndRolePrimaryKeys">
+		<![CDATA[
+    from DefaultGroupRoleXrefMapping
+    where EntityId = :entityId
+    and RecordId = :recordId
+    and RoleId = :roleId
+    order by Id asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.helpdesk.writedatabeans.AbstractGroupRoleXref.findEnabledByGroupAndRolePrimaryKeys">
+		<![CDATA[
+    from DefaultGroupRoleXrefMapping
+    where RoleId = :roleId
+    and GroupId = :groupId
+    order by Id asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.helpdesk.writedatafactories.GroupRoleXrefFactory.getSingleGroupId">
+		<![CDATA[
+    from DefaultGroupRoleXrefMapping
+    where EntityId = :entityId
+    and RecordId = :recordId
+    and RoleId = :roleId
+    order by GroupId asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.helpdesk.writedatafactories.GroupRoleXrefFactory.remove3">
+		<![CDATA[
+    delete DefaultGroupRoleXrefMapping
+    where RecordId = :recordId
+    and EntityId = :entityId
+    and RoleId = :roleId
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.helpdesk.writedatafactories.GroupRoleXrefFactory.remove4">
+		<![CDATA[
+    delete DefaultGroupRoleXrefMapping
+    where RecordId = :recordId
+    and EntityId = :entityId
+    and RoleId = :roleId
+    and GroupId = :groupId
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.helpdesk.writedatafactories.GroupRoleXrefFactory.removeAll">
+		<![CDATA[
+    delete DefaultGroupRoleXrefMapping
+    where RecordId = :recordId
+    and EntityId = :entityId
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.helpdesk.writedatabeans.AbstractGroup.findEnabledByRolePrimaryKey">
+		<![CDATA[
+    select distinct GroupId from DefaultGroupRoleXrefMapping
+    where RoleId = :roleId
+    and EnabledFlag = :enabledFlag
+    order by GroupId asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.helpdesk.writedatabeans.AbstractGroup.findEnabledByRecordAndRolePrimaryKeys">
+		<![CDATA[
+    select distinct GroupId from DefaultGroupRoleXrefMapping
+    where RoleId = :roleId
+    and RecordId = :recordId
+    and EnabledFlag = :enabledFlag
+    order by GroupId asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.helpdesk.writedatafactories.GroupRoleXrefFactory.getMultipleGroupPrimaryKeys">
+		<![CDATA[
+    select distinct GroupId from DefaultGroupRoleXrefMapping
+    where RoleId = :roleId
+    and RecordId = :recordId
+    and EntityId = :entityId
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.helpdesk.writedatabeans.AbstractGroupRoleXref.findEnabledSystemGroups">
+		<![CDATA[
+    from DefaultGroupRoleXrefMapping
+    where EntityId is null and RecordId is null
+    and EnabledFlag = :enabledFlag
+]]>
+	</query>
+</hibernate-mapping>

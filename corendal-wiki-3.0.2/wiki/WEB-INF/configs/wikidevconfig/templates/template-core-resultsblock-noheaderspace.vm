@@ -1,0 +1,56 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($rm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultRequestManager"))
+#set ($lclm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultLocaleManager"))
+
+##
+## get the writers used in this template
+##
+#set ($pws = $alc.getWriterSet())
+#set ($bw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultBlockWriter"))
+#set ($rbw = $srb.getResultsBlockWriter())
+
+##
+## get the current locale
+##
+#set ($currentLocale = $lclm.getPrimaryStandardLocale())
+
+##
+## print the space or the "print all" and "printable version" links
+##
+#if (($isPrintPrintableLinkRequired) || ($isPrintRestrictedLinkRequired))
+<table summary="" cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+<td align="$currentLocale.getRightAlign()">@NOEOLAFTERTHIS
+<table summary="" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td>@NOEOLAFTERTHIS
+
+#if ($isPrintRestrictedLinkRequired)
+$rbw.getRestrictedLinkHTML($srb)@NOEOLAFTERTHIS
+#end
+
+#if ($isPrintPrintableLinkRequired)
+</td>
+<td align="$currentLocale.getRightAlign()">@NOEOLAFTERTHIS
+$bw.getPrintableLinkHTML($srb))@NOEOLAFTERTHIS
+#end
+
+</td>
+</tr>
+</table>@NOEOLAFTERTHIS
+</td>
+</tr>
+</table>@NOEOLAFTERTHIS
+
+#else
+<table summary="" cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+<td>@NOEOLAFTERTHIS
+</td>
+</tr>
+</table>@NOEOLAFTERTHIS
+#end
+## end of template. keep the empty line after this line.

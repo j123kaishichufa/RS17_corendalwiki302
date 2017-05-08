@@ -1,0 +1,45 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($icnm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultIconManager"))
+
+##
+## get the icons used in this template
+##
+#set ($spacerIcon = $icnm.getSpacerStandardIcon())
+
+##
+## end the last line
+##
+</td>
+</tr>
+
+##
+## end the table
+##
+</table>@NOEOLAFTERTHIS
+
+##
+## end the form
+##
+</form>@NOEOLAFTERTHIS
+</td>
+
+##
+## end the table
+##
+</tr>
+</table>@NOEOLAFTERTHIS
+
+##
+## add a space
+##
+<table summary="" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td>@NOEOLAFTERTHIS
+#icon($spacerIcon 5 5 $alc)@NOEOLAFTERTHIS
+</td>
+</tr>
+</table>
+## end of template. keep the empty line after this line.

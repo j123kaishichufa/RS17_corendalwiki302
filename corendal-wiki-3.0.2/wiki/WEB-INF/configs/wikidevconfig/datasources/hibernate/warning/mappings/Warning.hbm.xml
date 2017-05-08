@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Version: $Id: Warning.hbm.xml,v 1.4 2007/12/18 19:25:39 tdanard Exp $ -->
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping
+	package="com.corendal.netapps.framework.core.writedatamappings">
+	<class name="DefaultWarningMapping" table="warning">
+		<id column="id" name="Id" type="string" />
+
+		<property column="page_id" length="36" name="PageId"
+			not-null="false" type="string" />
+		<property column="warning" name="Warning" not-null="true"
+			type="text" />
+		<property column="locale_id" length="36" name="LocaleId"
+			not-null="false" type="string" />
+		<property column="extension_id" length="36" name="ExtensionId"
+			not-null="true" type="string" />
+		<property column="enabled_flag" length="1" name="EnabledFlag"
+			not-null="true" type="string" />
+		<property column="app_id" length="36" name="AppId"
+			not-null="false" type="string" />
+		<property column="end_timestamp" length="19" name="EndTimestamp"
+			not-null="false" type="timestamp" />
+		<property column="start_timestamp" length="19"
+			name="StartTimestamp" not-null="true" type="timestamp" />
+	</class>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractWarning.findByEnabledFlag">
+		<![CDATA[
+    from DefaultWarningMapping
+    where EnabledFlag = :enabledFlag
+    order by Id asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractWarning.findEnabledByDate">
+		<![CDATA[
+    from DefaultWarningMapping
+    where StartTimestamp <= :date
+    and (EndTimestamp is null or EndTimestamp > :date)
+    and EnabledFlag = :enabledFlag
+    order by StartTimestamp asc
+]]>
+	</query>
+		<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractWarning.findEnabledByApplicationPrimaryKey">
+		<![CDATA[
+    from DefaultWarningMapping
+    where (AppId = :appId or AppId is null)
+    and EnabledFlag = :enabledFlag
+]]>
+	</query>
+</hibernate-mapping>

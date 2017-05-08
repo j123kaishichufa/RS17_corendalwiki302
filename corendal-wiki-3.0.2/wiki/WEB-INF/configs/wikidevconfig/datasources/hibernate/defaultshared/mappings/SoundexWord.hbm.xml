@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Version: $Id: SoundexWord.hbm.xml,v 1.6 2007/08/01 19:39:22 tdanard Exp $ -->
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping
+	package="com.corendal.netapps.framework.core.writedatamappings">
+	<class name="DefaultSoundexWordMapping" table="soundex_word">
+		<id column="id" name="Id" type="string" />
+
+		<property column="word" length="255" name="Word" not-null="true"
+			type="string" />
+		<property column="enabled_flag" length="1" name="EnabledFlag"
+			not-null="true" type="string" />
+		<property column="app_id" length="36" name="AppId"
+			not-null="true" type="string" />
+		<property column="soundex" length="255" name="Soundex"
+			not-null="true" type="string" />
+	</class>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractSoundex.findEnabledByWord">
+		<![CDATA[
+    from DefaultSoundexWordMapping
+    where Word = :word
+    and EnabledFlag = :enabledFlag
+    order by Id asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractSoundex.findEnabledBySoundex">
+		<![CDATA[
+    from DefaultSoundexWordMapping
+    where Soundex = :soundex
+    and EnabledFlag = :enabledFlag
+    order by Id asc
+]]>
+	</query>
+</hibernate-mapping>

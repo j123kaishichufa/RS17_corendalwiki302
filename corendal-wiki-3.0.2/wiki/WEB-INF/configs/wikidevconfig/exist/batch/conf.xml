@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Version: $Id: conf.xml,v 1.5 2007/02/10 21:14:14 tdanard Exp $ -->
+<exist>
+    <cluster protocol="UDP:PING" dbaUser="admin" dbaPassword="admin"/>
+	<db-connection database="native" files="data"
+		pageSize="4096" cacheSize="64M" free_mem_min="5">
+		<pool min="1" max="20" sync-period="120000" wait-before-shutdown="120000"/>
+		<watchdog query-timeout="-1" output-size-limit="10000"/>
+    </db-connection>
+    <serializer enable-xinclude="yes" enable-xsl="no"
+		indent="yes" add-exist-id="none" match-tagging-elements="yes"
+        match-tagging-attributes="no"/>
+	<xupdate growth-factor="20" allowed-fragmentation="20"
+		enable-consistency-checks="no"/>
+
+    <xquery>
+        <builtin-modules>
+            <module uri="http://exist-db.org/xquery/util"
+                class="org.exist.xquery.functions.util.UtilModule"/>
+            <module uri="http://exist-db.org/xquery/transform"
+                class="org.exist.xquery.functions.transform.TransformModule"/>
+            <module uri="http://exist-db.org/xquery/xmldb"
+                class="org.exist.xquery.functions.xmldb.XMLDBModule"/>
+            <module uri="http://exist-db.org/xquery/text"
+                class="org.exist.xquery.functions.text.TextModule"/>
+            <module class="org.exist.xquery.functions.session.SessionModule"
+                uri="http://exist-db.org/xquery/session" />
+        </builtin-modules>
+    </xquery>
+
+    <indexer stemming="no" caseSensitive="yes" suppress-whitespace="both" 
+	index-depth="1" tokenizer="org.exist.storage.analysis.SimpleTokenizer"
+	track-term-freq="yes" validation="no" preserve-whitespace-mixed-content="no">
+		<stopwords file="stopword"/>
+        <index>
+			<fulltext default="all" attributes="true">
+				<exclude path="/auth"/>
+			</fulltext>
+		</index>
+		<entity-resolver>
+			<catalog file="catalog"/>
+		</entity-resolver>
+    </indexer>
+   
+</exist>

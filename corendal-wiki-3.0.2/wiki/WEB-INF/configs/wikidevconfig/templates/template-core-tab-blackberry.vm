@@ -1,0 +1,62 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($clrm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultColorManager"))
+#set ($stlm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultStyleManager"))
+#set ($icnm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultIconManager"))
+#set ($rm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultRequestManager"))
+
+##
+## get the writers used in this template
+##
+#set ($pws = $alc.getWriterSet())
+#set ($tiw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultTabItemWriter"))
+
+##
+## get the icons used in this template
+##
+#set ($spacerIcon = $icnm.getSpacerStandardIcon())
+
+##
+## get the colors used in this template
+##
+#set ($dottedLineColor = $clrm.getDottedLineStandardColor())
+#set ($tabColor = $clrm.getTabStandardColor())
+
+##
+## get the styles used in this template
+##
+#set ($tabItemStyle = $stlm.getTabItemStandardStyle())
+
+##
+## print a comment
+##
+#set ($menuItemPk = $smi.getPrimaryKey())
+<!-- start of tab id $menuItemPk.toString() -->
+
+
+
+##
+## print all tabs
+##
+#set ($currentSti = $smi.getCurrentTabItem())
+#set ($tabItems = $smi.getTabItems())
+#set ($tabItemsSize = $tabItems.size())
+#set ($tabItemsSizeMinusOne = $tabItemsSize - 1)
+#foreach ($i in [0..$tabItemsSizeMinusOne])
+#if ($i > 0)
+&nbsp;|&nbsp;@NOEOLAFTERTHIS
+#end
+
+#set ($sti = $tabItems.get($i))
+$tiw.getHTML($sti, $currentSti)@NOEOLAFTERTHIS
+#end
+#if ($rm.getIsUserAgentCompatibleWithXHTML())@NOEOLAFTERTHIS
+<br />@NOEOLAFTERTHIS
+#else
+<br>@NOEOLAFTERTHIS
+#end
+
+<!-- end of tab id $menuItemPk.toString() -->
+## end of template. keep the empty line after this line.

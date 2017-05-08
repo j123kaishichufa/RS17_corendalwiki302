@@ -1,0 +1,5 @@
+#if ($sfb.getRowspan($canvasType) >= 1)
+</table>@NOEOLAFTERTHIS
+#end
+<!-- end of canvas number $canvasType -->
+## end of template. keep the empty line after this line.

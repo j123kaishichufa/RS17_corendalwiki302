@@ -1,0 +1,15 @@
+##
+## get the writers used in this template
+##
+#set ($pws = $alc.getWriterSet())
+#set ($fbw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultFormButtonWriter"))
+
+##
+## start the form
+##
+<form name="checkboxes" style="padding:0; margin:0;" onsubmit="appendOneFieldUsingCheckboxes('$targetFormNameJavascript', '$targetFieldNameJavascript', 'checkboxes', 'eCOREFILD213');return false;" action="#" method="get">@NOEOLAFTERTHIS
+
+##
+## print the button
+##
+$fbw.getHTMLNoCell($sfb)@NOEOLAFTERTHIS

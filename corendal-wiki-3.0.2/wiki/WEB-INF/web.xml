@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Version: $Id: web.xml,v 1.12 2007/12/26 22:39:00 tdanard Exp $ -->
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+
+	<distributable />
+
+	<listener>
+		<listener-class>
+			com.corendal.netapps.framework.runtime.listeners.DefaultDatabaseServletContextListener
+		</listener-class>
+	</listener>
+
+	<servlet>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<servlet-class>
+			com.corendal.netapps.framework.runtime.servlets.DynamicDatabaseHTTPServlet
+		</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>DailyCachedDatabaseHTTPServlet</servlet-name>
+		<servlet-class>
+			com.corendal.netapps.framework.runtime.servlets.DailyCachedDatabaseHTTPServlet
+		</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>NoCacheDatabaseHTTPServlet</servlet-name>
+		<servlet-class>
+			com.corendal.netapps.framework.runtime.servlets.NoCacheDatabaseHTTPServlet
+		</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>MultipartDatabaseHTTPServlet</servlet-name>
+		<servlet-class>
+			com.corendal.netapps.framework.runtime.servlets.MultipartDatabaseHTTPServlet
+		</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/customize</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/customize/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/ntlm</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/ntlm/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/article</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/article/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/image</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/image/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/content</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/content/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/contentrequest</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/contentrequest/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/goto</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/goto/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/gotoimage</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/gotoimage/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/home</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/home/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/0</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/0/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/references</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/references/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/admin</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/admin/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/help</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/help/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/mytools</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/mytools/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/search</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/search/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/directory</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/directory/*</url-pattern>
+	</servlet-mapping>
+	
+		<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/domain</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/domain/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/document</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/document/*</url-pattern>
+	</servlet-mapping>
+	
+		<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/lesson</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/lesson/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/link</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/link/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/materialrequest</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/materialrequest/*</url-pattern>
+	</servlet-mapping>
+	
+		<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/materialrequest</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/materialrequest/*</url-pattern>
+	</servlet-mapping>
+	
+
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/proxy</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/proxy/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/group</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/group/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/material</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/material/*</url-pattern>
+	</servlet-mapping>
+	
+		<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/material</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/material/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/form</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/form/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/lookup</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/lookup/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/reports</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/reports/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/error</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/error/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/pages</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DynamicDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/pages/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>MultipartDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/upload</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>MultipartDatabaseHTTPServlet</servlet-name>
+		<url-pattern>/upload/*</url-pattern>
+	</servlet-mapping>
+	
+	<welcome-file-list>
+		<welcome-file>home</welcome-file>
+	</welcome-file-list>
+	
+</web-app>

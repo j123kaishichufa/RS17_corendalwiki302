@@ -1,0 +1,3 @@
+Manifest-Version: $Id: MANIFEST.MF,v 1.1 2005/09/06 21:25:36 tdanard Exp $
+Class-Path: 
+

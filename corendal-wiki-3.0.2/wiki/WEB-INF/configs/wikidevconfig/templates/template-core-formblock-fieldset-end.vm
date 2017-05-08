@@ -1,0 +1,9 @@
+##
+## get the legend
+##
+#set ($legend = $sfb.getLegend($canvasType))
+
+#if ($legend)
+</fieldset>
+#end
+## end of template. keep the empty line after this line.

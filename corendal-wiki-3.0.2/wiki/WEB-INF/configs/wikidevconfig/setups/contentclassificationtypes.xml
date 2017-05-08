@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Version: $Id: contentclassificationtypes.xml,v 1.4 2006/07/17 02:23:36 tdanard Exp $ -->
+<contentclassificationtypes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../schemas/contentclassificationtypes.xsd">
+    <contentclassificationtype enabled-flag="Y" id="WIKI-RESC-1" order="1">
+        <name>Same as parent article</name>
+        <description>
+            The classification is identical to the classification of the directory the piece of content belongs to
+        </description>
+        <comment />
+    </contentclassificationtype>
+    <contentclassificationtype enabled-flag="N" id="WIKI-RESC-2" order="2">
+        <name>Visible to all users without restrictions</name>
+        <description>
+            Users can access the piece of content without being authenticated
+        </description>
+        <comment />
+    </contentclassificationtype>
+    <contentclassificationtype enabled-flag="Y" id="WIKI-RESC-3" order="3">
+        <name>Visible to all users, authentication is mandatory</name>
+        <description>
+            Users can access the piece of content but they need to authenticate
+        </description>
+        <comment />
+    </contentclassificationtype>
+    <contentclassificationtype enabled-flag="Y" id="WIKI-RESC-4" order="4">
+        <name>Visible to all users, access limited to authorized users only</name>
+        <description>
+            Access groups are associated with the piece of content. Only the members of these groups and the subscribers of the piece of content are granted access. All users know that the piece of content exists
+        </description>
+        <comment />
+    </contentclassificationtype>
+    <contentclassificationtype enabled-flag="Y" id="WIKI-RESC-5" order="5">
+        <name>Visible and accessible to authorized users only</name>
+        <description>
+            Access groups are associated with the piece of content. Only the members of these groups and the subscribers of the piece of content are granted access. Only these users know that the piece of content exists
+        </description>
+        <comment />
+    </contentclassificationtype>
+</contentclassificationtypes>

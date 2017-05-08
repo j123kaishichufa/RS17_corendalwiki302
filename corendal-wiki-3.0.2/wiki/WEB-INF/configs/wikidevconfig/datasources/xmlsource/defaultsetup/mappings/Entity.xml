@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Version: $Id: Entity.xml,v 1.3 2006/07/17 02:23:37 tdanard Exp $ -->
+<xmlsource-mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="../../../../../schemas/xmlsourcemapping.xsd"
+	package="com.corendal.netapps.framework.core.readdatahandlers">
+	<class name="DefaultEntityLoadHandler" collection="entities"
+		entity="entity">
+		<id attribute="id" name="Id" type="string" />
+
+	</class>
+	<query
+		name="com.corendal.netapps.framework.core.readdatabeans.AbstractEntity.findByEnabledFlag">
+		<![CDATA[for $result in /entities/entity[@enabled-flag = :enabledFlag]
+		return $result]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.readdatabeans.AbstractEntity.findEnabledBySearchPriority">
+		<![CDATA[for $result in /entities/entity[not(@search-priority = 0) and
+		@enabled-flag = "Y"] order by $result/@search-priority return
+		$result]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.readdatabeans.AbstractEntity.findEnabledByParentEntityPrimaryKey">
+		<![CDATA[for $result in /entities/entity[@parent-entity-id =
+		:parentEntityId and @enabled-flag = "Y"] order by $result/@child-priority return $result]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.readdatabeans.AbstractEntity.findEnabledByIndexedFlag">
+		<![CDATA[for $result in /entities/entity[@indexed-flag = :indexedFlag and
+		@enabled-flag = "Y"] return $result]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.readdatabeans.AbstractEntity.findEnabledByKeyword">
+		<![CDATA[for $result in /entities/entity[(zero-name |= :keyword or
+		singular-name |= :keyword or plural-name |= :keyword or
+		description |= :keyword or comment |= :keyword) and
+		(@indexed-flag = "Y") and (@enabled-flag = "Y")] return $result]]>
+	</query>
+</xmlsource-mapping>

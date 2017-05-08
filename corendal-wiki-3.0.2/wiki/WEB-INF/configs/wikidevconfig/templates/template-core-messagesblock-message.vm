@@ -1,0 +1,51 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($icnm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultIconManager"))
+#set ($stlm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultStyleManager"))
+
+##
+## get the styles used in this template
+##
+#set ($regularTextStyle = $stlm.getRegularTextStandardStyle())
+
+##
+## get the icons used in this template
+##
+#set ($spacerIcon = $icnm.getSpacerStandardIcon())
+
+##
+## get the current message
+##
+#set ($currentMessage = $messages.get($messageIndex))
+
+##
+## print a space
+##
+#if ($messageIndex > 0)
+<tr>
+<td>@NOEOLAFTERTHIS
+#icon($spacerIcon 10 10 $alc)@NOEOLAFTERTHIS
+</td>
+</tr>
+#end
+
+##
+## start the row
+##
+<tr>
+<td class="$regularTextStyle.getName()">@NOEOLAFTERTHIS
+
+##
+## print the message
+##
+$currentMessage.getCurrentMessageHTML()@NOEOLAFTERTHIS
+
+##
+##
+## end the row
+##
+</td>
+</tr>
+## end of template. keep the empty line after this line.

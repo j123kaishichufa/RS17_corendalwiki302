@@ -1,0 +1,16 @@
+#set ($formName = $pageFocus.getFormName())
+#set ($fieldName = $pageFocus.getFieldName())
+#if ($pageFocus.getFormName())
+  if (document.$formName) {
+    if (document.$formName.$fieldName) {
+      if (document.getElementById) {
+        eval("try {document.$formName.$fieldName@NOEOLAFTERTHIS
+.focus();} catch(e) {}");
+      } else {
+        document.$formName.$fieldName@NOEOLAFTERTHIS
+.focus();
+      }
+    }
+  }
+#end
+## end of template. keep the empty line after this line.

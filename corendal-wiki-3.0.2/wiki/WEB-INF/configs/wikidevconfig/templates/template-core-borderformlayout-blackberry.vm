@@ -1,0 +1,108 @@
+<!-- start of border form layout -->@NOEOLAFTERTHIS
+
+##
+## start the table. in case the lay is in debug mode, the border is 1
+## pixel wide
+##
+#if ($sfb.getIsDebugLayout())
+<table summary="" border="1" cellpadding="0" cellspacing="0">
+#else
+<table summary="" border="0" cellpadding="0" cellspacing="0">
+#end
+
+##
+## get all canvas sizes
+##
+#set ($westColspan = $sfb.getColspan(4))
+#set ($eastColspan = $sfb.getColspan(2))
+#set ($northColspan = $sfb.getColspan(1))
+#set ($southColspan = $sfb.getColspan(3))
+
+##
+## find  which canvas should be printed
+##
+#set ($isWestEastPrinted = "FALSE")
+
+#if (($westColspan > 0) || ($eastColspan > 0))
+#set ($isWestEastPrinted = "TRUE")
+#end
+
+##
+## print each canvas
+##
+#if ($northColspan > 0)
+<tr>
+
+#if ($isWestEastPrinted.equals("TRUE"))
+#if (($eastColspan > 0) && ($westColspan > 0))
+<td colspan="3">@NOEOLAFTERTHIS
+#else
+<td colspan="2">@NOEOLAFTERTHIS
+#end
+#else
+<td>@NOEOLAFTERTHIS
+#end
+
+<!-- NORTH -->@NOEOLAFTERTHIS
+$sfb.getCanvasHTML(1)@NOEOLAFTERTHIS
+<!-- /NORTH -->@NOEOLAFTERTHIS
+</td>
+</tr>
+#end
+
+<tr>
+
+#if ($isWestEastPrinted.equals("TRUE"))
+#if ($westColspan > 0)
+<td>@NOEOLAFTERTHIS
+<!-- WEST -->@NOEOLAFTERTHIS
+$sfb.getCanvasHTML(4)@NOEOLAFTERTHIS
+<!-- /WEST -->@NOEOLAFTERTHIS
+</td>
+#end
+#end
+
+<td>@NOEOLAFTERTHIS
+<!-- CENTER-->@NOEOLAFTERTHIS
+$sfb.getCanvasHTML(0)@NOEOLAFTERTHIS
+<!-- /CENTER -->@NOEOLAFTERTHIS
+</td>
+
+#if ($isWestEastPrinted.equals("TRUE"))
+#if ($eastColspan > 0)
+<td>@NOEOLAFTERTHIS
+<!-- EAST -->@NOEOLAFTERTHIS
+$sfb.getCanvasHTML(2)@NOEOLAFTERTHIS
+<!-- /EAST -->@NOEOLAFTERTHIS
+</td>
+#end
+#end
+
+</tr>
+
+#if ($southColspan > 0)
+<tr>
+
+#if ($isWestEastPrinted.equals("TRUE"))
+#if (($eastColspan > 0) && ($westColspan > 0))
+<td colspan="3">@NOEOLAFTERTHIS
+#else
+<td colspan="2">@NOEOLAFTERTHIS
+#end
+#else
+<td>@NOEOLAFTERTHIS
+#end
+
+<!-- SOUTH -->@NOEOLAFTERTHIS
+$sfb.getCanvasHTML(3)@NOEOLAFTERTHIS
+<!-- /SOUTH -->@NOEOLAFTERTHIS
+</td>
+</tr>
+#end
+
+##
+## end the table
+##
+</table>@NOEOLAFTERTHIS
+<!-- end of border form layout -->
+## end of template. keep the empty line after this line.

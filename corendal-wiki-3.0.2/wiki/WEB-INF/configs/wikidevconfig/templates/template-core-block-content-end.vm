@@ -1,0 +1,75 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($cm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultContentManager"))
+#set ($icnm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultIconManager"))
+#set ($cfgm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultConfigManager"))
+
+##
+## get the location of the images folder
+##
+#set ($prop =  $cfgm.getStandardPropertySet())
+#set ($imagesFolder = $prop.getImagesFolder())
+
+##
+## get the icons used in this template
+##
+#set ($spacerIcon = $icnm.getSpacerStandardIcon())
+
+##
+## get the tab
+##
+#set ($menu = $cm.getStandardMenu())
+#set ($menuItem = $menu.getCurrentMenuItem())
+#set ($tabItems = $menuItem.getTabItems())
+
+##
+## end the content cell
+##
+</td>
+
+#set ($sbType = $sb.getType())
+#if ($sbType.equals("SMALL"))
+<td width="11" height="100%">@NOEOLAFTERTHIS
+<img src="$imagesFolder/framework/spacer.png" height="100%" width="11" alt="" />@NOEOLAFTERTHIS
+</td>
+</tr>
+<tr>
+<td>@NOEOLAFTERTHIS
+<img src="$imagesFolder/framework/spacer.png" height="1" width="11" alt="" />@NOEOLAFTERTHIS
+</td>
+<td width="100%">@NOEOLAFTERTHIS
+<img src="$imagesFolder/framework/spacer.png" height="1" width="100%" alt="" />@NOEOLAFTERTHIS
+</td>
+<td>@NOEOLAFTERTHIS
+<img src="$imagesFolder/framework/spacer.png" height="1" width="11" alt="" />@NOEOLAFTERTHIS
+</td>
+#end
+
+##
+## print the icon. the size of this icon depends on the presence of tabs
+## in the current page
+##
+#if ($sb.getType().equals("LARGE"))
+#if ($sb.getVerticalSize() == 1)
+
+#set ($tabItemsSize = $tabItems.size())
+#if ($tabItemsSize > 0)
+<td width="1">@NOEOLAFTERTHIS
+#icon($spacerIcon 1 288 $alc)@NOEOLAFTERTHIS
+</td>
+#else
+<td width="1">@NOEOLAFTERTHIS
+#icon($spacerIcon 1 311 $alc)@NOEOLAFTERTHIS
+</td>
+#end
+#end
+#end
+
+##
+## end the table
+##
+</tr>
+</table>@NOEOLAFTERTHIS
+## end of template. keep the empty line after this line.

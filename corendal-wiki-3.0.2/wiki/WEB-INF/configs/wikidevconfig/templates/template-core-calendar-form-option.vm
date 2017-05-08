@@ -1,0 +1,17 @@
+##
+## print the option
+##
+#if ($rm.getIsUserAgentCompatibleWithXHTML())
+#if ($optionValueText.equals($currentValueText))
+<option value="$optionValueEncoded" selected="selected">$optionValueEncoded</option>
+#else
+<option value="$optionValueEncoded">$optionValueEncoded</option>
+#end
+#else
+#if ($optionValueText.equals($currentValueText))
+<option value="$optionValueEncoded" selected>$optionValueEncoded</option>
+#else
+<option value="$optionValueEncoded">$optionValueEncoded</option>
+#end
+#end
+## end of template. keep the empty line after this line.

@@ -1,0 +1,9 @@
+##
+## print the link
+##
+#if (($targetFormNameJavascript) && ($targetFieldNameJavascript))
+<a href="#" onclick="appendOneField('$targetFormNameJavascript', '$targetFieldNameJavascript', '$passedValueJavascript'); return false;" onkeypress="if (event.keyCode != 9) {appendOneField('$targetFormNameJavascript', '$targetFieldNameJavascript', '$passedValueJavascript'); return false;}">$printedValueHTML</a>
+#else
+$printedValueHTML
+#end
+## end of template. keep the empty line after this line.

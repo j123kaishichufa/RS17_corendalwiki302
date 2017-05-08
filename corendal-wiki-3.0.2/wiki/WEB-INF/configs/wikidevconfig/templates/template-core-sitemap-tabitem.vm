@@ -1,0 +1,30 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($stlm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultStyleManager"))
+
+##
+## get the writers used in this template
+##
+#set ($pws = $alc.getWriterSet())
+#set ($lw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultLinkWriter"))
+
+##
+## get the styles used in this template
+##
+#set ($regularTextStyle = $stlm.getRegularTextStandardStyle())
+
+##
+## print the tab item
+##
+<table summary="" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td>@NOEOLAFTERTHIS
+<span class="$regularTextStyle.getName()">@NOEOLAFTERTHIS
+$lw.getNonBreakableLinkHTML($sp.getDefaultLocation(), $sp.getShortDescriptionEncoded(), $sp.getNameHTML(), $sp.getAccessKeyEncoded())@NOEOLAFTERTHIS
+</span>@NOEOLAFTERTHIS
+</td>
+</tr>
+</table>@NOEOLAFTERTHIS
+## end of template. keep the empty line after this line.

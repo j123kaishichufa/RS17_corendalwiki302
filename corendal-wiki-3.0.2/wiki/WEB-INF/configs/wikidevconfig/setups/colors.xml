@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Version: $Id: colors.xml,v 1.1 2005/09/13 18:35:18 tdanard Exp $ -->
+<colors xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="../../schemas/colors.xsd">
+	<color enabled-flag="Y" id="CORE-COLR-1">
+		<code>#FFFFFF</code>
+		<description>background color of a standard page</description>
+	</color>
+	<color enabled-flag="Y" id="CORE-COLR-2">
+		<code>#000000</code>
+		<description>background color of the main menu</description>
+	</color>
+	<color enabled-flag="Y" id="CORE-COLR-3">
+		<code>#FFFFFF</code>
+		<description>background color of a block header</description>
+	</color>
+	<color enabled-flag="Y" id="CORE-COLR-4">
+		<code>#4E335A</code>
+		<description>background color of a page header</description>
+	</color>
+	<color enabled-flag="Y" id="CORE-COLR-5">
+		<code>#AAAAAA</code>
+		<description>
+			background color of a results table header
+		</description>
+	</color>
+	<color enabled-flag="Y" id="CORE-COLR-6">
+		<code>#DDDDDD</code>
+		<description>
+			background color of uneven rows in a results table
+		</description>
+	</color>
+	<color enabled-flag="Y" id="CORE-COLR-7">
+		<code>#EEEEEE</code>
+		<description>
+			background color of even rows in a results table
+		</description>
+	</color>
+	<color enabled-flag="Y" id="CORE-COLR-8">
+		<code>#FFFFFF</code>
+		<description>
+			background color of a menu item in the main menu, if this
+			item is selected
+		</description>
+	</color>
+	<color enabled-flag="Y" id="CORE-COLR-9">
+		<code>#D3D3D3</code>
+		<description>
+			background color of a menu item in the main menu, if this
+			item is not selected
+		</description>
+	</color>
+	<color enabled-flag="Y" id="CORE-COLR-10">
+		<code>#FFFFFF</code>
+		<description>background color of a tab</description>
+	</color>
+	<color enabled-flag="Y" id="CORE-COLR-11">
+		<code>#FFFFFF</code>
+		<description>
+			background color of a tab item, if this item is selected
+		</description>
+	</color>
+	<color enabled-flag="Y" id="CORE-COLR-12">
+		<code>#FFFFFF</code>
+		<description>
+			background color of a tab item, if this item is not selected
+		</description>
+	</color>
+	<color enabled-flag="Y" id="CORE-COLR-13">
+		<code>#FFFFFF</code>
+		<description>
+			background color of the first block on the right side of the
+			home page
+		</description>
+	</color>
+	<color enabled-flag="Y" id="CORE-COLR-14">
+		<code>#FFFFFF</code>
+		<description>
+			background color of the second block on the right side of
+			the home page
+		</description>
+	</color>
+	<color enabled-flag="Y" id="CORE-COLR-15">
+		<code>#FFFFFF</code>
+		<description>
+			background color of the third block on the right side of the
+			home page
+		</description>
+	</color>
+	<color enabled-flag="Y" id="CORE-COLR-16">
+		<code>#FFFFFF</code>
+		<description>
+			background color of any element when in printable mode
+		</description>
+	</color>
+	<color enabled-flag="Y" id="CORE-COLR-17">
+		<code>#FFFFFF</code>
+		<description>
+			background color of an entry form inside horizontal tabs
+		</description>
+	</color>
+	<color enabled-flag="Y" id="CORE-COLR-18">
+		<code>#CCCCCC</code>
+		<description>color of the dotted lines</description>
+	</color>
+	<color enabled-flag="Y" id="CORE-COLR-19">
+		<code>#FFFFFF</code>
+		<description>
+			background color of an entry field when on focus
+		</description>
+	</color>
+	<color enabled-flag="Y" id="CORE-COLR-20">
+		<code>#EEEEEE</code>
+		<description>
+			background color of an entry field when on blur
+		</description>
+	</color>
+	<color enabled-flag="Y" id="CORE-COLR-21">
+		<code>#4E335A</code>
+		<description>
+			background color of the page title and description
+		</description>
+	</color>
+	<color enabled-flag="Y" id="CORE-COLR-22">
+		<code>#FFFFFF</code>
+		<description>
+			background color of a search form inside horizontal tabs
+		</description>
+	</color>
+	<color enabled-flag="Y" id="CORE-COLR-23">
+		<code>#FFFFFF</code>
+		<description>
+			background color of a search field when on focus
+		</description>
+	</color>
+	<color enabled-flag="Y" id="CORE-COLR-24">
+		<code>#EEEEEE</code>
+		<description>
+			background color of a search field when on blur
+		</description>
+	</color>
+	<color enabled-flag="Y" id="CORE-COLR-25">
+		<code>#FFFF9B</code>
+		<description>
+			background color of a highlighted results row in yellow
+		</description>
+	</color>
+	<color enabled-flag="Y" id="CORE-COLR-26">
+		<code>#FFFF9B</code>
+		<description>background color of a warning</description>
+	</color>
+	<color enabled-flag="Y" id="CORE-COLR-27">
+		<code>#DDDDDD</code>
+		<description>
+			background color of highlighted text for a full-text search
+			result
+		</description>
+	</color>
+</colors>

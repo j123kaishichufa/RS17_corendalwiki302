@@ -1,0 +1,28 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($rm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultRequestManager"))
+
+##
+## get the writers used in this template
+##
+#set ($pws = $alc.getWriterSet())
+#set ($pw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultPageWriter"))
+
+##
+## get the current page
+##
+#set ($page = $rm.getStandardPage())
+
+##
+## get the template type
+##
+#set ($templateType = $page.getTemplateType())
+
+##
+## print the body
+##
+</tr>
+</table>@NOEOLAFTERTHIS
+## end of template. keep the empty line after this line.

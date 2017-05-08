@@ -1,0 +1,91 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($stlm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultStyleManager"))
+
+##
+## get the writers used in this template
+##
+#set ($pws = $alc.getWriterSet())
+#set ($lw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultLinkWriter"))
+#set ($rhcw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultResultsHeaderCellWriter"))
+
+##
+## get the styles used in this template
+##
+#set ($regularTextStyle = $stlm.getRegularTextStandardStyle())
+#set ($selectedColumnTitleStyle = $stlm.getSelectedColumnTitleStandardStyle())
+#set ($columnTitleStyle = $stlm.getColumnTitleStandardStyle())
+
+##
+## start the header
+##
+<th valign="top" rowspan="$rhc.getRowspan()" colspan="$rhc.getColspan()" align="$rhc.getAlign()">@NOEOLAFTERTHIS
+
+##
+## indicate the sort order of the column
+##
+#if ($rhc.getIsSortColumn())
+$rhcw.getSortOrderStartHTML($rhc)@NOEOLAFTERTHIS
+#end
+
+##
+## get the standard field and entity
+##
+#set ($field = $rhc.getStandardField())
+#set ($entity = $srb.getStandardEntity())
+
+##
+## get the name
+##
+#set ($nameHTML = $rhc.getNameHTML($entity))
+
+##
+## pick the appropriate style
+##
+#if ($nameHTML)
+#if ($rhc.getIsSortColumn())
+<span class="$selectedColumnTitleStyle.getName()">@NOEOLAFTERTHIS
+#else
+<span class="$columnTitleStyle.getName()">@NOEOLAFTERTHIS
+#end
+#else
+<span class="$regularTextStyle.getName()">@NOEOLAFTERTHIS
+#end
+
+#if (!($nameHTML))
+#set ($nameHTML = "&nbsp;")
+#end
+
+##
+## print the title
+##
+#if ($rhc.getIsBreakable())
+#if ($rhc.getIsSortable())
+$lw.getBreakableLinkHTML($defaultLocation, $field.getShortDescriptionEncoded(), $nameHTML, null)@NOEOLAFTERTHIS
+#else
+$lw.getBreakableLinkHTML(null, $field.getShortDescriptionEncoded(), $nameHTML, null)@NOEOLAFTERTHIS
+#end
+#else
+#if ($rhc.getIsSortable())
+$lw.getNonBreakableLinkHTML($defaultLocation, $field.getShortDescriptionEncoded(), $nameHTML, null)@NOEOLAFTERTHIS
+#else
+<span title="$field.getShortDescriptionEncoded()">$nameHTML</span>
+#end
+#end
+
+</span>@NOEOLAFTERTHIS
+
+##
+## indicate the sort order of the column
+##
+#if ($rhc.getIsSortColumn())
+$rhcw.getSortOrderEndHTML($rhc)@NOEOLAFTERTHIS
+#end
+
+##
+## close the header
+##
+</th>
+## end of template. keep the empty line after this line.

@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Version: $Id: MenuItem.xml,v 1.3 2006/07/17 02:23:37 tdanard Exp $ -->
+<xmlsource-mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="../../../../../schemas/xmlsourcemapping.xsd"
+	package="com.corendal.netapps.framework.core.readdatahandlers">
+	<class name="DefaultMenuItemLoadHandler" collection="menus"
+		entity="menu">
+		<id attribute="id" name="Id" type="string" />
+
+	</class>
+	<query
+		name="com.corendal.netapps.framework.core.readdatabeans.AbstractMenuItem.load">
+		<![CDATA[for $result in /menus/menu/menuitems/menuitem[@id = :id]
+		return <results>{$result}<menu id="{$result/ancestor::menu/@id}" /></results>]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.readdatabeans.AbstractMenuItem.findByEnabledFlag">
+		<![CDATA[for $result in /menus/menu/menuitems/menuitem[@enabled-flag = :enabledFlag]
+		return $result]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.readdatabeans.AbstractMenuItem.findEnabledByMenuPrimaryKey">
+		<![CDATA[for $result in /menus/menu[@id = :menuId]
+		return $result/menuitems/menuitem[@enabled-flag = "Y"]]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.readdatabeans.AbstractMenuItem.findEnabledByPagePrimaryKey">
+		<![CDATA[for $result in /menus/menu/menuitems/menuitem[@page-id = :pageId and @enabled-flag = "Y"]
+		return $result]]>
+	</query>
+</xmlsource-mapping>

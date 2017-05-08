@@ -1,0 +1,694 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Version: $Id: roles.xml,v 1.10 2008/11/19 17:12:05 tdanard Exp $ -->
+<roles xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="../../schemas/roles.xsd">
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="N"
+		group-standalone-flag="N" id="WIKI-ROLE-1" order="4"
+		queued-flag="N">
+		<name>Editor</name>
+		<description>
+			Person responsible for the content of an article and all
+			associated content
+		</description>
+		<comment>
+			This person must ensure all content is ready for
+			publication, including conformity with standards. The editor
+			must also ensure that the content is relevant and up-to-date
+		</comment>
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="N"
+		group-standalone-flag="N" id="WIKI-ROLE-2" order="5"
+		queued-flag="N">
+		<name>Author</name>
+		<description>
+			Person who originated the content but not necessarily
+			entered it into this application
+		</description>
+		<comment>
+			This person is an alternate point of contact for the
+			material
+		</comment>
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="N"
+		group-standalone-flag="N" id="WIKI-ROLE-3" order="6"
+		queued-flag="Y">
+		<name>Approver</name>
+		<description>
+			Person responsible for approving or rejecting a content
+			request
+		</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="N"
+		group-standalone-flag="N" id="WIKI-ROLE-4" order="7"
+		queued-flag="Y">
+		<name>Initiator</name>
+		<description>
+			Person requesting the addition, modification or deletion of
+			a piece of content
+		</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="N"
+		group-standalone-flag="N" id="WIKI-ROLE-5" order="8"
+		queued-flag="N">
+		<name>Subscriber</name>
+		<description>
+			Person requesting a notification to be sent each time a
+			piece of content is updated
+		</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="Y"
+		group-standalone-flag="Y" id="WIKI-ROLE-9" order="9"
+		queued-flag="N">
+		<name>Content Remover</name>
+		<description>
+			Person who can remove content
+		</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="Y"
+		group-standalone-flag="Y" id="CORE-ROLE-1" order="01"
+		queued-flag="N">
+		<name>Administrator</name>
+		<description>
+			Supports this site by ensuring its proper configuration,
+			backup and execution
+		</description>
+		<comment>
+			An administrator is in charge of various technical aspects
+			of this site support. It includes monitoring and tuning the
+			performance, backing up and restoring files, administrating
+			the underlying database, installing and configuring the
+			servers, installing and configuring this site software and
+			controlling the version of this site
+		</comment>
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="N"
+		group-standalone-flag="N" id="CORE-ROLE-2" order="02"
+		queued-flag="N">
+		<name>Email From</name>
+		<description>Sender of an email</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="N"
+		group-standalone-flag="N" id="CORE-ROLE-3" order="03"
+		queued-flag="N">
+		<name>Email To</name>
+		<description>Recipient of an email</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="N"
+		group-standalone-flag="N" id="CORE-ROLE-4" order="04"
+		queued-flag="N">
+		<name>Email Cc</name>
+		<description>Carbon copy recipient of an email</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="N"
+		group-standalone-flag="N" id="CORE-ROLE-5" order="05"
+		queued-flag="N">
+		<name>Email Bcc</name>
+		<description>
+			Blind carbon copy recipient of an email
+		</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="N"
+		group-standalone-flag="N" id="CORE-ROLE-6" order="06"
+		queued-flag="N">
+		<name>Proxy Grantor</name>
+		<description>
+			User granting its transaction privileges to another user
+		</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="N"
+		group-standalone-flag="N" id="CORE-ROLE-7" order="07"
+		queued-flag="N">
+		<name>Proxy Grantee</name>
+		<description>
+			User receiving transaction privileges from another user
+		</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="N"
+		group-standalone-flag="N" id="CORE-ROLE-8" order="08"
+		queued-flag="N">
+		<name>Direct Manager</name>
+		<description>User managing another person</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="Y"
+		group-standalone-flag="Y" id="CORE-ROLE-9" order="09"
+		queued-flag="N">
+		<name>Account General Administrator</name>
+		<description>
+			Role allowing the edition of accounts, but not the creation
+			of accounts
+		</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="N"
+		group-standalone-flag="N" id="CORE-ROLE-10" order="10"
+		queued-flag="N">
+		<name>Company LDAP control</name>
+		<description>
+			Role associating a company with a LDAP control
+		</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="N"
+		group-standalone-flag="N" id="CORE-ROLE-11" order="11"
+		queued-flag="N">
+		<name>City LDAP control</name>
+		<description>
+			Role associating a city with a LDAP control
+		</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="N"
+		group-standalone-flag="N" id="CORE-ROLE-12" order="12"
+		queued-flag="N">
+		<name>State LDAP control</name>
+		<description>
+			Role associating a state with a LDAP control
+		</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="N"
+		group-standalone-flag="N" id="CORE-ROLE-13" order="13"
+		queued-flag="N">
+		<name>Country LDAP control</name>
+		<description>
+			Role associating a country with a LDAP control
+		</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="Y" account-standalone-flag="N"
+		group-standalone-flag="N" id="CORE-ROLE-14" order="14"
+		queued-flag="N">
+		<name>Default LDAP control</name>
+		<description>
+			Role associating a building, a company, a city, a state or a
+			country with a LDAP control
+		</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="Y"
+		group-standalone-flag="N" id="CORE-ROLE-15" order="15"
+		queued-flag="N">
+		<name>Account Template</name>
+		<description>
+			Role indicating that a user account is a template account
+		</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="Y"
+		group-standalone-flag="N" id="CORE-ROLE-16" order="16"
+		queued-flag="N">
+		<name>Active Directory Administration Recipient</name>
+		<description>
+			Role indicating that a user is the recipient of all emails
+			notifying of a data update in Active Directory
+		</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="Y"
+		group-standalone-flag="Y" id="CORE-ROLE-17" order="17"
+		queued-flag="N">
+		<name>Active Directory Room Administrator</name>
+		<description>
+			Role indicating that a user can update room numbers
+		</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="N"
+		group-standalone-flag="N" id="CORE-ROLE-18" order="18"
+		queued-flag="N">
+		<name>Account Photo Watermark Template</name>
+		<description>
+			Role indicating that a file is the watermark template for
+			all photos
+		</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="Y"
+		group-standalone-flag="Y" id="CORE-ROLE-19" order="19"
+		queued-flag="N">
+		<name>Administrative Proxy</name>
+		<description>
+			Role indicating that a user can use the administrative proxy
+			feature
+		</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="N"
+		group-standalone-flag="N" id="CORE-ROLE-20" order="20"
+		queued-flag="N">
+		<name>Department Manager</name>
+		<description>
+			Role indicating that a user is the direct manager of another
+			user
+		</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="Y"
+		group-standalone-flag="Y" id="CORE-ROLE-21" order="21"
+		queued-flag="N">
+		<name>Departments Administrator</name>
+		<description>
+			Role indicating that a user can manage the list of
+			departments
+		</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="Y"
+		group-standalone-flag="Y" id="CORE-ROLE-22" order="22"
+		queued-flag="N">
+		<name>Buildings Administrator</name>
+		<description>
+			Role indicating that a user can manage the list of buildings
+		</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="Y"
+		group-standalone-flag="Y" id="CORE-ROLE-23" order="23"
+		queued-flag="N">
+		<name>Companies Administrator</name>
+		<description>
+			Role indicating that a user can manage the list of companies
+		</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="Y"
+		group-standalone-flag="Y" id="CORE-ROLE-24" order="24"
+		queued-flag="N">
+		<name>Account Super Administrator</name>
+		<description>
+			Role allowing the complete edition of accounts, including
+			the creation of accounts
+		</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="Y"
+		group-standalone-flag="Y" id="CORE-ROLE-26" order="26"
+		queued-flag="N">
+		<name>Account Exporter</name>
+		<description>
+			Role allowing the export of all account data
+		</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="Y"
+		group-standalone-flag="Y" id="CORE-ROLE-27" order="27"
+		queued-flag="N">
+		<name>Account Limited Administrator</name>
+		<description>
+			Role allowing the limited edition of accounts, not including
+			the creation of accounts
+		</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="Y"
+		group-standalone-flag="Y" id="CORE-ROLE-28" order="28"
+		queued-flag="N">
+		<name>Account Employee Administrator</name>
+		<description>
+			Role allowing the edition of account confidential data, such
+			as employee data
+		</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="Y"
+		group-standalone-flag="Y" id="CORE-ROLE-29" order="29"
+		queued-flag="N">
+		<name>Account Team Administrator</name>
+		<description>
+			Role allowing the edition of account team data
+		</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="Y"
+		group-standalone-flag="N" id="CORE-ROLE-30" order="30"
+		queued-flag="N">
+		<name>Feedback Administrator</name>
+		<description>Role of the recipient of feedbacks</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="Y"
+		group-standalone-flag="Y" id="CORE-ROLE-31" order="31"
+		queued-flag="N">
+		<name>Access Outside Domain</name>
+		<description>
+			Role of the users that are granted access to this
+			application while being out of the required domain. Active
+			Directory groups cannot be used for this role
+		</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="Y"
+		group-standalone-flag="N" id="CORE-ROLE-32" order="32"
+		queued-flag="N">
+		<name>Contact Template</name>
+		<description>
+			Role indicating that a user account is a contact template
+		</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="Y"
+		group-standalone-flag="Y" id="CORE-ROLE-33" order="33"
+		queued-flag="N">
+		<name>Account Administration Administrator</name>
+		<description>
+			Role allowing the edition of account administration data
+		</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="Y"
+		group-standalone-flag="Y" id="CORE-ROLE-34" order="34"
+		queued-flag="N">
+		<name>Contact Super Administrator</name>
+		<description>
+			Role allowing the complete edition of contacts, including
+			the creation of contacts
+		</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="Y"
+		group-standalone-flag="Y" id="CORE-ROLE-35" order="35"
+		queued-flag="N">
+		<name>Account Name Administrator</name>
+		<description>
+			Role allowing the complete edition of account names
+		</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="Y"
+		group-standalone-flag="Y" id="CORE-ROLE-36" order="36"
+		queued-flag="N">
+		<name>Contact Name Administrator</name>
+		<description>
+			Role allowing the complete edition of contact names
+		</description>
+		<comment />
+	</role>
+	<role enabled-flag="N" file-standalone-flag="N"
+		ldap-control-standalone-flag="Y" account-standalone-flag="N"
+		group-standalone-flag="N" id="CORE-ROLE-37" order="37"
+		queued-flag="N">
+		<name>Termination LDAP Control</name>
+		<description>
+			Role indicating in which LDAP control each terminated user
+			account should be moved to
+		</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="Y"
+		group-standalone-flag="Y" id="CORE-ROLE-38" order="38"
+		queued-flag="N">
+		<name>Account Access Denied</name>
+		<description>
+			Role indicating a user that is denied access to this
+			application
+		</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="Y"
+		group-standalone-flag="Y" id="CORE-ROLE-39" order="39"
+		queued-flag="N">
+		<name>Account Creator</name>
+		<description>
+			Role indicating a user that can create new accounts
+		</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="Y"
+		group-standalone-flag="Y" id="CORE-ROLE-40" order="40"
+		queued-flag="N">
+		<name>Account Access Allowed</name>
+		<description>
+			Role indicating a user that is granted access to this
+			application
+		</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="N"
+		group-standalone-flag="N" id="HLPD-ROLE-1" order="01"
+		queued-flag="N">
+		<name>Owner</name>
+		<description>Owner of a group</description>
+		<comment>
+			The group owner is responsible for ensuring that the
+			memberships are accurate and up-to-date
+		</comment>
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="N"
+		group-standalone-flag="N" id="HLPD-ROLE-2" order="02"
+		queued-flag="N">
+		<name>Member</name>
+		<description>
+			Member of a group, as assigned by the group owner
+		</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="Y"
+		group-standalone-flag="Y" id="HLPD-ROLE-3" order="03"
+		queued-flag="N">
+		<name>Group General Administrator</name>
+		<description>
+			Role indicating a user that can edit groups, including
+			adding and removing members
+		</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="Y"
+		group-standalone-flag="Y" id="HLPD-ROLE-4" order="04"
+		queued-flag="N">
+		<name>Group Super Administrator</name>
+		<description>
+			Role indicating a user that can create, edit and remove
+			groups as well as including adding and removing members
+		</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="Y"
+		group-standalone-flag="Y" id="HLPD-ROLE-5" order="05"
+		queued-flag="N">
+		<name>Group Limited Administrator</name>
+		<description>
+			Role indicating a user that can add and remove members
+		</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="Y"
+		group-standalone-flag="Y" id="HLPD-ROLE-6" order="05"
+		queued-flag="N">
+		<name>Group Exporter</name>
+		<description>
+			Role indicating a user that can export group data
+		</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="Y"
+		group-standalone-flag="Y" id="HLPD-ROLE-7" order="05"
+		queued-flag="N">
+		<name>Group Template</name>
+		<description>Role indicating a group template</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="Y"
+		group-standalone-flag="Y" id="HLPD-ROLE-8" order="06"
+		queued-flag="N">
+		<name>Group Name Administrator</name>
+		<description>
+			Role indicating a user that can edit a group name
+		</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="Y"
+		group-standalone-flag="Y" id="HLPD-ROLE-9" order="07"
+		queued-flag="N">
+		<name>Group Creator</name>
+		<description>
+			Role indicating a user that can create groups
+		</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="Y" account-standalone-flag="N"
+		group-standalone-flag="N" id="HLPD-ROLE-10" order="08"
+		queued-flag="N">
+		<name>Primary Account Results</name>
+		<description>
+			Role indicating a user that is part of the primary account
+			results when searching for accounts
+		</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="Y"
+		group-standalone-flag="Y" id="HLPD-ROLE-11" order="09"
+		queued-flag="N">
+		<name>Account No Password Reminder</name>
+		<description>
+			Role indicating a user that should not receive password
+			expiration reminders
+		</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="Y"
+		group-standalone-flag="Y" id="ADMN-ROLE-25" order="01"
+		queued-flag="N">
+		<name>Warning Administrator</name>
+		<description>
+			Role indicating a user that can edit warnings
+		</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="Y"
+		group-standalone-flag="Y" id="ADMN-ROLE-40" order="02"
+		queued-flag="N">
+		<name>Email Administrator</name>
+		<description>
+			Role indicating a user that can edit emails
+		</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="Y"
+		group-standalone-flag="Y" id="ADMN-ROLE-41" order="03"
+		queued-flag="N">
+		<name>System Account Administrator</name>
+		<description>
+			Role indicating a user that can add and remove system accounts
+		</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="Y"
+		group-standalone-flag="Y" id="ADMN-ROLE-42" order="04"
+		queued-flag="N">
+		<name>System Group Administrator</name>
+		<description>
+			Role indicating a user that can add and remove system groups
+		</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="Y"
+		group-standalone-flag="Y" id="ADMN-ROLE-43" order="04"
+		queued-flag="N">
+		<name>Entry Log Administrator</name>
+		<description>
+			Role indicating a user that can view entry logs
+		</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="Y"
+		group-standalone-flag="Y" id="ADMN-ROLE-44" order="05"
+		queued-flag="N">
+		<name>Error Log Administrator</name>
+		<description>
+			Role indicating a user that can view error logs
+		</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="Y"
+		group-standalone-flag="Y" id="ADMN-ROLE-45" order="06"
+		queued-flag="N">
+		<name>Response Log Administrator</name>
+		<description>
+			Role indicating a user that can view response logs
+		</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="Y"
+		group-standalone-flag="Y" id="ADMN-ROLE-46" order="07"
+		queued-flag="N">
+		<name>Data Source Administrator</name>
+		<description>
+			Role indicating a user that can view data sources
+		</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="Y"
+		group-standalone-flag="Y" id="ADMN-ROLE-47" order="08"
+		queued-flag="N">
+		<name>File Administrator</name>
+		<description>
+			Role indicating a user that can view files
+		</description>
+		<comment />
+	</role>
+	<role enabled-flag="Y" file-standalone-flag="N"
+		ldap-control-standalone-flag="N" account-standalone-flag="Y"
+		group-standalone-flag="Y" id="ADMN-ROLE-48" order="09"
+		queued-flag="N">
+		<name>LDAP Control Administrator</name>
+		<description>
+			Role indicating a user that can add and remove system LDAP controls
+		</description>
+		<comment />
+	</role>
+</roles>

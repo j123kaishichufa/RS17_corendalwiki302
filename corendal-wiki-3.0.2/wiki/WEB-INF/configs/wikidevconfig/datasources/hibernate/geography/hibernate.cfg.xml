@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Version: $Id: hibernate.cfg.xml,v 1.5 2007/06/05 22:01:04 tdanard Exp $ -->
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory name="java:hibernate/SessionFactory">
+		<property name="hibernate.connection.url">
+			jdbc:mysql://localhost:3306/geography?autoReconnect=true
+		</property>
+		<property name="hibernate.connection.driver_class">
+			com.mysql.jdbc.Driver
+		</property>
+		<property name="hibernate.connection.username">
+			geog_user
+		</property>
+		<property name="hibernate.connection.password">
+			geog_password
+		</property>
+		<property name="hibernate.show_sql">false</property>
+		<property name="hibernate.connection.release_mode">
+			on_close
+		</property>
+		<property name="hibernate.statement_cache.size">0</property>
+		<property name="hibernate.transaction.factory_class">
+			org.hibernate.transaction.JDBCTransactionFactory
+		</property>
+		<property name="hibernate.c3p0.acquire_increment">1</property>
+		<property name="hibernate.c3p0.idle_test_period">100</property>
+		<property name="hibernate.c3p0.max_size">20</property>
+		<property name="hibernate.c3p0.max_statements">0</property>
+		<property name="hibernate.c3p0.min_size">1</property>
+		<property name="hibernate.c3p0.timeout">100</property>
+	</session-factory>
+</hibernate-configuration>

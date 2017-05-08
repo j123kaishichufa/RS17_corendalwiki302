@@ -1,0 +1,17 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($clrm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultColorManager"))
+
+##
+## get the colors used in this template
+##
+#set ($resultsHeaderColor = $clrm.getResultsHeaderStandardColor())
+
+##
+## print the split
+##
+</tr>
+<tr bgcolor="$resultsHeaderColor.getColor()">
+## end of template. keep the empty line after this line.

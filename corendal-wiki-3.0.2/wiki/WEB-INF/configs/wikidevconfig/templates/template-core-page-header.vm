@@ -1,0 +1,250 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($rm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultRequestManager"))
+#set ($lclm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultLocaleManager"))
+#set ($cfm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultConfigManager"))
+#set ($pagm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultPageManager"))
+#set ($icnm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultIconManager"))
+#set ($stlm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultStyleManager"))
+#set ($clrm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultColorManager"))
+#set ($cttm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultContentManager"))
+
+##
+## get the writers used in this template
+##
+#set ($pws = $alc.getWriterSet())
+#set ($lw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultLinkWriter"))
+#set ($pw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultPageWriter"))
+#set ($hw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultHeaderWriter"))
+#set ($mw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultMenuWriter"))
+#set ($tw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultTabWriter"))
+
+##
+## get the current page
+##
+#set ($page = $rm.getStandardPage())
+#set ($templateType = $page.getTemplateType())
+
+##
+## get the current menu
+##
+#set ($menu = $cttm.getStandardMenu())
+
+
+##
+## get the current tab
+##
+#set ($menuItems = $menu.getMenuItems())
+#set ($menuItem = $menu.getCurrentMenuItem())
+#set ($tabItems = $menuItem.getTabItems())
+
+##
+## get the current locale
+##
+#set ($currentLocale = $lclm.getPrimaryStandardLocale())
+
+##
+## get the icon used in this template
+##
+#set ($spacerIcon = $icnm.getSpacerStandardIcon())
+
+#set ($currentDirection =  $currentLocale.getDirection())
+#if ($currentDirection.equals("LTR"))
+#set ($companyLogoBottomIcon = $icnm.getCompanyLogoBottomLTRStandardIcon())
+#set ($companyLogoUpIcon = $icnm.getCompanyLogoUpLTRStandardIcon())
+#set ($curveIcon = $icnm.getCurveLTRStandardIcon())
+#set ($headerBackgroundIcon = $icnm.getHeaderBackgroundLTRStandardIcon())
+#else
+#set ($companyLogoBottomIcon = $icnm.getCompanyLogoBottomRTLStandardIcon())
+#set ($companyLogoUpIcon = $icnm.getCompanyLogoUpRTLStandardIcon())
+#set ($curveIcon = $icnm.getCurveRTLStandardIcon())
+#set ($headerBackgroundIcon = $icnm.getHeaderBackgroundRTLStandardIcon())
+#end
+
+##
+## get the property set
+##
+#set ($propertySet = $cfm.getStandardPropertySet())
+
+##
+## get the colors used in this template
+##
+#set ($pageHeaderColor = $clrm.getPageHeaderStandardColor())
+#set ($pageMenuColor = $clrm.getPageMenuStandardColor())
+
+##
+## get the styles used in this template
+##
+#set ($applicationNameStyle = $stlm.getApplicationNameStandardStyle())
+#set ($printableAplicationNameStyle = $stlm.getPrintableApplicationNameStandardStyle())
+#set ($portalLinkStyle = $stlm.getPortalLinkStandardStyle())
+
+##
+## get the page used in this template
+##
+#set ($portalPage = $pagm.getPortalStandardPage())
+
+##
+## print the top of the page
+##
+#if ((!($rm.getIsPrintableMode())) && (!($templateType.equals("FLOATING")))  && (!($templateType.equals("PRINTABLE"))))
+
+<table summary="" cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+<td bgcolor="$pageHeaderColor.getColor()">@NOEOLAFTERTHIS
+
+<table summary="" border="0" cellpadding="0" cellspacing="0" width="100%" style="BACKGROUND-IMAGE: url($headerBackgroundIcon.getDefaultLocation()); BACKGROUND-REPEAT: repeat-y; BACKGROUND-POSITION: bottom $currentLocale.getLeftAlign()">
+<tr>
+<td width="$companyLogoUpIcon.getWidth()">@NOEOLAFTERTHIS
+
+##
+## print the name of the company as a logo and the application name
+##
+<table summary="" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td colspan="3">@NOEOLAFTERTHIS
+#icon($companyLogoUpIcon $companyLogoUpIcon.getWidth() $companyLogoUpIcon.getHeight() $alc)@NOEOLAFTERTHIS
+</td>
+</tr>
+<tr>
+#if ($currentLocale.getDirection().equals("LTR"))
+<td align="$currentLocale.getLeftAlign()" valign="top">@NOEOLAFTERTHIS
+#icon($companyLogoBottomIcon $companyLogoBottomIcon.getWidth() $companyLogoBottomIcon.getHeight() $alc)@NOEOLAFTERTHIS
+</td>
+#if ($propertySet.getIsFound())
+<td valign="middle" align="$currentLocale.getLeftAlign()" class="$applicationNameStyle.getName()">@NOEOLAFTERTHIS
+$propertySet.getApplicationNameHTML()@NOEOLAFTERTHIS
+</td>
+#end
+#else
+<td valign="top" align="$currentLocale.getRightAlign()" class=""$applicationNameStyle.getName()">@NOEOLAFTERTHIS
+
+#if ($propertySet.getIsFound())
+$propertySet.getApplicationNameHTML()@NOEOLAFTERTHIS
+#end
+
+</td>
+<td align="$currentLocale.getRightAlign()" valign="middle">@NOEOLAFTERTHIS
+#icon($companyLogoBottomIcon $companyLogoBottomIcon.getWidth() $companyLogoBottomIcon.getHeight() $alc)@NOEOLAFTERTHIS
+</td>
+#end
+
+<td>@NOEOLAFTERTHIS
+#icon($spacerIcon 50 1 $alc)@NOEOLAFTERTHIS
+</td>
+</tr>
+</table>@NOEOLAFTERTHIS
+
+</td>
+<td valign="top" width="100%" align="$currentLocale.getRightAlign()">@NOEOLAFTERTHIS
+
+<table summary="" cellpadding="0" cellspacing="0" border="0">
+<tr>
+
+<td align="$currentLocale.getRightAlign()">@NOEOLAFTERTHIS
+
+##
+## print the locale selection and $portalPage link
+##
+<table summary="" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td width="1000000" bgcolor="$pageHeaderColor.getColor()">@NOEOLAFTERTHIS
+#iconmaxwidth($spacerIcon 24 $alc)@NOEOLAFTERTHIS
+</td>
+<td width="$curveIcon.getWidth()" bgcolor="$pageHeaderColor.getColor()">@NOEOLAFTERTHIS
+#icon($curveIcon $curveIcon.getWidth() $curveIcon.getHeight() $alc)@NOEOLAFTERTHIS
+</td>
+<td bgcolor="$pageMenuColor.getColor()" align="$currentLocale.getRightAlign()">@NOEOLAFTERTHIS
+
+<table summary="" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td>@NOEOLAFTERTHIS
+#icon($spacerIcon 10 24 $alc)@NOEOLAFTERTHIS
+</td>
+
+#if ($portalPage.getIsFound())
+<td align="$currentLocale.getRightAlign()" bgcolor="$pageMenuColor.getColor()">@NOEOLAFTERTHIS
+<span class="$portalLinkStyle.getName()">@NOEOLAFTERTHIS
+$lw.getNonBreakableLinkHTML($portalPage.getDefaultLocation(), $portalPage.getShortDescriptionEncoded(), $portalPage.getNameHTML(), $portalPage.getAccessKeyEncoded())@NOEOLAFTERTHIS
+</span>@NOEOLAFTERTHIS
+</td>
+<td bgcolor="$pageMenuColor.getColor()">@NOEOLAFTERTHIS
+<span class="$portalLinkStyle.getName()">@NOEOLAFTERTHIS
+&nbsp;|&nbsp;@NOEOLAFTERTHIS
+</span>@NOEOLAFTERTHIS
+</td>
+#end
+
+##
+## print the search form
+##
+<td bgcolor="$pageMenuColor.getColor()">@NOEOLAFTERTHIS
+
+$hw.getSearchFormHTML()@NOEOLAFTERTHIS
+
+</td>
+<td bgcolor="$pageMenuColor.getColor()">@NOEOLAFTERTHIS
+#icon($spacerIcon 10 24 $alc)@NOEOLAFTERTHIS
+</td>
+
+</tr>
+</table>@NOEOLAFTERTHIS
+
+</td>
+</tr>
+</table>@NOEOLAFTERTHIS
+
+</td>
+</tr>
+<tr>
+
+##
+## print the banner
+##
+<td align="$currentLocale.getRightAlign()" valign="middle">@NOEOLAFTERTHIS
+$hw.getBannerHTML()@NOEOLAFTERTHIS
+</td>
+</tr>
+</table>@NOEOLAFTERTHIS
+</td>
+</tr>
+</table>@NOEOLAFTERTHIS
+</td>
+</tr>
+</table>
+#else
+#if (!($templateType.equals("FLOATING")))
+##
+## only print the name of the application
+##
+<span class="$printableAplicationNameStyle.getName()">$propertySet.getCompanyNameHTML() $propertySet.getApplicationNameHTML()</span>
+<table summary="" cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+<td>@NOEOLAFTERTHIS
+</td>
+</tr>
+</table>
+#end
+#end
+
+##
+## print the menu
+##
+#if ((!($rm.getIsPrintableMode())))
+#if ($menu)
+$mw.getHTML($menu)@NOEOLAFTERTHIS
+#end
+#end
+
+##
+## print the tab
+##
+#if ((!($rm.getIsPrintableMode())))
+#set ($tabItemsSize = $tabItems.size())
+#if ($tabItemsSize > 0)
+$tw.getHTML($menuItem)@NOEOLAFTERTHIS
+#end
+#end
+## end of template. keep the empty line after this line.

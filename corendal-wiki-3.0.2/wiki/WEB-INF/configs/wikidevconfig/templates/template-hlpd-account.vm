@@ -1,0 +1,78 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($clrm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultColorManager"))
+#set ($stlm = $pms.getManager("com.corendal.netapps.framework.helpdesk.managers.DefaultStyleManager"))
+
+##
+## get the styles used in this template
+##
+#set ($accountNameStyle = $stlm.getAccountNameStandardStyle())
+#set ($accountDescriptionStyle = $stlm.getAccountDescriptionStandardStyle())
+
+##
+## get the colors used in this template
+##
+#set ($dottedLineColor = $clrm.getDottedLineStandardColor())
+
+##
+## start the master table
+##
+<table summary="" style="border-bottom: 1px dotted $dottedLineColor.getColor()" width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>@NOEOLAFTERTHIS
+
+##
+## start the table
+##
+<table summary="" width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="$accountNameStyle.getName()">@NOEOLAFTERTHIS
+
+##
+## print the name
+##
+$accountNameHTML@NOEOLAFTERTHIS
+
+##
+## start a new row
+##
+</td>
+</tr>
+
+#set ($accountDescriptionHTML = $sa.getShortDescriptionHTML())
+#if (($accountDescriptionHTML) && (!($accountDescriptionHTML.equals(""))))
+<tr>
+<td class="$accountDescriptionStyle.getName()">@NOEOLAFTERTHIS
+
+##
+## print the description
+##
+$accountDescriptionHTML.@NOEOLAFTERTHIS
+
+##
+## end the table
+##
+</td>
+</tr>
+#end
+
+</table>@NOEOLAFTERTHIS
+
+##
+## print the icon
+##
+#if ($previewIconHTML)
+</td>
+<td align="right" valign="bottom">@NOEOLAFTERTHIS
+$previewIconHTML
+#end
+
+##
+## end the master table
+##
+</td>
+</tr>
+</table>
+## end of template. keep the empty line after this line.

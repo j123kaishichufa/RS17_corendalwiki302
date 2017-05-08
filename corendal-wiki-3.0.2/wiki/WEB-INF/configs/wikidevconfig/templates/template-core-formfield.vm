@@ -1,0 +1,596 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($rm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultRequestManager"))
+#set ($stlm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultStyleManager"))
+#set ($icnm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultIconManager"))
+
+##
+## get the icons used in this template
+##
+#set ($spacerIcon = $icnm.getSpacerStandardIcon())
+
+##
+## get the styles used in this template
+##
+#set ($regularTextStyle = $stlm.getRegularTextStandardStyle())
+
+##
+## get various sff variables
+##
+#set ($sffType = $sff.getType())
+#set ($sffFocusColor = $sff.getFocusColor())
+#set ($sffBlurColor = $sff.getBlurColor())
+#set ($sffPrintOnlyStyle = $sff.getPrintOnlyStyle())
+#set ($sffStyle = $sff.getStandardStyle())
+#set ($sl = $sff.getStandardLookup())
+#set ($sffStyleName = $sffStyle.getName())
+
+##
+## print the field inside of a table when print only
+##
+#if ($sffType.equals("PRINTONLY"))
+<table summary="" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td valign="top">@NOEOLAFTERTHIS
+#end
+
+##
+## print the field inside of a table when a lookup is used
+##
+#if (($sl) && (!($sffType.equals("PRINTONLY"))))
+<table summary="" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td valign="top">@NOEOLAFTERTHIS
+#end
+
+##
+## modify the end of tag in case of XHTML
+##
+#set ($endTag = ">")
+#if ($rm.getIsUserAgentCompatibleWithXHTML())
+#set ($endTag = " />")
+#end
+
+##
+## print the field depending on its type
+##
+#if (($sffType.equals("TEXT")))
+##
+## print the text field
+##
+#if (!($sff.getVCardName()))
+#if ($sff.getTabIndex() >= 0)
+#if ($sff.getUniqueId())
+<input type="text" name="$sff.getParameterName()" id="$sff.getUniqueId()" value="$sff.getUsedDefaultValueEncoded()" size="$sff.getDisplaySize()" maxlength="$sff.getMaxSize()" class="$sffStyleName" tabindex="$sff.getTabIndex()" onfocus="this.style.backgroundColor='$sffFocusColor.getColor()'" onblur="this.style.backgroundColor='$sffBlurColor.getColor()'"$endTag@NOEOLAFTERTHIS
+#else
+<input type="text" name="$sff.getParameterName()" value="$sff.getUsedDefaultValueEncoded()" size="$sff.getDisplaySize()" maxlength="$sff.getMaxSize()" class="$sffStyleName" tabindex="$sff.getTabIndex()" onfocus="this.style.backgroundColor='$sffFocusColor.getColor()'" onblur="this.style.backgroundColor='$sffBlurColor.getColor()'"$endTag@NOEOLAFTERTHIS
+#end
+#else
+#if ($sff.getUniqueId())
+<input type="text" name="$sff.getParameterName()" id="$sff.getUniqueId()" value="$sff.getUsedDefaultValueEncoded()" size="$sff.getDisplaySize()" maxlength="$sff.getMaxSize()" class="$sffStyleName" onfocus="this.style.backgroundColor='$sffFocusColor.getColor()'" onblur="this.style.backgroundColor='$sffBlurColor.getColor()'"$endTag@NOEOLAFTERTHIS
+#else
+<input type="text" name="$sff.getParameterName()" value="$sff.getUsedDefaultValueEncoded()" size="$sff.getDisplaySize()" maxlength="$sff.getMaxSize()" class="$sffStyleName" onfocus="this.style.backgroundColor='$sffFocusColor.getColor()'" onblur="this.style.backgroundColor='$sffBlurColor.getColor()'"$endTag@NOEOLAFTERTHIS
+#end
+#end
+#else
+#if ($sff.getTabIndex() >= 0)
+#if ($sff.getUniqueId())
+<input type="text" name="$sff.getParameterName()" id="$sff.getUniqueId()" value="$sff.getUsedDefaultValueEncoded()" size="$sff.getDisplaySize()" maxlength="$sff.getMaxSize()" vcard_name="$sff.getVCardName()" class="$sffStyleName" tabindex="$sff.getTabIndex()" onfocus="this.style.backgroundColor='$sffFocusColor.getColor()'" onblur="this.style.backgroundColor='$sffBlurColor.getColor()'"$endTag@NOEOLAFTERTHIS
+#else
+<input type="text" name="$sff.getParameterName()" value="$sff.getUsedDefaultValueEncoded()" size="$sff.getDisplaySize()" maxlength="$sff.getMaxSize()" vcard_name="$sff.getVCardName()" class="$sffStyleName" tabindex="$sff.getTabIndex()" onfocus="this.style.backgroundColor='$sffFocusColor.getColor()'" onblur="this.style.backgroundColor='$sffBlurColor.getColor()'"$endTag@NOEOLAFTERTHIS
+#end
+#else
+#if ($sff.getUniqueId())
+<input type="text" name="$sff.getParameterName()" id="$sff.getUniqueId()" value="$sff.getUsedDefaultValueEncoded()" size="$sff.getDisplaySize()" maxlength="$sff.getMaxSize()" vcard_name="$sff.getVCardName()" class="$sffStyleName" onfocus="this.style.backgroundColor='$sffFocusColor.getColor()'" onblur="this.style.backgroundColor='$sffBlurColor.getColor()'"$endTag@NOEOLAFTERTHIS
+#else
+<input type="text" name="$sff.getParameterName()" value="$sff.getUsedDefaultValueEncoded()" size="$sff.getDisplaySize()" maxlength="$sff.getMaxSize()" vcard_name="$sff.getVCardName()" class="$sffStyleName" onfocus="this.style.backgroundColor='$sffFocusColor.getColor()'" onblur="this.style.backgroundColor='$sffBlurColor.getColor()'"$endTag@NOEOLAFTERTHIS
+#end
+#end
+#end
+#end
+
+#if ($sffType.equals("FILE"))
+#if (!($sff.getVCardName()))
+#if ($sff.getTabIndex() >= 0)
+#if ($sff.getUniqueId())
+<input type="file" name="$sff.getParameterName()" id="$sff.getUniqueId()" value="$sff.getUsedDefaultValueEncoded()" size="$sff.getDisplaySize()" maxlength="$sff.getMaxSize()" class="$sffStyleName" tabindex="$sff.getTabIndex()" onfocus="this.style.backgroundColor='$sffFocusColor.getColor()'" onblur="this.style.backgroundColor='$sffBlurColor.getColor()'"$endTag@NOEOLAFTERTHIS
+#else
+<input type="file" name="$sff.getParameterName()" value="$sff.getUsedDefaultValueEncoded()" size="$sff.getDisplaySize()" maxlength="$sff.getMaxSize()" class="$sffStyleName" tabindex="$sff.getTabIndex()" onfocus="this.style.backgroundColor='$sffFocusColor.getColor()'" onblur="this.style.backgroundColor='$sffBlurColor.getColor()'"$endTag@NOEOLAFTERTHIS
+#end
+#else
+#if ($sff.getUniqueId())
+<input type="file" name="$sff.getParameterName()" id="$sff.getUniqueId()" value="$sff.getUsedDefaultValueEncoded()" size="$sff.getDisplaySize()" maxlength="$sff.getMaxSize()" class="$sffStyleName" onfocus="this.style.backgroundColor='$sffFocusColor.getColor()'" onblur="this.style.backgroundColor='$sffBlurColor.getColor()'"$endTag@NOEOLAFTERTHIS
+#else
+<input type="file" name="$sff.getParameterName()" value="$sff.getUsedDefaultValueEncoded()" size="$sff.getDisplaySize()" maxlength="$sff.getMaxSize()" class="$sffStyleName" onfocus="this.style.backgroundColor='$sffFocusColor.getColor()'" onblur="this.style.backgroundColor='$sffBlurColor.getColor()'"$endTag@NOEOLAFTERTHIS
+#end
+#end
+#else
+#if ($sff.getTabIndex() >= 0)
+#if ($sff.getUniqueId())
+<input type="file" name="$sff.getParameterName()" id="$sff.getUniqueId()" value="$sff.getUsedDefaultValueEncoded()" size="$sff.getDisplaySize()" maxlength="$sff.getMaxSize()" vcard_name="$sff.getVCardName()" class="$sffStyleName" tabindex="$sff.getTabIndex()" onfocus="this.style.backgroundColor='$sffFocusColor.getColor()'" onblur="this.style.backgroundColor='$sffBlurColor.getColor()'"$endTag@NOEOLAFTERTHIS
+#else
+<input type="file" name="$sff.getParameterName()" value="$sff.getUsedDefaultValueEncoded()" size="$sff.getDisplaySize()" maxlength="$sff.getMaxSize()" vcard_name="$sff.getVCardName()" class="$sffStyleName" tabindex="$sff.getTabIndex()" onfocus="this.style.backgroundColor='$sffFocusColor.getColor()'" onblur="this.style.backgroundColor='$sffBlurColor.getColor()'"$endTag@NOEOLAFTERTHIS
+#end
+#else
+#if ($sff.getUniqueId())
+<input type="file" name="$sff.getParameterName()" id="$sff.getUniqueId()" value="$sff.getUsedDefaultValueEncoded()" size="$sff.getDisplaySize()" maxlength="$sff.getMaxSize()" vcard_name="$sff.getVCardName()" class="$sffStyleName" onfocus="this.style.backgroundColor='$sffFocusColor.getColor()'" onblur="this.style.backgroundColor='$sffBlurColor.getColor()'"$endTag@NOEOLAFTERTHIS
+#else
+<input type="file" name="$sff.getParameterName()" value="$sff.getUsedDefaultValueEncoded()" size="$sff.getDisplaySize()" maxlength="$sff.getMaxSize()" vcard_name="$sff.getVCardName()" class="$sffStyleName" onfocus="this.style.backgroundColor='$sffFocusColor.getColor()'" onblur="this.style.backgroundColor='$sffBlurColor.getColor()'"$endTag@NOEOLAFTERTHIS
+#end
+#end
+#end
+#end
+
+#if ($sffType.equals("TEXTAREA"))
+##
+## note: wrap is not used for textareas as it is not a standard HTML
+## 4.01 attribute
+##
+#if (!($sff.getVCardName()))
+#if ($sff.getTabIndex() >= 0)
+#if ($sff.getUniqueId())
+<textarea name="$sff.getParameterName()" id="$sff.getUniqueId()" rows="$sff.getTextAreaRowspan()" cols="$sff.getTextAreaColspan()" class="$sffStyleName" tabindex="$sff.getTabIndex()" onfocus="this.style.backgroundColor='$sffFocusColor.getColor()'" onblur="this.style.backgroundColor='$sffBlurColor.getColor()'">@NOEOLAFTERTHIS
+#else
+<textarea name="$sff.getParameterName()" rows="$sff.getTextAreaRowspan()" cols="$sff.getTextAreaColspan()" class="$sffStyleName" tabindex="$sff.getTabIndex()" onfocus="this.style.backgroundColor='$sffFocusColor.getColor()' onblur="this.style.backgroundColor='$sffBlurColor.getColor()'">@NOEOLAFTERTHIS
+#end
+#else
+#if ($sff.getUniqueId())
+<textarea name="$sff.getParameterName()" id="$sff.getUniqueId()" rows="$sff.getTextAreaRowspan()" cols="$sff.getTextAreaColspan()" class="$sffStyleName" onfocus="this.style.backgroundColor='$sffFocusColor.getColor()'" onblur="this.style.backgroundColor='$sffBlurColor.getColor()'">@NOEOLAFTERTHIS
+#else
+<textarea name="$sff.getParameterName()" rows="$sff.getTextAreaRowspan()" cols="$sff.getTextAreaColspan()" class="$sffStyleName" onfocus="this.style.backgroundColor='$sffFocusColor.getColor()'" onblur="this.style.backgroundColor='$sffBlurColor.getColor()'">@NOEOLAFTERTHIS
+#end
+#end
+#else
+#if ($sff.getTabIndex() >= 0)
+#if ($sff.getUniqueId())
+<textarea name="$sff.getParameterName()" id="$sff.getUniqueId()" rows="$sff.getTextAreaRowspan()" cols="$sff.getTextAreaColspan()" vcard_name="$sff.getVCardName()" class="$sffStyleName" tabindex="$sff.getTabIndex()" onfocus="this.style.backgroundColor='$sffFocusColor.getColor()'" onblur="this.style.backgroundColor='$sffBlurColor.getColor()'">@NOEOLAFTERTHIS
+#else
+<textarea name="$sff.getParameterName()" rows="$sff.getTextAreaRowspan()" cols="$sff.getTextAreaColspan()" vcard_name="$sff.getVCardName()" class="$sffStyleName" tabindex="$sff.getTabIndex()" onfocus="this.style.backgroundColor='$sffFocusColor.getColor()'" onblur="this.style.backgroundColor='$sffBlurColor.getColor()'">@NOEOLAFTERTHIS
+#end
+#else
+#if ($sff.getUniqueId())
+<textarea name="$sff.getParameterName()" id="$sff.getUniqueId()" rows="$sff.getTextAreaRowspan()" cols="$sff.getTextAreaColspan()" vcard_name="$sff.getVCardName()" class="$sffStyleName" onfocus="this.style.backgroundColor='$sffFocusColor.getColor()'" onblur="this.style.backgroundColor='$sffBlurColor.getColor()'">@NOEOLAFTERTHIS
+#else
+<textarea name="$sff.getParameterName()" rows="$sff.getTextAreaRowspan()" cols="$sff.getTextAreaColspan()" vcard_name="$sff.getVCardName()" class="$sffStyleName" onfocus="this.style.backgroundColor='$sffFocusColor.getColor()'" onblur="this.style.backgroundColor='$sffBlurColor.getColor()'">@NOEOLAFTERTHIS
+#end
+#end
+#end
+$sff.getUsedDefaultValueEncoded()@NOEOLAFTERTHIS
+</textarea>@NOEOLAFTERTHIS
+#end
+
+#if ($sffType.equals("SELECT"))
+#if (!($sff.getOnChange()))
+#if (!($sff.getVCardName()))
+#if ($sff.getTabIndex() >= 0)
+#if ($sff.getUniqueId())
+<select name="$sff.getParameterName()" id="$sff.getUniqueId()" class="$sffStyleName" tabindex="$sff.getTabIndex()">
+#else
+<select name="$sff.getParameterName()" class="$sffStyleName" tabindex="$sff.getTabIndex()">
+#end
+#else
+#if ($sff.getUniqueId())
+<select name="$sff.getParameterName()" id="$sff.getUniqueId()" class="$sffStyleName">
+#else
+<select type="text" name="$sff.getParameterName()" class="$sffStyleName">
+#end
+#end
+#else
+#if ($sff.getTabIndex() >= 0)
+#if ($sff.getUniqueId())
+<select name="$sff.getParameterName()" id="$sff.getUniqueId()" vcard_name="$sff.getVCardName()" class="$sffStyleName" tabindex="$sff.getTabIndex()">
+#else
+<select name="$sff.getParameterName()" vcard_name="$sff.getVCardName()" class="$sffStyleName" tabindex="$sff.getTabIndex()">
+#end
+#else
+#if ($sff.getUniqueId())
+<select name="$sff.getParameterName()" id="$sff.getUniqueId()" vcard_name="$sff.getVCardName()" class="$sffStyleName">
+#else
+<select name="$sff.getParameterName()" vcard_name="$sff.getVCardName()" class="$sffStyleName">
+#end
+#end
+#end
+
+#else
+
+#if (!($sff.getVCardName()))
+#if ($sff.getTabIndex() >= 0)
+#if ($sff.getUniqueId())
+<select name="$sff.getParameterName()" id="$sff.getUniqueId()" class="$sffStyleName" tabindex="$sff.getTabIndex()" onchange="$sff.getOnChange()">
+#else
+<select name="$sff.getParameterName()" class="$sffStyleName" tabindex="$sff.getTabIndex()" onchange="$sff.getOnChange()">
+#end
+#else
+#if ($sff.getUniqueId())
+<select name="$sff.getParameterName()" id="$sff.getUniqueId()" class="$sffStyleName" onchange="$sff.getOnChange()">
+#else
+<select type="text" name="$sff.getParameterName()" class="$sffStyleName" onchange="$sff.getOnChange()">
+#end
+#end
+#else
+#if ($sff.getTabIndex() >= 0)
+#if ($sff.getUniqueId())
+<select name="$sff.getParameterName()" id="$sff.getUniqueId()" vcard_name="$sff.getVCardName()" class="$sffStyleName" tabindex="$sff.getTabIndex()" onchange="$sff.getOnChange()">
+#else
+<select name="$sff.getParameterName()" vcard_name="$sff.getVCardName()" class="$sffStyleName" tabindex="$sff.getTabIndex()" onchange="$sff.getOnChange()">
+#end
+#else
+#if ($sff.getUniqueId())
+<select name="$sff.getParameterName()" id="$sff.getUniqueId()" vcard_name="$sff.getVCardName()" class="$sffStyleName" onchange="$sff.getOnChange()">
+#else
+<select name="$sff.getParameterName()" vcard_name="$sff.getVCardName()" class="$sffStyleName" onchange="$sff.getOnChange()">
+#end
+#end
+#end
+
+#end
+
+#set ($optionValueText = $sff.getUsedDefaultValueText())
+
+#set ($optionValuesText = $sff.getSelectOptionValuesText())
+#set ($optionValuesEncoded = $sff.getSelectOptionValuesEncoded())
+#set ($optionNamesText = $sff.getSelectOptionNamesText())
+#set ($optionNamesEncoded = $sff.getSelectOptionNamesEncoded())
+
+#set ($optionValuesTextSize = $optionValuesText.size())
+#set ($optionValuesTextSizeMinusOne = $optionValuesTextSize - 1)
+
+#if (($optionValuesTextSize > 0) && (!($optionValuesText.contains($optionValueText))))
+#set ($optionValueText = $optionValuesText.get(0))
+#end
+
+#foreach ($i in [0..$optionValuesTextSizeMinusOne])
+#set ($currentOptionValueText = $optionValuesText.get($i))
+#set ($currentOptionNameText = $optionNamesText.get($i))
+#set ($currentOptionValueEncoded = $optionValuesEncoded.get($i))
+#set ($currentOptionNameEncoded = $optionNamesEncoded.get($i))
+
+#if ($currentOptionNameEncoded.equals(""))
+#set ($currentOptionNameEncoded = "&nbsp;")
+#end
+
+#if ($currentOptionValueText)
+#if ($optionValueText)
+#if ($optionValueText.equals($currentOptionValueText))
+<option value="@NOEOLAFTERTHIS
+$currentOptionValueEncoded@NOEOLAFTERTHIS
+#if ($rm.getIsUserAgentCompatibleWithXHTML())
+" selected="selected">@NOEOLAFTERTHIS
+#else
+" selected>@NOEOLAFTERTHIS
+#end
+
+$currentOptionNameEncoded@NOEOLAFTERTHIS
+
+#if ($rm.getIsUserAgentCompatibleWithXHTML())
+</option>
+#end
+#else
+<option value="$currentOptionValueEncoded">@NOEOLAFTERTHIS
+$currentOptionNameEncoded@NOEOLAFTERTHIS
+
+#if ($rm.getIsUserAgentCompatibleWithXHTML())
+</option>
+#end
+#end
+#else
+<option value="$currentOptionValueEncoded">@NOEOLAFTERTHIS
+$currentOptionNameEncoded@NOEOLAFTERTHIS
+
+#if ($rm.getIsUserAgentCompatibleWithXHTML())
+</option>
+#end
+#end
+#else
+#if ($optionValueText)
+<option value="$currentOptionValueEncoded">$currentOptionNameEncoded
+
+#if ($rm.getIsUserAgentCompatibleWithXHTML())
+</option>
+#end
+#else
+<option value="$currentOptionValueEncoded@NOEOLAFTERTHIS
+
+#if ($rm.getIsUserAgentCompatibleWithXHTML())
+" selected="selected">@NOEOLAFTERTHIS
+#else
+" selected>@NOEOLAFTERTHIS
+#end
+$currentOptionNameEncoded
+
+#if ($rm.getIsUserAgentCompatibleWithXHTML())
+</option>
+#end
+#end
+#end
+#end
+
+</select>
+#end
+
+#if ($sffType.equals("PASSWORD"))
+#if ($sff.getTabIndex() >= 0)
+#if ($sff.getUniqueId())
+<input type="password" name="$sff.getParameterName()" id="$sff.getUniqueId()" value="" size="$sff.getDisplaySize()" maxlength="$sff.getMaxSize()" class="$sffStyleName" tabindex="$sff.getTabIndex()" onfocus="this.style.backgroundColor='$sffFocusColor.getColor()'" onblur="this.style.backgroundColor='$sffBlurColor.getColor()'"$endTag@NOEOLAFTERTHIS
+#else
+<input type="password" name="$sff.getParameterName()" value="" size="$sff.getDisplaySize()" maxlength="$sff.getMaxSize()" class="$sffStyleName" tabindex="$sff.getTabIndex()" onfocus="this.style.backgroundColor='$sffFocusColor.getColor()'" onblur="this.style.backgroundColor='$sffBlurColor.getColor()'"$endTag@NOEOLAFTERTHIS
+#end
+#else
+#if ($sff.getUniqueId())
+<input type="password" name="$sff.getParameterName()" id="$sff.getUniqueId()" value="" size="$sff.getDisplaySize()" maxlength="$sff.getMaxSize()" class="$sffStyleName" onfocus="this.style.backgroundColor='$sffFocusColor.getColor()'" onblur="this.style.backgroundColor='$sffBlurColor.getColor()'"$endTag@NOEOLAFTERTHIS
+#else
+<input type="password" name="$sff.getParameterName()" value="" size="$sff.getDisplaySize()" maxlength="$sff.getMaxSize()" class="$sffStyleName" onfocus="this.style.backgroundColor='$sffFocusColor.getColor()'" onblur="this.style.backgroundColor='$sffBlurColor.getColor()'"$endTag@NOEOLAFTERTHIS
+#end
+#end
+#end
+
+#if ($sffType.equals("CHECKBOX"))
+
+##
+## print the check box
+##
+#if (($sff.getUsedDefaultValueText()) && ($sff.getUsedDefaultValueText().equals($sff.getOptionValueText())))
+#if ($sff.getTabIndex() >= 0)
+#if ($sff.getUniqueId())
+#if ($rm.getIsUserAgentCompatibleWithXHTML())
+<input type="checkbox" name="$sff.getParameterName()" id="$sff.getUniqueId()" class="$regularTextStyle.getName()" tabindex="$sff.getTabIndex()" value="$sff.getOptionValueEncoded()" checked="checked" />@NOEOLAFTERTHIS
+#else
+<input type="checkbox" name="$sff.getParameterName()" id="$sff.getUniqueId()" class="$regularTextStyle.getName()" tabindex="$sff.getTabIndex()" value="$sff.getOptionValueEncoded()" checked>@NOEOLAFTERTHIS
+#end
+#else
+#if ($rm.getIsUserAgentCompatibleWithXHTML())
+<input type="checkbox" name="$sff.getParameterName()" class="$regularTextStyle.getName()" tabindex="$sff.getTabIndex()" value="$sff.getOptionValueEncoded()" checked="checked" />@NOEOLAFTERTHIS
+#else
+<input type="checkbox" name="$sff.getParameterName()" class="$regularTextStyle.getName()" tabindex="$sff.getTabIndex()" value="$sff.getOptionValueEncoded()" checked>@NOEOLAFTERTHIS
+#end
+#end
+#else
+#if ($sff.getUniqueId())
+#if ($rm.getIsUserAgentCompatibleWithXHTML())
+<input type="checkbox" name="$sff.getParameterName()" id="$sff.getUniqueId()" class="$regularTextStyle.getName()" value="$sff.getOptionValueEncoded()" checked="checked" />@NOEOLAFTERTHIS
+#else
+<input type="checkbox" name="$sff.getParameterName()" id="$sff.getUniqueId()" class="$regularTextStyle.getName()" value="$sff.getOptionValueEncoded()" checked>@NOEOLAFTERTHIS
+#end
+#else
+#if ($rm.getIsUserAgentCompatibleWithXHTML())
+<input type="checkbox" name="$sff.getParameterName()" class="$regularTextStyle.getName()" value="$sff.getOptionValueEncoded()" checked="checked" />@NOEOLAFTERTHIS
+#else
+<input type="checkbox" name="$sff.getParameterName()" class="$regularTextStyle.getName()" value="$sff.getOptionValueEncoded()" checked>@NOEOLAFTERTHIS
+#end
+#end
+#end
+#else
+#if ($sff.getTabIndex() >= 0)
+#if ($sff.getUniqueId())
+<input type="checkbox" name="$sff.getParameterName()" id="$sff.getUniqueId()" class="$regularTextStyle.getName()" tabindex="$sff.getTabIndex()" value="$sff.getOptionValueEncoded()"$endTag@NOEOLAFTERTHIS
+#else
+<input type="checkbox" name="$sff.getParameterName()" class="$regularTextStyle.getName()" tabindex="$sff.getTabIndex()" value="$sff.getOptionValueEncoded()"$endTag@NOEOLAFTERTHIS
+#end
+#else
+#if ($sff.getUniqueId())
+<input type="checkbox" name="$sff.getParameterName()" id="$sff.getUniqueId()" class="$regularTextStyle.getName()" value="$sff.getOptionValueText()$endTag
+#else
+<input type="checkbox" name="$sff.getParameterName()" class="$regularTextStyle.getName()" value="$sff.getOptionValueEncoded()"$endTag@NOEOLAFTERTHIS
+#end
+#end
+#end
+#end
+
+#if ($sffType.equals("RADIO"))
+
+##
+## print the radio button
+##
+#if (($sff.getUsedDefaultValueText()) && ($sff.getUsedDefaultValueText().equals($sff.getOptionValueText())))
+#if ($sff.getTabIndex() >= 0)
+#if ($sff.getUniqueId())
+#if ($rm.getIsUserAgentCompatibleWithXHTML())
+<input type="radio" name="$sff.getParameterName()" id="$sff.getUniqueId()" class="$regularTextStyle.getName()" tabindex="$sff.getTabIndex()" value="$sff.getOptionValueEncoded()" checked="checked" />@NOEOLAFTERTHIS
+#else
+<input type="radio" name="$sff.getParameterName()" id="$sff.getUniqueId()" class="$regularTextStyle.getName()" tabindex="$sff.getTabIndex()" value="$sff.getOptionValueEncoded()" checked>@NOEOLAFTERTHIS
+#end
+#else
+#if ($rm.getIsUserAgentCompatibleWithXHTML())
+<input type="radio" name="$sff.getParameterName()" class="$regularTextStyle.getName()" tabindex="$sff.getTabIndex()" value="$sff.getOptionValueEncoded()" checked="checked" />@NOEOLAFTERTHIS
+#else
+<input type="radio" name="$sff.getParameterName()" class="$regularTextStyle.getName()" tabindex="$sff.getTabIndex()" value="$sff.getOptionValueEncoded()" checked>@NOEOLAFTERTHIS
+#end
+#end
+#else
+#if ($sff.getUniqueId())
+#if ($rm.getIsUserAgentCompatibleWithXHTML())
+<input type="radio" name="$sff.getParameterName()" id="$sff.getUniqueId()" class="$regularTextStyle.getName()" value="$sff.getOptionValueEncoded()" checked="checked" />@NOEOLAFTERTHIS
+#else
+<input type="radio" name="$sff.getParameterName()" id="$sff.getUniqueId()" class="$regularTextStyle.getName()" value="$sff.getOptionValueEncoded()" checked>@NOEOLAFTERTHIS
+#end
+#else
+#if ($rm.getIsUserAgentCompatibleWithXHTML())
+<input type="radio" name="$sff.getParameterName()" class="$regularTextStyle.getName()" value="$sff.getOptionValueEncoded()" checked="checked" />@NOEOLAFTERTHIS
+#else
+<input type="radio" name="$sff.getParameterName()" class="$regularTextStyle.getName()" value="$sff.getOptionValueEncoded()" checked>@NOEOLAFTERTHIS
+#end
+#end
+#end
+#else
+#if ($sff.getTabIndex() >= 0)
+#if ($sff.getUniqueId())
+<input type="radio" name="$sff.getParameterName()" id="$sff.getUniqueId()" class="$regularTextStyle.getName()" tabindex="$sff.getTabIndex()" value="$sff.getOptionValueEncoded()"$endTag@NOEOLAFTERTHIS
+#else
+<input type="radio" name="$sff.getParameterName()" class="$regularTextStyle.getName()" tabindex="$sff.getTabIndex()" value="$sff.getOptionValueEncoded()"$endTag@NOEOLAFTERTHIS
+#end
+#else
+#if ($sff.getUniqueId())
+<input type="radio" name="$sff.getParameterName()" id="$sff.getUniqueId()" class="$regularTextStyle.getName()" value="$sff.getOptionValueEncoded()"$endTag@NOEOLAFTERTHIS
+#else
+<input type="radio" name="$sff.getParameterName()" class="$regularTextStyle.getName()" value="$sff.getOptionValueEncoded()"$endTag@NOEOLAFTERTHIS
+#end
+#end
+#end
+#end
+
+#if ($sffType.equals("PRINTONLY"))
+##
+## pad the value to ensure somewhat consistent spacing between edit
+## and print only fields
+##
+#set ($valueFieldText = $sff.getFirstDefaultValueText())
+#set ($valueFieldEncoded = $sff.getFirstDefaultValueEncoded())
+#set ($valueFieldHTML = $sff.getFirstDefaultValueHTML())
+
+##
+## print the print only field
+##
+#if (($valueFieldHTML) && ($valueFieldHTML.length() > 0))
+<span class="$sffPrintOnlyStyle.getName()">@NOEOLAFTERTHIS
+$valueFieldHTML@NOEOLAFTERTHIS
+
+##
+## pad the print only field
+##
+#if ($sff.getIsPrintOnlyPadding())
+#if ($valueFieldHTML.equals($valueFieldEncoded))
+#set ($valueFieldTextLength = $valueFieldText.length())
+#set ($valueFieldTextMax = $sff.getMaxEntrySize())
+#if ($valueFieldTextMax > $valueFieldTextLength)
+#set ($valueFieldTextLengthPlusOne = $valueFieldTextLength + 1)
+#foreach ($i in [$valueFieldTextLengthPlusOne..$valueFieldTextMax])
+&nbsp;@NOEOLAFTERTHIS
+#end
+#end
+#end
+#end
+</span>@NOEOLAFTERTHIS
+#end
+#end
+
+##
+## print the lookup associated with the current field
+##
+#if (($sl) && (!($sffType.equals("PRINTONLY"))))
+##
+## close the current cell and start a new cell
+##
+</td>
+<td class="$sffPrintOnlyStyle.getName()">@NOEOLAFTERTHIS
+
+##
+## print a space
+##
+&nbsp;@NOEOLAFTERTHIS
+
+##
+## close the current cell and start a new cell
+##
+</td>
+#if ($sffType.equals("TEXTAREA"))
+<td class="$sffPrintOnlyStyle.getName()" valign="top">@NOEOLAFTERTHIS
+#else
+<td class="$sffPrintOnlyStyle.getName()">@NOEOLAFTERTHIS
+#end
+
+##
+## print the lookup link (link writer is not used as it does not
+## include tab indexes)
+##
+#if ($sff.getTabIndex() >= 0)
+<em><strong>@NOEOLAFTERTHIS
+<a href="$encodedLocation" tabindex="$sff.getTabIndex()" onclick="$onClick" onkeypress="if (event.keyCode != 9) {$onClick}" title="$sl.getLinkTitleEncoded()">$sl.getLinkNameHTML()</a>@NOEOLAFTERTHIS
+</strong></em>@NOEOLAFTERTHIS
+#else
+<em><strong>@NOEOLAFTERTHIS
+<a href="$encodedLocation" onclick="$onClick" onkeypress="if (event.keyCode != 9) {$onClick}" title="$sl.getLinkTitleEncoded()">$sl.getLinkNameHTML()</a>@NOEOLAFTERTHIS
+</strong></em>@NOEOLAFTERTHIS
+#end
+
+##
+## print the additional HTML
+##
+#if ($sl.getAdditionalHTML())
+##
+## close the current cell and start a new cell
+##
+</td>
+<td class="$sffPrintOnlyStyle.getName()">@NOEOLAFTERTHIS
+
+##
+## print a space
+##
+&nbsp;@NOEOLAFTERTHIS
+
+##
+## close the current cell and start a new cell
+##
+</td>
+#if ($sffType.equals("TEXTAREA"))
+<td class="$sffPrintOnlyStyle.getName()" valign="top">@NOEOLAFTERTHIS
+#else
+<td class="$sffPrintOnlyStyle.getName()">@NOEOLAFTERTHIS
+#end
+
+##
+## print a separator
+##
+/@NOEOLAFTERTHIS
+
+##
+## close the current cell and start a new cell
+##
+</td>
+<td class="$sffPrintOnlyStyle.getName()">@NOEOLAFTERTHIS
+
+##
+## print a space
+##
+&nbsp;@NOEOLAFTERTHIS
+
+##
+## close the current cell and start a new cell
+##
+</td>
+#if ($sffType.equals("TEXTAREA"))
+<td class="$sffPrintOnlyStyle.getName()" valign="top">@NOEOLAFTERTHIS
+#else
+<td class="$sffPrintOnlyStyle.getName()">@NOEOLAFTERTHIS
+#end
+
+##
+## print a additional html. add the tab index when required.
+##
+$sl.getAdditionalHTML()@NOEOLAFTERTHIS
+#end
+
+##
+## close the current cell and start a new cell
+##
+</td>
+<td class="$sffPrintOnlyStyle.getName()">@NOEOLAFTERTHIS
+
+##
+## print a space
+##
+&nbsp;&nbsp;&nbsp;@NOEOLAFTERTHIS
+
+
+##
+## close the table
+##
+</td>
+</tr>
+</table>@NOEOLAFTERTHIS
+#end
+
+##
+## end the table when print only
+##
+#if ($sffType.equals("PRINTONLY"))
+</td>
+<td>@NOEOLAFTERTHIS
+#icon($spacerIcon 1 19 $alc)@NOEOLAFTERTHIS
+</td>
+</tr>
+</table>
+#end
+
+## end of template. keep the empty line after this line.

@@ -1,0 +1,186 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($clrm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultColorManager"))
+#set ($icnm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultIconManager"))
+#set ($lclm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultLocaleManager"))
+#set ($cfgm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultConfigManager"))
+
+##
+## get the writers used in this template
+##
+#set ($pws = $alc.getWriterSet())
+#set ($bw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultBlockWriter"))
+#set ($rbw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultResultsBlockWriter"))
+
+##
+## get the location of the images folder
+##
+#set ($prop =  $cfgm.getStandardPropertySet())
+#set ($imagesFolder = $prop.getImagesFolder())
+
+##
+## get the current locale
+##
+#set ($currentLocale = $lclm.getPrimaryStandardLocale())
+
+##
+## get the icons to be used
+##
+
+#set ($spacerIcon = $icnm.getSpacerStandardIcon())
+
+#set ($currentDirection = $currentLocale.getDirection())
+#if ($currentDirection.equals("LTR"))
+#set ($pageBlockBorderIcon = $icnm.getPageBlockBorderLTRStandardIcon())
+#set ($whiteTabTopRightCorner1Icon = $icnm.getWhiteTabTopRightCorner1LTRStandardIcon())
+#set ($whiteTabVerticalLeftIcon = $icnm.getWhiteTabVerticalLeftLTRStandardIcon())
+#else
+#set ($pageBlockBorderIcon = $icnm.getPageBlockBorderRTLStandardIcon())
+#set ($whiteTabTopRightCorner1Icon = $icnm.getWhiteTabTopRightCorner1RTLStandardIcon())
+#set ($whiteTabVerticalLeftIcon = $icnm.getWhiteTabVerticalLeftRTLStandardIcon())
+#end
+
+#set ($whiteTabSelectedMiddleBottomIcon = $icnm.getWhiteTabSelectedMiddleBottomStandardIcon())
+#set ($whiteTabMiddleBottomIcon = $icnm.getWhiteTabMiddleBottomStandardIcon())
+
+##
+## print the header
+##
+#set ($sbType = $sb.getType())
+
+#if ($sbType.equals("SMALL"))
+<td width="11" height="100%">@NOEOLAFTERTHIS
+<img src="$imagesFolder/framework/spacer.png" height="100%" width="11" alt="" />@NOEOLAFTERTHIS
+</td>
+</tr>
+<tr>
+<td>@NOEOLAFTERTHIS
+<img src="$imagesFolder/framework/spacer.png" height="5" width="11" alt="" />@NOEOLAFTERTHIS
+</td>
+<td width="100%">@NOEOLAFTERTHIS
+<img src="$imagesFolder/framework/spacer.png" height="5" width="100%" alt="" />@NOEOLAFTERTHIS
+</td>
+<td>@NOEOLAFTERTHIS
+<img src="$imagesFolder/framework/spacer.png" height="5" width="11" alt="" />@NOEOLAFTERTHIS
+</td>
+</tr>
+</table>@NOEOLAFTERTHIS
+</td>
+#end
+
+#set ($sbBlockSetSize = $sb.getBlocksSetSize())
+#set ($sbBlockSetSizeMinusOne = $sbBlockSetSize - 1)
+#if ($sbBlockSetSize > 1)
+#if ($sb.getIsBlockSetVisible())
+
+##
+## print the "printable version" link, if applicable
+##
+#if ($bw.getIsPrintPrintableLinkRequired($sb))
+<td align="$currentLocale.getRightAlign()">@NOEOLAFTERTHIS
+$bw.getPrintableLinkHTML($sb)@NOEOLAFTERTHIS
+</td>
+#else
+<td width="1" align="$currentLocale.getRightAlign()">@NOEOLAFTERTHIS
+#icon($spacerIcon 1 1 $alc)@NOEOLAFTERTHIS
+</td>
+#end
+
+##
+## end the second line
+##
+<td width="1">@NOEOLAFTERTHIS
+#icon($spacerIcon 1 1 $alc)@NOEOLAFTERTHIS
+</td>
+</tr>
+
+##
+## print the third line
+##
+<tr>
+
+#foreach ($i in [0..$sbBlockSetSizeMinusOne])
+<td valign="bottom">@NOEOLAFTERTHIS
+
+#if ($sb.getCurrentOrderInBlockSet() == $i)
+#iconmaxwidth($whiteTabSelectedMiddleBottomIcon $whiteTabSelectedMiddleBottomIcon.getHeight() $alc)@NOEOLAFTERTHIS
+#else
+#iconmaxwidth($whiteTabMiddleBottomIcon $whiteTabMiddleBottomIcon.getHeight() $alc)@NOEOLAFTERTHIS
+#end
+
+</td>
+#end
+
+##
+## print the rest of the third line, almost reaching the small
+## blocks. the width is 1 million pixels instead of 100% to
+## bypass an Internet Explorer bug which causes the
+## whiteTabMiddleBottom icon to reach the side of the page,
+## leaving no space for the small blocks
+##
+<td width="1000000" valign="bottom">@NOEOLAFTERTHIS
+#iconmaxwidth ($whiteTabMiddleBottomIcon $whiteTabMiddleBottomIcon.getHeight() $alc)@NOEOLAFTERTHIS
+</td>
+<td valign="bottom">@NOEOLAFTERTHIS
+#icon($whiteTabTopRightCorner1Icon $whiteTabTopRightCorner1Icon.getWidth() $whiteTabTopRightCorner1Icon.getHeight() $alc)@NOEOLAFTERTHIS
+</td>
+
+##
+## print the fourth line
+##
+</tr>
+<tr>
+<td height="100%" width="$whiteTabVerticalLeftIcon.getWidth()" style="background-image: url($whiteTabVerticalLeftIcon.getDefaultLocation()); background-repeat: repeat-y;">@NOEOLAFTERTHIS
+#iconmaxheight($whiteTabVerticalLeftIcon $whiteTabVerticalLeftIcon.getWidth() $alc)@NOEOLAFTERTHIS
+</td>
+#set ($colspan = ($sbBlockSetSize * 2) + 1)
+<td colspan="$colspan">@NOEOLAFTERTHIS
+#end
+#else
+
+##
+## print the "print all" link
+##
+#if ($srb)
+#if ($rbw.getIsPrintRestrictedLinkRequired($srb))
+<td align="$currentLocale.getRightAlign()">@NOEOLAFTERTHIS
+$rbw.getRestrictedLinkHTML($srb)@NOEOLAFTERTHIS
+</td>
+#end
+#end
+
+##
+## print the "printable version" link
+##
+#if ($bw.getIsPrintPrintableLinkRequired($sb))
+<td align="$currentLocale.getRightAlign()">@NOEOLAFTERTHIS
+$bw.getPrintableLinkHTML($sb)@NOEOLAFTERTHIS
+</td>
+#end
+
+##
+## end the table
+##
+</tr>
+</table>@NOEOLAFTERTHIS
+
+##
+## print the page block header border
+##
+#if ($sbType.equals("LARGE"))
+##
+## print the image
+##
+<table summary="" width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="100%">@NOEOLAFTERTHIS
+#iconmaxwidth($pageBlockBorderIcon $pageBlockBorderIcon.getHeight() $alc)@NOEOLAFTERTHIS
+</td>
+</tr>
+</table>
+#end
+#end
+
+## end of template. keep the empty line after this line.

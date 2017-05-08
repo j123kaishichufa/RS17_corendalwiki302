@@ -1,0 +1,39 @@
+##
+## get the writers used in this template
+##
+#set ($pws = $alc.getWriterSet())
+#set ($fbw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultFormButtonWriter"))
+
+##
+## start the form
+##
+<form name="checkboxes" style="padding:0; margin:0;" onsubmit="appendOneFieldUsingCheckboxes('$targetFormNameJavascript', '$targetFieldNameJavascript', 'checkboxes', 'eCOREFILD213');return false;" action="#" method="get">@NOEOLAFTERTHIS
+
+##
+## start the table
+##
+<table summary="" width="100%" border="0" cellpadding="0" cellspacing="0">
+
+##
+## start the first line
+##
+<tr>
+<td>@NOEOLAFTERTHIS
+
+##
+## print the button
+##
+$fbw.getHTMLNoCell($sfb)@NOEOLAFTERTHIS
+
+##
+## end the first line
+##
+</td>
+</tr>
+
+##
+## start the second line
+##
+<tr>
+<td>@NOEOLAFTERTHIS
+## end of template. keep the empty line after this line.

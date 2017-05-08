@@ -1,0 +1,83 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($rm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultRequestManager"))
+#set ($icnm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultIconManager"))
+#set ($stlm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultStyleManager"))
+
+##
+## get the writers used in this template
+##
+#set ($pws = $alc.getWriterSet())
+#set ($bw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultFormButtonWriter"))
+#set ($iw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultIconWriter"))
+#set ($flw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultFormLabelWriter"))
+#set ($ffw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultFormFieldWriter"))
+
+##
+## get the icons used in this template
+##
+#set ($spacerIcon = $icnm.getSpacerStandardIcon())
+
+##
+## get the style used in this template
+##
+#set ($portalLinkStyle = $stlm.getPortalLinkStandardStyle())
+
+##
+## start the table
+##
+<table summary="" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td>@NOEOLAFTERTHIS
+
+##
+## print the form
+##
+<form name="searchbox" style="padding:0; margin:0;" accept-charset="$formCharSet" action="$formActionLocation">
+
+#if ($rm.getIsUserAgentCompatibleWithXHTML())
+<input type="hidden" name="fbid" value="CORE-BLCK-10" />
+#else
+<input type="hidden" name="fbid" value="CORE-BLCK-10">
+#end
+
+##
+## add the list of selected block ids. This is used when the search
+## results page has two blocks. We ensure that the current block printed
+## will be the current block.
+##
+#set ($blocksSize = $currentSelectedBlockPrimaryKeys.size())
+#if ($blocksSize > 0)
+#set ($blocksSizeMinusOne = $blocksSize - 1)
+#foreach ($i in [0..$blocksSizeMinusOne])
+#set($currentSelectedBlockPk = $currentSelectedBlockPrimaryKeys.get($i))
+#if ($rm.getIsUserAgentCompatibleWithXHTML())
+<input type="hidden" name="sbid" value="$currentSelectedBlockPk.toString()" />
+#else
+<input type="hidden" name="sbid" value="$currentSelectedBlockPk.toString()">
+#end
+#end
+#end
+
+##
+## add the list of checked entities
+##
+#set ($contentTypeParameter = $contentTypeField.getParameterName())
+#set ($checkedEntitiesSize = $checkedEntities.size())
+#set ($checkedEntitiesSizeMinusOne = $checkedEntitiesSize - 1)
+#foreach ($i in [0..$checkedEntitiesSizeMinusOne])
+#set ($checkedEntity = $checkedEntities.get($i))
+#set ($checkedEntityPk = $checkedEntity.getPrimaryKey())
+
+#if ($rm.getIsUserAgentCompatibleWithXHTML())
+<input type="hidden" name="$contentTypeParameter" value="$checkedEntityPk.toString()" />
+#else
+<input type="hidden" name="$contentTypeParameter" value="$checkedEntityPk.toString()">
+#end
+#end
+
+$flw.getHTMLNoCell($siteKeywordSearchLabel)@NOEOLAFTERTHIS
+$ffw.getHTMLNoCell($siteKeywordSearchField)@NOEOLAFTERTHIS
+$bw.getHTMLNoCell($siteKeywordSearchButton)@NOEOLAFTERTHIS

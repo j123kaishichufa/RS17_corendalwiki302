@@ -1,0 +1,164 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($msgm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultMessageManager"))
+
+##
+## get the messages used in this template
+##
+#set ($mandatoryMessage = $msgm.getMandatoryStandardMessage())
+
+##
+## get the unique key and other attributes
+##
+#set ($uniqueId = $sfl.getUniqueId())
+#set ($sflStyle = $sfl.getStandardStyle())
+#set ($sl = $sfl.getStandardLabel())
+#set ($shortDescriptionEncoded = $sl.getCurrentShortDescriptionEncoded())
+#set ($sffType = $sff.getType())
+#set ($se = $sfl.getStandardEntity())
+
+##
+## start the table when label is mandatory. this is to prevent internet
+## explorer to break between the label and the mandatory sign
+##
+#if ($isTableUsed)
+<table summary="" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>@NOEOLAFTERTHIS
+#end
+
+##
+## start the label
+##
+
+#if (!($uniqueId))
+#if (!($shortDescriptionEncoded))
+<span class="$sflStyle.getName()">@NOEOLAFTERTHIS
+#else
+<span class="$sflStyle.getName()" title="$shortDescriptionEncoded">@NOEOLAFTERTHIS
+<strong>@NOEOLAFTERTHIS
+#end
+#else
+#if (($sff) && (!($sffType.equals("PRINTONLY"))))
+#if (!($shortDescriptionEncoded))
+#if ($accessKeyEncoded)
+<label id="$uniqueId" for="$sff.getUniqueId()" accesskey="$accessKeyEncoded" class="$sflStyle.getName()">@NOEOLAFTERTHIS
+#else
+<label id="$uniqueId" for="$sff.getUniqueId()" class="$sflStyle.getName()">@NOEOLAFTERTHIS
+#end
+#else
+#if ($accessKeyEncoded)
+<label id="$uniqueId" for="$sff.getUniqueId()" accesskey="$accessKeyEncoded" class="$sflStyle.getName()" title="$shortDescriptionEncoded">@NOEOLAFTERTHIS
+#else
+<label id="$uniqueId" for="$sff.getUniqueId()" class="$sflStyle.getName()" title="$shortDescriptionEncoded">@NOEOLAFTERTHIS
+#end
+<strong>@NOEOLAFTERTHIS
+#end
+#else
+#if (!($shortDescriptionEncoded))
+#if ($accessKeyEncoded)
+<label id="$uniqueId" accesskey="$accessKeyEncoded" class="$sflStyle.getName()">@NOEOLAFTERTHIS
+#else
+<label id="$uniqueId" class="$sflStyle.getName()">
+#end
+#else
+#if ($accessKeyEncoded)
+<label id="$uniqueId" accesskey="$accessKeyEncoded" class="$sflStyle.getName()" title="$shortDescriptionEncoded">@NOEOLAFTERTHIS
+#else
+<label id="$uniqueId" class="$sflStyle.getName()" title="$shortDescriptionEncoded">@NOEOLAFTERTHIS
+#end
+<strong>@NOEOLAFTERTHIS
+#end
+#end
+#end
+
+##
+## print the text of the label
+##
+#if ($sl.getCurrentNameHTML())
+#if (!($sfl.getIsNameBreakable()))
+$sl.getNonBreakableCurrentNameHTML()
+#else
+$sl.getCurrentNameHTML()@NOEOLAFTERTHIS
+#end
+#else
+#if ($accessKeyEncoded)
+#if (!($sfl.getIsNameBreakable()))
+$sl.getNonBreakableAccessNameHTML($se)@NOEOLAFTERTHIS
+#else
+$sl.getAccessNameHTML($sfl.getStandardEntity())@NOEOLAFTERTHIS
+#end
+#else
+#if (!($sfl.getIsNameBreakable()))
+$sl.getNonBreakableNameHTML($se)@NOEOLAFTERTHIS
+#else
+$sl.getNameHTML($sfl.getStandardEntity())@NOEOLAFTERTHIS
+#end
+#end
+#end
+
+##
+## end the label
+##
+#if ($shortDescriptionEncoded)
+</strong>@NOEOLAFTERTHIS
+#end
+
+#if ($uniqueId)
+</label>@NOEOLAFTERTHIS
+#else
+</span>@NOEOLAFTERTHIS
+#end
+
+##
+## add the mandatory sign when label is mandatory
+##
+#if ($sfl.getIsMandatory())
+
+
+##
+## print the mandatory sign with the mandatory title
+##
+#if ($isTableUsed)
+</td>
+<td valign="top">@NOEOLAFTERTHIS
+#end
+
+<span class="$sflStyle.getName()" title="$mandatoryMessage.getMessageEncoded()">@NOEOLAFTERTHIS
+
+#if ($sff)
+#if (!($sffType.equals("PRINTONLY")))
+<label for="$sff.getUniqueId()">@NOEOLAFTERTHIS
+#else
+<label>@NOEOLAFTERTHIS
+#end
+#end
+
+(*)@NOEOLAFTERTHIS
+
+#if ($sff)
+</label>@NOEOLAFTERTHIS
+#end
+</span>@NOEOLAFTERTHIS
+#end
+
+#if ($isTableUsed)
+#if ($sff)
+#if (($sffType.equals("PRINTONLY")) || ($sffType.equals("FILE")) || ($sffType.equals("PASSWORD")) || ($sffType.equals("TEXT")) || ($sffType.equals("SELECT")) || ($sffType.equals("TEXTAREA")))
+#if ($shortDescriptionEncoded)
+<span class="$sflStyle.getName()" title="$shortDescriptionEncoded">@NOEOLAFTERTHIS
+#else
+<span class="$sflStyle.getName()">@NOEOLAFTERTHIS
+#end
+:@NOEOLAFTERTHIS
+</span>@NOEOLAFTERTHIS
+#end
+#end
+
+</td>@NOEOLAFTERTHIS
+</tr>
+</table>
+#end
+## end of template. keep the empty line after this line.

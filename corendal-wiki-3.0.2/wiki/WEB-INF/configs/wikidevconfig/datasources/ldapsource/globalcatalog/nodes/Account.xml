@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Version: $Id: Account.xml,v 1.5 2008/10/16 21:50:35 tdanard Exp $ -->
+<ldapsource-node xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="../../../../../schemas/ldapsourcenode.xsd">
+	<dn>dc=mycompany,dc=com</dn>
+	<preferred-domain>mydomain.mycompany.com</preferred-domain>
+	<object-class>user</object-class>
+	<object-category />
+	<attribute name="UID">userPrincipalName</attribute>
+	<attribute name="UserAccountControl">userAccountControl</attribute>
+	<attribute name="SAMAccountName">sAMAccountName</attribute>
+	<attribute name="DisplayName">cn</attribute>
+	<attribute name="PreferredDisplayName">displayName</attribute>
+	<attribute name="FirstName">givenName</attribute>
+	<attribute name="LastName">sn</attribute>
+	<attribute name="LandlineNumber">telephoneNumber</attribute>
+	<attribute name="MobileNumber">mobile</attribute>
+	<attribute name="FaxNumber">facsimileTelephoneNumber</attribute>
+	<attribute name="AlternativeNumber">ipPhone</attribute>
+	<attribute name="HomeNumber">homePhone</attribute>
+	<attribute name="MiddleInitial">initials</attribute>
+	<attribute name="EmailAddress">mail</attribute>
+	<attribute name="PagerNumber">pager</attribute>
+	<attribute name="Delivery">physicalDeliveryOfficeName</attribute>
+	<attribute name="Department">department</attribute>
+	<attribute name="Address">streetAddress</attribute>
+	<attribute name="ZipCode">postalCode</attribute>
+	<attribute name="City">l</attribute>
+	<attribute name="State">st</attribute>
+	<attribute name="Country">co</attribute>
+	<attribute name="CountryCode">c</attribute>
+	<attribute name="Company">company</attribute>
+	<attribute name="DistinguishedName">distinguishedName</attribute>
+	<attribute name="MemberOf">memberOf</attribute>
+	<attribute name="Description">description</attribute>
+	<attribute name="DriveName">info</attribute>
+	<attribute name="Photo">thumbnailPhoto</attribute>
+	<attribute name="Manager">manager</attribute>
+	<attribute name="JobTitle">title</attribute>
+	<attribute name="EmployeeId">employeeID</attribute>
+	<attribute name="EmployeeType">employeeType</attribute>
+	<attribute name="ProxyAddress">proxyAddresses</attribute>
+	<attribute name="LegacyExchangeDN">legacyExchangeDN</attribute>
+	<attribute name="ShowInAddressBook">showInAddressBook</attribute>
+	<attribute name="TargetAddress">targetAddress</attribute>
+	<attribute name="Secretary">secretary</attribute>
+	<attribute name="TelephoneAssistant">telephoneAssistant</attribute>
+</ldapsource-node>

@@ -1,0 +1,11 @@
+##
+## get the writers used in this template
+##
+#set ($pws = $alc.getWriterSet())
+#set ($lw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultLinkWriter"))
+
+##
+## print the tab item
+##
+$lw.getNonBreakableLinkHTML($sp.getDefaultLocation(), $sp.getShortDescriptionEncoded(), $sp.getNameHTML(), $sp.getAccessKeyEncoded())@NOEOLAFTERTHIS
+## end of template. keep the empty line after this line.

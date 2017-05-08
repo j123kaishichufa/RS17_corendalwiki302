@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Version: $Id: ContentRequest.hbm.xml,v 1.2 2007/04/06 18:59:01 tdanard Exp $ -->
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.corendal.netapps.wiki.writedatamappings">
+	<class name="DefaultContentRequestMapping"
+		table="content_request">
+		<id column="id" name="Id" type="string" />
+
+		<property column="request_typ_id" length="36"
+			name="RequestTypeId" not-null="true" type="string" />
+		<property column="content_info_id" length="36"
+			name="ContentInfoId" not-null="false" type="string" />
+		<property column="content_typ_id" length="36"
+			name="ContentTypeId" not-null="true" type="string" />
+		<property column="status_typ_id" length="36" name="StatusTypeId"
+			not-null="true" type="string" />
+		<property column="parent_content_id" length="36"
+			name="ParentContentId" not-null="false" type="string" />
+		<property column="child_content_id" length="36"
+			name="ChildContentId" not-null="false" type="string" />
+		<property column="friendly_address" length="255"
+			name="FriendlyAddress" not-null="false" type="string" />
+		<property column="body" name="Body" not-null="false"
+			type="string" />
+		<property column="content_class_typ_id" length="36"
+			name="ContentClassTypeId" not-null="false" type="string" />
+		<property column="content_rule_typ_id" length="36"
+			name="ContentRuleTypeId" not-null="false" type="string" />
+		<property column="cmnt" name="Comment" not-null="false"
+			type="string" />
+		<property column="ord" length="11" name="Order" not-null="true"
+			type="integer" />
+		<property column="enabled_flag" length="1" name="EnabledFlag"
+			not-null="true" type="string" />
+	</class>
+	<query
+		name="com.corendal.netapps.wiki.writedatabeans.AbstractContentRequest.findEnabledPendingByContentPrimaryKey">
+		<![CDATA[
+    from DefaultContentRequestMapping
+    where StatusTypeId = :statusTypeId
+    and ChildContentId = :childContentId
+    and EnabledFlag = :enabledFlag
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.wiki.writedatabeans.AbstractContentRequest.findEnabledPendingByParentArticlePrimaryKey">
+		<![CDATA[
+    from DefaultContentRequestMapping
+    where StatusTypeId = :statusTypeId
+    and ParentContentId = :parentContentId
+    and EnabledFlag = :enabledFlag
+]]>
+	</query>
+</hibernate-mapping>

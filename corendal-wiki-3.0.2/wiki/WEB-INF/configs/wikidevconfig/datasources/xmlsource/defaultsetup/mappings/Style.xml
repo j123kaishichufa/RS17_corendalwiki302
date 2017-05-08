@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Version: $Id: Style.xml,v 1.3 2006/07/17 02:23:37 tdanard Exp $ -->
+<xmlsource-mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="../../../../../schemas/xmlsourcemapping.xsd"
+	package="com.corendal.netapps.framework.core.readdatahandlers">
+	<class name="DefaultStyleLoadHandler" collection="styles"
+		entity="style">
+		<id attribute="id" name="Id" type="string" />
+
+	</class>
+	<query
+		name="com.corendal.netapps.framework.core.readdatabeans.AbstractStyle.findByEnabledFlag">
+		<![CDATA[for $result in /styles/style[@enabled-flag = :enabledFlag]
+		return $result]]>
+	</query>
+</xmlsource-mapping>

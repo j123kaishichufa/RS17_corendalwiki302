@@ -1,0 +1,38 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($stlm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultStyleManager"))
+#set ($icnm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultIconManager"))
+
+##
+## get the writers used in this template
+##
+#set ($pws = $alc.getWriterSet())
+#set ($lw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultLinkWriter"))
+
+##
+## get the icons used in this template
+##
+#set ($spacerIcon = $icnm.getSpacerStandardIcon())
+
+##
+## get the styles used in this template
+##
+#set ($regularTextStyle = $stlm.getRegularTextStandardStyle())
+#set ($termNameStyle = $stlm.getTermNameStandardStyle())
+
+#if ($nameHTML)
+#if (($descriptionHTML) && (!($descriptionHTML.equals(""))))
+<span>$nameHTML</span><span>: </span><span>$descriptionHTML.</span>
+#else
+<span>$nameHTML</span>
+#end
+#else
+#if (($descriptionHTML) && (!($descriptionHTML.equals(""))))
+<span>$descriptionHTML</span>
+#else
+#icon($spacerIcon 10 10 $alc)
+#end
+#end
+## end of template. keep the empty line after this line.

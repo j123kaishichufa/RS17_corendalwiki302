@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Version: $Id: styles.xml,v 1.7 2006/01/11 17:50:55 tdanard Exp $ -->
+<styles xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="../../schemas/styles.xsd">
+	<style enabled-flag="Y" id="CORE-STYL-1">
+		<name>regular</name>
+		<description>
+			custom style used to display regular text
+		</description>
+	</style>
+	<style enabled-flag="Y" id="CORE-STYL-2">
+		<name>pagedescription</name>
+		<description>
+			custom style used to display the page description in the
+			page headers
+		</description>
+	</style>
+	<style enabled-flag="Y" id="CORE-STYL-4">
+		<name>pagetitle</name>
+		<description>
+			custom style used to display the page title in standard page
+			headers
+		</description>
+	</style>
+	<style enabled-flag="Y" id="CORE-STYL-5">
+		<name>menuitem</name>
+		<description>
+			custom style used to display menu items, if those items are
+			not selected
+		</description>
+	</style>
+	<style enabled-flag="Y" id="CORE-STYL-6">
+		<name>selectedmenuitem</name>
+		<description>
+			custom style used to display menu items, if those items are
+			selected
+		</description>
+	</style>
+	<style enabled-flag="Y" id="CORE-STYL-7">
+		<name>tabitem</name>
+		<description>
+			custom style used to display tab items, if those items are
+			not selected
+		</description>
+	</style>
+	<style enabled-flag="Y" id="CORE-STYL-8">
+		<name>selectedtabitem</name>
+		<description>
+			custom style used to display tab items, if those items are
+			selected
+		</description>
+	</style>
+	<style enabled-flag="Y" id="CORE-STYL-9">
+		<name>blocktitle</name>
+		<description>
+			custom style used to display the title of a block
+		</description>
+	</style>
+	<style enabled-flag="Y" id="CORE-STYL-10">
+		<name>portallink</name>
+		<description>
+			custom style used to display the portal link
+		</description>
+	</style>
+	<style enabled-flag="Y" id="CORE-STYL-11">
+		<name>searchfield</name>
+		<description>
+			custom style used to display search fields
+		</description>
+	</style>
+	<style enabled-flag="Y" id="CORE-STYL-12">
+		<name>searchbutton</name>
+		<description>
+			custom style used to display search buttons
+		</description>
+	</style>
+	<style enabled-flag="Y" id="CORE-STYL-13">
+		<name>printableapplicationname</name>
+		<description>
+			custom style used to display the name of an application,
+			when in the printable mode
+		</description>
+	</style>
+	<style enabled-flag="Y" id="CORE-STYL-14">
+		<name>numentitiesfound</name>
+		<description>
+			custom style used to display the number of entities found in
+			results tables
+		</description>
+	</style>
+	<style enabled-flag="Y" id="CORE-STYL-15">
+		<name>donoprint</name>
+		<description>
+			custom style used to include elements not to be printed
+		</description>
+	</style>
+	<style enabled-flag="Y" id="CORE-STYL-16">
+		<name>entryfield</name>
+		<description>
+			custom style used to display entry fields
+		</description>
+	</style>
+	<style enabled-flag="Y" id="CORE-STYL-17">
+		<name>entrybutton</name>
+		<description>
+			custom style used to display entry buttons
+		</description>
+	</style>
+	<style enabled-flag="Y" id="CORE-STYL-18">
+		<name>entrylabel</name>
+		<description>
+			custom style used to display entry labels
+		</description>
+	</style>
+	<style enabled-flag="Y" id="CORE-STYL-19">
+		<name>signinlink</name>
+		<description>
+			custom style used to display the sign-in link
+		</description>
+	</style>
+	<style enabled-flag="Y" id="CORE-STYL-20">
+		<name>activeentryformblocktitle</name>
+		<description>
+			custom style used to display the title of an entry form
+			block
+		</description>
+	</style>
+	<style enabled-flag="Y" id="CORE-STYL-22">
+		<name>message</name>
+		<description>
+			custom style used to display error, validation or info
+			messages
+		</description>
+	</style>
+	<style enabled-flag="Y" id="CORE-STYL-23">
+		<name>displayonlyfield</name>
+		<description>
+			custom style used to display display-only fields in entry
+			and search forms
+		</description>
+	</style>
+	<style enabled-flag="Y" id="CORE-STYL-24">
+		<name>applicationname</name>
+		<description>
+			custom style used to display the application name in page
+			headers
+		</description>
+	</style>
+	<style enabled-flag="Y" id="CORE-STYL-25">
+		<name>languageselect</name>
+		<description>
+			custom style used to display the language selection
+			pull-down menu
+		</description>
+	</style>
+	<style enabled-flag="Y" id="CORE-STYL-26">
+		<name>searchsitefield</name>
+		<description>
+			custom style used to display the search site field at the
+			top of the page
+		</description>
+	</style>
+	<style enabled-flag="Y" id="CORE-STYL-28">
+		<name>inactiveentryformblocktitle</name>
+		<description>
+			custom style used to display the title of an entry form
+			block
+		</description>
+	</style>
+	<style enabled-flag="Y" id="CORE-STYL-29">
+		<name>sideblocktitle</name>
+		<description>
+			custom style used to display the title of a small block
+		</description>
+	</style>
+	<style enabled-flag="Y" id="CORE-STYL-3">
+		<name>searchformbody</name>
+		<description>
+			custom style used to display the name of the columns in
+			results tables
+		</description>
+	</style>
+	<style enabled-flag="Y" id="CORE-STYL-30">
+		<name>regular</name>
+		<description>
+			custom style used to display regular text in entry forms
+		</description>
+	</style>
+	<style enabled-flag="Y" id="CORE-STYL-31">
+		<name>inactivesearchformblocktitle</name>
+		<description>
+			custom style used to display the title of an search form
+			block
+		</description>
+	</style>
+	<style enabled-flag="Y" id="CORE-STYL-32">
+		<name>activesearchformblocktitle</name>
+		<description>
+			custom style used to display the title of an entry form
+			block
+		</description>
+	</style>
+	<style enabled-flag="Y" id="CORE-STYL-33">
+		<name>searchlabel</name>
+		<description>
+			custom style used to display search labels
+		</description>
+	</style>
+	<style enabled-flag="Y" id="CORE-STYL-34">
+		<name>listing</name>
+		<description>
+			custom style used to display items in lists
+		</description>
+	</style>
+	<style enabled-flag="Y" id="CORE-STYL-35">
+		<name>selectedcolumntitle</name>
+		<description>
+			custom style used to display the name of the sort columns in
+			results tables
+		</description>
+	</style>
+	<style enabled-flag="Y" id="CORE-STYL-36">
+		<name>selectedcurrenttabitem</name>
+		<description>
+			custom style used to display tab items, if those items are
+			selected
+		</description>
+	</style>
+	<style enabled-flag="Y" id="CORE-STYL-37">
+		<name>textvisibleonly</name>
+		<description>
+			custom style used to display text visible only to
+			text-browsers
+		</description>
+	</style>
+	<style enabled-flag="Y" id="CORE-STYL-38">
+		<name>message</name>
+		<description>
+			custom style used to display messages inside forms
+		</description>
+	</style>
+	<style enabled-flag="Y" id="CORE-STYL-39">
+		<name>departmentname</name>
+		<description>
+			custom style used to display department names
+		</description>
+	</style>
+	<style enabled-flag="Y" id="CORE-STYL-40">
+		<name>departmentdescription</name>
+		<description>
+			custom style used to display department descriptions
+		</description>
+	</style>
+	<style enabled-flag="Y" id="HLPD-STYL-1">
+		<name>accountname</name>
+		<description>style used to display account names</description>
+	</style>
+	<style enabled-flag="Y" id="HLPD-STYL-2">
+		<name>accountdescription</name>
+		<description>
+			style used to display account descriptions
+		</description>
+	</style>
+	<style enabled-flag="Y" id="HLPD-STYL-3">
+		<name>groupname</name>
+		<description>style used to display group names</description>
+	</style>
+	<style enabled-flag="Y" id="HLPD-STYL-4">
+		<name>groupdescription</name>
+		<description>
+			style used to display group descriptions
+		</description>
+	</style>
+	<style enabled-flag="Y" id="WIKI-STYL-3">
+		<name>contentpath</name>
+		<description>style used to display content paths</description>
+	</style>
+	<style enabled-flag="Y" id="WIKI-STYL-4">
+		<name>contentdescription</name>
+		<description>
+			style used to display content descriptions
+		</description>
+	</style>
+	<style enabled-flag="Y" id="WIKI-STYL-5">
+		<name>contenttitle</name>
+		<description>style used to display content titles</description>
+	</style>
+	<style enabled-flag="Y" id="WIKI-STYL-6">
+		<name>contentbody</name>
+		<description>style used to display content bodies</description>
+	</style>
+</styles>

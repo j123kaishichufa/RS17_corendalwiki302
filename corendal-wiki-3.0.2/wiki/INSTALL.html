@@ -1,0 +1,597 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=ISO-8859-1"
+ http-equiv="content-type">
+  <title>INSTALL</title>
+</head>
+<body>
+<span style="font-weight: bold;"><big>Installation of Wiki version
+3.0 with MySQL<br>
+</big></span><big><small>Updated April 22nd, 2010</small></big><span
+ style="font-weight: bold;"><big><br>
+</big></span><span style="font-weight: bold;"><big><small><br>
+Prerequirements</small><br>
+<br>
+</big></span>Linux or Windows Operating System<br>
+Tomcat 5.0 or greater (and Java 5.0 or greater)<br>
+MySQL 5.0 or greater<br>
+A running Active Directory domain controller (Windows Server 2003 or greater)<br>
+A service account<br>
+<br>
+A basic knowledge of Tomcat and MySQL is required to perform
+this installation. The assistance of your Active Directory admnistrator
+might be required as well.<br>
+<span style="font-weight: bold;"><br>
+Create and populate the MySQL databases<br>
+<br>
+</span>In this documentation, Windows is assumed with C:\Documents and
+Settings\Thierry\My Documents\wiki being the folder where you
+extracted the application
+files. Settings highlighted in orange need to be modified.<span
+ style="font-weight: bold;"><br>
+</span><span style="font-weight: bold;"><br>
+</span>Open a MS-DOS command session. <br>
+<br>
+cd C:\Documents and Settings\Thierry\My
+Documents\wiki\WEB-INF\installmefirst<br>
+<br>
+<span style="font-weight: bold;"></span>mysql -u root -prootpassword<br>
+<br>
+create database wiki;<br>
+use wiki;<br>
+source
+./sql/main-wiki/shared/install/mysql/install_all_shared_mysql.sql;<br>
+<br>
+create database session;<br>
+use session;<br>
+source
+./sql/framework/core/session/install/mysql/install_all_session_mysql.sql;<br>
+<br>
+create database organization;<br>
+use organization;<br>
+source
+./sql/framework/core/organization/install/mysql/install_all_organization_mysql.sql;<br>
+<br>
+create database geography;<br>
+use geography;<br>
+source
+./sql/framework/core/geography/install/mysql/install_all_geography_mysql.sql;<span
+ style="font-weight: bold;"><span style="font-weight: bold;"><span
+ style="font-weight: bold;"><span style="font-weight: bold;"><br>
+</span></span></span></span><br>
+create database proxy;<br>
+use proxy;<br>
+source
+./sql/framework/core/proxy/install/mysql/install_all_proxy_mysql.sql;<br>
+<br>
+create database warning;<br>
+use warning;<br>
+source
+./sql/framework/core/warning/install/mysql/install_all_warning_mysql.sql;<br>
+<span style="font-weight: bold;"><span style="font-weight: bold;"><span
+ style="font-weight: bold;"><span style="font-weight: bold;"><br>
+Create the MySQL users<br>
+<br>
+</span></span></span></span>GRANT ALL PRIVILEGES ON *.* TO
+wiki_user@localhost IDENTIFIED BY 'wiki_password' WITH GRANT OPTION;<br>
+GRANT ALL PRIVILEGES ON *.* TO wiki_user@localhost.localdomain
+IDENTIFIED BY 'wiki_password' WITH GRANT OPTION;<br>
+<br>
+GRANT ALL PRIVILEGES ON *.* TO session_user@localhost IDENTIFIED BY
+'session_password' WITH GRANT OPTION;<br>
+GRANT ALL PRIVILEGES ON *.* TO session_user@localhost.localdomain
+IDENTIFIED BY 'session_password' WITH GRANT OPTION;<br>
+<br>
+GRANT ALL PRIVILEGES ON *.* TO orgn_user@localhost IDENTIFIED BY
+'orgn_password' WITH GRANT OPTION;<br>
+GRANT ALL PRIVILEGES ON *.* TO orgn_user@localhost.localdomain
+IDENTIFIED BY 'orgn_password' WITH GRANT OPTION;<br>
+<br>
+GRANT ALL PRIVILEGES ON *.* TO geog_user@localhost IDENTIFIED BY
+'geog_password' WITH GRANT OPTION;<br>
+GRANT ALL PRIVILEGES ON *.* TO geog_user@localhost.localdomain
+IDENTIFIED BY 'geog_password' WITH GRANT OPTION;<br>
+<br>
+GRANT ALL PRIVILEGES ON *.* TO proxy_user@localhost IDENTIFIED BY
+'proxy_password' WITH GRANT OPTION;<br>
+GRANT ALL PRIVILEGES ON *.* TO proxy_user@localhost.localdomain
+IDENTIFIED BY 'proxy_password' WITH GRANT OPTION;<br>
+<br>
+GRANT ALL PRIVILEGES ON *.* TO warning_user@localhost IDENTIFIED BY
+'warning_password' WITH GRANT OPTION;<br>
+GRANT ALL PRIVILEGES ON *.* TO warning_user@localhost.localdomain
+IDENTIFIED BY 'warning_password' WITH GRANT OPTION;<br>
+<span style="font-weight: bold;"></span><br>
+Note: Linux users need to execute these statements twice. First using
+"localhost" and "localhost.localdomain", then using the host and domain
+names stored in /etc/hosts. Example using "mylocahost" and
+"mylocalhost.mylocaldomain":<span style="font-weight: bold;"><span
+ style="font-weight: bold;"><span style="font-weight: bold;"><span
+ style="font-weight: bold;"><br>
+<br>
+</span></span></span></span>GRANT ALL PRIVILEGES ON *.* TO wiki_user@<span
+ style="color: rgb(255, 102, 0);">mylocalhost </span>IDENTIFIED BY
+'wiki_password' WITH GRANT OPTION;<br>
+GRANT ALL PRIVILEGES ON *.* TO wiki_user@<span
+ style="color: rgb(255, 102, 0);">mylocalhost.mylocaldomain</span>
+IDENTIFIED BY 'wiki_password' WITH GRANT OPTION;<br>
+<br>
+GRANT ALL PRIVILEGES ON *.* TO session_user@<span
+ style="color: rgb(255, 102, 0);">mylocalhost</span> IDENTIFIED BY
+'session_password' WITH GRANT OPTION;<br>
+GRANT ALL PRIVILEGES ON *.* TO session_user@<span
+ style="color: rgb(255, 102, 0);">mylocalhost.mylocaldomain</span>
+IDENTIFIED BY 'session_password' WITH GRANT OPTION;<br>
+<br>
+GRANT ALL PRIVILEGES ON *.* TO orgn_user@<span
+ style="color: rgb(255, 102, 0);">mylocalhost </span>IDENTIFIED BY
+'orgn_password' WITH GRANT OPTION;<br>
+GRANT ALL PRIVILEGES ON *.* TO orgn_user@<span
+ style="color: rgb(255, 102, 0);">mylocalhost.mylocaldomain</span>
+IDENTIFIED BY 'orgn_password' WITH GRANT OPTION;<br>
+<br>
+GRANT ALL PRIVILEGES ON *.* TO geog_user@<span
+ style="color: rgb(255, 102, 0);">mylocalhost</span> IDENTIFIED BY
+'geog_password' WITH GRANT OPTION;<br>
+GRANT ALL PRIVILEGES ON *.* TO geog_user@<span
+ style="color: rgb(255, 102, 0);">mylocalhost.mylocaldomain</span>
+IDENTIFIED BY 'geog_password' WITH GRANT OPTION;<br>
+<br>
+GRANT ALL PRIVILEGES ON *.* TO proxy_user@<span
+ style="color: rgb(255, 102, 0);">mylocalhost</span> IDENTIFIED BY
+'proxy_password' WITH GRANT OPTION;<br>
+GRANT ALL PRIVILEGES ON *.* TO proxy_user@<span
+ style="color: rgb(255, 102, 0);">mylocalhost.mylocaldomain</span>
+IDENTIFIED BY 'proxy_password' WITH GRANT OPTION;<br>
+<br>
+GRANT ALL PRIVILEGES ON *.* TO warning_user@<span
+ style="color: rgb(255, 102, 0);">mylocalhost</span> IDENTIFIED BY
+'warning_password' WITH GRANT OPTION;<br>
+GRANT ALL PRIVILEGES ON *.* TO warning_user@<span
+ style="color: rgb(255, 102, 0);">mylocalhost.mylocaldomain</span>
+IDENTIFIED BY 'warning_password' WITH GRANT OPTION;<br>
+<br>
+exit;<br>
+<br>
+<span style="font-weight: bold;">Customize Active Directory settings<br>
+<br>
+</span>You need to use a service account to connect to Active
+Directory. If you are just evaluating Corendal Wiki, you can use
+your
+own account and password for this evaluation.<span
+ style="font-weight: bold;"><br>
+</span><br>
+in C:\Documents and Settings\Thierry\My
+Documents\wiki\WEB-INF\configs\wikidevconfig\datasources\ldapsource\activewiki\ldapsource.xml<br>
+<br>
+<span style="color: rgb(0, 0, 0);">&nbsp;&nbsp;&nbsp; &lt;property
+name="java.naming.provider.url"&gt;ldap://<span
+ style="color: rgb(255, 102, 0);">mydomaincontroller.mydomain.mycompany.com</span>:389&lt;/property&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;property
+name="java.naming.factory.initial"&gt;com.sun.jndi.ldap.LdapCtxFactory&lt;/property&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;property
+name="java.naming.security.authentication"&gt;simple&lt;/property&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;property
+name="java.naming.security.principal"&gt;<span
+ style="color: rgb(255, 102, 0);">myserviceaccount@mydomain.mycompany.com</span>&lt;/property&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;property
+name="java.naming.security.credentials"&gt;<span
+ style="color: rgb(255, 102, 0);">myservicepassword</span>&lt;/property&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;property
+name="com.sun.jndi.ldap.connect.pool"&gt;true&lt;/property&gt;</span><br>
+<br>
+in C:\Documents and Settings\Thierry\My
+Documents\wiki\WEB-INF\configs\wikidevconfig\datasources\ldapsource\activewiki\nodes\Account.xml<br>
+<br>
+&nbsp;&nbsp;&nbsp; &lt;dn&gt;<span style="color: rgb(255, 102, 0);">dc=mydomain,dc=mycompany,dc=com</span>&lt;/dn&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;preferred-domain&gt;<span
+ style="color: rgb(255, 102, 0);">mydomain.mycompany.com</span>&lt;/preferred-domain&gt;<br>
+<br>
+in C:\Documents and Settings\Thierry\My
+Documents\wiki\WEB-INF\configs\wikidevconfig\datasources\ldapsource\activewiki\nodes\Group.xml<br>
+<br>
+&nbsp;&nbsp;&nbsp; &lt;dn&gt;<span style="color: rgb(255, 102, 0);">dc=mydomain,dc=mycompany,dc=com</span>&lt;/dn&gt;<span
+ style="font-weight: bold;"></span><span style="font-weight: bold;"></span><br>
+<br>
+in C:\Documents and Settings\Thierry\My
+Documents\wiki\WEB-INF\configs\wikidevconfig\datasources\ldapsource\globalcatalog\ldapsource.xml<br>
+<br>
+<span style="color: rgb(0, 0, 0);">&nbsp;&nbsp;&nbsp; &lt;property
+name="java.naming.provider.url"&gt;ldap://<span
+ style="color: rgb(255, 102, 0);">mydomaincontroller.mydomain.mycompany.com</span>:3268&lt;/property&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;property
+name="java.naming.factory.initial"&gt;com.sun.jndi.ldap.LdapCtxFactory&lt;/property&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;property
+name="java.naming.security.authentication"&gt;simple&lt;/property&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;property
+name="java.naming.security.principal"&gt;<span
+ style="color: rgb(255, 102, 0);">myserviceaccount@mydomain.mycompany.com</span>&lt;/property&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;property
+name="java.naming.security.credentials"&gt;<span
+ style="color: rgb(255, 102, 0);">myservicepassword</span>&lt;/property&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;property
+name="com.sun.jndi.ldap.connect.pool"&gt;true&lt;/property&gt;</span><br>
+<br>
+in C:\Documents and Settings\Thierry\My
+Documents\wiki\WEB-INF\configs\wikidevconfig\datasources\ldapsource\globalcatalog\nodes\Account.xml<br>
+<br>
+&nbsp;&nbsp;&nbsp; &lt;dn&gt;<span style="color: rgb(255, 102, 0);">dc=mycompany,dc=com</span>&lt;/dn&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;preferred-domain&gt;<span
+ style="color: rgb(255, 102, 0);">mydomain.mycompany.com</span>&lt;/preferred-domain&gt;<br>
+<br>
+In doubt, ask your Windows administrator for these Active Directory
+settings.
+<span style="font-weight: bold;"></span><br>
+<span style="font-weight: bold;"></span><br style="font-weight: bold;">
+<span style="font-weight: bold;">Customize the applications.xml file</span><br>
+<br>
+in C:\Documents and Settings\Thierry\My
+Documents\wiki\WEB-INF\configs\wikidevconfig\setups<br>
+<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;property
+name="framework.core.webapp.protocol"&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(255, 102, 0);">http</span><br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&lt;/property&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;property
+name="framework.core.webapp.host"&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(255, 102, 0);">localhost</span><br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&lt;/property&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;property
+name="framework.core.webapp.port"&gt;<span
+ style="color: rgb(255, 102, 0);">8080</span>&lt;/property&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;property
+name="framework.core.webapp.folder"&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; /wiki<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&lt;/property&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;property
+name="framework.core.uploads.maxsize"&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; 50<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&lt;/property&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;property
+name="framework.core.smtp.host"&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(255, 102, 0);">mailserverip.mycompany.com</span><br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&lt;/property&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;property
+name="framework.core.emails.domain"&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(255, 102, 0);">mycompany.com</span><br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&lt;/property&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;property
+name="framework.core.cookies.domain"&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(255, 102, 0);">mycompany.com</span><br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&lt;/property&gt;<br>
+<br>
+If you are not using Tomcat, you don't know the port number and you
+just want to evaluate this application, just remove the
+framework.core.webapp.port property line. The application will detect
+automatically the port number. However, this is a required property for
+production setups.<br>
+<br style="font-weight: bold;">
+<span style="font-weight: bold;">Customize the jcifs.properties file<br>
+<br>
+</span>This properties file is used by the NTLM authentication. The
+domain, username and password are required for pre-authentication / SMB
+sign-in against Windows Server 2003. <span style="font-weight: bold;"><br>
+</span><br>
+in C:\Documents and Settings\Thierry\My
+Documents\wiki\WEB-INF\configs\wikidevconfig\properties<br>
+<br>
+jcifs.http.domainController=<span style="color: rgb(255, 102, 0);">mydomaincontroller.mycompany.com</span><br>
+jcifs.smb.client.soTimeout=600000<br>
+jcifs.netbios.cachePolicy=1200<br>
+jcifs.smb.client.domain=<span style="color: rgb(255, 102, 0);">mydomain.mycompany.com</span><br>
+jcifs.smb.client.username<span style="color: rgb(255, 153, 0);"><span
+ style="color: rgb(0, 0, 0);">=</span><span
+ style="color: rgb(255, 102, 0);">myserviceaccount</span></span><br>
+jcifs.smb.client.password=<span style="color: rgb(255, 102, 0);">myservicepassword</span><br>
+jcifs.util.loglevel=1<span style="color: rgb(255, 102, 0);"><br>
+<br>
+</span>Customize the C:\Documents and Settings\Thierry\My
+Documents\wiki\WEB-INF\configs\wikidevconfig\setups\applications.xml
+file to specify which IP ranges should have NTLM authentication. <br>
+<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;ntlm-ip-address-ranges&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&lt;ip-address-range&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &lt;from&gt;<span style="color: rgb(255, 102, 0);">127.0.0.1</span>&lt;/from&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &lt;to&gt;<span style="color: rgb(255, 102, 0);">127.0.0.1</span>&lt;/to&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&lt;/ip-address-range&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&lt;ip-address-range&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &lt;from&gt;<span style="color: rgb(255, 102, 0);">192.168.0.1</span>&lt;/from&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &lt;to&gt;<span style="color: rgb(255, 102, 0);">192.168.0.255</span>&lt;/to&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&lt;/ip-address-range&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&lt;ip-address-range&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &lt;from&gt;<span style="color: rgb(255, 102, 0);">192.168.56.1</span>&lt;/from&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &lt;to&gt;<span style="color: rgb(255, 102, 0);">192.168.56.255</span>&lt;/to&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&lt;/ip-address-range&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/ntlm-ip-address-ranges&gt;<br>
+<br>
+To disable NTLM all together, leave only one range, such as:<br>
+<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;ntlm-ip-address-ranges&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&lt;ip-address-range&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &lt;from&gt;<span style="color: rgb(255, 102, 0);">128.0.0.1</span>&lt;/from&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &lt;to&gt;<span style="color: rgb(255, 102, 0);">128.0.0.1</span>&lt;/to&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&lt;/ip-address-range&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/ntlm-ip-address-ranges&gt;<br>
+<br>
+If you want to use NTLM
+over HTTPS, there are some tricky setups for your HTTPS proxy because
+of Internet Explorer bugs. Write me an email for more info: Thierry
+Danard (<a href="mailto:tdanard@yahoo.com">tdanard@yahoo.com</a>)<span
+ style="color: rgb(255, 102, 0);"></span><br>
+<br>
+<span style="font-weight: bold;">Customize the preprocessor.properties
+file<br>
+</span><br>
+This file will be used to perform search/replace in many of the
+configuration files at startup. Your configuration files will not be
+changed, this application creates and uses temporary files on startup.<span
+ style="font-weight: bold;"><br>
+</span><br>
+HelpDeskName=<span style="color: rgb(255, 102, 0);">My Company's Help
+Desk</span><br>
+HelpDeskEmailAddress=<span style="color: rgb(255, 102, 0);">helpdesk@mycompany.com</span><br>
+HelpDeskPhoneNumber=<span style="color: rgb(255, 102, 0);">+1 555
+123-4567</span><span style="color: rgb(255, 102, 0);"></span><br>
+HelpDeskApplicationName=Wiki Web Application<br>
+PublicApplicationName=Wiki<br>
+CompanyName=<span style="color: rgb(255, 102, 0);">My Company</span><span
+ style="color: rgb(255, 102, 0);"></span><br>
+ApplicationReleaseDate=<span style="color: rgb(255, 102, 0);">April
+19th, 2006</span><br>
+UserDocumentationLocation=<span style="color: rgb(255, 102, 0);">My
+Company's User Documentation Home</span><br>
+UserTrainingContact=<span style="color: rgb(255, 102, 0);">My Company's
+User Training Contact</span><br>
+LegalTermsPageURL=<span style="color: rgb(255, 102, 0);">My Company's
+Legal Terms URL<br>
+</span><br style="font-weight: bold;">
+<br style="font-weight: bold;">
+<span style="font-weight: bold;">Install the web application</span><br>
+<br>
+Copy the C:\Documents and Settings\Thierry\My Documents\wiki
+folder to your Tomcat webapps folder (example:C:\Program Files\Apache
+Software Foundation\Tomcat 5.0\webapps)<br>
+<br>
+Start Tomcat.<br>
+<br>
+<span style="font-weight: bold;">Use the application</span><br>
+<br>
+Depending on your settings, the address of the application should be
+<a href="http://localhost:8080/wiki/home/">http://localhost:8080/wiki/home/</a><br>
+<br>
+You will notice that the first page is long to load at first. Each time
+a page is loaded for the first time, a cache is built. <br>
+<br>
+<span style="font-weight: bold;">User accounts</span><br>
+<br>
+Two users are built-in: demoadmin (password is admin),&nbsp; and
+demoguest (password is guest). You can also use your Active Directory
+account and password.<br>
+<br>
+The application is designed to work with Active Directory. If you want
+to create your own built-in users, look at the C:\Documents and
+Settings\Thierry\My
+Documents\framework\WEB-INF\installmefirst\sql\framework\core\shared\populate\populate_account_table_core.sql
+for examples. To generate encrypted passwords for these users, use the
+"main" method of the
+com.corendal.netapps.framework.core.utils.OneWayEncryptUtil class<br>
+<br>
+<span style="font-weight: bold;">Administration</span><br>
+<br>
+To gain administrator access, just execute a SQL statement. Example
+if "tdanard" is your Active Directory login :<br>
+<br>
+use wiki;<br>
+insert into account_role_xref values ('admin1', 'tdanard',
+'CORE-ROLE-1', null, null, 'Y');<br>
+commit;<br>
+<br>
+To delete the default users:<br>
+<br>
+use wiki;<br>
+delete from account where id='demoadmin';<br>
+delete from account where id='demoguest';<br>
+commit;<br>
+<br>
+Once the application is started, you can also use the "System Accounts
+and Groups Monitor" screens to grant various roles, including
+Admnistrator.<br>
+<br>
+<span style="font-weight: bold;">MySQL</span><br>
+<br>
+MySQL has a default limitation of 1 MB for files. You will get a
+FileTooBigException when trying to upload large files. See
+www.mysql.com to learn how to change your my.cnf settings. By default,
+MySQL only indexes words that are at least 4 character-long. This
+setting can be changed as well.<br>
+<br>
+<span style="font-weight: bold;">Install the crons (optional for
+evaluation)</span><br>
+<br>
+All cron files for Linux are in C:\Documents and Settings\Thierry\My
+Documents\wiki\WEB-INF\installmelast\crons.<br>
+In Linux, edit your crontab of your "tomcat" user to execute the two
+crons at system startup (everyminutewiki.cron) and daily
+(dailywiki.cron)<br>
+<br>
+All bat files for Windows are in C:\Documents and Settings\Thierry\My
+Documents\wiki\WEB-INF\installmelast\bats.<br>
+In Linux, edit your scheduled tasks oto execute the two
+bats at system startup (everyminutewiki.bat) and daily
+(dailywiki.bat)<br>
+<br>
+<br>
+<span style="font-weight: bold;">Customization of User Interface</span><br>
+<br>
+It is fairly easy to adapt the site to your corporate standards.<br>
+<br>
+All template files are in C:\Documents and Settings\Thierry\My
+Documents\wiki\WEB-INF\configs\wikidevconfig\templates. The
+following files are usually customized to edit the header and the
+footer of each page:<br>
+<br>
+<div style="margin-left: 40px;">C:\Documents and Settings\Thierry\My
+Documents\wiki\WEB-INF\configs\wikidevconfig\templates\template-core-page-header.vm<br>
+C:\Documents and Settings\Thierry\My
+Documents\wiki\WEB-INF\configs\wikidevconfig\templates\template-core-page-footer.vm<br>
+</div>
+<br>
+Other files you might want to edit to customize the look and feel of
+the application are:<br>
+<br>
+<div style="margin-left: 40px;">C:\Documents and Settings\Thierry\My
+Documents\wiki\WEB-INF\configs\wikidevconfig\setups\styles.xml<br>
+C:\Documents and Settings\Thierry\My
+Documents\wiki\WEB-INF\configs\wikidevconfig\setups\colors.xml<br>
+C:\Documents and Settings\Thierry\My
+Documents\wiki\WEB-INF\configs\wikidevconfig\setups\icons.xml<br>
+C:\Documents and Settings\Thierry\My
+Documents\wiki\css\screen.css<br>
+</div>
+<br>
+<span style="font-weight: bold;">Oracle</span><br>
+<br>
+Corendal Wiki has been tested successfully with Oracle 10g .<br>
+<br>
+The
+Oracle installation
+is very similar to the MySQL installation, except for the
+hibernate.cfg.xml files that need to be
+changed. <br>
+<br>
+Follow this template for hibernate.cfg.xml files. <br>
+<br>
+&lt;hibernate-configuration&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;session-factory
+name="java:hibernate/SessionFactory"&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;property
+name="hibernate.connection.url"&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+jdbc:oracle:thin:@(DESCRIPTION =<br>
+&nbsp;&nbsp;&nbsp; (FAILOVER = ON)<br>
+&nbsp;&nbsp;&nbsp; (ADDRESS_LIST =<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(ADDRESS=(PROTOCOL=TCP)(HOST=<span style="color: rgb(255, 102, 0);">myhost1.mydomain</span>)(PORT=<span
+ style="color: rgb(255, 102, 0);">1521</span>))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(ADDRESS=(PROTOCOL=TCP)(HOST=<span style="color: rgb(255, 102, 0);">myhost2.mydomain</span>)(PORT=<span
+ style="color: rgb(255, 102, 0);">1521</span>))<br>
+&nbsp;&nbsp;&nbsp; )<br>
+&nbsp;&nbsp;&nbsp; (CONNECT_DATA =<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (SERVICE_NAME = <span
+ style="color: rgb(255, 102, 0);">WIKI</span>)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (FAILOVER_MODE =<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (TYPE = SESSION)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (METHOD = BASIC)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (RETRIES = 180)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (DELAY = 5)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; )<br>
+&nbsp;&nbsp;&nbsp; )<br>
+&nbsp; )<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/property&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;property
+name="hibernate.connection.driver_class"&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+oracle.jdbc.driver.OracleDriver<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/property&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;property
+name="hibernate.connection.username"&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; wiki_user<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/property&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;property
+name="hibernate.default_schema"&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; wiki_user<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/property&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;property
+name="hibernate.connection.password"&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+wiki_password<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/property&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;property
+name="hibernate.connection.SetBigStringTryClob"&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; true<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/property&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;property
+name="hibernate.jdbc.batch_size"&gt;0&lt;/property&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;property
+name="hibernate.jdbc.use_streams_for_binary"&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; true<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/property&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;property
+name="hibernate.show_sql"&gt;false&lt;/property&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;property
+name="hibernate.statement_cache"&gt;0&lt;/property&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;property
+name="hibernate.transaction.factory_class"&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+org.hibernate.transaction.JDBCTransactionFactory<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/property&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;property
+name="c3p0.acquire_increment"&gt;1&lt;/property&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;property
+name="c3p0.idle_test_period"&gt;100&lt;/property&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;property
+name="c3p0.max_size"&gt;100&lt;/property&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;property
+name="c3p0.max_statements"&gt;0&lt;/property&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;property
+name="c3p0.min_size"&gt;1&lt;/property&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;property
+name="c3p0.timeout"&gt;100&lt;/property&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;/session-factory&gt;<br>
+&lt;/hibernate-configuration&gt;<br>
+<br>
+In this template, an Oracle cluster is used with two nodes:
+myhost1.mydomain and myhost2.mydomain<br>
+<br>
+The SQL scripts to create the tables and sequences in Oracle are
+included in this distribution. Instead of&nbsp; executing source
+./sql/main-wiki/shared/install/mysql/install_all_shared_mysql.sql,
+execute
+@./sql/main-wiki/shared/install/oracle/install_all_shared_oracle.sql.<br>
+<br>
+<span style="font-weight: bold;">Gotchas</span><br>
+<br>
+The Velocity templating engine creates a velocity.log file in your
+tomcat wiki at startup. Make sure that you are starting Tomcat
+under a user that has write-access to that wiki.<br>
+<br>
+It's safer to use the Sun JDK rather than the Linux vendor-supplied
+(.rpm) version.<br>
+<br>
+If Tomcat doesn't start and you used a .war file to deploy this web
+application, make sure that Tomcat deployed all files.<br>
+<span style="font-weight: bold;"></span><br>
+</body>
+</html>

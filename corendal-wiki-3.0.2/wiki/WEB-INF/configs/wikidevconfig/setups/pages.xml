@@ -1,0 +1,4696 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Version: $Id: pages.xml,v 1.36 2008/02/03 20:31:45 tdanard Exp $ -->
+<pages xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="../../schemas/pages.xsd">
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="CORE-PAGE-1" indexed-flag="Y" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Home Page</name>
+		<description>Entry point of this site</description>
+		<comment>
+			This application is dedicated to technical documentation
+			consultation and collaborative writing
+		</comment>
+		<access-key>1</access-key>
+		<urls>
+			<url absolute-flag="N" base="/" default-flag="Y"
+				directory="/home" redirect-flag="Y" />
+			<url absolute-flag="N" base="/" default-flag="N"
+				directory="/0" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.wiki.pages.DefaultHomeStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="WIKI-BLCK-16"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-38"
+					display-header-flag="Y" horizontal-order="2" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-115"
+					display-header-flag="Y" horizontal-order="3" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-2"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="2" />
+				<blockspage-block block-id="WIKI-BLCK-21"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-22"
+					display-header-flag="N" horizontal-order="1" type="SMALL"
+					vertical-order="2" />
+				<blockspage-block block-id="WIKI-BLCK-68"
+					display-header-flag="N" horizontal-order="1" type="SMALL"
+					vertical-order="3" />
+				<blockspage-block block-id="WIKI-BLCK-69"
+					display-header-flag="N" horizontal-order="1" type="SMALL"
+					vertical-order="4" />
+				<blockspage-block block-id="WIKI-BLCK-3"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="5" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="CORE-PAGE-10" indexed-flag="Y" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Basic Search</name>
+		<description>
+			To search the entire site by content type and by keyword
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/basicsearchform"
+				default-flag="Y" directory="/search" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="CORE-BLCK-10"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-25"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="CORE-PAGE-11" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Log In / Sign Up</name>
+		<description>To authenticate yourself</description>
+		<comment>
+			If you have never used this site before, you need to create
+			a user account by signing up
+		</comment>
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/loginsignup" default-flag="Y"
+				directory="/customize" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage" />
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="CORE-PAGE-12" indexed-flag="N" menu-id="CORE-MENU-2"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="FLOATING">
+		<name>View Glossary</name>
+		<description>
+			Defines each field or technical term used in this screen
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/defaultglossary"
+				default-flag="Y" directory="/help" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="CORE-BLCK-26"
+					display-header-flag="N" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="CORE-PAGE-13" indexed-flag="N" menu-id="CORE-MENU-2"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="FLOATING">
+		<name>View Glossary</name>
+		<description>
+			Defines each field or technical term used in this screen
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/alphabeticalglossary"
+				default-flag="Y" directory="/help" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="CORE-BLCK-27"
+					display-header-flag="N" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="CORE-PAGE-14" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Sign Out</name>
+		<description>To end your session</description>
+		<comment>
+			Your authentication will be lost after signing out. Sign
+			back in to return to this site
+		</comment>
+		<access-key>7</access-key>
+		<urls>
+			<url absolute-flag="N" base="/signout" default-flag="Y"
+				directory="/customize" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardSignOutPage" />
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="CORE-PAGE-15" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Help</name>
+		<description>To get help about this site</description>
+		<comment />
+		<access-key>6</access-key>
+		<urls>
+			<url absolute-flag="N" base="/" default-flag="Y"
+				directory="/help" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardTabRedirectPage" />
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="CORE-PAGE-16" indexed-flag="Y" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Glossary</name>
+		<description>
+			Definition of most technical terms used in this site
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/glossary" default-flag="Y"
+				directory="/help" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="CORE-BLCK-24"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="CORE-BLCK-23"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="CORE-PAGE-18" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name />
+		<description />
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/keepsessionalive"
+				default-flag="Y" directory="/customize" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardKeepSessionAlivePage" />
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="CORE-PAGE-19" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Forbidden</name>
+		<description>
+			Indicates that you have been denied access to the screen
+			requested
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/forbidden" default-flag="Y"
+				directory="/error" redirect-flag="N" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="WIKI-BLCK-76"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="CORE-PAGE-2" indexed-flag="Y" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="" template-type="STANDARD">
+		<name>www.mycompany.com</name>
+		<description>My Company's Home Page</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="Y" base="/" default-flag="Y"
+				directory="http://www.mycompany.com" redirect-flag="N" />
+		</urls>
+		<class name="" />
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="CORE-PAGE-201" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name />
+		<description />
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/changepassword"
+				default-flag="Y" directory="/customize" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage" />
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="CORE-PAGE-202" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="" template-type="STANDARD">
+		<name>Reset Password</name>
+		<description>
+			To gain access to this site when you have forgotten your
+			password
+		</description>
+		<comment />
+		<access-key />
+		<class name="" />
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="CORE-PAGE-203" indexed-flag="Y" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Log In</name>
+		<description>
+			To authenticate yourself giving your login and password
+		</description>
+		<comment />
+		<access-key>7</access-key>
+		<urls>
+			<url absolute-flag="N" base="/login" default-flag="Y"
+				directory="/customize" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardNTLMSignInLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="CORE-BLCK-12"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="CORE-BLCK-13"
+					display-header-flag="Y" horizontal-order="2" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-13"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="2" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="CORE-PAGE-204" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name />
+		<description />
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/signup" default-flag="Y"
+				directory="/customize" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage" />
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="CORE-PAGE-205" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name />
+		<description />
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/changelocale" default-flag="Y"
+				directory="/customize" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardChangeLocalePage" />
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="CORE-PAGE-206" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name />
+		<description />
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/changevariant"
+				default-flag="Y" directory="/customize" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardChangeVariantPage" />
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="CORE-PAGE-207" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name />
+		<description />
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/" default-flag="Y"
+				directory="/ntlm" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardNTLMSignInEntryRedirectPage" />
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="CORE-PAGE-26" indexed-flag="Y" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>My Account</name>
+		<description>
+			Displays the contact information of your user account
+		</description>
+		<comment>
+			Contact #HelpDeskName# if your account information is
+			incorrect
+		</comment>
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/myaccount" default-flag="Y"
+				directory="/mytools" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="CORE-BLCK-30"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-35"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="CORE-PAGE-27" indexed-flag="N" menu-id="CORE-MENU-3"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="FLOATING">
+		<name>Pick</name>
+		<description>To select a date from the calendar</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/calendardate" default-flag="Y"
+				directory="/lookup" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="CORE-BLCK-1"
+					display-header-flag="N" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="CORE-PAGE-32" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="CORE-PAGE-26" servlet-id="CORE-SERV-4"
+		template-type="STANDARD">
+		<name>View My Account</name>
+		<description>
+			Displays the contact information of your user account
+		</description>
+		<comment />
+
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/mytools/myphoto"
+				default-flag="Y" directory="/upload" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage" />
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="CORE-PAGE-33" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>View My Account Photo</name>
+		<description>
+			Displays the photo associated with your user account
+		</description>
+		<comment />
+
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/myaccount/myphoto"
+				default-flag="Y" directory="/mytools" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultMyAccountStandardPhotoDownloadPage" />
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="CORE-PAGE-35" indexed-flag="N" menu-id="CORE-MENU-4"
+		parent-page-id="CORE-PAGE-36" servlet-id="CORE-SERV-1"
+		template-type="FLOATING">
+		<name>Lookup</name>
+		<description>To look for a department</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/searchdepartments"
+				default-flag="Y" directory="/lookup" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="CORE-BLCK-40"
+					display-header-flag="N" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="CORE-BLCK-41"
+					display-header-flag="N" horizontal-order="1" type="LARGE"
+					vertical-order="2" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="CORE-PAGE-36" indexed-flag="N" menu-id="CORE-MENU-4"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="FLOATING">
+		<name>Lookup</name>
+		<description>To look for a department</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/defaultdepartments"
+				default-flag="Y" directory="/lookup" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="CORE-BLCK-40"
+					display-header-flag="N" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="CORE-BLCK-42"
+					display-header-flag="N" horizontal-order="1" type="LARGE"
+					vertical-order="2" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="CORE-PAGE-37" indexed-flag="N" menu-id="CORE-MENU-4"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="FLOATING">
+		<name>Lookup</name>
+		<description>Lists departments recently used</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/recentdepartments"
+				default-flag="Y" directory="/lookup" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="CORE-BLCK-42"
+					display-header-flag="N" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="CORE-PAGE-38" indexed-flag="N" menu-id="CORE-MENU-5"
+		parent-page-id="CORE-PAGE-39" servlet-id="CORE-SERV-1"
+		template-type="FLOATING">
+		<name>Lookup</name>
+		<description>
+			To look for multiple departments listed in the references
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/searchmultidepartments"
+				default-flag="Y" directory="/lookup" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="CORE-BLCK-43"
+					display-header-flag="N" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="CORE-BLCK-44"
+					display-header-flag="N" horizontal-order="1" type="LARGE"
+					vertical-order="2" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="CORE-PAGE-39" indexed-flag="N" menu-id="CORE-MENU-5"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="FLOATING">
+		<name>Lookup</name>
+		<description>
+			To look for multiple departments listed in the references
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/defaultmultidepartments"
+				default-flag="Y" directory="/lookup" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="CORE-BLCK-43"
+					display-header-flag="N" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="CORE-BLCK-45"
+					display-header-flag="N" horizontal-order="1" type="LARGE"
+					vertical-order="2" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="CORE-PAGE-40" indexed-flag="N" menu-id="CORE-MENU-5"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="FLOATING">
+		<name>Lookup</name>
+		<description>Lists departments recently used</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/recentmultidepartments"
+				default-flag="Y" directory="/lookup" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="CORE-BLCK-45"
+					display-header-flag="N" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="CORE-PAGE-41" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Departments</name>
+		<description>Lists all registered departments</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/departmentsearchform"
+				default-flag="Y" directory="/references" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage" />
+
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="CORE-PAGE-42" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Departments</name>
+		<description>
+			Lists the departments matching the search criteria entered
+		</description>
+		<comment>
+			You can refine your search criteria using the form at the
+			bottom of the screen
+		</comment>
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/departmentsearchresults"
+				default-flag="Y" directory="/references" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage" />
+
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="CORE-PAGE-43" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>View/Edit Department</name>
+		<description>To view or edit this department</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/department" default-flag="Y"
+				directory="/references" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage" />
+
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="CORE-PAGE-44" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>New Department</name>
+		<description>To create a new department</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/department/addnewdepartment"
+				default-flag="Y" directory="/references" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage" />
+
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="CORE-PAGE-45" indexed-flag="N" menu-id="CORE-MENU-6"
+		parent-page-id="CORE-PAGE-46" servlet-id="CORE-SERV-1"
+		template-type="FLOATING">
+		<name>Lookup</name>
+		<description>To look for a building</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/searchbuildings"
+				default-flag="Y" directory="/lookup" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="CORE-BLCK-52"
+					display-header-flag="N" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="CORE-BLCK-53"
+					display-header-flag="N" horizontal-order="1" type="LARGE"
+					vertical-order="2" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="CORE-PAGE-46" indexed-flag="N" menu-id="CORE-MENU-6"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="FLOATING">
+		<name>Lookup</name>
+		<description>To look for a building</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/defaultbuildings"
+				default-flag="Y" directory="/lookup" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="CORE-BLCK-52"
+					display-header-flag="N" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="CORE-BLCK-54"
+					display-header-flag="N" horizontal-order="1" type="LARGE"
+					vertical-order="2" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="CORE-PAGE-47" indexed-flag="N" menu-id="CORE-MENU-6"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="FLOATING">
+		<name>Lookup</name>
+		<description>Lists buildings recently used</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/recentbuildings"
+				default-flag="Y" directory="/lookup" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="CORE-BLCK-54"
+					display-header-flag="N" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="CORE-PAGE-48" indexed-flag="N" menu-id="CORE-MENU-7"
+		parent-page-id="CORE-PAGE-49" servlet-id="CORE-SERV-1"
+		template-type="FLOATING">
+		<name>Lookup</name>
+		<description>
+			To look for multiple buildings listed in the references
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/searchmultibuildings"
+				default-flag="Y" directory="/lookup" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="CORE-BLCK-55"
+					display-header-flag="N" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="CORE-BLCK-56"
+					display-header-flag="N" horizontal-order="1" type="LARGE"
+					vertical-order="2" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="CORE-PAGE-49" indexed-flag="N" menu-id="CORE-MENU-7"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="FLOATING">
+		<name>Lookup</name>
+		<description>
+			To look for multiple buildings listed in the references
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/defaultmultibuildings"
+				default-flag="Y" directory="/lookup" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="CORE-BLCK-55"
+					display-header-flag="N" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="CORE-BLCK-57"
+					display-header-flag="N" horizontal-order="1" type="LARGE"
+					vertical-order="2" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="CORE-PAGE-50" indexed-flag="N" menu-id="CORE-MENU-7"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="FLOATING">
+		<name>Lookup</name>
+		<description>Lists buildings recently used</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/recentmultibuildings"
+				default-flag="Y" directory="/lookup" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="CORE-BLCK-57"
+					display-header-flag="N" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="CORE-PAGE-51" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Buildings</name>
+		<description>Lists all registered buildings</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/buildingsearchform"
+				default-flag="Y" directory="/references" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage" />
+
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="CORE-PAGE-52" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Buildings</name>
+		<description>
+			Lists the buildings matching the search criteria entered
+		</description>
+		<comment>
+			You can refine your search criteria using the form at the
+			bottom of the screen
+		</comment>
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/buildingsearchresults"
+				default-flag="Y" directory="/references" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage" />
+
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="CORE-PAGE-53" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>View/Edit Building</name>
+		<description>To view or edit this building</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/building" default-flag="Y"
+				directory="/references" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage" />
+
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="CORE-PAGE-54" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>New Building</name>
+		<description>To create a new building</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/building/addnewbuilding"
+				default-flag="Y" directory="/references" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage" />
+
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="CORE-PAGE-55" indexed-flag="N" menu-id="CORE-MENU-8"
+		parent-page-id="CORE-PAGE-56" servlet-id="CORE-SERV-1"
+		template-type="FLOATING">
+		<name>Lookup</name>
+		<description>To look for a company</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/searchcompanies"
+				default-flag="Y" directory="/lookup" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="CORE-BLCK-64"
+					display-header-flag="N" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="CORE-BLCK-65"
+					display-header-flag="N" horizontal-order="1" type="LARGE"
+					vertical-order="2" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="CORE-PAGE-56" indexed-flag="N" menu-id="CORE-MENU-8"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="FLOATING">
+		<name>Lookup</name>
+		<description>To look for a company</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/defaultcompanies"
+				default-flag="Y" directory="/lookup" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="CORE-BLCK-65"
+					display-header-flag="N" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="CORE-BLCK-66"
+					display-header-flag="N" horizontal-order="1" type="LARGE"
+					vertical-order="2" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="CORE-PAGE-57" indexed-flag="N" menu-id="CORE-MENU-8"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="FLOATING">
+		<name>Lookup</name>
+		<description>Lists companies recently used</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/recentcompanies"
+				default-flag="Y" directory="/lookup" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="CORE-BLCK-66"
+					display-header-flag="N" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="CORE-PAGE-58" indexed-flag="N" menu-id="CORE-MENU-9"
+		parent-page-id="CORE-PAGE-59" servlet-id="CORE-SERV-1"
+		template-type="FLOATING">
+		<name>Lookup</name>
+		<description>
+			To look for multiple companies listed in the references
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/searchmulticompanies"
+				default-flag="Y" directory="/lookup" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="CORE-BLCK-67"
+					display-header-flag="N" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="CORE-BLCK-68"
+					display-header-flag="N" horizontal-order="1" type="LARGE"
+					vertical-order="2" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="CORE-PAGE-59" indexed-flag="N" menu-id="CORE-MENU-9"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="FLOATING">
+		<name>Lookup</name>
+		<description>
+			To look for multiple companies listed in the references
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/defaultmulticompanies"
+				default-flag="Y" directory="/lookup" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="CORE-BLCK-67"
+					display-header-flag="N" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="CORE-BLCK-69"
+					display-header-flag="N" horizontal-order="1" type="LARGE"
+					vertical-order="2" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="CORE-PAGE-60" indexed-flag="N" menu-id="CORE-MENU-9"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="FLOATING">
+		<name>Lookup</name>
+		<description>Lists companies recently used</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/recentmulticompanies"
+				default-flag="Y" directory="/lookup" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="CORE-BLCK-69"
+					display-header-flag="N" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="CORE-PAGE-61" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Companies</name>
+		<description>Lists all registered companies</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/companysearchform"
+				default-flag="Y" directory="/references" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage" />
+
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="CORE-PAGE-62" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Companies</name>
+		<description>
+			Lists the companies matching the search criteria entered
+		</description>
+		<comment>
+			You can refine your search criteria using the form at the
+			bottom of the screen
+		</comment>
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/companysearchresults"
+				default-flag="Y" directory="/references" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage" />
+
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="CORE-PAGE-63" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>View/Edit Company</name>
+		<description>To view or edit this company</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/company" default-flag="Y"
+				directory="/references" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage" />
+
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="CORE-PAGE-64" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>New Company</name>
+		<description>To create a new company</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/company/addnewcompany"
+				default-flag="Y" directory="/references" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage" />
+
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="CORE-PAGE-65" indexed-flag="N" menu-id="CORE-MENU-4"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="FLOATING">
+		<name>Lookup</name>
+		<description>
+			Lists departments you manage or departments you belong to
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/mydepartments"
+				default-flag="Y" directory="/lookup" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="CORE-BLCK-79"
+					display-header-flag="N" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="CORE-PAGE-66" indexed-flag="N" menu-id="CORE-MENU-5"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="FLOATING">
+		<name>Lookup</name>
+		<description>
+			Lists departments you manage or departments you belong to
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/mymultidepartments"
+				default-flag="Y" directory="/lookup" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="CORE-BLCK-80"
+					display-header-flag="N" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="CORE-PAGE-67" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Add to Address Book</name>
+		<description>
+			Adds your account to your address book
+		</description>
+		<comment />
+
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/myaccount/addtoaddressbook"
+				default-flag="Y" directory="/mytools" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultMyAccountStandardVCardPage" />
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="CORE-PAGE-68" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Send to Address Book</name>
+		<description>
+			Sends your account to your address book
+		</description>
+		<comment />
+
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/myaccount/sendtoaddressbook"
+				default-flag="Y" directory="/mytools" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultMyAccountStandardVCardSendPage" />
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="ADMN-PAGE-67" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="ADMN-PAGE-93" servlet-id="CORE-SERV-1"
+		template-type="STANDARD">
+		<name>Batches Monitor</name>
+		<description>
+			To control the execution of the batches associated with this
+			site
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/batchmonitor" default-flag="Y"
+				directory="/admin" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="ADMN-BLCK-83"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="ADMN-BLCK-115"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="ADMN-PAGE-68" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="ADMN-PAGE-93" servlet-id="CORE-SERV-1"
+		template-type="STANDARD">
+		<name>Emails Monitor</name>
+		<description>To view the list of pending emails</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/emailmonitor" default-flag="Y"
+				directory="/admin" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="ADMN-BLCK-84"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="ADMN-BLCK-115"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="ADMN-PAGE-69" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="ADMN-PAGE-93" servlet-id="CORE-SERV-1"
+		template-type="STANDARD">
+		<name>Warnings Monitor</name>
+		<description>To view the list of warnings</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/warningmonitor"
+				default-flag="Y" directory="/admin" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="ADMN-BLCK-85"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="ADMN-BLCK-99"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+				<blockspage-block block-id="ADMN-BLCK-115"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="2" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="ADMN-PAGE-70" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="ADMN-PAGE-93" servlet-id="CORE-SERV-1"
+		template-type="STANDARD">
+		<name>System Accounts and Groups Monitor</name>
+		<description>
+			To view the list of accounts and groups that have global
+			roles
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/accountandgroupmonitor"
+				default-flag="Y" directory="/admin" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="ADMN-BLCK-86"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="ADMN-BLCK-87"
+					display-header-flag="Y" horizontal-order="2" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="ADMN-BLCK-108"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+				<blockspage-block block-id="ADMN-BLCK-117"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="2" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="ADMN-PAGE-71" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="ADMN-PAGE-93" servlet-id="CORE-SERV-1"
+		template-type="STANDARD">
+		<name>Entry Logs Monitor</name>
+		<description>To search the list of entry logs</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/entrylogsearchform"
+				default-flag="Y" directory="/admin" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="ADMN-BLCK-89"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="ADMN-BLCK-116"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="ADMN-PAGE-72" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="ADMN-PAGE-93" servlet-id="CORE-SERV-1"
+		template-type="STANDARD">
+		<name>Entry Logs Monitor</name>
+		<description>To search the list of entry logs</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/entrylogsearchresults"
+				default-flag="Y" directory="/admin" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="ADMN-BLCK-88"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="ADMN-BLCK-89"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="2" />
+				<blockspage-block block-id="ADMN-BLCK-116"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="ADMN-PAGE-73" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="ADMN-PAGE-93" servlet-id="CORE-SERV-1"
+		template-type="STANDARD">
+		<name>Error Logs Monitor</name>
+		<description>To search the list of error logs</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/errorlogsearchform"
+				default-flag="Y" directory="/admin" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="ADMN-BLCK-91"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="ADMN-BLCK-116"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="ADMN-PAGE-74" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="ADMN-PAGE-93" servlet-id="CORE-SERV-1"
+		template-type="STANDARD">
+		<name>Error Logs Monitor</name>
+		<description>To search the list of error logs</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/errorlogsearchresults"
+				default-flag="Y" directory="/admin" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="ADMN-BLCK-90"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="ADMN-BLCK-91"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="2" />
+				<blockspage-block block-id="ADMN-BLCK-116"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="ADMN-PAGE-75" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="ADMN-PAGE-93" servlet-id="CORE-SERV-1"
+		template-type="STANDARD">
+		<name>Response Logs Monitor</name>
+		<description>To search the list of response logs</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/responselogsearchform"
+				default-flag="Y" directory="/admin" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="ADMN-BLCK-93"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="ADMN-BLCK-116"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="ADMN-PAGE-76" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="ADMN-PAGE-93" servlet-id="CORE-SERV-1"
+		template-type="STANDARD">
+		<name>Response Logs Monitor</name>
+		<description>To search the list of response logs</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/responselogsearchresults"
+				default-flag="Y" directory="/admin" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="ADMN-BLCK-92"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="ADMN-BLCK-93"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="2" />
+				<blockspage-block block-id="ADMN-BLCK-116"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="ADMN-PAGE-77" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="ADMN-PAGE-93" servlet-id="CORE-SERV-1"
+		template-type="STANDARD">
+		<name>Data Sources Monitor</name>
+		<description>To view the list of data sources</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/datasourcemonitor"
+				default-flag="Y" directory="/admin" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="ADMN-BLCK-94"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="ADMN-BLCK-115"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="ADMN-PAGE-78" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="ADMN-PAGE-93" servlet-id="CORE-SERV-1"
+		template-type="STANDARD">
+		<name>Files Monitor</name>
+		<description>To search the list of files</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/filesearchform"
+				default-flag="Y" directory="/admin" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="ADMN-BLCK-95"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="ADMN-BLCK-115"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="ADMN-PAGE-82" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="ADMN-PAGE-93" servlet-id="CORE-SERV-1"
+		template-type="STANDARD">
+		<name>Files Monitor</name>
+		<description>To search the list of files</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/filesearchresults"
+				default-flag="Y" directory="/admin" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="ADMN-BLCK-98"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="ADMN-BLCK-95"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="2" />
+				<blockspage-block block-id="ADMN-BLCK-115"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="ADMN-PAGE-79" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="ADMN-PAGE-93" servlet-id="CORE-SERV-1"
+		template-type="STANDARD">
+		<name>System Files Monitor</name>
+		<description>
+			To view the list of files that have global roles
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/systemfilemonitor"
+				default-flag="Y" directory="/admin" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="ADMN-BLCK-96"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="ADMN-BLCK-113"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+				<blockspage-block block-id="ADMN-BLCK-117"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="2" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="ADMN-PAGE-80" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="ADMN-PAGE-93" servlet-id="CORE-SERV-1"
+		template-type="STANDARD">
+		<name>System LDAP Controls Monitor</name>
+		<description>
+			To view the list of LDAP controls that have global roles
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/systemldapcontrolmonitor"
+				default-flag="Y" directory="/admin" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="ADMN-BLCK-97"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="ADMN-BLCK-111"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+				<blockspage-block block-id="ADMN-BLCK-117"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="2" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="ADMN-PAGE-81" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name />
+		<description />
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/file" default-flag="Y"
+				directory="/admin" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.administration.pages.DefaultStandardFileDownloadPage" />
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="ADMN-PAGE-83" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="ADMN-PAGE-93" servlet-id="CORE-SERV-1"
+		template-type="STANDARD">
+		<name>Warnings</name>
+		<description>
+			To view/edit warning data used in this site
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/warnings" default-flag="Y"
+				directory="/admin" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="ADMN-BLCK-100"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="ADMN-BLCK-101"
+					display-header-flag="Y" horizontal-order="2" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="ADMN-BLCK-99"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+				<blockspage-block block-id="ADMN-BLCK-115"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="2" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="ADMN-PAGE-86" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="ADMN-PAGE-93" servlet-id="CORE-SERV-1"
+		template-type="STANDARD">
+		<name>New Warning</name>
+		<description>To create a new warning</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/warnings/newwarning"
+				default-flag="Y" directory="/admin" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="ADMN-BLCK-102"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="ADMN-BLCK-115"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="ADMN-PAGE-87" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="ADMN-PAGE-93" servlet-id="CORE-SERV-1"
+		template-type="STANDARD">
+		<name>View Error Log</name>
+		<description>To view this error log</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/viewerrorlog" default-flag="Y"
+				directory="/admin" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="ADMN-BLCK-103"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="ADMN-BLCK-116"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="ADMN-PAGE-88" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="ADMN-PAGE-93" servlet-id="CORE-SERV-1"
+		template-type="STANDARD">
+		<name>Emails</name>
+		<description>
+			To view and edit email data used in this site
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/emails" default-flag="Y"
+				directory="/admin" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="ADMN-BLCK-104"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="ADMN-BLCK-105"
+					display-header-flag="Y" horizontal-order="2" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="ADMN-BLCK-106"
+					display-header-flag="Y" horizontal-order="3" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="ADMN-BLCK-107"
+					display-header-flag="Y" horizontal-order="4" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="ADMN-BLCK-115"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="2" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="ADMN-PAGE-89" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="ADMN-PAGE-93" servlet-id="CORE-SERV-1"
+		template-type="STANDARD">
+		<name>New System Account or Group</name>
+		<description>
+			To create a new account or group global to this site
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N"
+				base="/systemaccountsandgroups/newsystemaccountsandgroups"
+				default-flag="Y" directory="/admin" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="ADMN-BLCK-109"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="ADMN-BLCK-110"
+					display-header-flag="Y" horizontal-order="2" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="ADMN-BLCK-117"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="ADMN-PAGE-90" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="ADMN-PAGE-93" servlet-id="CORE-SERV-1"
+		template-type="STANDARD">
+		<name>New System LDAP Control</name>
+		<description>
+			To create a new LDAP control global to this site
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N"
+				base="/systemldapcontrols/newsystemldapcontrols" default-flag="Y"
+				directory="/admin" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="ADMN-BLCK-112"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="ADMN-BLCK-117"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="ADMN-PAGE-91" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="ADMN-PAGE-93" servlet-id="CORE-SERV-1"
+		template-type="STANDARD">
+		<name>New System File</name>
+		<description>
+			To create a new file global to this site
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/systemfiles/newsystemfile"
+				default-flag="Y" directory="/admin" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="ADMN-BLCK-114"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="ADMN-BLCK-117"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="ADMN-PAGE-92" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="ADMN-PAGE-93" servlet-id="CORE-SERV-1"
+		template-type="STANDARD">
+		<name>New System File</name>
+		<description>
+			To create a new file global to this site
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/systemfiles/newsystemfile"
+				default-flag="Y" directory="/upload" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="ADMN-BLCK-114"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="ADMN-BLCK-117"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="ADMN-PAGE-93" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Admin</name>
+		<description>To view and edit administration data</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/" default-flag="Y"
+				directory="/admin" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="ADMN-BLCK-115"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="ADMN-BLCK-116"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="2" />
+				<blockspage-block block-id="ADMN-BLCK-117"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="3" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="CORE-PAGE-3" indexed-flag="Y" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Feedback</name>
+		<description>
+			To send comments and suggestions about this site
+		</description>
+		<comment />
+		<access-key>9</access-key>
+		<urls>
+			<url absolute-flag="Y" base="#HelpDeskEmailAddress#"
+				default-flag="Y" directory="mailto:" redirect-flag="N" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage" />
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="CORE-PAGE-4" indexed-flag="Y" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Privacy Practices</name>
+		<description>
+			Describes how personal information is used in this site
+		</description>
+		<comment>
+			This document states what type of information is gathered,
+			tracked and used, and with whom the information is shared
+		</comment>
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/privacypractices"
+				default-flag="Y" directory="/references" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="WIKI-BLCK-18"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-23"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="2" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="CORE-PAGE-5" indexed-flag="Y" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Terms of Use</name>
+		<description>
+			Describes the authorized usage of this site
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/termsofuse" default-flag="Y"
+				directory="/references" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="WIKI-BLCK-19"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-23"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="2" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="CORE-PAGE-6" indexed-flag="Y" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Accessibility Statement</name>
+		<description>
+			Describes the accessibility features of this site
+		</description>
+		<comment />
+		<access-key>0</access-key>
+		<urls>
+			<url absolute-flag="N" base="/accessibilitystatement"
+				default-flag="Y" directory="/references" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="WIKI-BLCK-20"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-23"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="2" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="CORE-PAGE-7" indexed-flag="Y" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Site Index</name>
+		<description>
+			List of all screens accessible to all users in this site
+		</description>
+		<comment>Some screens may require authentication</comment>
+		<access-key>3</access-key>
+		<urls>
+			<url absolute-flag="N" base="/siteindex" default-flag="Y"
+				directory="/help" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="CORE-BLCK-29"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="CORE-BLCK-28"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="CORE-PAGE-8" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-2" template-type="STANDARD">
+		<name>Style Sheet</name>
+		<description>
+			Describes the fonts used in this site using the CSS format
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/" default-flag="Y"
+				directory="/css" redirect-flag="N" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardStyleSheetCssPage" />
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="CORE-PAGE-9" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Sorry, that file was not found</name>
+		<description>
+			<![CDATA[Indicates that the screen requested doesn't exist]]>
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/notfound" default-flag="Y"
+				directory="/error" redirect-flag="N" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="WIKI-BLCK-9"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="HLPD-PAGE-1" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="WIKI-PAGE-166" servlet-id="CORE-SERV-1"
+		template-type="STANDARD">
+		<name>User Accounts</name>
+		<description>
+			To look for a user account listed in the directory
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/accountsearchform"
+				default-flag="Y" directory="/references" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="HLPD-BLCK-3"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-226"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-219"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="2" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="HLPD-PAGE-2" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="WIKI-PAGE-166" servlet-id="CORE-SERV-1"
+		template-type="STANDARD">
+		<name>User Groups</name>
+		<description>
+			To look for a user group listed in the directory
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/groupsearchform"
+				default-flag="Y" directory="/references" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="HLPD-BLCK-6"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-228"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-219"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="2" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="HLPD-PAGE-3" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="WIKI-PAGE-166" servlet-id="CORE-SERV-1"
+		template-type="STANDARD">
+		<name>View User Group</name>
+		<description>
+			To view and edit the information associated with this user
+			group
+		</description>
+		<comment>
+			Only the owner of a user group can perform updates
+		</comment>
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/group" default-flag="Y"
+				directory="/references" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.helpdesk.pages.DefaultGroupStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="HLPD-BLCK-14"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="HLPD-BLCK-10"
+					display-header-flag="Y" horizontal-order="2" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="HLPD-BLCK-11"
+					display-header-flag="Y" horizontal-order="3" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-227"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-228"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="2" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="HLPD-PAGE-12" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name />
+		<description />
+		<comment />
+		<access-key />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.pages.DefaultStandardAccountCompletePage" />
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="HLPD-PAGE-13" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name />
+		<description />
+		<comment />
+		<access-key />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.pages.DefaultStandardGroupCompletePage" />
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="HLPD-PAGE-14" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="HLPD-PAGE-1" servlet-id="CORE-SERV-1"
+		template-type="STANDARD">
+		<name>User Account Search</name>
+		<description>
+			Lists the user accounts matching the search criteria entered
+		</description>
+		<comment>
+			You can refine your search criteria using the form at the
+			bottom of the screen
+		</comment>
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/accountsearchresults"
+				default-flag="Y" directory="/references" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="HLPD-BLCK-46"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="HLPD-BLCK-45"
+					display-header-flag="Y" horizontal-order="2" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="HLPD-BLCK-3"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="2" />
+				<blockspage-block block-id="HLPD-BLCK-43"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="HLPD-PAGE-15" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="HLPD-PAGE-2" servlet-id="CORE-SERV-1"
+		template-type="STANDARD">
+		<name>User Group Search</name>
+		<description>
+			Lists the user groups matching the search criteria entered
+		</description>
+		<comment>
+			You can refine your search criteria using the form at the
+			bottom of the screen
+		</comment>
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/groupsearchresults"
+				default-flag="Y" directory="/references" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="HLPD-BLCK-47"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="HLPD-BLCK-6"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="2" />
+				<blockspage-block block-id="HLPD-BLCK-44"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-228"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="2" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="HLPD-PAGE-17" indexed-flag="N" menu-id="HLPD-MENU-3"
+		parent-page-id="HLPD-PAGE-18" servlet-id="CORE-SERV-1"
+		template-type="FLOATING">
+		<name>Lookup</name>
+		<description>
+			To look for a user account listed in the directory
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/searchaccounts"
+				default-flag="Y" directory="/lookup" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="HLPD-BLCK-1"
+					display-header-flag="N" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="HLPD-BLCK-2"
+					display-header-flag="N" horizontal-order="1" type="LARGE"
+					vertical-order="2" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="HLPD-PAGE-18" indexed-flag="N" menu-id="HLPD-MENU-3"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="FLOATING">
+		<name>Lookup</name>
+		<description>
+			To look for a user account listed in the directory
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/defaultaccounts"
+				default-flag="Y" directory="/lookup" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="HLPD-BLCK-1"
+					display-header-flag="N" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="HLPD-BLCK-5"
+					display-header-flag="N" horizontal-order="1" type="LARGE"
+					vertical-order="2" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="HLPD-PAGE-19" indexed-flag="N" menu-id="HLPD-MENU-3"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="FLOATING">
+		<name>Lookup</name>
+		<description>Lists user accounts recently used</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/recentaccounts"
+				default-flag="Y" directory="/lookup" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="HLPD-BLCK-5"
+					display-header-flag="N" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="HLPD-PAGE-20" indexed-flag="Y" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Remove My Groups</name>
+		<description>To remove a user group you own</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/group/removegroup"
+				default-flag="Y" directory="/references" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.helpdesk.pages.DefaultGroupStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="HLPD-BLCK-20"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-228"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+				<blockspage-block block-id="HLPD-BLCK-44"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="2" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="HLPD-PAGE-22" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Add One Member</name>
+		<description>
+			To add one user account to this user group
+		</description>
+		<comment>User accounts can be added one at a time</comment>
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/group/addmember"
+				default-flag="Y" directory="/references" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.helpdesk.pages.DefaultGroupStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="HLPD-BLCK-12"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-227"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-228"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="2" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="HLPD-PAGE-23" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Add Multiple Members</name>
+		<description>
+			To add multiple user accounts to this user group
+		</description>
+		<comment>
+			If you enter a user account that is already a member of this
+			group, this user account will be ignored
+		</comment>
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/group/addmembers"
+				default-flag="Y" directory="/references" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.helpdesk.pages.DefaultGroupStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="HLPD-BLCK-15"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-227"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-228"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="2" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="HLPD-PAGE-216" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name />
+		<description />
+		<comment />
+		<access-key />
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage" />
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="HLPD-PAGE-218" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name />
+		<description />
+		<comment />
+		<access-key />
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage" />
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="HLPD-PAGE-22" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name />
+		<description />
+		<comment />
+		<access-key />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.pages.DefaultGroupStandardLargeFirstBlocksPage" />
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="HLPD-PAGE-23" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name />
+		<description />
+		<comment />
+		<access-key />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.pages.DefaultGroupStandardLargeFirstBlocksPage" />
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="HLPD-PAGE-27" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="WIKI-PAGE-166" servlet-id="CORE-SERV-1"
+		template-type="STANDARD">
+		<name>View Account</name>
+		<description>
+			Displays the contact information of this user account
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/account" default-flag="Y"
+				directory="/references" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.helpdesk.pages.DefaultAccountStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="HLPD-BLCK-22"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-75"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="HLPD-PAGE-31" indexed-flag="Y" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Help Desk</name>
+		<description>
+			To get help about this site from help desk analysts
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/helpdesk" default-flag="Y"
+				directory="/help" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="WIKI-BLCK-14"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="HLPD-PAGE-32" indexed-flag="Y" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Online Help</name>
+		<description>
+			To get help about this site by reading user documentation
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/onlinehelp" default-flag="Y"
+				directory="/help" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="WIKI-BLCK-11"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="HLPD-PAGE-33" indexed-flag="Y" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Release Notes</name>
+		<description>
+			Historical listing of new features and modifications brought
+			to this site
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/releasenotes" default-flag="Y"
+				directory="/help" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="WIKI-BLCK-12"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="HLPD-PAGE-38" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Role</name>
+		<description>
+			Displays the description and privileges of a role
+		</description>
+		<comment>Roles are assigned by help desk analysts</comment>
+		<access-key />
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage" />
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="HLPD-PAGE-39" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Privilege</name>
+		<description>
+			Displays the description of a privilege, and the roles
+			owning this privilege
+		</description>
+		<comment>Privileges are assigned by help desk analysts</comment>
+		<access-key />
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage" />
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="HLPD-PAGE-40" indexed-flag="N" menu-id="HLPD-MENU-4"
+		parent-page-id="HLPD-PAGE-41" servlet-id="CORE-SERV-1"
+		template-type="FLOATING">
+		<name>Lookup</name>
+		<description>
+			To look for a user group listed in the directory
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/searchgroups" default-flag="Y"
+				directory="/lookup" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="HLPD-BLCK-36"
+					display-header-flag="N" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="HLPD-BLCK-37"
+					display-header-flag="N" horizontal-order="1" type="LARGE"
+					vertical-order="2" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="HLPD-PAGE-41" indexed-flag="N" menu-id="HLPD-MENU-4"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="FLOATING">
+		<name>Lookup</name>
+		<description>
+			To look for a user group listed in the directory
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/defaultgroups"
+				default-flag="Y" directory="/lookup" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="HLPD-BLCK-36"
+					display-header-flag="N" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="HLPD-BLCK-8"
+					display-header-flag="N" horizontal-order="1" type="LARGE"
+					vertical-order="2" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="HLPD-PAGE-42" indexed-flag="N" menu-id="HLPD-MENU-4"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="FLOATING">
+		<name>Lookup</name>
+		<description>Lists user groups recently used</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/recentgroups" default-flag="Y"
+				directory="/lookup" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="HLPD-BLCK-8"
+					display-header-flag="N" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="HLPD-PAGE-43" indexed-flag="N" menu-id="HLPD-MENU-4"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="FLOATING">
+		<name>Lookup</name>
+		<description>Lists user groups you belong to</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/mygroups" default-flag="Y"
+				directory="/lookup" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="HLPD-BLCK-38"
+					display-header-flag="N" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="HLPD-PAGE-44" indexed-flag="N" menu-id="HLPD-MENU-5"
+		parent-page-id="HLPD-PAGE-45" servlet-id="CORE-SERV-1"
+		template-type="FLOATING">
+		<name>Lookup</name>
+		<description>
+			To look for user accounts listed in the directory
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/searchmultiaccounts"
+				default-flag="Y" directory="/lookup" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="HLPD-BLCK-59"
+					display-header-flag="N" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="HLPD-BLCK-60"
+					display-header-flag="N" horizontal-order="1" type="LARGE"
+					vertical-order="2" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="HLPD-PAGE-45" indexed-flag="N" menu-id="HLPD-MENU-5"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="FLOATING">
+		<name>Lookup</name>
+		<description>
+			To look for user accounts listed in the directory
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/defaultmultiaccounts"
+				default-flag="Y" directory="/lookup" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="HLPD-BLCK-59"
+					display-header-flag="N" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="HLPD-BLCK-61"
+					display-header-flag="N" horizontal-order="1" type="LARGE"
+					vertical-order="2" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="HLPD-PAGE-46" indexed-flag="N" menu-id="HLPD-MENU-5"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="FLOATING">
+		<name>Lookup</name>
+		<description>Lists user accounts recently used</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/recentmultiaccounts"
+				default-flag="Y" directory="/lookup" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="HLPD-BLCK-61"
+					display-header-flag="N" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="HLPD-PAGE-47" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-4" template-type="STANDARD">
+		<name>View Account</name>
+		<description>
+			Displays the contact information of this user account
+		</description>
+		<comment />
+
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/references/account/photo"
+				default-flag="Y" directory="/upload" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.helpdesk.pages.DefaultAccountStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="HLPD-BLCK-62"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="HLPD-PAGE-48" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>View Account Photo</name>
+		<description>
+			Displays the photo associated with this user account
+		</description>
+		<comment />
+
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/account/photo"
+				default-flag="Y" directory="/references" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.helpdesk.pages.DefaultAnyAccountStandardPhotoDownloadPage" />
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="HLPD-PAGE-62" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="HLPD-PAGE-70" servlet-id="CORE-SERV-1"
+		template-type="STANDARD">
+		<name>Add One Membership</name>
+		<description>
+			To add one user group membership to your user account
+		</description>
+		<comment>User accounts can be added one at a time</comment>
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/myaccount/addmembership"
+				default-flag="Y" directory="/mytools" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.helpdesk.pages.DefaultGroupStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="HLPD-BLCK-71"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="HLPD-PAGE-63" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="HLPD-PAGE-70" servlet-id="CORE-SERV-1"
+		template-type="STANDARD">
+		<name>Add Multiple Memberships</name>
+		<description>
+			To add multiple user group memberships to your user account
+		</description>
+		<comment>
+			If you enter a user group that is already a membership of
+			this account, this user group will be ignored
+		</comment>
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/myaccount/addmemberships"
+				default-flag="Y" directory="/mytools" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.helpdesk.pages.DefaultGroupStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="HLPD-BLCK-72"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="HLPD-PAGE-64" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="HLPD-PAGE-70" servlet-id="CORE-SERV-1"
+		template-type="STANDARD">
+		<name>Remove One Membership</name>
+		<description>
+			To remove one user account membership from your user account
+		</description>
+		<comment>User accounts can be removed one at a time</comment>
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/myaccount/removemembership"
+				default-flag="Y" directory="/mytools" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.helpdesk.pages.DefaultGroupStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="HLPD-BLCK-73"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="HLPD-PAGE-65" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="HLPD-PAGE-70" servlet-id="CORE-SERV-1"
+		template-type="STANDARD">
+		<name>Remove Multiple Memberships</name>
+		<description>
+			To remove multiple user group memberships from your user
+			account
+		</description>
+		<comment>
+			If you enter a user group that is not already a membership
+			of this account, this user group will be ignored
+		</comment>
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/myaccount/removememberships"
+				default-flag="Y" directory="/mytools" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.helpdesk.pages.DefaultGroupStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="HLPD-BLCK-74"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="HLPD-PAGE-66" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Add One Membership</name>
+		<description>
+			To add one user group membership to this user account
+		</description>
+		<comment>User accounts can be added one at a time</comment>
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/account/addmembership"
+				default-flag="Y" directory="/references" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.helpdesk.pages.DefaultAccountStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="HLPD-BLCK-75"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="HLPD-PAGE-67" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Add Multiple Memberships</name>
+		<description>
+			To add multiple user group memberships to this user account
+		</description>
+		<comment>
+			If you enter a user group that is already a membership of
+			this account, this user group will be ignored
+		</comment>
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/account/addmemberships"
+				default-flag="Y" directory="/references" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.helpdesk.pages.DefaultAccountStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="HLPD-BLCK-76"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="HLPD-PAGE-68" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Remove One Membership</name>
+		<description>
+			To remove one user account membership from this user account
+		</description>
+		<comment>User accounts can be removed one at a time</comment>
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/account/removemembership"
+				default-flag="Y" directory="/references" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.helpdesk.pages.DefaultAccountStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="HLPD-BLCK-77"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="HLPD-PAGE-69" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Remove Multiple Memberships</name>
+		<description>
+			To remove multiple user group memberships from this user
+			account
+		</description>
+		<comment>
+			If you enter a user group that is not already a membership
+			of this account, this user group will be ignored
+		</comment>
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/account/removememberships"
+				default-flag="Y" directory="/references" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.helpdesk.pages.DefaultAccountStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="HLPD-BLCK-78"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="HLPD-PAGE-74" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Add to Address Book</name>
+		<description>
+			Adds this account to your address book
+		</description>
+		<comment />
+
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/account/addtoaddressbook"
+				default-flag="Y" directory="/references" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.helpdesk.pages.DefaultAnyAccountStandardVCardPage" />
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="HLPD-PAGE-75" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Send to Address Book</name>
+		<description>
+			Sends this account to your address book
+		</description>
+		<comment />
+
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/account/sendtoaddressbook"
+				default-flag="Y" directory="/references" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.helpdesk.pages.DefaultAnyAccountStandardVCardSendPage" />
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="WIKI-PAGE-1" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Search</name>
+		<description>To explore the content of this site</description>
+		<comment />
+		<access-key>4</access-key>
+		<urls>
+			<url absolute-flag="N" base="/" default-flag="Y"
+				directory="/search" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardTabRedirectPage" />
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="WIKI-PAGE-10" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name />
+		<description />
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/" default-flag="Y"
+				directory="/image" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.wiki.pages.DefaultStandardImageDownloadPage" />
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="WIKI-PAGE-11" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="CORE-PAGE-1" servlet-id="CORE-SERV-1"
+		template-type="STANDARD">
+		<name>View Article</name>
+		<description>Displays the content of an article</description>
+		<comment>
+			An article can is a combination of text, images and related
+			content
+		</comment>
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/" default-flag="Y"
+				directory="/goto" redirect-flag="N" />
+		</urls>
+		<class
+			name="com.corendal.netapps.wiki.pages.DefaultArticleStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="WIKI-BLCK-16"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-38"
+					display-header-flag="Y" horizontal-order="2" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-115"
+					display-header-flag="Y" horizontal-order="3" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-21"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-22"
+					display-header-flag="N" horizontal-order="1" type="SMALL"
+					vertical-order="2" />
+				<blockspage-block block-id="WIKI-BLCK-68"
+					display-header-flag="N" horizontal-order="1" type="SMALL"
+					vertical-order="3" />
+				<blockspage-block block-id="WIKI-BLCK-69"
+					display-header-flag="N" horizontal-order="1" type="SMALL"
+					vertical-order="4" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="WIKI-PAGE-12" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="WIKI-PAGE-9" servlet-id="CORE-SERV-1"
+		template-type="STANDARD">
+		<name>Edit Related Content</name>
+		<description>
+			To request the modification of one of the articles or images
+			related to this article, or to reorganize them
+		</description>
+		<comment>
+			Only the editor of this article can reorganize this content
+		</comment>
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/editcontent" default-flag="Y"
+				directory="/article" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.wiki.pages.DefaultArticleStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="WIKI-BLCK-26"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-41"
+					display-header-flag="Y" horizontal-order="2" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-21"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="WIKI-PAGE-13" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="WIKI-PAGE-9" servlet-id="CORE-SERV-1"
+		template-type="STANDARD">
+		<name>Remove Related Content</name>
+		<description>
+			To request the removal of an article or image related to
+			this article
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/removecontent"
+				default-flag="Y" directory="/article" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.wiki.pages.DefaultArticleStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="WIKI-BLCK-27"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-21"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="WIKI-PAGE-15" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="CORE-PAGE-10" servlet-id="CORE-SERV-1"
+		template-type="STANDARD">
+		<name>Basic Search</name>
+		<description>
+			To search the entire site by content type and by keyword
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/basicsearchresults"
+				default-flag="Y" directory="/search" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="WIKI-BLCK-32"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-117"
+					display-header-flag="Y" horizontal-order="2" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="CORE-BLCK-10"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="WIKI-PAGE-16" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="WIKI-PAGE-9" servlet-id="CORE-SERV-1"
+		template-type="STANDARD">
+		<name>Add New Article</name>
+		<description>
+			To request the addition of a new article related to this
+			article
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/addnewarticle"
+				default-flag="Y" directory="/article" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.wiki.pages.DefaultArticleStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="WIKI-BLCK-28"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-21"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="WIKI-PAGE-17" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="WIKI-PAGE-9" servlet-id="CORE-SERV-1"
+		template-type="STANDARD">
+		<name>Add New Image</name>
+		<description>
+			To request the addition of a new image related to this
+			article
+		</description>
+		<comment>
+			Do not add if this image is already stored in this wiki
+		</comment>
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/addnewimage" default-flag="Y"
+				directory="/image" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.wiki.pages.DefaultArticleStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="WIKI-BLCK-29"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-21"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="WIKI-PAGE-18" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="WIKI-PAGE-9" servlet-id="CORE-SERV-1"
+		template-type="STANDARD">
+		<name />
+		<description />
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/" default-flag="Y"
+				directory="/gotoimage" redirect-flag="N" />
+		</urls>
+		<class
+			name="com.corendal.netapps.wiki.pages.DefaultStandardImageDownloadPage" />
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="WIKI-PAGE-19" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-4" template-type="STANDARD">
+		<name>Add New Image</name>
+		<description>
+			To request the addition of a new image related to this
+			article
+		</description>
+		<comment>
+			Do not add if this image is already stored in this wiki
+		</comment>
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/addimage" default-flag="Y"
+				directory="/upload" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.wiki.pages.DefaultArticleStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="WIKI-BLCK-29"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-21"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="WIKI-PAGE-2" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>My Tools</name>
+		<description>
+			To manage your account and associated tasks
+		</description>
+		<comment />
+		<access-key>5</access-key>
+		<urls>
+			<url absolute-flag="N" base="/" default-flag="Y"
+				directory="/mytools" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardTabRedirectPage" />
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="WIKI-PAGE-20" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="WIKI-PAGE-9" servlet-id="CORE-SERV-1"
+		template-type="STANDARD">
+		<name>Add Existing Content</name>
+		<description>
+			To request the addition of an existing article or image
+			related to this article
+		</description>
+		<comment>
+			You must have recently accessed this content to submit a
+			request
+		</comment>
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/addexistingcontent"
+				default-flag="Y" directory="/article" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.wiki.pages.DefaultArticleStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="WIKI-BLCK-31"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-21"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="WIKI-PAGE-21" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Request</name>
+		<description>To view or edit a content request</description>
+		<comment>
+			The approver and the initiator can edit a content request
+			only if this request is pending approval. Reference requests
+			and removal requests cannot be edited
+		</comment>
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/" default-flag="Y"
+				directory="/contentrequest" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.wiki.pages.DefaultArticleStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="WIKI-BLCK-34"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-120"
+					display-header-flag="Y" horizontal-order="2" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-37"
+					display-header-flag="Y" horizontal-order="3" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-36"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="WIKI-PAGE-22" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name />
+		<description />
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/image" default-flag="Y"
+				directory="/contentrequest" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.wiki.pages.DefaultStandardContentRequestImageDownloadPage" />
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="WIKI-PAGE-24" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="WIKI-PAGE-9" servlet-id="CORE-SERV-1"
+		template-type="STANDARD">
+		<name>Edit Article Content</name>
+		<description>
+			To request the modification of this article or to remove
+			versions of this article
+		</description>
+		<comment>
+			Only the editor of this article can remove one of its
+			versions
+		</comment>
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/edit" default-flag="Y"
+				directory="/article" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.wiki.pages.DefaultArticleStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="WIKI-BLCK-39"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-105"
+					display-header-flag="Y" horizontal-order="2" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-77"
+					display-header-flag="Y" horizontal-order="3" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-88"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-35"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="2" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="WIKI-PAGE-25" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="WIKI-PAGE-9" servlet-id="CORE-SERV-1"
+		template-type="STANDARD">
+		<name>Edit Image</name>
+		<description>
+			To request the modification of this image
+		</description>
+		<comment>
+			To avoid the creation of duplicate image versions, please
+			upload a new file ONLY IF the image itself has changed
+		</comment>
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/edit" default-flag="Y"
+				directory="/image" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.wiki.pages.DefaultImageStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="WIKI-BLCK-40"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-106"
+					display-header-flag="Y" horizontal-order="2" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-78"
+					display-header-flag="Y" horizontal-order="3" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-89"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-35"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="2" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="WIKI-PAGE-26" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-4" template-type="STANDARD">
+		<name>Edit Image</name>
+		<description>
+			To request the modification of this image
+		</description>
+		<comment>
+			To avoid the creation of duplicate image versions, please
+			upload a new file ONLY IF the image itself has changed
+		</comment>
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/editimage" default-flag="Y"
+				directory="/upload" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.wiki.pages.DefaultArticleStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="WIKI-BLCK-40"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-35"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="WIKI-PAGE-27" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>View Article Version</name>
+		<description>
+			Displays the historical content of an article
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/version" default-flag="Y"
+				directory="/article" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.wiki.pages.DefaultArticleVersionStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="WIKI-BLCK-119"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-21"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="WIKI-PAGE-28" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name />
+		<description />
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/version" default-flag="Y"
+				directory="/image" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.wiki.pages.DefaultStandardImageVersionDownloadPage" />
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="WIKI-PAGE-38" indexed-flag="Y" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Site Map</name>
+		<description>
+			Hierarchical list of all screens accessible to all users in
+			this site
+		</description>
+		<comment>Some screens may require authentication</comment>
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/sitemap" default-flag="Y"
+				directory="/help" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="CORE-BLCK-32"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="CORE-BLCK-28"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="WIKI-PAGE-39" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Article Properties</name>
+		<description>
+			Displays the properties of this article
+		</description>
+		<comment>Statistics are generated on a daily basis</comment>
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/properties" default-flag="Y"
+				directory="/article" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.wiki.pages.DefaultArticleStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="WIKI-BLCK-42"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-51"
+					display-header-flag="Y" horizontal-order="2" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-45"
+					display-header-flag="Y" horizontal-order="3" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-53"
+					display-header-flag="Y" horizontal-order="4" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-59"
+					display-header-flag="Y" horizontal-order="5" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-77"
+					display-header-flag="Y" horizontal-order="6" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-48"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-80"
+					display-header-flag="N" horizontal-order="1" type="SMALL"
+					vertical-order="2" />
+				<blockspage-block block-id="WIKI-BLCK-88"
+					display-header-flag="N" horizontal-order="1" type="SMALL"
+					vertical-order="3" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="WIKI-PAGE-4" indexed-flag="Y" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Advanced Search</name>
+		<description>
+			To search the content of this site using advanced search
+			criteria
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/advancedsearchform"
+				default-flag="Y" directory="/search" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="WIKI-BLCK-5"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-25"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="WIKI-PAGE-40" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Article Properties</name>
+		<description>
+			Displays the properties of this article
+		</description>
+		<comment>Statistics are generated on a daily basis</comment>
+		<access-key />
+		<class
+			name="com.corendal.netapps.wiki.pages.DefaultArticleStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="WIKI-BLCK-43"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-46"
+					display-header-flag="Y" horizontal-order="2" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-55"
+					display-header-flag="Y" horizontal-order="3" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-107"
+					display-header-flag="Y" horizontal-order="4" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-79"
+					display-header-flag="Y" horizontal-order="5" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-112"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-49"
+					display-header-flag="N" horizontal-order="1" type="SMALL"
+					vertical-order="2" />
+				<blockspage-block block-id="WIKI-BLCK-90"
+					display-header-flag="N" horizontal-order="1" type="SMALL"
+					vertical-order="3" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="WIKI-PAGE-41" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Image Properties</name>
+		<description>Displays the properties of this image</description>
+		<comment>Statistics are generated on a daily basis</comment>
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/properties" default-flag="Y"
+				directory="/image" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.wiki.pages.DefaultImageStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="WIKI-BLCK-44"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-52"
+					display-header-flag="Y" horizontal-order="2" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-47"
+					display-header-flag="Y" horizontal-order="3" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-54"
+					display-header-flag="Y" horizontal-order="4" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-60"
+					display-header-flag="Y" horizontal-order="5" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-78"
+					display-header-flag="Y" horizontal-order="6" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-50"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-81"
+					display-header-flag="N" horizontal-order="1" type="SMALL"
+					vertical-order="2" />
+				<blockspage-block block-id="WIKI-BLCK-89"
+					display-header-flag="N" horizontal-order="1" type="SMALL"
+					vertical-order="3" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="WIKI-PAGE-42" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Subscribe to Article</name>
+		<description>
+			To request an email notification to be sent when a new
+			version of this article is issued
+		</description>
+		<comment>
+			The recipients of this notification can be an individual
+			user or the members of a group
+		</comment>
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/addnewsubscription"
+				default-flag="Y" directory="/article" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.wiki.pages.DefaultArticleStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="WIKI-BLCK-57"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-97"
+					display-header-flag="Y" horizontal-order="2" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-63"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="WIKI-PAGE-43" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Subscribe to Image</name>
+		<description>
+			To request an email notification to be sent when a new
+			version of this image is issued
+		</description>
+		<comment>
+			The recipients of this notification can be an individual
+			user or the members of a group
+		</comment>
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/addnewsubscription"
+				default-flag="Y" directory="/image" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.wiki.pages.DefaultImageStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="WIKI-BLCK-58"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-98"
+					display-header-flag="Y" horizontal-order="2" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-65"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="WIKI-PAGE-44" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Unsubscribe to Article</name>
+		<description>
+			To stop email notifications from being sent when a new
+			version of this article is issued
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/removesubscription"
+				default-flag="Y" directory="/article" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.wiki.pages.DefaultArticleStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="WIKI-BLCK-61"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-99"
+					display-header-flag="Y" horizontal-order="2" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-64"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="WIKI-PAGE-45" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Unsubscribe to Image</name>
+		<description>
+			To stop email notifications from being sent when a new
+			version of this image is issued
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/removesubscription"
+				default-flag="Y" directory="/image" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.wiki.pages.DefaultImageStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="WIKI-BLCK-62"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-100"
+					display-header-flag="Y" horizontal-order="2" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-66"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="WIKI-PAGE-46" indexed-flag="Y" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>My Approvals</name>
+		<description>
+			Lists the content requests waiting for your approval
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/myapprovals" default-flag="Y"
+				directory="/mytools" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="WIKI-BLCK-104"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-35"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="WIKI-PAGE-48" indexed-flag="Y" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>My Subscriptions</name>
+		<description>
+			Lists the content you are subscribed to
+		</description>
+		<comment>
+			Subscriptions are articles or images from this site that you
+			want to receive by email on a regular basis
+		</comment>
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/mysubscriptions"
+				default-flag="Y" directory="/mytools" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="WIKI-BLCK-7"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-103"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-67"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="2" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="WIKI-PAGE-5" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="WIKI-PAGE-4" servlet-id="CORE-SERV-1"
+		template-type="STANDARD">
+		<name>Advanced Search</name>
+		<description>
+			To search the content of this site using advanced search
+			criteria
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/advancedsearchresults"
+				default-flag="Y" directory="/search" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="WIKI-BLCK-56"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-118"
+					display-header-flag="Y" horizontal-order="2" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-5"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="2" />
+				<blockspage-block block-id="WIKI-BLCK-25"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="WIKI-PAGE-50" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="WIKI-PAGE-166" servlet-id="CORE-SERV-1"
+		template-type="STANDARD">
+		<name>View Requests</name>
+		<description>
+			Lists the content requests submitted by this user and
+			waiting for approval
+		</description>
+		<comment>
+			Requests can be content to add, edit, or remove. Requests
+			can also be references to add or remove
+		</comment>
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/requests" default-flag="Y"
+				directory="/references" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.helpdesk.pages.DefaultAccountStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="WIKI-BLCK-70"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-75"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="WIKI-PAGE-51" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="WIKI-PAGE-166" servlet-id="CORE-SERV-1"
+		template-type="STANDARD">
+		<name>View Approvals</name>
+		<description>
+			Lists the content requests waiting for approval by this user
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/approvals" default-flag="Y"
+				directory="/references" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.helpdesk.pages.DefaultAccountStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="WIKI-BLCK-71"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-75"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="WIKI-PAGE-52" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="WIKI-PAGE-166" servlet-id="CORE-SERV-1"
+		template-type="STANDARD">
+		<name>View Subscriptions</name>
+		<description>
+			Lists the content this user subscribed to
+		</description>
+		<comment>
+			Subscriptions are articles or images from this site that the
+			user wants to receive by email on a regular basis
+		</comment>
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/subscriptions"
+				default-flag="Y" directory="/references" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.helpdesk.pages.DefaultAccountStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="WIKI-BLCK-72"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-75"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="WIKI-PAGE-53" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="WIKI-PAGE-166" servlet-id="CORE-SERV-1"
+		template-type="STANDARD">
+		<name>View Content</name>
+		<description>
+			Lists the content this user is responsible for
+		</description>
+		<comment>
+			A user is responsible for an article if this user is its
+			author. A user is responsible for all content of an article
+			if this user is its editor
+		</comment>
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/contents" default-flag="Y"
+				directory="/references" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.helpdesk.pages.DefaultAccountStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="WIKI-BLCK-74"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-73"
+					display-header-flag="Y" horizontal-order="2" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-75"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="WIKI-PAGE-54" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Add Access Group</name>
+		<description>
+			To add a group to the list of access groups of this article
+		</description>
+		<comment>
+			The editors, the associate editors, the author and the
+			subscribers of an article are always granted access
+		</comment>
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/addaccessgroup"
+				default-flag="Y" directory="/article" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.wiki.pages.DefaultArticleStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="WIKI-BLCK-82"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-91"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="WIKI-PAGE-55" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Remove Access Group</name>
+		<description>
+			To remove a group from the list of access groups of this
+			article
+		</description>
+		<comment>
+			The editors, the associate editors, the author and the
+			subscribers of an article are always granted access
+		</comment>
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/removeaccessgroup"
+				default-flag="Y" directory="/image" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.wiki.pages.DefaultImageStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="WIKI-BLCK-85"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-92"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="WIKI-PAGE-56" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Add Access Group</name>
+		<description>
+			To add a group to the list of access groups of this image
+		</description>
+		<comment>
+			The editors, the associate editors and the subscribers of an
+			image are always granted access
+		</comment>
+		<access-key />
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="WIKI-BLCK-83"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-93"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="WIKI-PAGE-57" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Remove Access Group</name>
+		<description>
+			To remove a group from the list of access groups of this
+			image
+		</description>
+		<comment>
+			The editors, the associate editors and the subscribers of an
+			image are always granted access
+		</comment>
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/removeaccessgroup"
+				default-flag="Y" directory="/article" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.wiki.pages.DefaultArticleStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="WIKI-BLCK-86"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-94"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="WIKI-PAGE-58" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Add Access Group</name>
+		<description>
+			To add a group to the list of access groups of this article
+		</description>
+		<comment>
+			The editors and the associate editors of an article are
+			always granted access
+		</comment>
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/addaccessgroup"
+				default-flag="Y" directory="/image" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.wiki.pages.DefaultImageStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="WIKI-BLCK-84"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-95"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="WIKI-PAGE-59" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Remove Access Group</name>
+		<description>
+			To remove a group from the list of access groups of this
+			article
+		</description>
+		<comment>
+			The editors and the associate editors of an article are
+			always granted access
+		</comment>
+		<access-key />
+		<class
+			name="com.corendal.netapps.wiki.pages.DefaultArticleStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="WIKI-BLCK-87"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-96"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="WIKI-PAGE-6" indexed-flag="Y" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>My Requests</name>
+		<description>
+			Lists the content requests you have submitted and waiting
+			for approval
+		</description>
+		<comment>
+			Requests can be content to add, edit or remove. Requests can
+			also be references to add or remove
+		</comment>
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/myrequests" default-flag="Y"
+				directory="/mytools" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="WIKI-BLCK-8"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-35"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="WIKI-PAGE-60" indexed-flag="Y" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>My Daily Digest</name>
+		<description>
+			Lists the content you are subscribed to on a daily basis and
+			that have been modified during a day
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/subscriptions/mydailydigest"
+				default-flag="Y" directory="/reports" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="WIKI-BLCK-101"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-103"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="WIKI-PAGE-61" indexed-flag="Y" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>My Weekly Digest</name>
+		<description>
+			Lists the content you are subscribed to on a weekly basis
+			and that have been modified within a period of 7 days
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/subscriptions/myweeklydigest"
+				default-flag="Y" directory="/reports" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="WIKI-BLCK-102"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-103"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="WIKI-PAGE-62" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name />
+		<description />
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/markashot" default-flag="Y"
+				directory="/article" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.wiki.pages.DefaultStandardArticleMarkAsHotPage" />
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="WIKI-PAGE-63" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name />
+		<description />
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/markashot" default-flag="Y"
+				directory="/image" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.wiki.pages.DefaultStandardImageMarkAsHotPage" />
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="WIKI-PAGE-64" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Subscribe to Article</name>
+		<description>
+			To request an email notification to be sent when an article
+			or image is added or modified in this article
+		</description>
+		<comment>
+			The recipients of this notification can be an individual
+			user or the members of a group
+		</comment>
+		<access-key />
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="WIKI-BLCK-108"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-110"
+					display-header-flag="Y" horizontal-order="2" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-113"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="WIKI-PAGE-65" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Unsubscribe to Article</name>
+		<description>
+			To stop email notifications from being sent when an article
+			or image is added or modified in this article
+		</description>
+		<comment />
+		<access-key />
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="WIKI-BLCK-109"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-111"
+					display-header-flag="Y" horizontal-order="2" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-114"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="WIKI-PAGE-66" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="HLPD-PAGE-32" servlet-id="CORE-SERV-1"
+		template-type="STANDARD">
+		<name>Online Help</name>
+		<description>
+			To get help about this site by reading user documentation
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/onlinehelp/goto/"
+				default-flag="Y" directory="/help" redirect-flag="N" />
+		</urls>
+		<class
+			name="com.corendal.netapps.wiki.pages.DefaultOnlineHelpArticleStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="WIKI-BLCK-11"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-122"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-121"
+					display-header-flag="N" horizontal-order="1" type="SMALL"
+					vertical-order="2" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="WIKI-PAGE-67" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name />
+		<description />
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/onlinehelp/gotoimage/"
+				default-flag="Y" directory="/help" redirect-flag="N" />
+		</urls>
+		<class
+			name="com.corendal.netapps.wiki.pages.DefaultStandardOnlineHelpImageDownloadPage" />
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="WIKI-PAGE-68" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="HLPD-PAGE-32" servlet-id="CORE-SERV-1"
+		template-type="STANDARD">
+		<name>Online Help</name>
+		<description>
+			To get help about this site by reading user documentation
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/onlinehelp/searchresults/"
+				default-flag="Y" directory="/help" redirect-flag="N" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="WIKI-BLCK-123"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-122"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-121"
+					display-header-flag="N" horizontal-order="1" type="SMALL"
+					vertical-order="2" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="HLPD-PAGE-24" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Remove One Member</name>
+		<description>
+			To remove one user account from this user group
+		</description>
+		<comment>User accounts can be removed one at a time</comment>
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/group/removemember"
+				default-flag="Y" directory="/references" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.helpdesk.pages.DefaultGroupStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="HLPD-BLCK-13"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-227"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-228"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="2" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="HLPD-PAGE-25" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Remove Multiple Members</name>
+		<description>
+			To remove multiple user accounts from this user group
+		</description>
+		<comment>
+			If you enter a user account that is not already a member of
+			this group, this user account will be ignored
+		</comment>
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/group/removemembers"
+				default-flag="Y" directory="/references" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.helpdesk.pages.DefaultGroupStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="HLPD-BLCK-16"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-227"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-228"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="2" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="HLPD-PAGE-55" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Add New Proxy</name>
+		<description>
+			To grant your transaction privileges to another person
+		</description>
+		<comment>
+			A grantee cannot grant your transaction privileges to
+			another person
+		</comment>
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/addnewproxy" default-flag="Y"
+				directory="/proxy" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="HLPD-BLCK-17"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-220"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+				<blockspage-block block-id="HLPD-BLCK-43"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="2" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="HLPD-PAGE-56" indexed-flag="Y" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Remove My Proxies</name>
+		<description>
+			To revoke transaction privileges you have granted
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/removeproxy" default-flag="Y"
+				directory="/proxy" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="HLPD-BLCK-18"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-220"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+				<blockspage-block block-id="HLPD-BLCK-43"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="2" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="HLPD-PAGE-57" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Edit My Proxies</name>
+		<description>
+			To modify an existing grant of your transaction privileges
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/editproxy" default-flag="Y"
+				directory="/proxy" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="HLPD-BLCK-19"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-220"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+				<blockspage-block block-id="HLPD-BLCK-43"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="2" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="WIKI-PAGE-166" indexed-flag="Y" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>References</name>
+		<description>
+			To view and edit reference data used in this site
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/" default-flag="Y"
+				directory="/references" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="WIKI-BLCK-219"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-23"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="HLPD-PAGE-72" indexed-flag="Y" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>My Proxies</name>
+		<description>
+			Lists the users you have granted transaction privileges to,
+			and the users you can perform transactions for
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/myproxies" default-flag="Y"
+				directory="/mytools" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="HLPD-BLCK-55"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="HLPD-BLCK-54"
+					display-header-flag="Y" horizontal-order="2" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-221"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="HLPD-PAGE-73" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="WIKI-PAGE-166" servlet-id="CORE-SERV-1"
+		template-type="STANDARD">
+		<name>View Proxies</name>
+		<description>
+			Lists the accounts this user has granted transaction
+			privileges to, and the accounts this user can perform
+			transactions for
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/proxies" default-flag="Y"
+				directory="/references" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.helpdesk.pages.DefaultAccountStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="HLPD-BLCK-48"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="HLPD-BLCK-49"
+					display-header-flag="Y" horizontal-order="2" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-75"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="HLPD-PAGE-71" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="WIKI-PAGE-166" servlet-id="CORE-SERV-1"
+		template-type="STANDARD">
+		<name>View Groups</name>
+		<description>
+			Lists the groups this user account belongs to, and the
+			groups this user account manages
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/groups" default-flag="Y"
+				directory="/references" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.helpdesk.pages.DefaultAccountStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="HLPD-BLCK-50"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="HLPD-BLCK-51"
+					display-header-flag="Y" horizontal-order="2" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-75"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="HLPD-PAGE-70" indexed-flag="Y" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>My Groups</name>
+		<description>
+			Lists the groups you belong to, and the groups you manage
+		</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/mygroups" default-flag="Y"
+				directory="/mytools" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="HLPD-BLCK-53"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="HLPD-BLCK-52"
+					display-header-flag="Y" horizontal-order="2" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-229"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+				<blockspage-block block-id="HLPD-BLCK-44"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="2" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="WIKI-PAGE-179" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Add New Group</name>
+		<description>To enter a new local user group</description>
+		<comment>
+			Personal user groups are accessible to all users but they
+			are not displayed by default in lookups
+		</comment>
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/group/addnewgroup"
+				default-flag="Y" directory="/references" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="HLPD-BLCK-9"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-228"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+				<blockspage-block block-id="HLPD-BLCK-44"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="2" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="WIKI-PAGE-180" indexed-flag="Y" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>Edit My Groups</name>
+		<description>To modify a user group you own</description>
+		<comment />
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/group/editgroup"
+				default-flag="Y" directory="/references" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.helpdesk.pages.DefaultGroupStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="HLPD-BLCK-21"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-228"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+				<blockspage-block block-id="HLPD-BLCK-44"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="2" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="Y" enabled-flag="Y"
+		id="WIKI-PAGE-7" indexed-flag="Y" menu-id="CORE-MENU-1"
+		parent-page-id="" servlet-id="CORE-SERV-1" template-type="STANDARD">
+		<name>My Content</name>
+		<description>
+			Lists the content you are responsible for
+		</description>
+		<comment>
+			You are responsible for all content related to an article if
+			you are its editor. You are responsible for an article if
+			you are its author
+		</comment>
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/mycontents" default-flag="Y"
+				directory="/mytools" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.framework.core.pages.DefaultStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="WIKI-BLCK-10"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-33"
+					display-header-flag="Y" horizontal-order="2" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-35"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+			</blockspage-blocks>
+		</class>
+	</page>
+	<page app-id="" auth-required-flag="N" enabled-flag="Y"
+		id="WIKI-PAGE-9" indexed-flag="N" menu-id="CORE-MENU-1"
+		parent-page-id="CORE-PAGE-1" servlet-id="CORE-SERV-1"
+		template-type="STANDARD">
+		<name>View Article</name>
+		<description>Displays the content of an article</description>
+		<comment>
+			An article can is a combination of text, images and related
+			content
+		</comment>
+		<access-key />
+		<urls>
+			<url absolute-flag="N" base="/" default-flag="Y"
+				directory="/article" redirect-flag="Y" />
+		</urls>
+		<class
+			name="com.corendal.netapps.wiki.pages.DefaultArticleStandardLargeFirstBlocksPage">
+			<blockspage-blocks>
+				<blockspage-block block-id="WIKI-BLCK-16"
+					display-header-flag="Y" horizontal-order="1" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-38"
+					display-header-flag="Y" horizontal-order="2" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-115"
+					display-header-flag="Y" horizontal-order="3" type="LARGE"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-21"
+					display-header-flag="Y" horizontal-order="1" type="SMALL"
+					vertical-order="1" />
+				<blockspage-block block-id="WIKI-BLCK-22"
+					display-header-flag="N" horizontal-order="1" type="SMALL"
+					vertical-order="2" />
+				<blockspage-block block-id="WIKI-BLCK-68"
+					display-header-flag="N" horizontal-order="1" type="SMALL"
+					vertical-order="3" />
+				<blockspage-block block-id="WIKI-BLCK-69"
+					display-header-flag="N" horizontal-order="1" type="SMALL"
+					vertical-order="4" />
+			</blockspage-blocks>
+		</class>
+	</page>
+</pages>

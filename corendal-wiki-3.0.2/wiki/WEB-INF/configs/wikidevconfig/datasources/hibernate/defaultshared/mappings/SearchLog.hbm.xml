@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Version: $Id: SearchLog.hbm.xml,v 1.6 2007/08/01 19:39:22 tdanard Exp $ -->
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping
+	package="com.corendal.netapps.framework.core.writedatamappings">
+	<class name="DefaultSearchLogMapping" table="search_log">
+		<id column="id" name="Id" type="string" />
+
+		<property column="cardinal" length="11" name="Cardinal"
+			not-null="true" type="integer" />
+		<property column="enabled_flag" length="1" name="EnabledFlag"
+			not-null="true" type="string" />
+		<property column="block_id" length="36" name="BlockId"
+			not-null="true" type="string" />
+		<property column="app_id" length="36" name="AppId"
+			not-null="true" type="string" />
+		<property column="criteria" length="255" name="Criteria"
+			not-null="true" type="string" />
+	</class>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractSearchLog.findEnabledByCriteria">
+		<![CDATA[
+    from DefaultSearchLogMapping
+    where Criteria = :criteria
+    and EnabledFlag = :enabledFlag
+    order by Id asc
+]]>
+	</query>
+</hibernate-mapping>

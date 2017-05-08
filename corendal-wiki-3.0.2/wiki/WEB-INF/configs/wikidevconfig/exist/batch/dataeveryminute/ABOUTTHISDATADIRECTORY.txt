@@ -1,0 +1,8 @@
+$Id: ABOUTTHISDATADIRECTORY.txt,v 1.1 2006/07/17 02:23:37 tdanard Exp $
+
+This "data" directory stores all eXist data.
+It should not be empty so that it can be copied when the
+application is archived in a zip file.
+
+If the "data" directory is not present when the servlet container starts,
+the application will fail.

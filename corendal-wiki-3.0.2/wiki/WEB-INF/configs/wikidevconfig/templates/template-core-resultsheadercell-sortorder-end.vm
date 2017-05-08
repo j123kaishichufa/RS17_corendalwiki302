@@ -1,0 +1,51 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($icnm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultIconManager"))
+
+##
+## get the icons used in this template
+##
+#set ($spacerIcon = $icnm.getSpacerStandardIcon())
+#set ($ascendingIcon = $icnm.getAscendingStandardIcon())
+#set ($descendingIcon = $icnm.getDescendingStandardIcon())
+
+##
+## get the sort order
+##
+#set($sortOrder = $rhc.getSortOrder())
+
+##
+## start a new cell
+##
+</td>
+<td width="2">@NOEOLAFTERTHIS
+
+##
+## print a spacer
+##
+#icon($spacerIcon 2 2 $alc)@NOEOLAFTERTHIS
+
+##
+## start a new cell
+##
+</td>
+<td>@NOEOLAFTERTHIS
+
+##
+## print the appropriate icon
+##
+#if ($sortOrder == 1)
+#icon($ascendingIcon $ascendingIcon.getWidth() $ascendingIcon.getHeight() $alc)@NOEOLAFTERTHIS
+#else
+#icon($descendingIcon $descendingIcon.getWidth() $descendingIcon.getHeight() $alc)@NOEOLAFTERTHIS
+#end
+
+##
+## end the table
+##
+</td>
+</tr>
+</table>@NOEOLAFTERTHIS
+## end of template. keep the empty line after this line.

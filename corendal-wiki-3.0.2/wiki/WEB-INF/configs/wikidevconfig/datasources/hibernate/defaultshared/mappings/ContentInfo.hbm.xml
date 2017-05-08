@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Version: $Id: ContentInfo.hbm.xml,v 1.2 2007/04/06 19:45:59 tdanard Exp $ -->
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.corendal.netapps.wiki.writedatamappings">
+	<class name="DefaultContentInfoMapping" table="content_info">
+		<id column="id" name="Id" type="string" />
+
+		<property column="nam" length="36" name="Name" not-null="true"
+			type="string" />
+		<property column="dsc" length="255" name="Description"
+			not-null="true" type="string" />
+		<property column="enabled_flag" length="1" name="EnabledFlag"
+			not-null="true" type="string" />
+	</class>
+	<query
+		name="com.corendal.netapps.wiki.writedatabeans.AbstractContentInfo.findByEnabledFlag">
+		<![CDATA[
+    from DefaultContentInfoMapping
+    where EnabledFlag like :enabledFlag
+    order by Id asc
+]]>
+	</query>
+</hibernate-mapping>

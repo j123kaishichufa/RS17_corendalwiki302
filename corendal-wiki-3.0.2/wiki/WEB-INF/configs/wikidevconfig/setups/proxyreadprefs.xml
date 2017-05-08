@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Version: $Id: proxyreadprefs.xml,v 1.3 2006/07/17 02:23:36 tdanard Exp $ -->
+<proxyreadprefs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="../../schemas/proxyreadpref.xsd">
+	<proxyreadpref enabled-flag="Y" id="CORE-PRPF-1" order="1">
+		<name>
+			Do NOT let this grantee access resources I can view but not
+			edit
+		</name>
+		<description />
+		<comment />
+	</proxyreadpref>
+	<proxyreadpref enabled-flag="Y" id="CORE-PRPF-2" order="2">
+		<name>
+			Let this grantee access resources I can view but not edit
+		</name>
+		<description />
+		<comment />
+	</proxyreadpref>
+</proxyreadprefs>

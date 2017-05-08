@@ -1,0 +1,80 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($stlm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultStyleManager"))
+#set ($icnm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultIconManager"))
+#set ($rm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultRequestManager"))
+
+##
+## get the writers used in this template
+##
+#set ($pws = $alc.getWriterSet())
+#set ($lw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultLinkWriter"))
+#set ($smw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultSiteMapWriter"))
+
+##
+## get the icons used in this template
+##
+#set ($spacerIcon = $icnm.getSpacerStandardIcon())
+
+##
+## get the styles used in this template
+##
+#set ($regularTextStyle = $stlm.getRegularTextStandardStyle())
+
+##
+## make a break
+##
+#if ($rm.getIsUserAgentCompatibleWithXHTML())
+<br />
+#else
+<br>
+#end
+
+##
+## print the link
+##
+$lw.getNonBreakableLinkHTML($sp.getDefaultLocation(), $sp.getShortDescriptionEncoded(), $sp.getNameHTML(), $sp.getAccessKeyEncoded())@NOEOLAFTERTHIS
+
+##
+## print all tab items
+##
+#set ($tabItemsSize = $tabItems.size())
+#if ($tabItemsSize > 0)
+
+##
+## print each tab item
+##
+#set ($tabItemsSizeMinusOne = $tabItemsSize - 1)
+#foreach ($i  in [0..$tabItemsSizeMinusOne])
+#set ($sti = $tabItems.get($i))
+
+##
+## make a break
+##
+#if ($rm.getIsUserAgentCompatibleWithXHTML())
+<br />
+#else
+<br>
+#end
+
+##
+## print the tab item
+##
+$smw.getTabItemHTML($sti)@NOEOLAFTERTHIS
+#end
+
+
+#end
+
+
+##
+## make another break
+##
+#if ($rm.getIsUserAgentCompatibleWithXHTML())
+<br />
+#else
+<br>
+#end
+## end of template. keep the empty line after this line.

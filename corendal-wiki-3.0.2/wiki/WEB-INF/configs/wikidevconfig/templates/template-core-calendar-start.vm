@@ -1,0 +1,41 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($stlm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultStyleManager"))
+#set ($msgm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultMessageManager"))
+
+##
+## get the styles used in this template
+##
+#set ($regularTextStyle = $stlm.getRegularTextStandardStyle())
+
+##
+## start the days table
+##
+<table summary="" cellpadding="2" cellspacing="2" border="1" width="100%">
+
+##
+## get the messages used in this template
+##
+#set ($sundayMessage = $msgm.getSundayStandardMessage())
+#set ($mondayMessage = $msgm.getMondayStandardMessage())
+#set ($tuesdayMessage = $msgm.getTuesdayStandardMessage())
+#set ($wednesdayMessage = $msgm.getWednesdayStandardMessage())
+#set ($thursdayMessage = $msgm.getThursdayStandardMessage())
+#set ($fridayMessage = $msgm.getFridayStandardMessage())
+#set ($saturdayMessage = $msgm.getSaturdayStandardMessage())
+
+##
+## print all days of the week
+##
+<tr>
+<td align="center" class="$regularTextStyle.getName()">$sundayMessage.getCurrentMessageEncoded()</td>
+<td align="center" class="$regularTextStyle.getName()">$mondayMessage.getCurrentMessageEncoded()</td>
+<td align="center" class="$regularTextStyle.getName()">$tuesdayMessage.getCurrentMessageEncoded()</td>
+<td align="center" class="$regularTextStyle.getName()">$wednesdayMessage.getCurrentMessageEncoded()</td>
+<td align="center" class="$regularTextStyle.getName()">$thursdayMessage.getCurrentMessageEncoded()</td>
+<td align="center" class="$regularTextStyle.getName()">$fridayMessage.getCurrentMessageEncoded()</td>
+<td align="center" class="$regularTextStyle.getName()">$saturdayMessage.getCurrentMessageEncoded()</td>
+</tr>
+## end of template. keep the empty line after this line.

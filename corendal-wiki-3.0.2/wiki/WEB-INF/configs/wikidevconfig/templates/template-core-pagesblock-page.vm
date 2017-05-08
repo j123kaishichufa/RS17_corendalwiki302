@@ -1,0 +1,114 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($am = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultAccessManager"))
+#set ($icnm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultIconManager"))
+#set ($msgm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultMessageManager"))
+#set ($stlm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultStyleManager"))
+
+##
+## get the writers used in this template
+##
+#set ($pws = $alc.getWriterSet())
+#set ($lw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultLinkWriter"))
+
+##
+## get the styles used in this template
+##
+#set ($regularTextStyle = $stlm.getRegularTextStandardStyle())
+
+##
+## get the icons used in this template
+##
+#set ($spacerIcon = $icnm.getSpacerStandardIcon())
+
+##
+## get the messages used in this template
+##
+#set ($signInRequiredMessage = $msgm.getSignInRequiredStandardMessage())
+
+##
+## get the current page
+##
+#set ($currentPage = $pages.get($pageIndex))
+#set ($currentIcon = $icons.get($pageIndex))
+#set ($type = $spb.getType())
+#set ($orderNumber = $pageIndex + 1)
+
+##
+## print a space
+##
+#if ($pageIndex > 0)
+<tr>
+#if ($type.equals("SMALL"))
+<td colspan="2">@NOEOLAFTERTHIS
+#icon($spacerIcon 10 10 $alc)@NOEOLAFTERTHIS
+</td>
+#else
+<td>@NOEOLAFTERTHIS
+#icon($spacerIcon 10 10 $alc)@NOEOLAFTERTHIS
+</td>
+#end
+</tr>
+#end
+
+##
+## start the row
+##
+<tr>
+#if ($type.equals("SMALL"))
+<td valign="top">@NOEOLAFTERTHIS
+$currentIcon@NOEOLAFTERTHIS
+</td>
+<td><span class="content">&nbsp;</span></td>
+#end
+<td>@NOEOLAFTERTHIS
+<span class="$regularTextStyle.getName()">@NOEOLAFTERTHIS
+
+##
+## add the index number if necessary
+##
+#if ($type.equals("LARGE"))
+$orderNumber.&nbsp;@NOEOLAFTERTHIS
+#end
+
+##
+## print the name as a link without a title
+##
+#if ($spb.getType().equals("LARGE"))
+$lw.getNonBreakableLinkHTML($defaultLocation, null, $currentPage.getCurrentNameHTML(), $currentPage.getAccessKeyEncoded())@NOEOLAFTERTHIS
+#else
+$lw.getBreakableLinkHTML($defaultLocation, null, $currentPage.getCurrentNameHTML(), $currentPage.getAccessKeyEncoded())@NOEOLAFTERTHIS
+#end
+
+##
+## print the page description
+##
+#if ($type.equals("LARGE"))
+#if ($currentPage.getCurrentLongDescriptionHTML())
+:&nbsp;@NOEOLAFTERTHIS
+$currentPage.getCurrentLongDescriptionHTML()@NOEOLAFTERTHIS
+#end
+#else
+#if ($currentPage.getCurrentShortDescriptionHTML())
+:&nbsp;@NOEOLAFTERTHIS
+$currentPage.getCurrentShortDescriptionHTML()@NOEOLAFTERTHIS
+#end
+#end
+
+##
+## add a comment notifying whether authentication is required
+##
+#if (($currentPage.getIsAuthRequired()) && (!($am.getIsAuthenticated())))
+&nbsp;$signInRequiredMessage.getCurrentMessageText()@NOEOLAFTERTHIS
+#end
+.@NOEOLAFTERTHIS
+
+##
+## end the row
+##
+</span>@NOEOLAFTERTHIS
+</td>
+</tr>
+## end of template. keep the empty line after this line.

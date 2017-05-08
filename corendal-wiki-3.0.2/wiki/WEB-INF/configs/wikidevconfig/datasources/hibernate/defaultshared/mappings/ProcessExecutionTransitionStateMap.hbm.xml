@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Version: $Id: ProcessExecutionTransitionStateMap.hbm.xml,v 1.1 2007/08/01 19:39:22 tdanard Exp $ -->
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping
+	package="com.corendal.netapps.framework.workflow.writedatamappings">
+	<class name="DefaultProcessExecutionTransitionStateMapMapping"
+		table="process_exe_trans_stat_map">
+		<id column="id" name="Id" type="string" />
+
+		<property column="process_exe_trans_id" length="36"
+			name="ProcessExecutionTransitionId" not-null="true" type="string" />
+		<property column="parent_process_exe_stat_id" length="36"
+			name="ParentProcessExecutionStateId" not-null="false" type="string" />
+		<property column="child_process_exe_stat_id" length="36"
+			name="ChildProcessExecutionStateId" not-null="false" type="string" />
+		<property column="process_def_trans_stat_map_id" length="36"
+			name="ProcessDefitionTransitionStateMapId" not-null="true"
+			type="string" />
+		<property column="ord" length="11" name="Order" not-null="true"
+			type="integer" />
+		<property column="enabled_flag" length="1" name="EnabledFlag"
+			not-null="true" type="string" />
+	</class>
+	<query
+		name="com.corendal.netapps.framework.workflow.writedatabeans.AbstractProcessExecutionTransitionStateMap.findEnabledByProcessExecutionTransitionPrimaryKey">
+		<![CDATA[
+    from DefaultProcessExecutionTransitionStateMapMapping
+    where ProcessExecutionTransitionId = :processExecutionTransitionId
+    and EnabledFlag = :enabledFlag
+    order by Order asc
+]]>
+	</query>
+</hibernate-mapping>

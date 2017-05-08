@@ -1,0 +1,91 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($stlm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultStyleManager"))
+#set ($icnm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultIconManager"))
+
+##
+## get the writers used in this template
+##
+#set ($pws = $alc.getWriterSet())
+#set ($lw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultLinkWriter"))
+
+##
+## get the icons used in this template
+##
+#set ($spacerIcon = $icnm.getSpacerStandardIcon())
+
+##
+## get the styles used in this template
+##
+#set ($regularTextStyle = $stlm.getRegularTextStandardStyle())
+#set ($termNameStyle = $stlm.getTermNameStandardStyle())
+
+##
+## print the anchor
+##
+#if ($nameCell)
+#if ($nameCell.getRecordNumber() != 0)
+$lw.getSkipRecordsAnchorHTML($nameCell)
+#end
+#end
+
+##
+## print the link
+##
+#if ($nameCell)
+#if ($nameCell.getSkipToRecordNumber() != 0)
+$lw.getSkipRecordsLinkHTML($nameCell)
+#end
+#end
+
+##
+## start the table
+##
+<table summary="" cellpadding="0" cellspacing="0" border="0">
+<tr>
+
+
+##
+## print the icon
+##
+<td valign="top">@NOEOLAFTERTHIS
+$illustrationCell.getValueHTML()@NOEOLAFTERTHIS
+</td>
+
+##
+## print a space
+##
+<td>@NOEOLAFTERTHIS
+<span class="$regularTextStyle.getName()">@NOEOLAFTERTHIS
+&nbsp;@NOEOLAFTERTHIS
+</span>@NOEOLAFTERTHIS
+</td>
+
+##
+## print the term
+##
+<td valign="top">@NOEOLAFTERTHIS
+#if ($nameHTML)
+#if (($descriptionHTML) && (!($descriptionHTML.equals(""))))
+<span class="$termNameStyle.getName()">$nameHTML</span><span class="$regularTextStyle.getName()">: </span><span class="$regularTextStyle.getName()">$descriptionHTML.</span>@NOEOLAFTERTHIS
+#else
+<span class="$termNameStyle.getName()">$nameHTML</span>@NOEOLAFTERTHIS
+#end
+#else
+#if (($descriptionHTML) && (!($descriptionHTML.equals(""))))
+<span class="$regularTextStyle.getName()">$descriptionHTML</span>@NOEOLAFTERTHIS
+#else
+#icon($spacerIcon 10 10 $alc)@NOEOLAFTERTHIS
+#end
+#end
+</td>
+
+##
+## close the table
+##
+</tr>
+</table>@NOEOLAFTERTHIS
+
+## end of template. keep the empty line after this line.

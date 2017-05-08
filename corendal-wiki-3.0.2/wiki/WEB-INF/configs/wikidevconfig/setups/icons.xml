@@ -1,0 +1,1100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Version: $Id: icons.xml,v 1.5 2005/11/22 04:14:52 tdanard Exp $ -->
+<icons xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="../../schemas/icons.xsd">
+	<icon enabled-flag="Y" height="12" id="CORE-ICON-1" width="23">
+		<name>/flag/newresource.png</name>
+		<title />
+		<description>Indicates a resource is new</description>
+	</icon>
+	<icon enabled-flag="Y" height="12" id="CORE-ICON-2" width="54">
+		<name>/flag/updatedresource.png</name>
+		<title />
+		<description>
+			Indicates a resource has been recently updated
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="16" id="CORE-ICON-3" width="16">
+		<name>/format/formathtml.png</name>
+		<title>Screen</title>
+		<description />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="CORE-ICON-6" width="16">
+		<name>/format/currentformathtml.png</name>
+		<title>Screen</title>
+		<description />
+	</icon>
+	<icon enabled-flag="Y" height="13" id="CORE-ICON-9" width="9">
+		<name>/framework/ascending.png</name>
+		<title />
+		<description>
+			Displayed in table headers for ascending columns
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="13" id="CORE-ICON-10" width="9">
+		<name>/framework/descending.png</name>
+		<title />
+		<description>
+			Displayed in table headers for descending columns
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="24" id="CORE-ICON-11" width="24">
+		<name>/style/curve-ltr.jpg</name>
+		<title />
+		<description>
+			Displayed in the standard header before the portal name
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="24" id="CORE-ICON-12" width="24">
+		<name>/style/curve-rtl.jpg</name>
+		<title />
+		<description>
+			Displayed in the standard header before the portal name
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="32" id="CORE-ICON-13" width="32">
+		<name>/framework/spacer.png</name>
+		<title />
+		<description>Used to create spaces</description>
+	</icon>
+	<icon enabled-flag="Y" height="3" id="CORE-ICON-14" width="10">
+		<name>/menu/menumiddlebottom.png</name>
+		<title />
+		<description>
+			Displayed in the main menu under the title of a menu item,
+			if this item is not selected
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="7" id="CORE-ICON-15" width="10">
+		<name>/menu/menumiddletop.png</name>
+		<title />
+		<description>
+			Displayed in the main menu over the title of a menu item, if
+			this item is not selected
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="3" id="CORE-ICON-16" width="10">
+		<name>/menu/menuselectedmiddlebottom.png</name>
+		<title />
+		<description>
+			Displayed in the main menu under the title of a menu item,
+			if this item is selected
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="7" id="CORE-ICON-17" width="10">
+		<name>/menu/menuselectedmiddletop.png</name>
+		<title />
+		<description>
+			Displayed in the main menu over the title of a menu item, if
+			this item is selected
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="22" id="CORE-ICON-18" width="32">
+		<name>/menu/menufirst-ltr.png</name>
+		<title />
+		<description>
+			Displayed in the main menu before the first menu item, if
+			this item is not selected
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="22" id="CORE-ICON-19" width="32">
+		<name>/menu/menulast-ltr.png</name>
+		<title />
+		<description>
+			Displayed in the main menu after the last menu item, if this
+			item is not selected
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="22" id="CORE-ICON-20" width="32">
+		<name>/menu/menuright-ltr.png</name>
+		<title />
+		<description>
+			Displayed in the main menu after a menu item, if the
+			previous and next items are not selected
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="22" id="CORE-ICON-21" width="32">
+		<name>/menu/menuselectedfirst-ltr.png</name>
+		<title />
+		<description>
+			Displayed in the main menu before the first menu item, if
+			this item is selected
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="22" id="CORE-ICON-22" width="32">
+		<name>/menu/menuselectedlast-ltr.png</name>
+		<title />
+		<description>
+			Displayed in the main menu in case the last menu item is
+			selected
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="22" id="CORE-ICON-23" width="32">
+		<name>/menu/menuselectedleft-ltr.png</name>
+		<title />
+		<description>
+			Displayed in the main menu after a menu item, if this item
+			is selected
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="22" id="CORE-ICON-24" width="32">
+		<name>/menu/menuselectedright-ltr.png</name>
+		<title />
+		<description>
+			Displayed in the main menu after a menu item, if the
+			previous item is selected
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="22" id="CORE-ICON-25" width="32">
+		<name>/menu/menufirst-rtl.png</name>
+		<title />
+		<description>
+			Displayed in the main menu before the first menu item, if
+			this item is not selected
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="22" id="CORE-ICON-26" width="32">
+		<name>/menu/menulast-rtl.png</name>
+		<title />
+		<description>
+			Displayed in the main menu after the last menu item, if this
+			item is not selected
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="22" id="CORE-ICON-27" width="32">
+		<name>/menu/menuright-rtl.png</name>
+		<title />
+		<description>
+			Displayed in the main menu after a menu item, if the
+			previous and next items are not selected
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="23" id="CORE-ICON-28" width="15">
+		<name>/menu/menuselectedfirst-rtl.png</name>
+		<title />
+		<description>
+			Displayed in the main menu before the first menu item, if
+			this item is selected
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="22" id="CORE-ICON-29" width="32">
+		<name>/menu/menuselectedlast-rtl.png</name>
+		<title />
+		<description>
+			Displayed in the main menu in case the last menu item is
+			selected
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="22" id="CORE-ICON-30" width="32">
+		<name>/menu/menuselectedleft-rtl.png</name>
+		<title />
+		<description>
+			Displayed in the main menu after a menu item, if this item
+			is selected
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="22" id="CORE-ICON-31" width="32">
+		<name>/menu/menuselectedright-rtl.png</name>
+		<title />
+		<description>
+			Displayed in the main menu after a menu item, if the
+			previous item is selected
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="3" id="CORE-ICON-32" width="10">
+		<name>/tab/whitetabselectedmiddlebottom.png</name>
+		<title />
+		<description>
+			Displayed in a tab under the title of a tab item, if this
+			item is selected
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="7" id="CORE-ICON-33" width="8">
+		<name>/tab/whitetabselectedmiddletop.png</name>
+		<title />
+		<description>
+			Displayed in a tab over the title of a tab item, if this
+			item is selected
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="3" id="CORE-ICON-34" width="10">
+		<name>/tab/whitetabmiddlebottom.png</name>
+		<title />
+		<description>
+			Displayed in a tab under the title of a tab item, if this
+			item is not selected
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="7" id="CORE-ICON-35" width="8">
+		<name>/tab/whitetabmiddletop.png</name>
+		<title />
+		<description>
+			Displayed in a tab over the title of a tab item, if this
+			item is not selected
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="3" id="CORE-ICON-36" width="10">
+		<name>/tab/whitetabbottom.png</name>
+		<title />
+		<description>
+			Displayed at the bottom tab, drawing the bottom line
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="28" id="CORE-ICON-37" width="9">
+		<name>/tab/whitetablast-ltr.png</name>
+		<title />
+		<description>
+			Displayed in a tab after the last tab item, if this item is
+			not selected
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="28" id="CORE-ICON-38" width="15">
+		<name>/tab/whitetabright-ltr.png</name>
+		<title />
+		<description>
+			Displayed in a tab after a tab item, if the previous and
+			next items are not selected
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="28" id="CORE-ICON-39" width="9">
+		<name>/tab/whitetabselectedfirst-ltr.png</name>
+		<title />
+		<description>
+			Displayed in a tab before the first tab item, if this item
+			is selected
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="28" id="CORE-ICON-40" width="9">
+		<name>/tab/whitetabselectedlast-ltr.png</name>
+		<title />
+		<description>
+			Displayed in a tab in case the last tab item is selected
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="28" id="CORE-ICON-41" width="15">
+		<name>/tab/whitetabselectedleft-ltr.png</name>
+		<title />
+		<description>
+			Displayed in a tab after a tab item, if this item is
+			selected
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="28" id="CORE-ICON-42" width="15">
+		<name>/tab/whitetabselectedright-ltr.png</name>
+		<title />
+		<description>
+			Displayed in a tab after a tab item, if the previous item is
+			selected
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="28" id="CORE-ICON-43" width="9">
+		<name>/tab/whitetabfirst-ltr.png</name>
+		<title />
+		<description>
+			Displayed in a tab before the first tab item, if this item
+			is not selected
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="9" id="CORE-ICON-44" width="9">
+		<name>/tab/whitetabbottomleftcorner-ltr.png</name>
+		<title />
+		<description>
+			Displayed at the bottom left of a tab, drawing the left
+			corner
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="9" id="CORE-ICON-45" width="9">
+		<name>/tab/whitetabbottomrightcorner-ltr.png</name>
+		<title />
+		<description>
+			Displayed at the bottom right of a tab, drawing the right
+			corner
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="3" id="CORE-ICON-46" width="9">
+		<name>/tab/whitetabtoprightcorner1-ltr.png</name>
+		<title />
+		<description>
+			Displayed at the top right of a tab, drawing the upper part
+			of the right corner
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="6" id="CORE-ICON-47" width="9">
+		<name>/tab/whitetabtoprightcorner2-ltr.png</name>
+		<title />
+		<description>
+			Displayed at the top right of a tab, drawing the bottom part
+			of the right corner
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="6" id="CORE-ICON-48" width="3">
+		<name>/tab/whitetabverticalleft-ltr.png</name>
+		<title />
+		<description>
+			Displayed on the left side of a tab, drawing the side line
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="8" id="CORE-ICON-49" width="3">
+		<name>/tab/whitetabverticalright-ltr.png</name>
+		<title />
+		<description>
+			Displayed on the right side of a tab, drawing the side line
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="28" id="CORE-ICON-50" width="9">
+		<name>/tab/whitetablast-rtl.png</name>
+		<title />
+		<description>
+			Displayed in a tab before the first tab item, if this item
+			is not selected
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="28" id="CORE-ICON-51" width="15">
+		<name>/tab/whitetabright-rtl.png</name>
+		<title />
+		<description>
+			Displayed in a tab after the last tab item, if this item is
+			not selected
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="28" id="CORE-ICON-52" width="9">
+		<name>/tab/whitetabselectedfirst-rtl.png</name>
+		<title />
+		<description>
+			Displayed in a tab after a tab item, if the previous and
+			next items are not selected
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="28" id="CORE-ICON-53" width="9">
+		<name>/tab/whitetabselectedlast-rtl.png</name>
+		<title />
+		<description>
+			Displayed in a tab before the first tab item, if this item
+			is selected
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="28" id="CORE-ICON-54" width="15">
+		<name>/tab/whitetabselectedleft-rtl.png</name>
+		<title />
+		<description>
+			Displayed in a tab in case the last tab item is selected
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="28" id="CORE-ICON-55" width="15">
+		<name>/tab/whitetabselectedright-rtl.png</name>
+		<title />
+		<description>
+			Displayed in a tab after a tab item, if this item is
+			selected
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="28" id="CORE-ICON-56" width="9">
+		<name>/tab/whitetabfirst-rtl.png</name>
+		<title />
+		<description>
+			Displayed in a tab after a tab item, if the previous item is
+			selected
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="9" id="CORE-ICON-57" width="9">
+		<name>/tab/whitetabbottomleftcorner-rtl.png</name>
+		<title />
+		<description>
+			Displayed at the bottom left of a tab, drawing the left
+			corner
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="9" id="CORE-ICON-58" width="9">
+		<name>/tab/whitetabbottomrightcorner-rtl.png</name>
+		<title />
+		<description>
+			Displayed at the bottom right of a tab, drawing the right
+			corner
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="3" id="CORE-ICON-59" width="9">
+		<name>/tab/whitetabtoprightcorner1-rtl.png</name>
+		<title />
+		<description>
+			Displayed at the top right of a tab, drawing the upper part
+			of the right corner
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="6" id="CORE-ICON-60" width="9">
+		<name>/tab/whitetabtoprightcorner2-rtl.png</name>
+		<title />
+		<description>
+			Displayed at the top right of a tab, drawing the bottom part
+			of the right corner
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="6" id="CORE-ICON-61" width="3">
+		<name>/tab/whitetabverticalleft-rtl.png</name>
+		<title />
+		<description>
+			Displayed on the left side of a tab, drawing the side line
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="8" id="CORE-ICON-62" width="3">
+		<name>/tab/whitetabverticalright-rtl.png</name>
+		<title />
+		<description>
+			Displayed on the right side of a tab, drawing the side line
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="14" id="CORE-ICON-63" width="1">
+		<name>/menu/menuselectedbackground.png</name>
+		<title />
+		<description>
+			Displayed as a background of selected menus
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="14" id="CORE-ICON-64" width="1">
+		<name>/menu/menubackground.png</name>
+		<title />
+		<description>Displayed as a background of menus</description>
+	</icon>
+	<icon enabled-flag="Y" height="24" id="CORE-ICON-65" width="1">
+		<name>/menu/menubarbackground.png</name>
+		<title />
+		<description>
+			Displayed as a background of the menu bar
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="1" id="CORE-ICON-133" width="1">
+		<name>/framework/pixel.png</name>
+		<title />
+		<description>
+			To draw lines separating the left and the right blocks of a
+			page
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="32" id="CORE-ICON-134" width="32">
+		<name>/global/corendal32x32.ico</name>
+		<title />
+		<description>
+			To display near the address, in the address bar of the user
+			browser
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="32" id="CORE-ICON-137" width="32">
+		<name>/message/okmessage.png</name>
+		<title />
+		<description>To display in validation messages</description>
+	</icon>
+	<icon enabled-flag="Y" height="32" id="CORE-ICON-138" width="32">
+		<name>/message/errormessage.png</name>
+		<title />
+		<description>To display in error messages</description>
+	</icon>
+	<icon enabled-flag="Y" height="32" id="CORE-ICON-139" width="32">
+		<name>/message/infomessage.png</name>
+		<title />
+		<description>To display in info messages</description>
+	</icon>
+	<icon enabled-flag="Y" height="57" id="CORE-ICON-141" width="250">
+		<name>/style/corendaltop-ltr.jpg</name>
+		<title />
+		<description>
+			Displayed in the standard header, specifies the name of the
+			company in left to right mode (upper part)
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="57" id="CORE-ICON-142" width="250">
+		<name>/style/corendaltop-rtl.jpg</name>
+		<title />
+		<description>
+			Displayed in the standard header, specifies the name of the
+			company in right to left mode (upper part)
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="18" id="CORE-ICON-143" width="75">
+		<name>/style/corendalbottom-ltr.jpg</name>
+		<title />
+		<description>
+			Displayed in the standard header, specifies the name of the
+			company in left to right mode (bottom part)
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="18" id="CORE-ICON-144" width="75">
+		<name>/style/corendalbottom-rtl.jpg</name>
+		<title />
+		<description>
+			Displayed in the standard header, specifies the name of the
+			company in right to left mode (bottom part)
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="75" id="CORE-ICON-145" width="280">
+		<name>/style/pageheaderbackground-ltr.jpg</name>
+		<title />
+		<description>
+			To display in the standard header as a background in left to
+			right mode
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="75" id="CORE-ICON-146" width="280">
+		<name>/style/pageheaderbackground-rtl.jpg</name>
+		<title />
+		<description>
+			To display in the standard header as a background in right
+			to left mode
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="16" id="CORE-ICON-149" width="16">
+		<name>/style/print.jpg</name>
+		<title />
+		<description>
+			To display in javascript:print() links
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="11" id="CORE-ICON-150" width="15">
+		<name>/style/glossary.jpg</name>
+		<title />
+		<description>To display in openwin(glossary) links</description>
+	</icon>
+	<icon enabled-flag="Y" height="1" id="CORE-ICON-151" width="5">
+		<name>/style/pageblockborder-ltr.jpg</name>
+		<title />
+		<description>
+			Displayed under search and entry form titles
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="1" id="CORE-ICON-152" width="5">
+		<name>/style/pageblockborder-rtl.jpg</name>
+		<title />
+		<description>
+			Displayed under search and entry form titles
+		</description>
+	</icon>
+	<icon enabled-flag="Y" height="16" id="HLPD-ICON-2" width="16">
+		<name>/directory/account.png</name>
+		<title>User Account</title>
+		<description />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="HLPD-ICON-3" width="16">
+		<name>/directory/group.png</name>
+		<title>User Group</title>
+		<description />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="HLPD-ICON-4" width="16">
+		<name>/directory/proxywithoutemail.png</name>
+		<title>Proxy Grantee (without email option)</title>
+		<description />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="HLPD-ICON-5" width="16">
+		<name>/directory/proxywithemail.png</name>
+		<title>Proxy Grantee (with email option)</title>
+		<description />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="HLPD-ICON-6" width="16">
+		<name>/directory/disabledaccount.png</name>
+		<title>Disabled User Account</title>
+		<description />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="HLPD-ICON-7" width="16">
+		<name>/directory/disabledproxywithoutemail.png</name>
+		<title>Disabled Proxy Grantee (without email option)</title>
+		<description />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="HLPD-ICON-8" width="16">
+		<name>/directory/disabledproxywithemail.png</name>
+		<title>Disabled Proxy Grantee (with email option)</title>
+		<description />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="HLPD-ICON-9" width="16">
+		<name>/directory/lotusnotesaccount.png</name>
+		<title>Lotus Notes User Account</title>
+		<description />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="HLPD-ICON-10" width="16">
+		<name>/directory/contactaccount.png</name>
+		<title>Contact User Account</title>
+		<description />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="HLPD-ICON-11" width="16">
+		<name>/directory/nativeaccount.png</name>
+		<title />
+		<description>Native Account</description>
+	</icon>
+	<icon enabled-flag="Y" height="16" id="HLPD-ICON-12" width="16">
+		<name>/directory/nativegroup.png</name>
+		<title />
+		<description>Native Group</description>
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-1" width="16">
+		<name>/docside/directory.png</name>
+		<title>Directory</title>
+		<description />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-2" width="16">
+		<name>/format/formatunk.png</name>
+		<title>Unknown Document</title>
+		<extension id="CORE-EXTN-7" direct-flag="Y" secure-flag="N" />
+		<description />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-3" width="16">
+		<name>/docside/link.png</name>
+		<title>External Link</title>
+		<description />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-4" width="16">
+		<name>/format/formattxt.png</name>
+		<title>Text Document</title>
+		<description />
+		<extension id="CORE-EXTN-1" direct-flag="Y" secure-flag="N" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-5" width="16">
+		<name>/format/formathtml.png</name>
+		<title>HTML Document</title>
+		<description />
+		<extension id="CORE-EXTN-3" direct-flag="Y" secure-flag="N" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-6" width="16">
+		<name>/format/formatexcel.png</name>
+		<title>Excel Document</title>
+		<description />
+		<extension id="CORE-EXTN-4" direct-flag="Y" secure-flag="N" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-7" width="16">
+		<name>/format/formatxml.png</name>
+		<title>XML Document</title>
+		<description />
+		<extension id="CORE-EXTN-5" direct-flag="Y" secure-flag="N" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-8" width="16">
+		<name>/format/formatword.png</name>
+		<title>Word Document</title>
+		<description />
+		<extension id="CORE-EXTN-17" direct-flag="Y" secure-flag="N" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-9" width="16">
+		<name>/format/formatpowerpoint.png</name>
+		<title>PowerPoint Document</title>
+		<description />
+		<extension id="CORE-EXTN-8" direct-flag="Y" secure-flag="N" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-10" width="16">
+		<name>/format/formataccess.png</name>
+		<title>Access Document</title>
+		<description />
+		<extension id="CORE-EXTN-9" direct-flag="Y" secure-flag="N" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-11" width="16">
+		<name>/format/formatwinzip.png</name>
+		<title>Winzip Document</title>
+		<description />
+		<extension id="CORE-EXTN-10" direct-flag="Y" secure-flag="N" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-12" width="16">
+		<name>/format/formatpublisher.png</name>
+		<title>Publisher Document</title>
+		<description />
+		<extension id="CORE-EXTN-11" direct-flag="Y" secure-flag="N" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-13" width="16">
+		<name>/format/formatpdf.png</name>
+		<title>Acrobat PDF Document</title>
+		<description />
+		<extension id="CORE-EXTN-12" direct-flag="Y" secure-flag="N" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-14" width="16">
+		<name>/format/formatgif.png</name>
+		<title>GIF Document</title>
+		<description />
+		<extension id="CORE-EXTN-13" direct-flag="Y" secure-flag="N" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-15" width="16">
+		<name>/format/formatjpeg.png</name>
+		<title>JPEG Document</title>
+		<description />
+		<extension id="CORE-EXTN-14" direct-flag="Y" secure-flag="N" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-16" width="16">
+		<name>/format/formatbitmap.png</name>
+		<title>Bitmap Document</title>
+		<description />
+		<extension id="CORE-EXTN-15" direct-flag="Y" secure-flag="N" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-17" width="16">
+		<name>/format/formatwave.png</name>
+		<title>Wave Sound Document</title>
+		<description />
+		<extension id="CORE-EXTN-16" direct-flag="Y" secure-flag="N" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-20" width="16">
+		<name>/format/formatpng.png</name>
+		<title>PNG Document</title>
+		<description />
+		<extension id="CORE-EXTN-19" direct-flag="Y" secure-flag="N" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-51" width="16">
+		<name>/format/formathtml.png</name>
+		<title>HTML Document</title>
+		<description />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-101" width="16">
+		<name>/docside/indirectdirectory.png</name>
+		<title>Directory</title>
+		<description />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-102" width="16">
+		<name>/indirectformat/indirectformatunk.png</name>
+		<title>Unknown Document</title>
+		<description />
+		<extension id="CORE-EXTN-7" direct-flag="N" secure-flag="N" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-103" width="16">
+		<name>/docside/indirectlink.png</name>
+		<title>External Link</title>
+		<description />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-104" width="16">
+		<name>/indirectformat/indirectformattxt.png</name>
+		<title>Text Document</title>
+		<description />
+		<extension id="CORE-EXTN-1" direct-flag="N" secure-flag="N" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-105" width="16">
+		<name>/indirectformat/indirectformathtml.png</name>
+		<title>HTML Document</title>
+		<description />
+		<extension id="CORE-EXTN-3" direct-flag="N" secure-flag="N" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-106" width="16">
+		<name>/indirectformat/indirectformatexcel.png</name>
+		<title>Excel Document</title>
+		<description />
+		<extension id="CORE-EXTN-4" direct-flag="N" secure-flag="N" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-107" width="16">
+		<name>/indirectformat/indirectformatxml.png</name>
+		<title>XML Document</title>
+		<description />
+		<extension id="CORE-EXTN-5" direct-flag="N" secure-flag="N" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-108" width="16">
+		<name>/indirectformat/indirectformatword.png</name>
+		<title>Word Document</title>
+		<description />
+		<extension id="CORE-EXTN-17" direct-flag="N" secure-flag="N" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-109" width="16">
+		<name>/indirectformat/indirectformatpowerpoint.png</name>
+		<title>PowerPoint Document</title>
+		<description />
+		<extension id="CORE-EXTN-8" direct-flag="N" secure-flag="N" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-110" width="16">
+		<name>/indirectformat/indirectformataccess.png</name>
+		<title>Access Document</title>
+		<description />
+		<extension id="CORE-EXTN-9" direct-flag="N" secure-flag="N" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-111" width="16">
+		<name>/indirectformat/indirectformatwinzip.png</name>
+		<title>Winzip Document</title>
+		<description />
+		<extension id="CORE-EXTN-10" direct-flag="N" secure-flag="N" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-112" width="16">
+		<name>/indirectformat/indirectformatpublisher.png</name>
+		<title>Publisher Document</title>
+		<description />
+		<extension id="CORE-EXTN-11" direct-flag="N" secure-flag="N" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-113" width="16">
+		<name>/indirectformat/indirectformatpdf.png</name>
+		<title>Acrobat PDF Document</title>
+		<description />
+		<extension id="CORE-EXTN-12" direct-flag="N" secure-flag="N" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-114" width="16">
+		<name>/indirectformat/indirectformatgif.png</name>
+		<title>GIF Document</title>
+		<description />
+		<extension id="CORE-EXTN-13" direct-flag="N" secure-flag="N" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-115" width="16">
+		<name>/indirectformat/indirectformatjpeg.png</name>
+		<title>JPEG Document</title>
+		<description />
+		<extension id="CORE-EXTN-14" direct-flag="N" secure-flag="N" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-116" width="16">
+		<name>/indirectformat/indirectformatbitmap.png</name>
+		<title>Bitmap Document</title>
+		<description />
+		<extension id="CORE-EXTN-15" direct-flag="N" secure-flag="N" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-117" width="16">
+		<name>/indirectformat/indirectformatwave.png</name>
+		<title>Wave Sound Document</title>
+		<description />
+		<extension id="CORE-EXTN-16" direct-flag="N" secure-flag="N" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-120" width="16">
+		<name>/indirectformat/indirectformatpng.png</name>
+		<title>PNG Document</title>
+		<description />
+		<extension id="CORE-EXTN-19" direct-flag="N" secure-flag="N" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-201" width="16">
+		<name>/docside/properties.png</name>
+		<title>Properties</title>
+		<description />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-501" width="16">
+		<name>/docside/securedirectory.png</name>
+		<title>Directory</title>
+		<description />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-502" width="16">
+		<name>/secureformat/secureformatunk.png</name>
+		<title>Unknown Document</title>
+		<description />
+		<extension id="CORE-EXTN-7" direct-flag="Y" secure-flag="Y" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-503" width="16">
+		<name>/docside/securelink.png</name>
+		<title>External Link</title>
+		<description />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-504" width="16">
+		<name>/secureformat/secureformattxt.png</name>
+		<title>Text Document</title>
+		<description />
+		<extension id="CORE-EXTN-1" direct-flag="Y" secure-flag="Y" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-505" width="16">
+		<name>/secureformat/secureformathtml.png</name>
+		<title>HTML Document</title>
+		<description />
+		<extension id="CORE-EXTN-3" direct-flag="Y" secure-flag="Y" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-506" width="16">
+		<name>/secureformat/secureformatexcel.png</name>
+		<title>Excel Document</title>
+		<description />
+		<extension id="CORE-EXTN-4" direct-flag="Y" secure-flag="Y" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-507" width="16">
+		<name>/secureformat/secureformatxml.png</name>
+		<title>XML Document</title>
+		<description />
+		<extension id="CORE-EXTN-5" direct-flag="Y" secure-flag="Y" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-508" width="16">
+		<name>/secureformat/secureformatword.png</name>
+		<title>Word Document</title>
+		<description />
+		<extension id="CORE-EXTN-17" direct-flag="Y" secure-flag="Y" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-509" width="16">
+		<name>/secureformat/secureformatpowerpoint.png</name>
+		<title>PowerPoint Document</title>
+		<description />
+		<extension id="CORE-EXTN-8" direct-flag="Y" secure-flag="Y" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-510" width="16">
+		<name>/secureformat/secureformataccess.png</name>
+		<title>Access Document</title>
+		<description />
+		<extension id="CORE-EXTN-9" direct-flag="Y" secure-flag="Y" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-511" width="16">
+		<name>/secureformat/secureformatwinzip.png</name>
+		<title>Winzip Document</title>
+		<description />
+		<extension id="CORE-EXTN-10" direct-flag="Y" secure-flag="Y" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-512" width="16">
+		<name>/secureformat/secureformatpublisher.png</name>
+		<title>Publisher Document</title>
+		<description />
+		<extension id="CORE-EXTN-11" direct-flag="Y" secure-flag="Y" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-513" width="16">
+		<name>/secureformat/secureformatpdf.png</name>
+		<title>Acrobat PDF Document</title>
+		<description />
+		<extension id="CORE-EXTN-12" direct-flag="Y" secure-flag="Y" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-514" width="16">
+		<name>/secureformat/secureformatgif.png</name>
+		<title>GIF Document</title>
+		<description />
+		<extension id="CORE-EXTN-13" direct-flag="Y" secure-flag="Y" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-515" width="16">
+		<name>/secureformat/secureformatjpeg.png</name>
+		<title>JPEG Document</title>
+		<description />
+		<extension id="CORE-EXTN-14" direct-flag="Y" secure-flag="Y" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-516" width="16">
+		<name>/secureformat/secureformatbitmap.png</name>
+		<title>Bitmap Document</title>
+		<description />
+		<extension id="CORE-EXTN-15" direct-flag="Y" secure-flag="Y" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-517" width="16">
+		<name>/secureformat/secureformatwave.png</name>
+		<title>Wave Sound Document</title>
+		<description />
+		<extension id="CORE-EXTN-16" direct-flag="Y" secure-flag="Y" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-520" width="16">
+		<name>/secureformat/secureformatpng.png</name>
+		<title>PNG Document</title>
+		<description />
+		<extension id="CORE-EXTN-19" direct-flag="Y" secure-flag="Y" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-551" width="16">
+		<name>/secureformat/secureformathtml.png</name>
+		<title>HTML Document</title>
+		<description />
+		<extension id="CORE-EXTN-3" direct-flag="Y" secure-flag="Y" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-601" width="16">
+		<name>/docside/indirectsecuredirectory.png</name>
+		<title>Directory</title>
+		<description />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-602" width="16">
+		<name>/indirectsecureformat/indirectsecureformatunk.png</name>
+		<title>Unknown Document</title>
+		<description />
+		<extension id="CORE-EXTN-7" direct-flag="N" secure-flag="Y" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-603" width="16">
+		<name>/docside/indirectsecurelink.png</name>
+		<title>External Link</title>
+		<description />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-604" width="16">
+		<name>/indirectsecureformat/indirectsecureformattxt.png</name>
+		<title>Text Document</title>
+		<description />
+		<extension id="CORE-EXTN-1" direct-flag="N" secure-flag="Y" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-605" width="16">
+		<name>/indirectsecureformat/indirectsecureformathtml.png</name>
+		<title>HTML Document</title>
+		<description />
+		<extension id="CORE-EXTN-3" direct-flag="N" secure-flag="Y" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-606" width="16">
+		<name>/indirectsecureformat/indirectsecureformatexcel.png</name>
+		<title>Excel Document</title>
+		<description />
+		<extension id="CORE-EXTN-4" direct-flag="N" secure-flag="Y" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-607" width="16">
+		<name>/indirectsecureformat/indirectsecureformatxml.png</name>
+		<title>XML Document</title>
+		<description />
+		<extension id="CORE-EXTN-5" direct-flag="N" secure-flag="Y" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-608" width="16">
+		<name>/indirectsecureformat/indirectsecureformatword.png</name>
+		<title>Word Document</title>
+		<description />
+		<extension id="CORE-EXTN-17" direct-flag="N" secure-flag="Y" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-609" width="16">
+		<name>
+			/indirectsecureformat/indirectsecureformatpowerpoint.png
+		</name>
+		<title>PowerPoint Document</title>
+		<description />
+		<extension id="CORE-EXTN-8" direct-flag="N" secure-flag="Y" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-610" width="16">
+		<name>
+			/indirectsecureformat/indirectsecureformataccess.png
+		</name>
+		<title>Access Document</title>
+		<description />
+		<extension id="CORE-EXTN-9" direct-flag="N" secure-flag="Y" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-611" width="16">
+		<name>
+			/indirectsecureformat/indirectsecureformatwinzip.png
+		</name>
+		<title>Winzip Document</title>
+		<description />
+		<extension id="CORE-EXTN-10" direct-flag="N" secure-flag="Y" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-612" width="16">
+		<name>
+			/indirectsecureformat/indirectsecureformatpublisher.png
+		</name>
+		<title>Publisher Document</title>
+		<description />
+		<extension id="CORE-EXTN-11" direct-flag="N" secure-flag="Y" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-613" width="16">
+		<name>/indirectsecureformat/indirectsecureformatpdf.png</name>
+		<title>Acrobat PDF Document</title>
+		<description />
+		<extension id="CORE-EXTN-12" direct-flag="N" secure-flag="Y" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-614" width="16">
+		<name>/indirectsecureformat/indirectsecureformatgif.png</name>
+		<title>GIF Document</title>
+		<description />
+		<extension id="CORE-EXTN-13" direct-flag="N" secure-flag="Y" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-615" width="16">
+		<name>/indirectsecureformat/indirectsecureformatjpeg.png</name>
+		<title>JPEG Document</title>
+		<description />
+		<extension id="CORE-EXTN-14" direct-flag="N" secure-flag="Y" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-616" width="16">
+		<name>
+			/indirectsecureformat/indirectsecureformatbitmap.png
+		</name>
+		<title>Bitmap Document</title>
+		<description />
+		<extension id="CORE-EXTN-15" direct-flag="N" secure-flag="Y" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-617" width="16">
+		<name>/indirectsecureformat/indirectsecureformatwave.png</name>
+		<title>Wave Sound Document</title>
+		<description />
+		<extension id="CORE-EXTN-16" direct-flag="N" secure-flag="Y" />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="DOCS-ICON-620" width="16">
+		<name>/indirectsecureformat/indirectsecureformatpng.png</name>
+		<title>PNG Document</title>
+		<description />
+		<extension id="CORE-EXTN-19" direct-flag="N" secure-flag="Y" />
+	</icon>
+
+	<icon enabled-flag="Y" height="16" id="WIKI-ICON-1" width="16">
+		<name>/wiki/article.png</name>
+		<title>Article</title>
+		<description />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="WIKI-ICON-101" width="16">
+		<name>/wiki/indirectarticle.png</name>
+		<title>Article</title>
+		<description />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="WIKI-ICON-201" width="16">
+		<name>/wiki/properties.png</name>
+		<title>Properties</title>
+		<description />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="WIKI-ICON-501" width="16">
+		<name>/wiki/securearticle.png</name>
+		<title>Article</title>
+		<description />
+	</icon>
+	<icon enabled-flag="Y" height="16" id="WIKI-ICON-601" width="16">
+		<name>/wiki/indirectsecurearticle.png</name>
+		<title>Article</title>
+		<description />
+	</icon>
+</icons>

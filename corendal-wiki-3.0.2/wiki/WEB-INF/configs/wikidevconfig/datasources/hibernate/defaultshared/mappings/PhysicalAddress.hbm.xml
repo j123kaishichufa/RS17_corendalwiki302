@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Version: $Id: PhysicalAddress.hbm.xml,v 1.6 2007/08/01 19:39:22 tdanard Exp $ -->
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping
+	package="com.corendal.netapps.framework.core.writedatamappings">
+	<class name="DefaultPhysicalAddressMapping" table="phys_addr">
+		<id column="id" name="Id" type="string" />
+
+		<property column="state_id" length="36" name="StateId"
+			not-null="false" type="string" />
+		<property column="post_addr_4" length="255" name="Address4"
+			not-null="false" type="string" />
+		<property column="country_id" length="36" name="CountryId"
+			not-null="false" type="string" />
+		<property column="zip_cod_id" length="36" name="ZipCodeId"
+			not-null="false" type="string" />
+		<property column="city_id" length="36" name="CityId"
+			not-null="false" type="string" />
+		<property column="post_addr_2" length="255" name="Address2"
+			not-null="false" type="string" />
+		<property column="enabled_flag" length="1" name="EnabledFlag"
+			not-null="true" type="string" />
+		<property column="post_addr_3" length="255" name="Address3"
+			not-null="false" type="string" />
+		<property column="post_addr_1" length="255" name="Address1"
+			not-null="false" type="string" />
+	</class>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractPhyscialAddress.findEnabledByAddress1">
+		<![CDATA[
+    from DefaultPhysicalAddressMapping
+    where Address1 = :address1
+    and EnabledFlag = :enabledFlag
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractPhyscialAddress.findEnabledByAddress2">
+		<![CDATA[
+    from DefaultPhysicalAddressMapping
+    where Address2 = :address2
+    and EnabledFlag = :enabledFlag
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractPhyscialAddress.findEnabledByAddress3">
+		<![CDATA[
+    from DefaultPhysicalAddressMapping
+    where Address3 = :address3
+    and EnabledFlag = :enabledFlag
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractPhyscialAddress.findEnabledByAddress4">
+		<![CDATA[
+    from DefaultPhysicalAddressMapping
+    where Address4 = :address4
+    and EnabledFlag = :enabledFlag
+]]>
+	</query>
+</hibernate-mapping>

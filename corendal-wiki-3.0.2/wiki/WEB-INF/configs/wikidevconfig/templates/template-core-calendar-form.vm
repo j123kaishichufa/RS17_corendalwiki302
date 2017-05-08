@@ -1,0 +1,119 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($stlm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultStyleManager"))
+#set ($msgm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultMessageManager"))
+#set ($rm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultRequestManager"))
+#set ($lclm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultLocaleManager"))
+
+##
+## get the writers used in this template
+##
+#set ($pws = $alc.getWriterSet())
+#set ($bw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultFormButtonWriter"))
+#set ($dlw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultDateLookupWriter"))
+
+##
+## get the messages used in this template
+##
+#set ($januaryMessage = $msgm.getJanuaryStandardMessage())
+#set ($februaryMessage = $msgm.getFebruaryStandardMessage())
+#set ($marchMessage = $msgm.getMarchStandardMessage())
+#set ($aprilMessage = $msgm.getAprilStandardMessage())
+#set ($mayMessage = $msgm.getMayStandardMessage())
+#set ($juneMessage = $msgm.getJuneStandardMessage())
+#set ($julyMessage = $msgm.getJulyStandardMessage())
+#set ($augustMessage = $msgm.getAugustStandardMessage())
+#set ($septemberMessage = $msgm.getSeptemberStandardMessage())
+#set ($octoberMessage = $msgm.getOctoberStandardMessage())
+#set ($novemberMessage = $msgm.getNovemberStandardMessage())
+#set ($decemberMessage = $msgm.getDecemberStandardMessage())
+
+##
+## get the current locale
+##
+#set ($currentLocale = $lclm.getPrimaryStandardLocale())
+
+##
+## get the styles used in this template
+##
+#set ($regularTextStyle = $stlm.getRegularTextStandardStyle())
+#set ($searchFieldStyle = $stlm.getSearchFieldStandardStyle())
+
+##
+## get the name of the form and field to populate
+##
+#set ($formName = $rm.getParameter("tform"))
+#set ($fieldName = $rm.getParameter("tfield"))
+
+##
+## start the form
+##
+<form style="padding:0; margin:0;" name="dateselector" action="$encodedLocation">
+
+#if ($rm.getIsUserAgentCompatibleWithXHTML())
+<input type="hidden" name="tform" value="$formName" />
+<input type="hidden" name="tfield" value="$fieldName" />
+#else
+<input type="hidden" name="tform" value="$formName">
+<input type="hidden" name="tfield" value="$fieldName">
+#end
+
+<table summary="" cellpadding="0" cellspacing="0" border="0">
+<tr>
+
+##
+## print the current month and year
+##
+<td width="100%" class="$regularTextStyle.getName()">@NOEOLAFTERTHIS
+$requestedMonth
+$requestedYear
+</td>
+
+
+##
+## print the selection of months
+##
+<td width="50%" align="$currentLocale.getRightAlign()">@NOEOLAFTERTHIS
+<select name="month" class="$searchFieldStyle.getName()" onChange="if (this.options[selectedIndex].value != '') document.dateselector.submit()">
+$dlw.getOptionHTML($januaryMessage.getCurrentMessageText(), $requestedMonth)
+$dlw.getOptionHTML($februaryMessage.getCurrentMessageText(), $requestedMonth)
+$dlw.getOptionHTML($marchMessage.getCurrentMessageText(), $requestedMonth)
+$dlw.getOptionHTML($aprilMessage.getCurrentMessageText(), $requestedMonth)
+$dlw.getOptionHTML($mayMessage.getCurrentMessageText(), $requestedMonth)
+$dlw.getOptionHTML($juneMessage.getCurrentMessageText(), $requestedMonth)
+$dlw.getOptionHTML($julyMessage.getCurrentMessageText(), $requestedMonth)
+$dlw.getOptionHTML($augustMessage.getCurrentMessageText(), $requestedMonth)
+$dlw.getOptionHTML($septemberMessage.getCurrentMessageText(), $requestedMonth)
+$dlw.getOptionHTML($octoberMessage.getCurrentMessageText(), $requestedMonth)
+$dlw.getOptionHTML($novemberMessage.getCurrentMessageText(), $requestedMonth)
+$dlw.getOptionHTML($decemberMessage.getCurrentMessageText(), $requestedMonth)
+</select>@NOEOLAFTERTHIS
+</td>
+
+##
+## print the selection of months
+##
+<td width="50%" align="$currentLocale.getRightAlign()">@NOEOLAFTERTHIS
+<select name="year" class="$searchFieldStyle.getName()" onChange="if (this.options[selectedIndex].value != '') document.dateselector.submit()">
+
+#foreach ($i in [$minYear..$maxYear])
+$dlw.getOptionHTML($i, $requestedYear)
+#end
+
+</select>@NOEOLAFTERTHIS
+</td>
+
+##
+## print the submit button
+##
+$bw.getHTML($changeCalendarMonthButton)
+
+##
+## end the form
+##
+</tr>
+</table>@NOEOLAFTERTHIS
+</form>
+## end of template. keep the empty line after this line.

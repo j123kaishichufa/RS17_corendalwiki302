@@ -1,0 +1,39 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($stlm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultStyleManager"))
+#set ($msgm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultMessageManager"))
+
+##
+## get the writers used in this template
+##
+#set ($pws = $alc.getWriterSet())
+#set ($lw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultLinkWriter"))
+
+##
+## get the styles used in this template
+##
+#set ($regularTextStyle = $stlm.getRegularTextStandardStyle())
+
+##
+## get the messages used in this template
+##
+#set ($printableVersionMessage = $msgm.getPrintableVersionStandardMessage())
+
+##
+## open the span
+##
+<span class="$regularTextStyle.getName()">@NOEOLAFTERTHIS
+
+##
+## add the target link
+##
+#set ($target = "_blank")
+$lw.getNonBreakableTargetLinkHTML($target, $defaultLocation, null, $printableVersionMessage.getMessageHTML(), null)@NOEOLAFTERTHIS
+
+##
+## close the span
+##
+</span>
+## end of template. keep the empty line after this line.

@@ -1,0 +1,182 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($rm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultRequestManager"))
+#set ($cm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultContentManager"))
+#set ($lclm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultLocaleManager"))
+#set ($clrm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultColorManager"))
+#set ($rpm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultResponseManager"))
+#set ($msgm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultMessageManager"))
+#set ($cfgm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultConfigManager"))
+
+##
+## get the writers used in this template
+##
+#set ($pws = $alc.getWriterSet())
+#set ($lw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultLinkWriter"))
+#set ($nw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultNavigationWriter"))
+#set ($tw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultTimerWriter"))
+
+##
+## get the current page
+##
+#set ($page = $rm.getStandardPage())
+
+##
+## get the template type
+##
+#set ($templateType = $page.getTemplateType())
+
+##
+## get the messages used in this template
+##
+#set ($copyrightMessage = $msgm.getCopyrightStandardMessage())
+
+##
+## get the timer
+##
+#set ($timer = $rpm.getTimer())
+
+##
+## get the current locale
+##
+#set ($currentLocale = $lclm.getPrimaryStandardLocale())
+
+##
+## get the colors used in this template
+##
+#set ($pageBodyColor = $clrm.getPageBodyStandardColor())
+
+##
+## get the page requested
+##
+#set ($page = $rm.getStandardPage())
+#set ($pagePk = $page.getPrimaryKey())
+
+##
+## get the location of the cgi folder
+##
+#set ($prop =  $cfgm.getStandardPropertySet())
+#set ($cgiFolder = $prop.getDefaultCgiFolder())
+
+##
+## HTML code is different depending on XHTML or HTML code
+##
+#if ($rm.getIsUserAgentCompatibleWithXHTML())
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+#else
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+#end
+
+##
+## print the time spent
+##
+$tw.getHTML($timer)
+
+##
+## print a comment specifying the page id
+##
+<!-- start of the page id : $pagePk.toString()  -->
+
+##
+## print the head of the HTML page
+##
+#if ($rm.getIsUserAgentCompatibleWithXHTML())
+<html xmlns="http://www.w3.org/1999/xhtml" lang="$currentLocale.getLocaleCode()" xml:lang="$currentLocale.getLocaleCode()" dir="$currentLocale.getLowerCaseDeleteAccentsDirection()">
+#else
+<html lang="$currentLocale.getLocaleCode()" dir="$currentLocale.getLowerCaseDeleteAccentsDirection()">
+#end
+
+##
+## start the head of the HTML page
+##
+<head>
+
+##
+## print the meta tags
+##
+#if ($rm.getIsUserAgentCompatibleWithXHTML())
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="Description" content="$page.getCurrentLongDescriptionEncoded()" />
+<meta name="Copyright" content="$copyrightMessage.getMessageEncoded()" />
+#else
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META NAME="Description" CONTENT="$page.getCurrentLongDescriptionEncoded()">
+<META NAME="Copyright" CONTENT="$copyrightMessage.getMessageEncoded()">
+#end
+
+##
+## print the title of the HTML page
+##
+<title>$titleEncoded</title>
+
+##
+## print the icon reference
+##
+#if ($shortcutIconLocation)
+#if ($rm.getIsUserAgentCompatibleWithXHTML())
+<link rel="shortcut icon" href="$shortcutIconLocation" />
+#else
+<link rel="shortcut icon" href="$shortcutIconLocation">
+#end
+#end
+
+##
+## print the navigation elements (only for a regular page)
+##
+#if (!($templateType.equals("FLOATING")))
+$nw.getHTML($cm.getNavigationBar())
+#end
+
+##
+## display the style sheet references
+##
+<style type="text/css">
+@import "$cgiFolder/css/screen.css";
+</style>
+
+##
+## display all script sheet references
+##
+<script language="javascript" src="$cgiFolder/scripts/common.js" type="text/javascript"></script>
+<script language="javascript" src="$cgiFolder/scripts/rte.js" type="text/javascript"></script>
+
+##
+## close the head of the HTML page
+##
+</head>
+
+##
+## start the body of the page
+##
+#if (!($rm.getIsPrintableMode()))
+#if ($templateType.equals("FLOATING"))
+<body bgcolor="$pageBodyColor.getColor()" style="margin: 0" onload="init();">
+#else
+#if ($applicableWarnings.size() > 0)
+<body bgcolor="$pageBodyColor.getColor()" style="margin: 0 10 15 10" onload="init();">
+#else
+<body bgcolor="$pageBodyColor.getColor()" onload="init();">
+#end
+#end
+#else
+#if ($templateType.equals("FLOATING"))
+<body bgcolor="$pageBodyColor.getColor()" style="margin: 0">
+#else
+<body bgcolor="$pageBodyColor.getColor()">
+#end
+#end
+
+##
+## add the "top" anchor
+##
+$lw.getTopAnchorHTML()
+
+##
+## add the "skip navigation" link
+##
+$lw.getSkipNavigationLinkHTML()
+
+## end of template. keep the empty line after this line.

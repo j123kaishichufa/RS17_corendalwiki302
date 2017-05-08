@@ -1,0 +1,23 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($rm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultRequestManager"))
+
+##
+## print the anchor
+##
+#if ($accessKey)
+#if ($rm.getIsUserAgentCompatibleWithXHTML())
+<a id="$anchorName" name="$anchorName" accesskey="$accessKey"></a>
+#else
+<a name="$anchorName" accesskey="$accessKey"></a>
+#end
+#else
+#if ($rm.getIsUserAgentCompatibleWithXHTML())
+<a id="$anchorName" name="$anchorName"></a>
+#else
+<a name="$anchorName"></a>
+#end
+#end
+## end of template. keep the empty line after this line.

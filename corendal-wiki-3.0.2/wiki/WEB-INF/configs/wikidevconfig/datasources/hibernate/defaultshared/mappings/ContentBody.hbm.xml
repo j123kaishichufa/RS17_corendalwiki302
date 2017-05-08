@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Version: $Id: ContentBody.hbm.xml,v 1.5 2007/06/21 14:03:07 tdanard Exp $ -->
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.corendal.netapps.wiki.writedatamappings">
+	<class name="DefaultContentBodyMapping" table="content_body">
+		<id column="id" name="Id" type="string" />
+
+		<property column="content_version_id" length="36"
+			name="ContentVersionId" not-null="true" type="string" />
+		<property column="body_text" name="BodyText" not-null="true"
+			type="string" />
+		<property column="body_html" name="BodyHtml" not-null="true"
+			type="string" />
+		<property column="enabled_flag" length="1" name="EnabledFlag"
+			not-null="true" type="string" />
+	</class>
+	<query
+		name="com.corendal.netapps.wiki.writedatabeans.AbstractArticle.removeBodies">
+		<![CDATA[
+    delete DefaultContentBodyMapping
+    where ContentVersionId = :contentVersionId
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.wiki.writedatabeans.AbstractArticleVersion.removeBodies">
+		<![CDATA[
+    delete DefaultContentBodyMapping
+    where ContentVersionId = :contentVersionId
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.wiki.writedatabeans.AbstractArticleVersion.makeObsolete">
+		<![CDATA[
+    update DefaultContentBodyMapping
+    set BodyHtml = :bodyHtml
+    where ContentVersionId = :contentVersionId
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.wiki.writedatabeans.AbstractArticle.populateBodyText">
+		<![CDATA[
+    from DefaultContentBodyMapping
+    where ContentVersionId = :contentVersionId
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.wiki.writedatabeans.AbstractArticle.populateBodyHTML">
+		<![CDATA[
+    from DefaultContentBodyMapping
+    where ContentVersionId = :contentVersionId
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.wiki.writedatabeans.AbstractArticleVersion.load">
+		<![CDATA[
+    from DefaultContentBodyMapping
+    where ContentVersionId = :contentVersionId
+]]>
+	</query>
+</hibernate-mapping>

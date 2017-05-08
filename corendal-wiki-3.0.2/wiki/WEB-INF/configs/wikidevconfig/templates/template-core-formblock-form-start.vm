@@ -1,0 +1,64 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($icnm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultIconManager"))
+
+##
+## get the writers used in this template
+##
+#set ($pws = $alc.getWriterSet())
+#set ($bw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultBlockWriter"))
+
+
+##
+## get the color of the form
+##
+#set ($sfbColor = $sfb.getStandardColor())
+
+##
+## start the table
+##
+<table summary="" width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+
+##
+## start the form. the <form> tag must be within a table to avoid spaces.
+##
+<td>@NOEOLAFTERTHIS
+
+#if ($sfb.getOnSubmitScript())
+#if ($sfb.getEncodingType())
+<form style="padding:0; margin:0;" name="$sfb.getFormName()" onsubmit="$sfb.getOnSubmitScript()" action="$formActionLocation" enctype="$sfb.getEncodingType()" accept-charset=""$formCharSet" method="$sfb.getMethod()">
+#else
+<form style="padding:0; margin:0;" name="$sfb.getFormName()" onsubmit="$sfb.getOnSubmitScript()" action="$formActionLocation" accept-charset="$formCharSet" method="$sfb.getMethod()">
+#end
+#else
+#if ($sfb.getEncodingType())
+<form style="padding:0; margin:0;" name="$sfb.getFormName()" action="$formActionLocation" enctype="$sfb.getEncodingType()" accept-charset="$formCharSet" method="$sfb.getMethod()">
+#else
+<form style="padding:0; margin:0;" name="$sfb.getFormName()" action="$formActionLocation" accept-charset="$formCharSet" method="$sfb.getMethod()">
+#end
+#end
+
+##
+## print all hidden parameters
+##
+$sfb.getHiddenParametersHTML()
+
+##
+## start the table
+##
+<table summary="" width="100%" border="0" cellpadding="0" cellspacing="0">
+
+##
+## start the first line
+##
+#if ($sfb.getBlocksSetSize() > 1)
+<tr bgcolor="$sfbColor.getColor()">
+#else
+<tr>
+#end
+
+<td>@NOEOLAFTERTHIS
+## end of template. keep the empty line after this line.

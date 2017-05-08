@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Version: $Id: ContentSubscriptionMode.xml,v 1.3 2006/07/17 02:23:37 tdanard Exp $ -->
+<xmlsource-mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../../../schemas/xmlsourcemapping.xsd"
+    package="com.corendal.netapps.wiki.readdatahandlers">
+    <class name="DefaultContentSubscriptionModeLoadHandler" collection="contentsubscriptionmodes"
+        entity="contentsubscriptionmode">
+        <id attribute="id" name="Id" type="string" />
+        
+    </class>
+    <query
+        name="com.corendal.netapps.wiki.readdatabeans.AbstractContentSubscriptionMode.findByEnabledFlag">
+        <![CDATA[for $result in /contentsubscriptionmodes/contentsubscriptionmode[@enabled-flag =
+		:enabledFlag] order by $result/@order return $result]]>
+    </query>
+    <query
+        name="com.corendal.netapps.wiki.readdatabeans.AbstractContentSubscriptionMode.findEnabledByKeyword">
+        <![CDATA[for $result in /contentsubscriptionmodes/contentsubscriptionmode[(name |= :keyword or
+		description |= :keyword or comment |= :keyword) and
+		(@enabled-flag = "Y")] return $result]]>
+    </query>
+</xmlsource-mapping>

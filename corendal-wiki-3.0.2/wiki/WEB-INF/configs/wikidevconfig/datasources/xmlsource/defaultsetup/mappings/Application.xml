@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Version: $Id: Application.xml,v 1.3 2006/07/17 02:23:37 tdanard Exp $ -->
+<xmlsource-mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="../../../../../schemas/xmlsourcemapping.xsd"
+	package="com.corendal.netapps.framework.core.readdatahandlers">
+	<class name="DefaultApplicationLoadHandler" collection="applications"
+		entity="application">
+		<id attribute="id" name="Id" type="string" />
+
+	</class>
+	<query
+		name="com.corendal.netapps.framework.core.readdatabeans.AbstractApplication.findByEnabledFlag">
+		<![CDATA[for $result in /applications/application[@enabled-flag = :enabledFlag]
+		return $result]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.readdatabeans.AbstractApplication.findEnabledByMainFlag">
+		<![CDATA[for $result in /applications/application[@main-flag = :mainFlag and @enabled-flag = "Y"]
+		return $result]]>
+	</query>
+</xmlsource-mapping>

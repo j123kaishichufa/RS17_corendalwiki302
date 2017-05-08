@@ -1,0 +1,87 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($cfgm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultConfigManager"))
+#set ($cttm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultContentManager"))
+#set ($rm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultRequestManager"))
+#set ($icnm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultIconManager"))
+
+##
+## get the writers used in this template
+##
+#set ($pws = $alc.getWriterSet())
+#set ($pw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultPageWriter"))
+#set ($mw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultMenuWriter"))
+#set ($tw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultTabWriter"))
+#set ($ww = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultWarningWriter"))
+
+##
+## get the current page
+##
+#set ($page = $rm.getStandardPage())
+
+##
+## get the current menu
+##
+#set ($menu = $cttm.getStandardMenu())
+
+
+##
+## get the current tab
+##
+#set ($menuItems = $menu.getMenuItems())
+#set ($menuItem = $menu.getCurrentMenuItem())
+#set ($tabItems = $menuItem.getTabItems())
+
+##
+## get the template type
+##
+#set ($templateType = $page.getTemplateType())
+
+##
+## get the location of the images folder
+##
+#set ($prop =  $cfgm.getStandardPropertySet())
+#set ($imagesFolder = $prop.getImagesFolder())
+
+##
+## print the company name and application name
+##
+#if ((!($rm.getIsPrintableMode())) && (!($templateType.equals("FLOATING"))))
+$prop.getCompanyNameHTML() $prop.getApplicationNameHTML()@NOEOLAFTERTHIS
+#if ($rm.getIsUserAgentCompatibleWithXHTML())@NOEOLAFTERTHIS
+<br />@NOEOLAFTERTHIS
+#else
+<br>@NOEOLAFTERTHIS
+#end
+#end
+
+##
+## print the warning
+##
+#if ((!($rm.getIsPrintableMode())))
+$ww.getHTML()
+#end
+
+
+##
+## print the menu
+##
+#if ((!($rm.getIsPrintableMode())))
+#if ($menu)
+$mw.getHTML($menu)@NOEOLAFTERTHIS
+#end
+#end
+    
+
+##
+## print the tab
+##
+#if ((!($rm.getIsPrintableMode())))
+#set ($tabItemsSize = $tabItems.size())
+#if ($tabItemsSize > 0)
+$tw.getHTML($menuItem)@NOEOLAFTERTHIS
+#end
+#end
+## end of template. keep the empty line after this line.

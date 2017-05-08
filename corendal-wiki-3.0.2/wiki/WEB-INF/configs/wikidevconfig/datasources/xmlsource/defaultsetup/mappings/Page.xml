@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Version: $Id: Page.xml,v 1.3 2006/07/17 02:23:37 tdanard Exp $ -->
+<xmlsource-mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="../../../../../schemas/xmlsourcemapping.xsd"
+	package="com.corendal.netapps.framework.core.readdatahandlers">
+	<class name="DefaultPageLoadHandler" collection="pages"
+		entity="page">
+		<id attribute="id" name="Id" type="string" />
+
+	</class>
+	<query
+		name="com.corendal.netapps.framework.core.readdatabeans.AbstractBlock.findEnabledByPagePrimaryKeyAndType">
+		<![CDATA[for $result in /pages/page[@id = :pageId] return
+		$result/class/blockspage-blocks/blockspage-block[@type = :type]]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.readdatabeans.AbstractPage.findByEnabledFlag">
+		<![CDATA[for $result in /pages/page[@enabled-flag = :enabledFlag] return
+		$result]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.readdatabeans.AbstractPage.findEnabledByKeyword">
+		<![CDATA[for $result in /pages/page[(name |= :keyword or description |=
+		:keyword or comment |= :keyword) and (@indexed-flag = "Y") and
+		(@enabled-flag = "Y")] return $result]]>
+	</query>
+    <query
+		name="com.corendal.netapps.framework.core.readdatabeans.AbstractPage.findEnabledByIndexedFlag">
+		<![CDATA[for $result in /pages/page[@indexed-flag = :indexedFlag and
+		@enabled-flag = "Y"] return $result]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.readdatabeans.AbstractPageBlockXref.load">
+		<![CDATA[for $result in /pages/page[@id = :pageId] return
+		$result/class/blockspage-blocks/blockspage-block[@block-id = :blockId]]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.readdatabeans.AbstractPageBlockXref.findEnabledByPagePrimaryKey">
+		<![CDATA[for $result in /pages/page[@id = :pageId] return
+		$result/class/blockspage-blocks/blockspage-block]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.readdatabeans.AbstractURL.load">
+		<![CDATA[for $result in /pages/page[@id = :pageId] return
+		$result/urls/url[@directory = :directory and @base = :base]]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.readdatabeans.AbstractURL.findEnabledByPagePrimaryKey">
+		<![CDATA[for $result in /pages/page[@id = :pageId] return
+		$result/urls/url]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.readdatabeans.AbstractURL.findEnabledByDirectoryAndBase">
+		<![CDATA[for $result in /pages/page
+		where $result/urls/url[@directory = :directory and @base = :base]
+		return $result]]>
+	</query>
+</xmlsource-mapping>

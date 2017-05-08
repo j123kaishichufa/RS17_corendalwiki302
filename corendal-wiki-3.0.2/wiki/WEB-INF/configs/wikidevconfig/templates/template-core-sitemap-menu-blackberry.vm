@@ -1,0 +1,27 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($icnm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultIconManager"))
+
+##
+## get the writers used in this template
+##
+#set ($pws = $alc.getWriterSet())
+#set ($smw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultSiteMapWriter"))
+
+##
+## get the icons used in this template
+##
+#set ($spacerIcon = $icnm.getSpacerStandardIcon())
+
+##
+## print all menu items found
+##
+#set ($menuItemsSize = $menuItems.size())
+#set ($menuItemsSizeMinusOne = $menuItemsSize - 1)
+#foreach ($i in [0.. $menuItemsSizeMinusOne])
+#set ($currentSmi = $menuItems.get($i))
+$smw.getMenuItemHTML($currentSmi)
+#end
+## end of template. keep the empty line after this line.

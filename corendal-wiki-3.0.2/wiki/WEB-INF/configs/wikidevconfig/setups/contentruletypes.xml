@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Version: $Id: contentruletypes.xml,v 1.4 2006/07/17 02:23:36 tdanard Exp $ -->
+<contentruletypes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../schemas/contentruletypes.xsd">
+    <contentruletype enabled-flag="Y" id="WIKI-RESR-1" order="1">
+        <name>Same as parent article</name>
+        <description>
+            The rule is identical to the rule of the article the piece of content belongs to
+        </description>
+        <comment />
+    </contentruletype>
+    <contentruletype enabled-flag="Y" id="WIKI-RESR-4" order="2">
+        <name>Users can add or modify content without editor's approval</name>
+        <description>
+            Users can modify the piece of content without requiring prior approval
+        </description>
+        <comment />
+    </contentruletype>
+    <contentruletype enabled-flag="Y" id="WIKI-RESR-2" order="3">
+        <name>Users can request modifications from editors</name>
+        <description>
+            Modifications must be approved by the editor before they are effective
+        </description>
+        <comment />
+    </contentruletype>
+    <contentruletype enabled-flag="Y" id="WIKI-RESR-3" order="4">
+        <name>Users cannot request modifications from editors</name>
+        <description>
+            The editor has elected not to receive modification requests from the system
+        </description>
+        <comment />
+    </contentruletype>
+</contentruletypes>

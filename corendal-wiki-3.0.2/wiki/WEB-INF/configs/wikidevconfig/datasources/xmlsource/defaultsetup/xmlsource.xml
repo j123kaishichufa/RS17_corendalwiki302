@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Version: $Id: xmlsource.xml,v 1.4 2006/12/13 05:00:58 tdanard Exp $ -->
+<xmlsource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../../schemas/xmlsource.xsd">
+    <driver-url>xmldb:exist:///db</driver-url>
+    <driver-user>admin</driver-user>
+    <driver-password>admin</driver-password>
+    <driver-class>org.exist.xmldb.DatabaseImpl</driver-class>
+    <driver-collection-prefix>default</driver-collection-prefix>
+</xmlsource>

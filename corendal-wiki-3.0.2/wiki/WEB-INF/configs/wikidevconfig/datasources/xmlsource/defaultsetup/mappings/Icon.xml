@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Version: $Id: Icon.xml,v 1.3 2006/07/17 02:23:37 tdanard Exp $ -->
+<xmlsource-mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="../../../../../schemas/xmlsourcemapping.xsd"
+	package="com.corendal.netapps.framework.core.readdatahandlers">
+	<class name="DefaultIconLoadHandler" collection="icons"
+		entity="icon">
+		<id attribute="id" name="Id" type="string" />
+		
+	</class>
+	<query
+		name="com.corendal.netapps.framework.core.readdatabeans.AbstractIcon.findByEnabledFlag">
+		<![CDATA[for $result in /icons/icon[@enabled-flag = :enabledFlag]
+		return $result]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.readdatabeans.AbstractIcon.findEnabledByExtensionPrimaryKeyAndDirectFlagAndSecureFlag">
+		<![CDATA[for $result in /icons/icon/extension[@id = :extensionId and @direct-flag = :directFlag and @secure-flag = :secureFlag]
+		return <results>{$result}<icon id="{$result/ancestor::icon/@id}" /></results>]]>
+	</query>
+</xmlsource-mapping>

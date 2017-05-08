@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Version: $Id: entities.xsd,v 1.1 2006/07/08 21:15:56 tdanard Exp $ -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="entities">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="entity"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="entity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="zero-name"/>
+        <xs:element ref="singular-name"/>
+        <xs:element ref="plural-name"/>
+        <xs:element ref="xml-singular-name"/>
+        <xs:element ref="xml-plural-name"/>
+        <xs:element ref="description"/>
+        <xs:element ref="comment"/>
+        <xs:element ref="no-found"/>
+        <xs:element ref="one-found"/>
+        <xs:element ref="several-found"/>
+        <xs:element ref="factory-class"/>
+      </xs:sequence>
+      <xs:attribute name="child-priority" use="required" type="xs:integer"/>
+      <xs:attribute name="detail-page-id" use="required"/>
+      <xs:attribute name="enabled-flag" use="required" type="xs:NCName"/>
+      <xs:attribute name="id" use="required" type="xs:NCName"/>
+      <xs:attribute name="indexed-flag" use="required" type="xs:NCName"/>
+      <xs:attribute name="parent-entity-id" use="required"/>
+      <xs:attribute name="search-form-page-id" use="required"/>
+      <xs:attribute name="search-priority" use="required" type="xs:integer"/>
+      <xs:attribute name="search-results-page-id" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="zero-name" type="xs:string"/>
+  <xs:element name="singular-name" type="xs:string"/>
+  <xs:element name="plural-name" type="xs:string"/>
+  <xs:element name="xml-singular-name" type="xs:NCName"/>
+  <xs:element name="xml-plural-name" type="xs:NCName"/>
+  <xs:element name="description" type="xs:string"/>
+  <xs:element name="comment" type="xs:string"/>
+  <xs:element name="no-found" type="xs:string"/>
+  <xs:element name="one-found" type="xs:string"/>
+  <xs:element name="several-found" type="xs:string"/>
+  <xs:element name="factory-class">
+    <xs:complexType>
+      <xs:attribute name="name" use="required"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

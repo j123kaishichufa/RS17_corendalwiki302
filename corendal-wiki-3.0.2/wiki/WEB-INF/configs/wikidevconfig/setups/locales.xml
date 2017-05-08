@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Version: $Id: locales.xml,v 1.3 2006/07/17 02:23:36 tdanard Exp $ -->
+<locales xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="../../schemas/locales.xsd">
+	<locale country-code="" default-flag="Y" direction="LTR"
+		enabled-flag="Y" id="CORE-LOCL-1" language-code="en">
+		<name>English</name>
+	</locale>
+	<locale country-code="" default-flag="N" direction="LTR"
+		enabled-flag="N" id="CORE-LOCL-2" language-code="fr">
+		<name>French</name>
+	</locale>
+</locales>

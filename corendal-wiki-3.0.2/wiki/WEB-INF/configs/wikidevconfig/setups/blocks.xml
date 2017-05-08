@@ -1,0 +1,4029 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Version: $Id: blocks.xml,v 1.56 2008/11/19 17:12:05 tdanard Exp $ -->
+<blocks xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="../../schemas/blocks.xsd">
+	<block auth-required-flag="N" enabled-flag="Y" id="CORE-BLCK-1"
+		portlet-flag="Y" printable-flag="N">
+		<name>Date Lookup</name>
+		<description>To select a date from the calendar</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultCalendarDateLookupBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="CORE-BLCK-10"
+		portlet-flag="Y" printable-flag="N">
+		<name>Site Content</name>
+		<description>
+			To search the entire site by content type and by keyword
+		</description>
+		<comment />
+		<invite>
+			Select the type of content you want to search for, enter a
+			keyword then press GO
+		</invite>
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultSiteKeywordSearchFormBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="CORE-BLCK-12"
+		portlet-flag="Y" printable-flag="N">
+		<name>Log In</name>
+		<description>
+			To authenticate yourself giving your login and password
+		</description>
+		<comment />
+		<invite>
+			<![CDATA[Enter your Windows login and password]]>
+		</invite>
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultSignInBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="CORE-BLCK-13"
+		portlet-flag="Y" printable-flag="N">
+		<name>Log In As</name>
+		<description>
+			To login using somebody else's credentials
+		</description>
+		<comment />
+		<invite>
+			<![CDATA[Enter the login of the person you want to log in as]]>
+		</invite>
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultSignInAsBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="CORE-BLCK-14"
+		portlet-flag="Y" printable-flag="N">
+		<name>Change Password</name>
+		<description>
+			To modify a password to access this site
+		</description>
+		<comment />
+		<invite>
+			For security reasons, you must enter the old password once,
+			and the new password twice
+		</invite>
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultNativeAccountChangePasswordBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="CORE-BLCK-15"
+		portlet-flag="Y" printable-flag="N">
+		<name>Change Password</name>
+		<description>
+			To modify a password to access this site
+		</description>
+		<comment />
+		<invite>
+			For security reasons, you must enter the old password once,
+			and the new password twice
+		</invite>
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultActiveDirectoryAccountChangePasswordBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="CORE-BLCK-16"
+		portlet-flag="Y" printable-flag="N">
+		<name>Sign Up</name>
+		<description>
+			To register a new user account giving your contact
+			information
+		</description>
+		<comment>
+			This is a required step before authenticating if you have
+			never used this site before
+		</comment>
+		<invite>
+			To access this site for the first time, you must create a
+			user account by signing up. Rules for login and password are
+			displayed on the right side of this screen
+		</invite>
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultNativeAccountSignUpBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="CORE-BLCK-18"
+		portlet-flag="Y" printable-flag="N">
+		<name>Administrative Only</name>
+		<description>
+			To modify a password to access this site without entering the password currently used
+		</description>
+		<comment />
+		<invite>
+			For security reasons, you must enter the new password twice
+		</invite>
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultNativeAccountAdministrativeChangePasswordBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="CORE-BLCK-19"
+		portlet-flag="Y" printable-flag="N">
+		<name>Administrative Only</name>
+		<description>
+			To modify a password to access this site without entering the password currently used
+		</description>
+		<comment />
+		<invite>
+			For security reasons, you must enter the new password twice
+		</invite>
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultActiveDirectoryAccountAdministrativeChangePasswordBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="CORE-BLCK-20"
+		portlet-flag="Y" printable-flag="N">
+		<name>Generate Random Password</name>
+		<description>
+			To modify a password to access this site without entering
+			that new password
+		</description>
+		<comment />
+		<invite>
+			Upon submission, the specified account will receive an email
+			including the new password to use. This password will be
+			generated automatically
+		</invite>
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultActiveDirectoryAccountAdministrativeGeneratePasswordBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="CORE-BLCK-23"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Glossary</name>
+		<description>
+			Lists the technical terms used in this site
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultTermKeywordSearchFormBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="CORE-BLCK-24"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Glossary</name>
+		<description>
+			Lists the technical terms used in this site
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultSiteGlossaryBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="CORE-BLCK-26"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Glossary</name>
+		<description>
+			Terms are listed using a default order
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultContextualGlossaryDefaultBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="CORE-BLCK-27"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Glossary</name>
+		<description>Terms are listed alphabetically</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultContextualGlossaryAlphabeticalBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="CORE-BLCK-28"
+		portlet-flag="Y" printable-flag="N">
+		<name>Site Index</name>
+		<description>
+			List of all screens accessible to all users in this site
+		</description>
+		<comment>Some screens may require authentication</comment>
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultScreenKeywordSearchFormBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="CORE-BLCK-29"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Site Index</name>
+		<description>
+			List of all screens accessible to all users in this site
+		</description>
+		<comment>Some screens may require authentication</comment>
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultSiteIndexBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="CORE-BLCK-30"
+		portlet-flag="Y" printable-flag="Y">
+		<name>My Account</name>
+		<description>
+			Displays the contact information of your user account
+		</description>
+		<comment>
+			Contact #HelpDeskName# if your account information is
+			incorrect
+		</comment>
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultMyAccountViewBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="CORE-BLCK-31"
+		portlet-flag="Y" printable-flag="N">
+		<name>Edit Account</name>
+		<description>
+			To modify the contact information of your user account
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultMyNativeAccountEditBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="CORE-BLCK-32"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Site Map</name>
+		<description>
+			Hierarchical list of all screens accessible to all users in
+			this site
+		</description>
+		<comment>Some screens may require authentication</comment>
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultSiteMapBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="CORE-BLCK-33"
+		portlet-flag="Y" printable-flag="N">
+		<name>Edit Account</name>
+		<description>
+			To modify the contact information of your user account
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultMyActiveDirectoryAccountEditBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="CORE-BLCK-34"
+		portlet-flag="Y" printable-flag="N">
+		<name>Edit Account</name>
+		<description>
+			To modify the contact information of your user account
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultMyLotusNotesAccountEditBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="CORE-BLCK-35"
+		portlet-flag="Y" printable-flag="N">
+		<name>New Active Directory Account</name>
+		<description>
+			To create a new account in Active Directory
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultActiveDirectoryAccountNewBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="CORE-BLCK-36"
+		portlet-flag="Y" printable-flag="N">
+		<name>New Lotus Notes Account</name>
+		<description>
+			To create a new account in Lotus Notes
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultLotusNotesAccountNewBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="CORE-BLCK-37"
+		portlet-flag="Y" printable-flag="N">
+		<name>New Local Account</name>
+		<description>
+			To create a new account in the local LDAP database
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultLocalAccountNewBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="CORE-BLCK-38"
+		portlet-flag="Y" printable-flag="N">
+		<name>New Native Account</name>
+		<description>
+			To create a new account in the local SQL database
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultNativeAccountNewBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="CORE-BLCK-39"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Edit Photo</name>
+		<description>
+			To edit the photo associated with your account
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultMyActiveDirectoryAccountEditPhotoBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="CORE-BLCK-40"
+		portlet-flag="Y" printable-flag="N">
+		<name>Departments</name>
+		<description>To look for a department</description>
+		<comment />
+		<invite>
+			To search for a department, enter its name, then press
+			SEARCH. Use % as wildcard
+		</invite>
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultDepartmentLookupFormBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="CORE-BLCK-41"
+		portlet-flag="Y" printable-flag="N">
+		<name>Departments</name>
+		<description>To look for a department</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultDepartmentLookupResultsBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="CORE-BLCK-42"
+		portlet-flag="Y" printable-flag="N">
+		<name>Departments</name>
+		<description>Lists departments recently used</description>
+		<comment />
+		<invite>
+			The list of departments displayed below is based upon your
+			recent browsing and searching history
+		</invite>
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultDepartmentLookupRecentBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="CORE-BLCK-43"
+		portlet-flag="Y" printable-flag="N">
+		<name>Departments</name>
+		<description>To look for multiple departments</description>
+		<comment />
+		<invite>
+			To search for a department, enter its name, then press
+			SEARCH. Use % as wildcard
+		</invite>
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultDepartmentMultiLookupFormBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="CORE-BLCK-44"
+		portlet-flag="Y" printable-flag="N">
+		<name>Departments</name>
+		<description>To look for multiple departments</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultDepartmentMultiLookupResultsBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="CORE-BLCK-45"
+		portlet-flag="Y" printable-flag="N">
+		<name>Departments</name>
+		<description>Lists departments recently used</description>
+		<comment />
+		<invite>
+			The list of departments displayed below is based upon your
+			recent browsing and searching history
+		</invite>
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultDepartmentMultiLookupRecentBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="CORE-BLCK-46"
+		portlet-flag="Y" printable-flag="N">
+		<name>Departments</name>
+		<description>To search for departments</description>
+		<comment />
+		<invite>
+			To search for a department, enter its name, then press
+			SEARCH. Use % as wildcard
+		</invite>
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultDepartmentSearchFormBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="CORE-BLCK-47"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Departments</name>
+		<description>
+			Lists the departments matching the search criteria entered
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultDepartmentSearchResultsBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="CORE-BLCK-48"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Recent Departments</name>
+		<description>
+			Displays the 5 last departments you have accessed
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultMyRecentDepartmentsBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="CORE-BLCK-49"
+		portlet-flag="Y" printable-flag="Y">
+		<name>View Department</name>
+		<description>To view this department</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultDepartmentViewBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="CORE-BLCK-50"
+		portlet-flag="Y" printable-flag="N">
+		<name>Edit Department</name>
+		<description>To edit this department</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultDepartmentEditBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="CORE-BLCK-51"
+		portlet-flag="Y" printable-flag="N">
+		<name>New Department</name>
+		<description>To create a new department</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultDepartmentNewBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="CORE-BLCK-52"
+		portlet-flag="Y" printable-flag="N">
+		<name>Buildings</name>
+		<description>To look for a building</description>
+		<comment />
+		<invite>
+			To search for a building, enter its name, then press SEARCH.
+			Use % as wildcard
+		</invite>
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultOfficeLookupFormBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="CORE-BLCK-53"
+		portlet-flag="Y" printable-flag="N">
+		<name>Buildings</name>
+		<description>To look for a building</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultOfficeLookupResultsBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="CORE-BLCK-54"
+		portlet-flag="Y" printable-flag="N">
+		<name>Buildings</name>
+		<description>Lists buildings recently used</description>
+		<comment />
+		<invite>
+			The list of buildings displayed below is based upon your
+			recent browsing and searching history
+		</invite>
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultOfficeLookupRecentBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="CORE-BLCK-55"
+		portlet-flag="Y" printable-flag="N">
+		<name>Buildings</name>
+		<description>To look for multiple buildings</description>
+		<comment />
+		<invite>
+			To search for a building, enter its name, then press SEARCH.
+			Use % as wildcard
+		</invite>
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultOfficeMultiLookupFormBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="CORE-BLCK-56"
+		portlet-flag="Y" printable-flag="N">
+		<name>Buildings</name>
+		<description>To look for multiple buildings</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultOfficeMultiLookupResultsBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="CORE-BLCK-57"
+		portlet-flag="Y" printable-flag="N">
+		<name>Buildings</name>
+		<description>Lists buildings recently used</description>
+		<comment />
+		<invite>
+			The list of buildings displayed below is based upon your
+			recent browsing and searching history
+		</invite>
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultOfficeMultiLookupRecentBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="CORE-BLCK-58"
+		portlet-flag="Y" printable-flag="N">
+		<name>Buildings</name>
+		<description>To search for buildings</description>
+		<comment />
+		<invite>
+			To search for a building, enter its name, then press SEARCH.
+			Use % as wildcard
+		</invite>
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultOfficeSearchFormBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="CORE-BLCK-59"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Buildings</name>
+		<description>
+			Lists the buildings matching the search criteria entered
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultOfficeSearchResultsBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="CORE-BLCK-60"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Recent Buildings</name>
+		<description>
+			Displays the 5 last buildings you have accessed
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultMyRecentOfficesBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="CORE-BLCK-61"
+		portlet-flag="Y" printable-flag="Y">
+		<name>View Building</name>
+		<description>To view this building</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultOfficeViewBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="CORE-BLCK-62"
+		portlet-flag="Y" printable-flag="N">
+		<name>Edit Building</name>
+		<description>To edit this building</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultOfficeEditBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="CORE-BLCK-63"
+		portlet-flag="Y" printable-flag="N">
+		<name>New Building</name>
+		<description>To create a new building</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultOfficeNewBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="CORE-BLCK-64"
+		portlet-flag="Y" printable-flag="N">
+		<name>Companies</name>
+		<description>To look for a company</description>
+		<comment />
+		<invite>
+			To search for a company, enter its name, then press SEARCH.
+			Use % as wildcard
+		</invite>
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultCompanyLookupFormBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="CORE-BLCK-65"
+		portlet-flag="Y" printable-flag="N">
+		<name>Companies</name>
+		<description>To look for a company</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultCompanyLookupResultsBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="CORE-BLCK-66"
+		portlet-flag="Y" printable-flag="N">
+		<name>Companies</name>
+		<description>Lists companies recently used</description>
+		<comment />
+		<invite>
+			The list of companies displayed below is based upon your
+			recent browsing and searching history
+		</invite>
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultCompanyLookupRecentBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="CORE-BLCK-67"
+		portlet-flag="Y" printable-flag="N">
+		<name>Companies</name>
+		<description>To look for multiple companies</description>
+		<comment />
+		<invite>
+			To search for a company, enter its name, then press SEARCH.
+			Use % as wildcard
+		</invite>
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultCompanyMultiLookupFormBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="CORE-BLCK-68"
+		portlet-flag="Y" printable-flag="N">
+		<name>Companies</name>
+		<description>To look for multiple companies</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultCompanyMultiLookupResultsBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="CORE-BLCK-69"
+		portlet-flag="Y" printable-flag="N">
+		<name>Companies</name>
+		<description>Lists companies recently used</description>
+		<comment />
+		<invite>
+			The list of companies displayed below is based upon your
+			recent browsing and searching history
+		</invite>
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultCompanyMultiLookupRecentBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="CORE-BLCK-70"
+		portlet-flag="Y" printable-flag="N">
+		<name>Companies</name>
+		<description>To search for companies</description>
+		<comment />
+		<invite>
+			To search for a company, enter its name, then press SEARCH.
+			Use % as wildcard
+		</invite>
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultCompanySearchFormBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="CORE-BLCK-71"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Companies</name>
+		<description>
+			Lists the companies matching the search criteria entered
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultCompanySearchResultsBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="CORE-BLCK-72"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Recent Companies</name>
+		<description>
+			Displays the 5 last companies you have accessed
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultMyRecentCompaniesBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="CORE-BLCK-73"
+		portlet-flag="Y" printable-flag="Y">
+		<name>View Company</name>
+		<description>To view this company</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultCompanyViewBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="CORE-BLCK-74"
+		portlet-flag="Y" printable-flag="N">
+		<name>Edit Company</name>
+		<description>To edit this company</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultCompanyEditBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="CORE-BLCK-75"
+		portlet-flag="Y" printable-flag="N">
+		<name>New Company</name>
+		<description>To create a new company</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultCompanyNewBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="CORE-BLCK-76"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Edit Confidential Data</name>
+		<description>
+			To edit the confidential data associated with your account
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultMyActiveDirectoryAccountEditEmployeeBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="CORE-BLCK-77"
+		portlet-flag="Y" printable-flag="Y">
+		<name>My Team</name>
+		<description>
+			Displays the team of your user account
+		</description>
+		<comment>
+			Contact #HelpDeskName# if your account information is
+			incorrect
+		</comment>
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultMyAccountViewTeamBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="CORE-BLCK-78"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Edit Team Membership</name>
+		<description>
+			To edit the team membership associated with your account
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultMyActiveDirectoryAccountEditTeamBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="CORE-BLCK-79"
+		portlet-flag="Y" printable-flag="N">
+		<name>My Departments</name>
+		<description>
+			Lists the departments you manage or that you belong to
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultMyDepartmentsLookupBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="CORE-BLCK-80"
+		portlet-flag="Y" printable-flag="N">
+		<name>My Departments</name>
+		<description>
+			Lists the departments you manage or that you belong to
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultMyDepartmentsMultiLookupBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="CORE-BLCK-81"
+		portlet-flag="Y" printable-flag="N">
+		<name>New Active Directory Contact</name>
+		<description>
+			To create a new account in Active Directory that has no
+			login
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultActiveDirectoryContactNewBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="CORE-BLCK-82"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Administration</name>
+		<description>
+			To control the status of your account
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultMyActiveDirectoryAccountEditAdministrationBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="ADMN-BLCK-83"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Batches Monitor</name>
+		<description>
+			To control the execution of the batches associated with this
+			site
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.administration.blocks.DefaultBatchesMonitorBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="ADMN-BLCK-84"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Emails Monitor</name>
+		<description>To view the list of pending emails</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.administration.blocks.DefaultEmailsMonitorBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="ADMN-BLCK-85"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Warnings Monitor</name>
+		<description>To view the list of warnings</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.administration.blocks.DefaultWarningsMonitorBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="ADMN-BLCK-86"
+		portlet-flag="Y" printable-flag="Y">
+		<name>System Accounts Monitor</name>
+		<description>To view the list of accounts global to this site</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.administration.blocks.DefaultCurrentSystemAccountBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="ADMN-BLCK-87"
+		portlet-flag="Y" printable-flag="Y">
+		<name>System Groups Monitor</name>
+		<description>To view the list of groups global to this site</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.administration.blocks.DefaultCurrentSystemGroupBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="ADMN-BLCK-88"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Entry Logs</name>
+		<description>
+			To search for entry logs using advanced search criteria
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.administration.blocks.DefaultEntryLogSearchResultsBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="ADMN-BLCK-89"
+		portlet-flag="Y" printable-flag="N">
+		<name>Entry Logs</name>
+		<description>
+			To search the entry logs of this site using advanced search
+			criteria
+		</description>
+		<comment />
+		<invite>
+			To search for a particular entry log, enter your search
+			criteria then press SEARCH. Use % as wildcard
+		</invite>
+		<class
+			name="com.corendal.netapps.framework.administration.blocks.DefaultEntryLogSearchFormBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="ADMN-BLCK-90"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Error Logs</name>
+		<description>
+			To search for error logs using advanced search criteria
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.administration.blocks.DefaultErrorLogSearchResultsBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="ADMN-BLCK-91"
+		portlet-flag="Y" printable-flag="N">
+		<name>Error Logs</name>
+		<description>
+			To search the error logs of this site using advanced search
+			criteria
+		</description>
+		<comment />
+		<invite>
+			To search for a particular error log, enter your search
+			criteria then press SEARCH. Use % as wildcard
+		</invite>
+		<class
+			name="com.corendal.netapps.framework.administration.blocks.DefaultErrorLogSearchFormBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="ADMN-BLCK-92"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Response Logs</name>
+		<description>
+			To search for response logs using advanced search criteria
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.administration.blocks.DefaultResponseLogSearchResultsBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="ADMN-BLCK-93"
+		portlet-flag="Y" printable-flag="N">
+		<name>Response Logs</name>
+		<description>
+			To search the response logs of this site using advanced
+			search criteria
+		</description>
+		<comment />
+		<invite>
+			To search for a particular response log, enter your search
+			criteria then press SEARCH. Use % as wildcard
+		</invite>
+		<class
+			name="com.corendal.netapps.framework.administration.blocks.DefaultResponseLogSearchFormBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="ADMN-BLCK-94"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Data Sources Monitor</name>
+		<description>
+			To view the list of data sources global to this site
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.administration.blocks.DefaultDataSourcesMonitorBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="ADMN-BLCK-98"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Files</name>
+		<description>
+			To search for files using advanced search criteria
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.administration.blocks.DefaultFileSearchResultsBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="ADMN-BLCK-95"
+		portlet-flag="Y" printable-flag="N">
+		<name>Files</name>
+		<description>
+			To search the files of this site using advanced
+			search criteria
+		</description>
+		<comment />
+		<invite>
+			To search for a particular file, enter your search
+			criteria then press SEARCH. Use % as wildcard
+		</invite>
+		<class
+			name="com.corendal.netapps.framework.administration.blocks.DefaultFileSearchFormBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="ADMN-BLCK-96"
+		portlet-flag="Y" printable-flag="Y">
+		<name>System Files Monitor</name>
+		<description>
+			To view the list of system files that have global roles to
+			this site
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.administration.blocks.DefaultCurrentSystemFileBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="ADMN-BLCK-97"
+		portlet-flag="Y" printable-flag="Y">
+		<name>System LDAP Controls Monitor</name>
+		<description>
+			To view the list of system LDAP controls that have global
+			roles
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.administration.blocks.DefaultCurrentSystemLDAPControlBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="ADMN-BLCK-99"
+		portlet-flag="Y" printable-flag="N">
+		<name>Useful Links</name>
+		<description>
+			Useful Links when viewing or editing warnings
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultStandardPagesBlock">
+			<pagesblock-parameters>
+				<pagesblock-parameter name="warningid" />
+			</pagesblock-parameters>
+			<pagesblock-pages>
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="1" page-id="ADMN-PAGE-86" />
+			</pagesblock-pages>
+		</class>
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="ADMN-BLCK-100"
+		portlet-flag="Y" printable-flag="Y">
+		<name>View Warning</name>
+		<description>To view this warning</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.administration.blocks.DefaultWarningViewBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="ADMN-BLCK-101"
+		portlet-flag="Y" printable-flag="N">
+		<name>Edit Warning</name>
+		<description>To edit this warning</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.administration.blocks.DefaultWarningEditBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="ADMN-BLCK-102"
+		portlet-flag="Y" printable-flag="N">
+		<name>New Warning</name>
+		<description>
+			To request the addition of a new warning
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.administration.blocks.DefaultWarningNewBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="ADMN-BLCK-103"
+		portlet-flag="Y" printable-flag="Y">
+		<name>View Error Log</name>
+		<description>To view this error log</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.administration.blocks.DefaultErrorLogViewBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="ADMN-BLCK-104"
+		portlet-flag="Y" printable-flag="Y">
+		<name>View Email</name>
+		<description>To view an email</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.administration.blocks.DefaultEmailViewBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="ADMN-BLCK-105"
+		portlet-flag="Y" printable-flag="N">
+		<name>Edit Email</name>
+		<description>To edit an email</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.administration.blocks.DefaultEmailEditBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="ADMN-BLCK-106"
+		portlet-flag="Y" printable-flag="Y">
+		<name>View Entry Logs</name>
+		<description>
+			To view entry logs related to this email
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.administration.blocks.DefaultEmailViewEntryLogsBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="ADMN-BLCK-107"
+		portlet-flag="Y" printable-flag="Y">
+		<name>View Error Logs</name>
+		<description>
+			To view error logs related to this email
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.administration.blocks.DefaultEmailViewErrorLogsBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="ADMN-BLCK-108"
+		portlet-flag="Y" printable-flag="N">
+		<name>Useful Links</name>
+		<description>
+			Useful Links when viewing system accounts and groups
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultStandardPagesBlock">
+			<pagesblock-parameters>
+				<pagesblock-parameter name="systemaccountid" />
+			</pagesblock-parameters>
+			<pagesblock-pages>
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="1" page-id="ADMN-PAGE-89" />
+			</pagesblock-pages>
+		</class>
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="ADMN-BLCK-109"
+		portlet-flag="Y" printable-flag="N">
+		<name>New System Account</name>
+		<description>
+			To request the addition of a new account global to this site
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.administration.blocks.DefaultSystemAccountNewBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="ADMN-BLCK-110"
+		portlet-flag="Y" printable-flag="N">
+		<name>New System Group</name>
+		<description>
+			To request the addition of a new group global to this site
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.administration.blocks.DefaultSystemGroupNewBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="ADMN-BLCK-111"
+		portlet-flag="Y" printable-flag="N">
+		<name>Useful Links</name>
+		<description>
+			Useful Links when viewing system LDAP controls
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultStandardPagesBlock">
+			<pagesblock-parameters>
+				<pagesblock-parameter name="systemldapcontrolid" />
+			</pagesblock-parameters>
+			<pagesblock-pages>
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="1" page-id="ADMN-PAGE-90" />
+			</pagesblock-pages>
+		</class>
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="ADMN-BLCK-112"
+		portlet-flag="Y" printable-flag="N">
+		<name>New System LDAP Control</name>
+		<description>
+			To request the addition of a new system LDAP control to this
+			site
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.administration.blocks.DefaultSystemLDAPControlNewBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="ADMN-BLCK-113"
+		portlet-flag="Y" printable-flag="N">
+		<name>Useful Links</name>
+		<description>
+			Useful Links when viewing system files
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultStandardPagesBlock">
+			<pagesblock-parameters>
+				<pagesblock-parameter name="systemfileid" />
+			</pagesblock-parameters>
+			<pagesblock-pages>
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="1" page-id="ADMN-PAGE-91" />
+			</pagesblock-pages>
+		</class>
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="ADMN-BLCK-114"
+		portlet-flag="Y" printable-flag="N">
+		<name>New System File</name>
+		<description>
+			To request the addition of a new file global to this site
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.administration.blocks.DefaultSystemFileNewBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="ADMN-BLCK-115"
+		portlet-flag="Y" printable-flag="N">
+		<name>Status</name>
+		<description>
+			To view and edit system status
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultStandardPagesBlock">
+			<pagesblock-parameters>
+				<pagesblock-parameter name="statusid" />
+			</pagesblock-parameters>
+			<pagesblock-pages>
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="1" page-id="ADMN-PAGE-67" />
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="2" page-id="ADMN-PAGE-68" />
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="3" page-id="ADMN-PAGE-69" />
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="4" page-id="ADMN-PAGE-78" />
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="5" page-id="ADMN-PAGE-77" />
+			</pagesblock-pages>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="ADMN-BLCK-116"
+		portlet-flag="Y" printable-flag="N">
+		<name>Logs</name>
+		<description>
+			To view and edit logs
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultStandardPagesBlock">
+			<pagesblock-parameters>
+				<pagesblock-parameter name="logid" />
+			</pagesblock-parameters>
+			<pagesblock-pages>
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="1" page-id="ADMN-PAGE-75" />
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="2" page-id="ADMN-PAGE-73" />
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="3" page-id="ADMN-PAGE-71" />				
+			</pagesblock-pages>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="ADMN-BLCK-117"
+		portlet-flag="Y" printable-flag="N">
+		<name>System Settings</name>
+		<description>
+			To view and edit system settings
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultStandardPagesBlock">
+			<pagesblock-parameters>
+				<pagesblock-parameter name="settingid" />
+			</pagesblock-parameters>
+			<pagesblock-pages>
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="1" page-id="ADMN-PAGE-70" />
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="2" page-id="ADMN-PAGE-79" />
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="3" page-id="ADMN-PAGE-80" />				
+			</pagesblock-pages>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="HLPD-BLCK-1"
+		portlet-flag="Y" printable-flag="N">
+		<name>User Accounts</name>
+		<description>
+			To look for a user account listed in the directory
+		</description>
+		<comment />
+		<invite>
+			To search for a user account, enter its name or login, then
+			press SEARCH. Use % as wildcard
+		</invite>
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultAccountLookupFormBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="HLPD-BLCK-10"
+		portlet-flag="Y" printable-flag="Y">
+		<name>View Group</name>
+		<description>
+			Displays the description of a user group
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultGroupViewBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="HLPD-BLCK-11"
+		portlet-flag="Y" printable-flag="N">
+		<name>Edit Group</name>
+		<description>To modify this user group</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultNativeGroupEditBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="HLPD-BLCK-12"
+		portlet-flag="Y" printable-flag="N">
+		<name>Add One Member</name>
+		<description>
+			To add one user account to this user group
+		</description>
+		<comment>User accounts can be added one at a time</comment>
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultGroupMembershipNewBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="HLPD-BLCK-13"
+		portlet-flag="Y" printable-flag="N">
+		<name>Remove One Member</name>
+		<description>
+			To remove one user account from this user group
+		</description>
+		<comment>User accounts can be removed one at a time</comment>
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultGroupMembershipRemoveBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="HLPD-BLCK-14"
+		portlet-flag="Y" printable-flag="Y">
+		<name>View Members</name>
+		<description>Lists the members of this user group</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultGroupMembersBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="HLPD-BLCK-15"
+		portlet-flag="Y" printable-flag="N">
+		<name>Add Multiple Members</name>
+		<description>
+			To add multiple user accounts to this user group
+		</description>
+		<comment>
+			If you enter a user account that is already a member of this
+			group, this user account will be ignored
+		</comment>
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultGroupMembershipMultipleNewBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="HLPD-BLCK-16"
+		portlet-flag="Y" printable-flag="N">
+		<name>Remove Multiple Members</name>
+		<description>
+			To remove multiple user accounts from this user group
+		</description>
+		<comment>
+			If you enter a user account that is not already a member of
+			this group, this user account will be ignored
+		</comment>
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultGroupMembershipMultipleRemoveBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="HLPD-BLCK-17"
+		portlet-flag="Y" printable-flag="N">
+		<name>Add New Proxy</name>
+		<description>
+			To grant your transaction privileges to another person
+		</description>
+		<comment>
+			A grantee cannot grant your transaction privileges to
+			another person
+		</comment>
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultMyProxyNewBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="HLPD-BLCK-18"
+		portlet-flag="Y" printable-flag="N">
+		<name>Remove My Proxies</name>
+		<description>
+			To revoke transaction privileges you have granted
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultMyProxyRemoveBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="HLPD-BLCK-19"
+		portlet-flag="Y" printable-flag="N">
+		<name>Edit My Proxies</name>
+		<description>
+			To modify an existing grant of your transaction privileges
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultMyProxyEditBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="HLPD-BLCK-2"
+		portlet-flag="Y" printable-flag="N">
+		<name>User Accounts</name>
+		<description>
+			To look for a user account listed in the directory
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultAccountLookupResultsBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="HLPD-BLCK-20"
+		portlet-flag="Y" printable-flag="N">
+		<name>Remove My Groups</name>
+		<description>To remove a user group you own</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultMyGroupRemoveBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="HLPD-BLCK-21"
+		portlet-flag="Y" printable-flag="N">
+		<name>Edit My Groups</name>
+		<description>To modify a user group you own</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultMyGroupEditBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="HLPD-BLCK-22"
+		portlet-flag="Y" printable-flag="Y">
+		<name>View Account</name>
+		<description>
+			Displays the contact information of this user account
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultAnyAccountViewBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="HLPD-BLCK-23"
+		portlet-flag="Y" printable-flag="N">
+		<name>Edit Account</name>
+		<description>
+			To modify the contact information of this user account
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultAnyNativeAccountEditBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="HLPD-BLCK-24"
+		portlet-flag="Y" printable-flag="N">
+		<name>Edit Group</name>
+		<description>To modify this user group</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultActiveDirectoryGroupEditBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="HLPD-BLCK-25"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Team</name>
+		<description>
+			Displays the team of this user account
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultAnyAccountViewTeamBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="HLPD-BLCK-28"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Roles</name>
+		<description>Lists all roles used in this site</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultRolesResultsBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="HLPD-BLCK-3"
+		portlet-flag="Y" printable-flag="N">
+		<name>User Accounts</name>
+		<description>
+			To look for a user account listed in the directory
+		</description>
+		<comment />
+		<invite>
+			<![CDATA[To search for a user account, enter its name or login, then press SEARCH. Use % as wildcard. For faster search results, limit your search criteria to the "name or login", "last name", "first name", "building" or "room" fields]]>
+		</invite>
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultAccountSearchFormBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="HLPD-BLCK-33"
+		portlet-flag="Y" printable-flag="Y">
+		<name>View Role</name>
+		<description>Displays the description of a role</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultRoleViewBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="HLPD-BLCK-34"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Privileges</name>
+		<description>
+			Lists all privileges used in this site
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultPrivilegesResultsBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="HLPD-BLCK-35"
+		portlet-flag="Y" printable-flag="Y">
+		<name>View Privilege</name>
+		<description>
+			Displays the description of a privilege
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultPrivilegeViewBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="HLPD-BLCK-36"
+		portlet-flag="Y" printable-flag="N">
+		<name>User Groups</name>
+		<description>
+			To look for a user group listed in the directory
+		</description>
+		<comment />
+		<invite>
+			To search for a user group, enter its name, then press
+			SEARCH. Use % as wildcard
+		</invite>
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultGroupLookupFormBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="HLPD-BLCK-37"
+		portlet-flag="Y" printable-flag="N">
+		<name>User Groups</name>
+		<description>
+			To look for a user group listed in the directory
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultGroupLookupResultsBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="HLPD-BLCK-38"
+		portlet-flag="Y" printable-flag="N">
+		<name>My Memberships</name>
+		<description>Lists user groups you belong to</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultMyGroupsLookupBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="ADMN-BLCK-39"
+		portlet-flag="Y" printable-flag="N">
+		<name>Reassign roles and queues</name>
+		<description>
+			To reassign all roles and queues of a user to another user
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.administration.blocks.DefaultAnyAccountReplaceBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="ADMN-BLCK-40"
+		portlet-flag="Y" printable-flag="N">
+		<name>Reassign my roles and queues</name>
+		<description>
+			To reassign my roles and my queues to another user
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.admnistration.blocks.DefaultMyAccountReplaceBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="HLPD-BLCK-41"
+		portlet-flag="Y" printable-flag="N">
+		<name>Edit Account</name>
+		<description>
+			To modify the contact information of this user account
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultAnyActiveDirectoryAccountEditBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="HLPD-BLCK-42"
+		portlet-flag="Y" printable-flag="N">
+		<name>Edit Account</name>
+		<description>
+			To modify the contact information of this user account
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultAnyLotusNotesAccountEditBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="HLPD-BLCK-43"
+		portlet-flag="Y" printable-flag="N">
+		<name>Recent Accounts</name>
+		<description>
+			Displays the 5 last accounts you have accessed
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultMyRecentAccountsBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="HLPD-BLCK-44"
+		portlet-flag="Y" printable-flag="N">
+		<name>Recent Groups</name>
+		<description>
+			Displays the 5 last groups you have accessed
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultMyRecentGroupsBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="HLPD-BLCK-45"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Worldwide Results</name>
+		<description>
+			To look for a user account listed in the directory,
+			combining multiple sources
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultAccountAdditionalSearchResultsBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="HLPD-BLCK-46"
+		portlet-flag="Y" printable-flag="Y">
+		<name>User Accounts</name>
+		<description>
+			To look for a user account listed in the directory
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultAccountSearchResultsBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="HLPD-BLCK-47"
+		portlet-flag="Y" printable-flag="Y">
+		<name>User Groups</name>
+		<description>
+			To look for a user group listed in the directory
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultGroupSearchResultsBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="HLPD-BLCK-48"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Grantees</name>
+		<description>
+			Lists the persons this user has granted his or her
+			transaction privileges to
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultAnyGranteeAccountsBlock">
+			<pagesblock-parameters>
+				<pagesblock-parameter name="accountid" />
+			</pagesblock-parameters>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="HLPD-BLCK-49"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Grantors</name>
+		<description>
+			Lists the persons who have granted their transaction
+			privileges to this user
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultAnyGrantorAccountsBlock">
+			<pagesblock-parameters>
+				<pagesblock-parameter name="accountid" />
+			</pagesblock-parameters>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="HLPD-BLCK-50"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Memberships</name>
+		<description>
+			Lists the user groups this user belongs to
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultAnyGroupMembershipsBlock">
+			<pagesblock-parameters>
+				<pagesblock-parameter name="accountid" />
+			</pagesblock-parameters>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="HLPD-BLCK-51"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Ownerships</name>
+		<description>
+			Lists the user groups this user manages
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultAnyGroupOwnershipsBlock">
+			<pagesblock-parameters>
+				<pagesblock-parameter name="accountid" />
+			</pagesblock-parameters>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="HLPD-BLCK-52"
+		portlet-flag="Y" printable-flag="Y">
+		<name>My Ownerships</name>
+		<description>Lists the groups you manage</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultMyGroupOwnershipsBlock">
+			<pagesblock-parameters>
+				<pagesblock-parameter name="accountid" />
+			</pagesblock-parameters>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="HLPD-BLCK-53"
+		portlet-flag="Y" printable-flag="Y">
+		<name>My Memberships</name>
+		<description>Lists the groups you belong to</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultMyGroupMembershipsBlock">
+			<pagesblock-parameters>
+				<pagesblock-parameter name="accountid" />
+			</pagesblock-parameters>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="HLPD-BLCK-54"
+		portlet-flag="Y" printable-flag="Y">
+		<name>My Grantors</name>
+		<description>
+			Lists the users you can perform transactions for
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultMyGrantorAccountsBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="HLPD-BLCK-55"
+		portlet-flag="Y" printable-flag="Y">
+		<name>My Grantees</name>
+		<description>
+			Lists the users allowed to perform your transactions
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultMyGranteeAccountsBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="HLPD-BLCK-56"
+		portlet-flag="Y" printable-flag="Y">
+		<name>My Preferences</name>
+		<description>To edit your session time out</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultMyPreferencesEditBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="HLPD-BLCK-57"
+		portlet-flag="Y" printable-flag="Y">
+		<name>My Effective Memberships</name>
+		<description>
+			Lists the user groups you belong to, based upon effective
+			memberships
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultMyEffectiveGroupMembershipsBlock" />
+
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="HLPD-BLCK-58"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Effective Memberships</name>
+		<description>
+			Lists the user groups this user belongs to, based upon
+			effective memberships
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultAnyEffectiveGroupMembershipsBlock">
+			<pagesblock-parameters>
+				<pagesblock-parameter name="accountid" />
+			</pagesblock-parameters>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="HLPD-BLCK-59"
+		portlet-flag="Y" printable-flag="N">
+		<name>User Accounts</name>
+		<description>
+			To look for multiple user accounts listed in the directory
+		</description>
+		<comment />
+		<invite>
+			To search for a user account, enter its name, then press
+			SEARCH. Use % as wildcard
+		</invite>
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultAccountMultiLookupFormBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="HLPD-BLCK-60"
+		portlet-flag="Y" printable-flag="N">
+		<name>User Accounts</name>
+		<description>
+			To look for multiple user accounts listed in the directory
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultAccountMultiLookupResultsBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="HLPD-BLCK-61"
+		portlet-flag="Y" printable-flag="N">
+		<name>User Accounts</name>
+		<description>Lists user accounts recently used</description>
+		<comment />
+		<invite>
+			The list of user accounts displayed below is based upon your
+			recent browsing and searching history
+		</invite>
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultAccountMultiLookupRecentBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="HLPD-BLCK-62"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Edit Photo</name>
+		<description>
+			To edit the photo associated with this account
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultAnyActiveDirectoryAccountEditPhotoBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="HLPD-BLCK-63"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Edit Confidential Data</name>
+		<description>
+			To edit the confidential data associated with this account
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultAnyActiveDirectoryAccountEditEmployeeBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="HLPD-BLCK-64"
+		portlet-flag="Y" printable-flag="N">
+		<name>See Also</name>
+		<description>
+			Lists groups that are related to this group
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultGroupViewTeamBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="HLPD-BLCK-65"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Edit Team Membership</name>
+		<description>
+			To edit the team membership associated with this account
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultAnyActiveDirectoryAccountEditTeamBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="HLPD-BLCK-66"
+		portlet-flag="Y" printable-flag="N">
+		<name>Edit Account</name>
+		<description>
+			To modify the contact information of this user account
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultAnyActiveDirectoryContactEditBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="HLPD-BLCK-67"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Edit Photo</name>
+		<description>
+			To edit the photo associated with this account
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultAnyActiveDirectoryContactEditPhotoBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="HLPD-BLCK-68"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Edit Confidential Data</name>
+		<description>
+			To edit the confidential data associated with this account
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultAnyActiveDirectoryContactEditEmployeeBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="HLPD-BLCK-69"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Administration</name>
+		<description>To control the status of this account</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultAnyActiveDirectoryAccountEditAdministrationBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="HLPD-BLCK-70"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Administration</name>
+		<description>To control the status of this account</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultAnyActiveDirectoryContactEditAdministrationBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="N" id="HLPD-BLCK-71"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Add One Group Membership</name>
+		<description>
+			To add one user group to your account's memberships
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultMyAccountMembershipNewBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="N" id="HLPD-BLCK-72"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Add Multiple Group Memberships</name>
+		<description>
+			To add multiple groups to your account's memberships
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultMyAccountMembershipMultipleNewBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="N" id="HLPD-BLCK-73"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Remove One Group Membership</name>
+		<description>
+			To remove one user group from your account's memberships
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultMyAccountMembershipRemoveBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="N" id="HLPD-BLCK-74"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Remove Multiple Group Memberships</name>
+		<description>
+			To remove multiple groups remove your account's memberships
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultMyAccountMembershipMultipleRemoveBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="N" id="HLPD-BLCK-75"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Add One Group Membership</name>
+		<description>
+			To add one user group to this account's memberships
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultAnyAccountMembershipNewBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="N" id="HLPD-BLCK-76"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Add Multiple Group Memberships</name>
+		<description>
+			To add multiple groups to this account's memberships
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultAnyAccountMembershipMultipleNewBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="N" id="HLPD-BLCK-77"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Remove One Group Membership</name>
+		<description>
+			To remove one user group from this account's memberships
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultAnyAccountMembershipRemoveBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="N" id="HLPD-BLCK-78"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Remove Multiple Group Memberships</name>
+		<description>
+			To remove multiple groups from this account's memberships
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultAnyAccountMembershipMultipleRemoveBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="HLPD-BLCK-79"
+		portlet-flag="Y" printable-flag="N">
+		<name>New Active Directory Group</name>
+		<description>
+			To create a new group in Active Directory
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultActiveDirectoryGroupNewBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-2"
+		portlet-flag="Y" printable-flag="Y">
+		<name>
+			<![CDATA[What's New]]>
+		</name>
+		<description>
+			Lists the latest articles added to this wiki
+		</description>
+		<comment />
+		<invite>
+			The articles listed below are the latest articles added to
+			this wiki. To add an article, go to the article where you
+			think this article should be linked from and submit a
+			request
+		</invite>
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultWhatsNewViewBlock">
+			<messagesblock-messages>
+				<messagesblock-message message-id="WIKI-MESG-2"
+					order="1" />
+			</messagesblock-messages>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="HLPD-BLCK-5"
+		portlet-flag="Y" printable-flag="N">
+		<name>User Accounts</name>
+		<description>Lists user accounts recently used</description>
+		<comment />
+		<invite>
+			The list of accounts displayed below is based upon your
+			recent browsing and searching history
+		</invite>
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultAccountLookupRecentBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="HLPD-BLCK-6"
+		portlet-flag="Y" printable-flag="N">
+		<name>User Groups</name>
+		<description>
+			To look for a user group listed in the directory
+		</description>
+		<comment />
+		<invite>
+			To search for a user group, enter its name, then press
+			SEARCH. Use % as wildcard
+		</invite>
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultGroupSearchFormBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="HLPD-BLCK-8"
+		portlet-flag="Y" printable-flag="N">
+		<name>User Groups</name>
+		<description>Lists user groups recently used</description>
+		<comment />
+		<invite>
+			The list of user groups displayed below is based upon your
+			recent browsing and searching history
+		</invite>
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultGroupLookupRecentBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="HLPD-BLCK-9"
+		portlet-flag="Y" printable-flag="N">
+		<name>Add New Group</name>
+		<description>
+			To enter a new user group, public or personal
+		</description>
+		<comment>
+			Personal user groups are accessible to all users but they
+			are not displayed by default in lookups
+		</comment>
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultNativeGroupNewBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="WIKI-BLCK-10"
+		portlet-flag="Y" printable-flag="Y">
+		<name>My Articles</name>
+		<description>Lists the articles you have authored</description>
+		<comment>
+			If an article is outdated, you need to send a request to the
+			editor of the main article where this article resides
+		</comment>
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultMyArticlesViewBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-11"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Online Help</name>
+		<description>
+			To get help about this site by reading user documentation
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultStandardMessagesBlock">
+			<messagesblock-messages>
+				<messagesblock-message message-id="WIKI-MESG-6"
+					order="1" />
+			</messagesblock-messages>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-12"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Release Notes</name>
+		<description>
+			Historical listing of new features and modifications brought
+			to this site
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultStandardMessagesBlock">
+			<messagesblock-messages>
+				<messagesblock-message message-id="WIKI-MESG-4"
+					order="1" />
+			</messagesblock-messages>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-13"
+		portlet-flag="Y" printable-flag="N">
+		<name>Useful Links</name>
+		<description>
+			A selection of the most requested links when logging in
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultStandardPagesBlock">
+			<pagesblock-pages>
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="1" page-id="CORE-PAGE-4" />
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="2" page-id="CORE-PAGE-5" />
+			</pagesblock-pages>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-14"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Help Desk</name>
+		<description>
+			To get help about this site from help desk analysts
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultStandardMessagesBlock">
+			<messagesblock-messages>
+				<messagesblock-message message-id="WIKI-MESG-3"
+					order="1" />
+			</messagesblock-messages>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-15"
+		portlet-flag="Y" printable-flag="N">
+		<name>Rules for new passwords</name>
+		<description>
+			Describes the requirements for a new password to be valid in
+			this site
+		</description>
+		<comment>
+			A new password must meet all these requirements to be
+			accepted
+		</comment>
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultStandardMessagesBlock">
+			<messagesblock-messages>
+				<messagesblock-message message-id="WIKI-MESG-34"
+					order="1" />
+				<messagesblock-message message-id="WIKI-MESG-35"
+					order="2" />
+				<messagesblock-message message-id="WIKI-MESG-36"
+					order="3" />
+			</messagesblock-messages>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-16"
+		portlet-flag="Y" printable-flag="Y">
+		<name>View Article</name>
+		<description>Displays the content of an article</description>
+		<comment>
+			An article can is a combination of text, images and related
+			content
+		</comment>
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultArticleViewBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-17"
+		portlet-flag="Y" printable-flag="N">
+		<name>Rules for new logins</name>
+		<description>
+			Describes the requirements for a new login to be valid in
+			this site
+		</description>
+		<comment>
+			A new login must meet all these requirements to be accepted
+		</comment>
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultStandardMessagesBlock">
+			<messagesblock-messages>
+				<messagesblock-message message-id="WIKI-MESG-37"
+					order="1" />
+				<messagesblock-message message-id="WIKI-MESG-38"
+					order="2" />
+			</messagesblock-messages>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-18"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Privacy Practices</name>
+		<description>
+			Describes how personal information is used in this site
+		</description>
+		<comment>
+			This document states what type of information is gathered,
+			tracked and used, and with whom the information is shared
+		</comment>
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultStandardMessagesBlock">
+			<messagesblock-messages>
+				<messagesblock-message message-id="WIKI-MESG-39"
+					order="1" />
+			</messagesblock-messages>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-19"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Terms of Use</name>
+		<description>
+			Describes the authorized usage of this site
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultStandardMessagesBlock">
+			<messagesblock-messages>
+				<messagesblock-message message-id="WIKI-MESG-40"
+					order="1" />
+			</messagesblock-messages>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-20"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Accessibility Statement</name>
+		<description>
+			Describes the accessibility features of this site
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultStandardMessagesBlock">
+			<messagesblock-messages>
+				<messagesblock-message message-id="WIKI-MESG-41"
+					order="1" />
+			</messagesblock-messages>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-21"
+		portlet-flag="Y" printable-flag="Y">
+		<name>About this article</name>
+		<description>Useful information about this article</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultArticleAboutBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-22"
+		portlet-flag="Y" printable-flag="Y">
+		<name>About this article</name>
+		<description>Useful information about this article</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultStandardPagesBlock">
+			<pagesblock-parameters>
+				<pagesblock-parameter name="articleid" />
+			</pagesblock-parameters>
+			<pagesblock-pages>
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="1" page-id="WIKI-PAGE-16" />
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="2" page-id="WIKI-PAGE-17" />
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="3" page-id="WIKI-PAGE-20" />
+			</pagesblock-pages>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-23"
+		portlet-flag="Y" printable-flag="N">
+		<name>Useful Links</name>
+		<description>
+			A selection of images related to privacy, terms of use and
+			accessiblity
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultStandardPagesBlock">
+			<pagesblock-pages>
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="1" page-id="CORE-PAGE-4" />
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="2" page-id="CORE-PAGE-5" />
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="3" page-id="CORE-PAGE-6" />
+			</pagesblock-pages>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-24"
+		portlet-flag="Y" printable-flag="N">
+		<name>Useful Links</name>
+		<description>
+			A selection of the most requested links when viewing or
+			editing an account
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultStandardPagesBlock">
+			<pagesblock-pages>
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="1" page-id="CORE-PAGE-201" />
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="2" page-id="CORE-PAGE-202" />
+			</pagesblock-pages>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-25"
+		portlet-flag="Y" printable-flag="N">
+		<name>Search Tips</name>
+		<description>To optimize your search queries</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultStandardMessagesBlock">
+			<messagesblock-messages>
+				<messagesblock-message message-id="WIKI-MESG-5"
+					order="1" />
+			</messagesblock-messages>
+		</class>
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="WIKI-BLCK-26"
+		portlet-flag="Y" printable-flag="N">
+		<name>Edit One Related Content</name>
+		<description>
+			To request the modification of an article or image related
+			to this article
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultContentEditBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="WIKI-BLCK-27"
+		portlet-flag="Y" printable-flag="N">
+		<name>Remove Related Content</name>
+		<description>
+			To request the removal of an article or image related to
+			this article
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultContentRemoveBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="WIKI-BLCK-28"
+		portlet-flag="Y" printable-flag="N">
+		<name>Add New Article</name>
+		<description>
+			To request the addition of a new article related to this
+			article
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultArticleNewBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="WIKI-BLCK-29"
+		portlet-flag="Y" printable-flag="N">
+		<name>Add New Image</name>
+		<description>
+			To request the addition of a new image related to this
+			article
+		</description>
+		<comment>
+			Do not add if this image is already stored in this wiki
+		</comment>
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultImageNewBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-3"
+		portlet-flag="Y" printable-flag="N">
+		<name>Home's Useful Links</name>
+		<description>
+			A selection of the most requested links when viewing the
+			home page
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultStandardPagesBlock">
+			<pagesblock-parameters>
+				<pagesblock-parameter name="articleid" />
+			</pagesblock-parameters>
+			<pagesblock-pages>
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="1" page-id="WIKI-PAGE-39" />
+			</pagesblock-pages>
+		</class>
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="WIKI-BLCK-30"
+		portlet-flag="Y" printable-flag="N">
+		<name>Add New Related Article</name>
+		<description>
+			To request the addition of a new article related to this
+			article
+		</description>
+		<comment>
+			This article is not a duplicate of any other article
+		</comment>
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultArticleNewBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="WIKI-BLCK-31"
+		portlet-flag="Y" printable-flag="N">
+		<name>Add Existing Content</name>
+		<description>
+			To request the addition of an existing article or image
+			related to this article
+		</description>
+		<comment>
+			You must have recently accessed this content to submit a
+			request
+		</comment>
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultReferenceNewBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-32"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Site Content</name>
+		<description>
+			To search the entire site by content type and by keyword
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultSiteKeywordSearchResultsBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="WIKI-BLCK-33"
+		portlet-flag="Y" printable-flag="Y">
+		<name>My Editorships</name>
+		<description>Lists the articles you are editor for</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultMyEditorshipsViewBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-34"
+		portlet-flag="Y" printable-flag="Y">
+		<name>View Request</name>
+		<description>
+			Displays the content of a content request
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultContentRequestViewBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-35"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Recent Content</name>
+		<description>
+			Displays the 5 last content you have accessed
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultMyRecentContentsBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-36"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Useful Links</name>
+		<description>
+			A selection of the most requested links when viewing or
+			editing a content request
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultStandardPagesBlock">
+			<pagesblock-pages>
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="1" page-id="WIKI-PAGE-6" />
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="2" page-id="WIKI-PAGE-46" />
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="3" page-id="WIKI-PAGE-7" />
+			</pagesblock-pages>
+		</class>
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="WIKI-BLCK-37"
+		portlet-flag="Y" printable-flag="N">
+		<name>Edit Request</name>
+		<description>
+			To modify the content of a content request
+		</description>
+		<comment>
+			The approver and the initiator can edit a content request
+			only if this request is pending approval. Reference requests
+			and removal requests cannot be edited
+		</comment>
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultContentRequestEditBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="WIKI-BLCK-38"
+		portlet-flag="Y" printable-flag="N">
+		<name>Edit Article</name>
+		<description>
+			To request the modification of this article
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultArticleEditBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="WIKI-BLCK-39"
+		portlet-flag="Y" printable-flag="N">
+		<name>Edit Article</name>
+		<description>
+			To request the modification of this article
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultArticleEditBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-4"
+		portlet-flag="Y" printable-flag="N">
+		<name>Top 10 articles</name>
+		<description>
+			Most requested articles during the last 5 days
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultTopTenArticlesViewBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="WIKI-BLCK-40"
+		portlet-flag="Y" printable-flag="N">
+		<name>Edit Image</name>
+		<description>
+			To request the modification of this image
+		</description>
+		<comment>
+			To avoid the creation of duplicate image versions, please
+			upload a new file ONLY IF the image itself has changed
+		</comment>
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultImageEditBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="WIKI-BLCK-41"
+		portlet-flag="Y" printable-flag="N">
+		<name>Reorganize Related Content</name>
+		<description>
+			To modify the display order of the content in this article
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultArticleReorganizeBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-42"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Summary</name>
+		<description>
+			Displays summary information about this article
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultArticleSummaryBlock">
+			<pagesblock-pages>
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="1" page-id="WIKI-PAGE-39" />
+			</pagesblock-pages>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-43"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Summary</name>
+		<description>
+			Displays summary information about an article
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultArticleSummaryBlock">
+			<pagesblock-pages>
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="1" page-id="WIKI-PAGE-40" />
+			</pagesblock-pages>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-44"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Summary</name>
+		<description>
+			Displays summary information about an image
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultImageSummaryBlock">
+			<pagesblock-pages>
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="1" page-id="WIKI-PAGE-41" />
+			</pagesblock-pages>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-45"
+		portlet-flag="Y" printable-flag="Y">
+		<name>References</name>
+		<description>
+			Lists the articles where this article is referenced
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultArticleReferencesBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-46"
+		portlet-flag="Y" printable-flag="Y">
+		<name>References</name>
+		<description>
+			Lists the articles where an article is referenced
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultArticleReferencesBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-47"
+		portlet-flag="Y" printable-flag="Y">
+		<name>References</name>
+		<description>
+			Lists the articles where this image is referenced
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultImageReferencesBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-48"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Useful Links</name>
+		<description>
+			A selection of the most requested links when viewing the
+			properties of an article
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultStandardArticlePagesOfBlock">
+			<pagesblock-parameters>
+				<pagesblock-parameter name="articleid" />
+			</pagesblock-parameters>
+			<pagesblock-pages>
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="1" page-id="WIKI-PAGE-42" />
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="2" page-id="WIKI-PAGE-44" />
+			</pagesblock-pages>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-49"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Useful Links</name>
+		<description>
+			A selection of the most requested links when viewing the
+			properties of an article
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultStandardArticlePagesOfBlock">
+			<pagesblock-parameters>
+				<pagesblock-parameter name="articleid" />
+			</pagesblock-parameters>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-5"
+		portlet-flag="Y" printable-flag="N">
+		<name>Site Content</name>
+		<description>
+			To search the content of this site using advanced search
+			criteria
+		</description>
+		<comment />
+		<invite>
+			Select the type of content you want to search for, enter
+			your search criteria then press SEARCH
+		</invite>
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultContentsAdvancedSearchFormBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-50"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Useful Links</name>
+		<description>
+			A selection of the most requested links when viewing the
+			properties of an image
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultStandardImagePagesOfBlock">
+			<pagesblock-parameters>
+				<pagesblock-parameter name="imageid" />
+				<pagesblock-parameter name="accountid" />
+			</pagesblock-parameters>
+			<pagesblock-pages>
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="1" page-id="WIKI-PAGE-43" />
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="2" page-id="WIKI-PAGE-45" />
+			</pagesblock-pages>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-51"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Versions</name>
+		<description>
+			Lists the different versions of this article
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultArticleVersionsViewBlock">
+			<pagesblock-parameters>
+				<pagesblock-parameter name="accountid" />
+			</pagesblock-parameters>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-52"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Versions</name>
+		<description>
+			Lists the different versions of this image
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultImageVersionsViewBlock">
+			<pagesblock-parameters>
+				<pagesblock-parameter name="accountid" />
+			</pagesblock-parameters>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-53"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Statistics</name>
+		<description>
+			Lists the number of times this article was accessed each day
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultArticleStatisticsViewBlock">
+			<pagesblock-parameters>
+				<pagesblock-parameter name="accountid" />
+			</pagesblock-parameters>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-54"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Statistics</name>
+		<description>
+			Daily listing of the number of times an image was accessed
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultImageStatisticsViewBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-55"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Statistics</name>
+		<description>
+			Daily listing of the number of times an article was accessed
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultArticleStatisticsViewBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-56"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Site Content</name>
+		<description>
+			To search the content of this site using advanced search
+			criteria
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultContentsAdvancedSearchResultsBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="WIKI-BLCK-57"
+		portlet-flag="Y" printable-flag="N">
+		<name>Subscribe User</name>
+		<description>
+			To request an email notification to be sent to a user when a
+			new version of this article is issued
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultArticleSubscriptionNewBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="WIKI-BLCK-58"
+		portlet-flag="Y" printable-flag="N">
+		<name>Subscribe User</name>
+		<description>
+			To request an email notification to be sent to a user when a
+			new version of this image is issued
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultImageSubscriptionNewBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-59"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Subscribers</name>
+		<description>
+			Lists the user accounts receiving an email when a new
+			version of this article is issued
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultArticleSubscribersBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="WIKI-BLCK-6"
+		portlet-flag="Y" printable-flag="Y">
+		<name>My Approvals</name>
+		<description>
+			Lists the content requests waiting for your approval
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultMyContentApprovalsViewBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-60"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Subscribers</name>
+		<description>
+			Lists the user accounts receiving an email when a new
+			version of an image is issued
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultImageSubscribersBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="WIKI-BLCK-61"
+		portlet-flag="Y" printable-flag="N">
+		<name>Unsubscribe User</name>
+		<description>
+			To stop email notifications from being sent to a user when a
+			new version of this article is issued
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultArticleSubscriptionRemoveBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="WIKI-BLCK-62"
+		portlet-flag="Y" printable-flag="N">
+		<name>Unsubscribe User</name>
+		<description>
+			To stop email notifications from being sent to a user when a
+			new version of this image is issued
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultImageSubscriptionRemoveBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-63"
+		portlet-flag="Y" printable-flag="N">
+		<name>Useful Links</name>
+		<description>
+			A selection of the most requested links when subscribing to
+			this article
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultStandardPagesBlock">
+			<pagesblock-parameters>
+				<pagesblock-parameter name="articleid" />
+			</pagesblock-parameters>
+			<pagesblock-pages>
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="1" page-id="WIKI-PAGE-44" />
+			</pagesblock-pages>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-64"
+		portlet-flag="Y" printable-flag="N">
+		<name>Useful Links</name>
+		<description>
+			A selection of the most requested links when unsubscribing
+			to this article
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultStandardPagesBlock">
+			<pagesblock-parameters>
+				<pagesblock-parameter name="articleid" />
+			</pagesblock-parameters>
+			<pagesblock-pages>
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="1" page-id="WIKI-PAGE-42" />
+			</pagesblock-pages>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-65"
+		portlet-flag="Y" printable-flag="N">
+		<name>Useful Links</name>
+		<description>
+			A selection of the most requested links when subscribing to
+			an image
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultStandardPagesBlock">
+			<pagesblock-parameters>
+				<pagesblock-parameter name="imageid" />
+			</pagesblock-parameters>
+			<pagesblock-pages>
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="1" page-id="WIKI-PAGE-45" />
+			</pagesblock-pages>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-66"
+		portlet-flag="Y" printable-flag="N">
+		<name>Useful Links</name>
+		<description>
+			A selection of the most requested links when unsubscribing
+			to an image
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultStandardPagesBlock">
+			<pagesblock-parameters>
+				<pagesblock-parameter name="imageid" />
+			</pagesblock-parameters>
+			<pagesblock-pages>
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="1" page-id="WIKI-PAGE-43" />
+			</pagesblock-pages>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-67"
+		portlet-flag="Y" printable-flag="N">
+		<name>How-to</name>
+		<description>
+			Describes the procedure to follow to subscribe or
+			unsubscribe to a piece of content
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultStandardMessagesBlock">
+			<messagesblock-messages>
+				<messagesblock-message message-id="WIKI-MESG-187"
+					order="1" />
+			</messagesblock-messages>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-68"
+		portlet-flag="Y" printable-flag="Y">
+		<name>About this article</name>
+		<description>Useful information about this article</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultStandardPagesBlock">
+			<pagesblock-parameters>
+				<pagesblock-parameter name="articleid" />
+			</pagesblock-parameters>
+			<pagesblock-pages>
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="1" page-id="WIKI-PAGE-24" />
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="2" page-id="WIKI-PAGE-12" />
+			</pagesblock-pages>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-69"
+		portlet-flag="Y" printable-flag="Y">
+		<name>About this article</name>
+		<description>Useful information about this article</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultArticleRemoveRelatedContentPagesBlock">
+			<pagesblock-parameters>
+				<pagesblock-parameter name="articleid" />
+			</pagesblock-parameters>
+			<pagesblock-pages>
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="1" page-id="WIKI-PAGE-13" />
+			</pagesblock-pages>
+		</class>
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="WIKI-BLCK-7"
+		portlet-flag="Y" printable-flag="Y">
+		<name>My Subscriptions</name>
+		<description>
+			Lists the content you are subscribed to
+		</description>
+		<comment>
+			Subscriptions are articles or images from this site that you
+			want to receive by email on a regular basis
+		</comment>
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultMySubscriptionsViewBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-70"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Requests</name>
+		<description>
+			Lists the content requests submitted by this user and
+			waiting for approval
+		</description>
+		<comment>
+			Requests can be content to add, edit, or remove. Requests
+			can also be references to add or remove
+		</comment>
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultAnyContentRequestsViewBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-71"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Approvals</name>
+		<description>
+			Lists the content requests waiting for approval by this user
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultAnyContentApprovalsViewBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-72"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Subscriptions</name>
+		<description>
+			Lists the content this user subscribed to
+		</description>
+		<comment>
+			Subscriptions are articles or images from this site that the
+			user wants to receive by email on a regular basis
+		</comment>
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultAnySubscriptionsViewBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-73"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Editorships</name>
+		<description>
+			Lists the articles this user is editor for
+		</description>
+		<comment>
+			A user is responsible for all content of an article if this
+			user is its editor
+		</comment>
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultAnyEditorshipsViewBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-74"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Articles</name>
+		<description>
+			Lists the articles this user has authored
+		</description>
+		<comment>
+			A user is responsible for an article if this user is its
+			author
+		</comment>
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultAnyArticlesViewBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-75"
+		portlet-flag="Y" printable-flag="N">
+		<name>Account Tools</name>
+		<description>
+			To view the tasks and content associated with this user
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultStandardAccountPagesBlock">
+			<pagesblock-parameters>
+				<pagesblock-parameter name="accountid" />
+			</pagesblock-parameters>
+			<pagesblock-pages>
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="1" page-id="HLPD-PAGE-27" />
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="2" page-id="WIKI-PAGE-50" />
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="3" page-id="WIKI-PAGE-51" />
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="4" page-id="WIKI-PAGE-53" />
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="5" page-id="WIKI-PAGE-52" />
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="6" page-id="HLPD-PAGE-73" />
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="7" page-id="HLPD-PAGE-71" />
+			</pagesblock-pages>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-76"
+		portlet-flag="Y" printable-flag="N">
+		<name>Forbidden</name>
+		<description>
+			Indicates that you have been denied access to the screen
+			requested
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultStandardMessagesBlock">
+			<messagesblock-messages>
+				<messagesblock-message message-id="WIKI-MESG-195"
+					order="1" />
+			</messagesblock-messages>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-77"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Read-Only Access Groups</name>
+		<description>
+			Lists the groups granted or denied access to this article
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultArticleAccessGroupsViewBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-78"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Read-Only Access Groups</name>
+		<description>
+			Lists the groups granted exclusive access to this image
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultImageAccessGroupsViewBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-79"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Read-Only Access Groups</name>
+		<description>
+			Lists the groups granted exclusive access to this article
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultArticleAccessGroupsViewBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="WIKI-BLCK-8"
+		portlet-flag="Y" printable-flag="Y">
+		<name>My Requests</name>
+		<description>
+			Lists the content requests you have submitted and waiting
+			for approval
+		</description>
+		<comment>
+			Requests can be content to add, edit or remove. Requests can
+			also be references to add or remove
+		</comment>
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultMyContentRequestsViewBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-80"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Useful Links</name>
+		<description>
+			A selection of the most requested links when viewing the
+			properties of an article
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultStandardPagesBlock">
+			<pagesblock-parameters>
+				<pagesblock-parameter name="articleid" />
+			</pagesblock-parameters>
+			<pagesblock-pages>
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="1" page-id="WIKI-PAGE-24" />
+			</pagesblock-pages>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-81"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Useful Links</name>
+		<description>
+			A selection of the most requested links when viewing the
+			properties of an image
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultStandardPagesBlock">
+			<pagesblock-parameters>
+				<pagesblock-parameter name="imageid" />
+			</pagesblock-parameters>
+			<pagesblock-pages>
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="1" page-id="WIKI-PAGE-25" />
+			</pagesblock-pages>
+		</class>
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="WIKI-BLCK-82"
+		portlet-flag="Y" printable-flag="N">
+		<name>Add Access Group</name>
+		<description>
+			To add a group to the list of access groups of this article
+		</description>
+		<comment>
+			The editors, the associate editors, the author and the
+			subscribers of an article are always granted access
+		</comment>
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultArticleAccessGroupNewBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="WIKI-BLCK-83"
+		portlet-flag="Y" printable-flag="N">
+		<name>Add Access Group</name>
+		<description>
+			To add a group to the list of access groups of this image
+		</description>
+		<comment>
+			The editors, the associate editors and the subscribers of an
+			image are always granted access
+		</comment>
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultImageAccessGroupNewBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="WIKI-BLCK-84"
+		portlet-flag="Y" printable-flag="N">
+		<name>Add Access Group</name>
+		<description>
+			To add a group to the list of access groups of this article
+		</description>
+		<comment>
+			The editors and the associate editors of an article are
+			always granted access
+		</comment>
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultArticleAccessGroupNewBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="WIKI-BLCK-85"
+		portlet-flag="Y" printable-flag="N">
+		<name>Remove Access Group</name>
+		<description>
+			To remove a group from the list of access groups of this
+			article
+		</description>
+		<comment>
+			The editors, the associate editors, the author and the
+			subscribers of an article are always granted access
+		</comment>
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultArticleAccessGroupRemoveBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="WIKI-BLCK-86"
+		portlet-flag="Y" printable-flag="N">
+		<name>Remove Access Group</name>
+		<description>
+			To remove a group from the list of access groups of this
+			image
+		</description>
+		<comment>
+			The editors, the associate editors and the subscribers of an
+			image are always granted access
+		</comment>
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultImageAccessGroupRemoveBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="WIKI-BLCK-87"
+		portlet-flag="Y" printable-flag="N">
+		<name>Remove Access Group</name>
+		<description>
+			To remove a group from the list of access groups of this
+			article
+		</description>
+		<comment>
+			The editors and the associate editors of an article are
+			always granted access
+		</comment>
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultArticleAccessGroupRemoveBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-88"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Useful Links</name>
+		<description>
+			A selection of the most requested links when viewing the
+			properties of an article
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultStandardArticlePagesBlock">
+			<pagesblock-parameters>
+				<pagesblock-parameter name="articleid" />
+			</pagesblock-parameters>
+			<pagesblock-pages>
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="1" page-id="WIKI-PAGE-54" />
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="2" page-id="WIKI-PAGE-55" />
+			</pagesblock-pages>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-89"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Useful Links</name>
+		<description>
+			A selection of the most requested links when viewing the
+			properties of an image
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultStandardImagePagesBlock">
+			<pagesblock-parameters>
+				<pagesblock-parameter name="imageid" />
+			</pagesblock-parameters>
+			<pagesblock-pages>
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="1" page-id="WIKI-PAGE-56" />
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="2" page-id="WIKI-PAGE-57" />
+			</pagesblock-pages>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-9"
+		portlet-flag="Y" printable-flag="N">
+		<name>Sorry, that file was not found</name>
+		<description>
+			<![CDATA[Indicates that the screen requested doesn't exist]]>
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultStandardMessagesBlock">
+			<messagesblock-messages>
+				<messagesblock-message message-id="WIKI-MESG-42"
+					order="1" />
+			</messagesblock-messages>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-90"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Useful Links</name>
+		<description>
+			A selection of the most requested links when viewing the
+			properties of an article
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultStandardArticlePagesBlock">
+			<pagesblock-parameters>
+				<pagesblock-parameter name="articleid" />
+			</pagesblock-parameters>
+			<pagesblock-pages>
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="1" page-id="WIKI-PAGE-58" />
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="2" page-id="WIKI-PAGE-59" />
+			</pagesblock-pages>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-91"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Useful links</name>
+		<description>
+			A selection of the most requested links when adding access
+			groups to an article
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultStandardPagesBlock">
+			<pagesblock-parameters>
+				<pagesblock-parameter name="articleid" />
+			</pagesblock-parameters>
+			<pagesblock-pages>
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="2" page-id="WIKI-PAGE-55" />
+			</pagesblock-pages>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-92"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Useful links</name>
+		<description>
+			A selection of the most requested links when removing access
+			groups from an article
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultStandardPagesBlock">
+			<pagesblock-parameters>
+				<pagesblock-parameter name="articleid" />
+			</pagesblock-parameters>
+			<pagesblock-pages>
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="1" page-id="WIKI-PAGE-54" />
+			</pagesblock-pages>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-93"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Useful links</name>
+		<description>
+			A selection of the most requested links when adding access
+			groups to an image
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultStandardPagesBlock">
+			<pagesblock-parameters>
+				<pagesblock-parameter name="imageid" />
+			</pagesblock-parameters>
+			<pagesblock-pages>
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="1" page-id="WIKI-PAGE-57" />
+			</pagesblock-pages>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-94"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Useful links</name>
+		<description>
+			A selection of the most requested links when removing access
+			groups from an image
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultStandardPagesBlock">
+			<pagesblock-parameters>
+				<pagesblock-parameter name="imageid" />
+			</pagesblock-parameters>
+			<pagesblock-pages>
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="1" page-id="WIKI-PAGE-56" />
+			</pagesblock-pages>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-95"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Useful links</name>
+		<description>
+			A selection of the most requested links when adding access
+			groups to an article
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultStandardPagesBlock">
+			<pagesblock-parameters>
+				<pagesblock-parameter name="articleid" />
+			</pagesblock-parameters>
+			<pagesblock-pages>
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="1" page-id="WIKI-PAGE-59" />
+			</pagesblock-pages>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-96"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Useful links</name>
+		<description>
+			A selection of the most requested links when removing access
+			groups from an article
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultStandardPagesBlock">
+			<pagesblock-parameters>
+				<pagesblock-parameter name="articleid" />
+			</pagesblock-parameters>
+			<pagesblock-pages>
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="1" page-id="WIKI-PAGE-58" />
+			</pagesblock-pages>
+		</class>
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="WIKI-BLCK-97"
+		portlet-flag="Y" printable-flag="N">
+		<name>Subscribe Group</name>
+		<description>
+			To request an email notification to be sent to a group when
+			a new version of this article is issued
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultArticleGroupSubscriptionNewBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="WIKI-BLCK-98"
+		portlet-flag="Y" printable-flag="N">
+		<name>Subscribe Group</name>
+		<description>
+			To request an email notification to be sent to a group when
+			a new version of this image is issued
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultImageGroupSubscriptionNewBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="WIKI-BLCK-99"
+		portlet-flag="Y" printable-flag="N">
+		<name>Unsubscribe Group</name>
+		<description>
+			To stop email notifications from being sent to a group when
+			a new version of this article is issued
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultArticleGroupSubscriptionRemoveBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="WIKI-BLCK-100"
+		portlet-flag="Y" printable-flag="N">
+		<name>Unsubscribe Group</name>
+		<description>
+			To stop email notifications from being sent to a group when
+			a new version of this image is issued
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultImageGroupSubscriptionRemoveBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="WIKI-BLCK-101"
+		portlet-flag="Y" printable-flag="Y">
+		<name>My Daily Digest</name>
+		<description>
+			Lists the content you are subscribed to on a daily basis and
+			that have been modified during a day
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultMyDailySubscriptionsDigestBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="WIKI-BLCK-102"
+		portlet-flag="Y" printable-flag="Y">
+		<name>My Weekly Digest</name>
+		<description>
+			Lists the content you are subscribed to on a weekly basis
+			and that have been modified within a period of 7 days
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultMyWeeklySubscriptionsDigestBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="WIKI-BLCK-103"
+		portlet-flag="Y" printable-flag="N">
+		<name>Digest Reports</name>
+		<description>
+			A selection of the most requested links when viewing
+			subscriptions
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultStandardPagesBlock">
+			<pagesblock-pages>
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="1" page-id="WIKI-PAGE-60" />
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="2" page-id="WIKI-PAGE-61" />
+			</pagesblock-pages>
+		</class>
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="WIKI-BLCK-104"
+		portlet-flag="Y" printable-flag="Y">
+		<name>My Approvals</name>
+		<description>
+			Lists the content requests waiting for your approval
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultMyContentApprovalsEditBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="WIKI-BLCK-105"
+		portlet-flag="Y" printable-flag="N">
+		<name>Remove Versions</name>
+		<description>To remove versions of this article</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultArticleVersionsRemoveBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="WIKI-BLCK-106"
+		portlet-flag="Y" printable-flag="N">
+		<name>Remove Versions</name>
+		<description>To remove versions of this image</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultImageVersionsRemoveBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-107"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Subscribers</name>
+		<description>
+			Lists the user accounts receiving an email when an article
+			or image is added or modified in this article
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultArticleSubscribersBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="WIKI-BLCK-108"
+		portlet-flag="Y" printable-flag="N">
+		<name>Subscribe User</name>
+		<description>
+			To request an email notification to be sent to a user when
+			an article or image is added or modified in this article
+		</description>
+		<comment />
+		<invite>
+			<![CDATA[Please note that no notification is sent for a piece of content if the classification of this content is not "same as parent article". Content related to this article is also ignored]]>
+		</invite>
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultArticleSubscriptionNewBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="WIKI-BLCK-109"
+		portlet-flag="Y" printable-flag="N">
+		<name>Unsubscribe User</name>
+		<description>
+			To stop email notifications from being sent to a user when
+			an article or image is added or modified in this article
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultArticleSubscriptionRemoveBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="WIKI-BLCK-110"
+		portlet-flag="Y" printable-flag="N">
+		<name>Subscribe Group</name>
+		<description>
+			To request an email notification to be sent to a group when
+			an article or image is added or modified in this article
+		</description>
+		<comment />
+		<invite>
+			<![CDATA[Please note that no notification is sent for a piece of content if the classification of this content is not "same as parent article". Content related to this article are also ignored]]>
+		</invite>
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultArticleGroupSubscriptionNewBlock" />
+	</block>
+	<block auth-required-flag="Y" enabled-flag="Y" id="WIKI-BLCK-111"
+		portlet-flag="Y" printable-flag="N">
+		<name>Unsubscribe Group</name>
+		<description>
+			To stop email notifications from being sent to a group when
+			an article or image is added or modified in this article
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultArticleGroupSubscriptionRemoveBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-112"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Useful Links</name>
+		<description>
+			A selection of the most requested links when viewing the
+			properties of an article
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultStandardArticlePagesOfBlock">
+			<pagesblock-parameters>
+				<pagesblock-parameter name="articleid" />
+			</pagesblock-parameters>
+			<pagesblock-pages>
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="1" page-id="WIKI-PAGE-64" />
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="2" page-id="WIKI-PAGE-65" />
+			</pagesblock-pages>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-113"
+		portlet-flag="Y" printable-flag="N">
+		<name>Useful Links</name>
+		<description>
+			A selection of the most requested links when subscribing to
+			this article
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultStandardPagesBlock">
+			<pagesblock-parameters>
+				<pagesblock-parameter name="articleid" />
+			</pagesblock-parameters>
+			<pagesblock-pages>
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="1" page-id="WIKI-PAGE-40" />
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="2" page-id="WIKI-PAGE-65" />
+			</pagesblock-pages>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-114"
+		portlet-flag="Y" printable-flag="N">
+		<name>Useful Links</name>
+		<description>
+			A selection of the most requested links when unsubscribing
+			to this article
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultStandardPagesBlock">
+			<pagesblock-parameters>
+				<pagesblock-parameter name="articleid" />
+			</pagesblock-parameters>
+			<pagesblock-pages>
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="1" page-id="WIKI-PAGE-40" />
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="2" page-id="WIKI-PAGE-64" />
+			</pagesblock-pages>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-115"
+		portlet-flag="Y" printable-flag="N">
+		<name>
+			<![CDATA[What's Related]]>
+		</name>
+		<description>
+			Lists the content directly related to this article
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultArticleWhatsRelatedViewBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-116"
+		portlet-flag="Y" printable-flag="N">
+		<name>
+			<![CDATA[What's Related]]>
+		</name>
+		<description>
+			Lists the content directly related to this article
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultImageWhatsRelatedViewBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-117"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Full Text Results</name>
+		<description>
+			Lists more results based upon the content of articles as
+			opposed to only the name and description of these articles
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultAdditionalIllustratedSiteKeywordSearchResultsBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-118"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Full Text Results</name>
+		<description>
+			Lists more results based upon the content of articles as
+			opposed to only the name and description of these articles
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultContentsAdditionalAdvancedSearchResultsBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-119"
+		portlet-flag="Y" printable-flag="Y">
+		<name>View Article Version</name>
+		<description>
+			Displays the historical content of an article
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultArticleVersionViewBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-120"
+		portlet-flag="Y" printable-flag="Y">
+		<name>View Request Body</name>
+		<description>
+			Displays the body of a content request
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultContentRequestBodyViewBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-121"
+		portlet-flag="Y" printable-flag="N">
+		<name>Online Help</name>
+		<description>
+			To get help about this site by reading user documentation
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultOnlineHelpHierarchyBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-122"
+		portlet-flag="Y" printable-flag="N">
+		<name>Online Help</name>
+		<description>
+			To get help about this site by reading user documentation
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultOnlineHelpKeywordSearchFormBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-123"
+		portlet-flag="Y" printable-flag="N">
+		<name>Online Help</name>
+		<description>
+			To get help about this site by reading user documentation
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.wiki.blocks.DefaultOnlineHelpKeywordSearchResultsBlock" />
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-219"
+		portlet-flag="Y" printable-flag="Y">
+		<name>References for All Users</name>
+		<description>
+			Lists the reference tables used in this site
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultStandardPagesBlock">
+			<pagesblock-pages>
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="1" page-id="HLPD-PAGE-1" />
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="2" page-id="HLPD-PAGE-2" />
+			</pagesblock-pages>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-220"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Useful Links</name>
+		<description>
+			Most requested links when adding or removing proxies
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultStandardPagesBlock">
+			<pagesblock-pages>
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="1" page-id="HLPD-PAGE-72" />
+			</pagesblock-pages>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-221"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Proxy Management</name>
+		<description>To add, edit or remove proxies</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultStandardPagesBlock">
+			<pagesblock-pages>
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="1" page-id="HLPD-PAGE-55" />
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="2" page-id="HLPD-PAGE-57" />
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="3" page-id="HLPD-PAGE-56" />
+			</pagesblock-pages>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-226"
+		portlet-flag="Y" printable-flag="N">
+		<name>Useful Links</name>
+		<description>
+			Most requested links when searching for a user account
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultStandardPagesBlock">
+			<pagesblock-pages>
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="1" page-id="CORE-PAGE-26" />
+			</pagesblock-pages>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-227"
+		portlet-flag="Y" printable-flag="Y">
+		<name>Edit Memberships</name>
+		<description>To add or remove members</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.helpdesk.blocks.DefaultStandardGroupPagesWithoutDescriptionBlock">
+			<pagesblock-parameters>
+				<pagesblock-parameter name="groupid" />
+			</pagesblock-parameters>
+			<pagesblock-pages>
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="1" page-id="HLPD-PAGE-22" />
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="2" page-id="HLPD-PAGE-23" />
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="3" page-id="HLPD-PAGE-24" />
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="4" page-id="HLPD-PAGE-25" />
+			</pagesblock-pages>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-228"
+		portlet-flag="Y" printable-flag="N">
+		<name>Useful Links</name>
+		<description>
+			Most requested links when searching, adding, viewing or
+			removing a group
+		</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultStandardPagesBlock">
+			<pagesblock-pages>
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="1" page-id="HLPD-PAGE-70" />
+			</pagesblock-pages>
+		</class>
+	</block>
+	<block auth-required-flag="N" enabled-flag="Y" id="WIKI-BLCK-229"
+		portlet-flag="Y" printable-flag="N">
+		<name>Group Management</name>
+		<description>To add, edit or remove a group</description>
+		<comment />
+		<invite />
+		<class
+			name="com.corendal.netapps.framework.core.blocks.DefaultStandardPagesBlock">
+			<pagesblock-pages>
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="1" page-id="WIKI-PAGE-179" />
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="2" page-id="WIKI-PAGE-180" />
+				<pagesblock-page icon-id="CORE-ICON-3"
+					current-icon-id="CORE-ICON-6" order="3" page-id="HLPD-PAGE-20" />
+			</pagesblock-pages>
+		</class>
+	</block>
+</blocks>

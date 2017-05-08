@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Version: $Id: servlets.xml,v 1.3 2006/07/17 02:23:36 tdanard Exp $ -->
+<servlets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="../../schemas/servlets.xsd">
+	<servlet default-flag="Y" enabled-flag="Y" id="CORE-SERV-1">
+		<name>DynamicPageServlet</name>
+		<class
+			name="com.corendal.netapps.framework.core.servlets.DymamicDatabaseHTTPServlet" />
+	</servlet>
+	<servlet default-flag="N" enabled-flag="Y" id="CORE-SERV-2">
+		<name>DailyCachedPageServlet</name>
+		<class
+			name="com.corendal.netapps.framework.core.servlets.DailyCachedDatabaseHTTPServlet" />
+	</servlet>
+	<servlet default-flag="N" enabled-flag="Y" id="CORE-SERV-3">
+		<name>NoCachePageServlet</name>
+		<class
+			name="com.corendal.netapps.framework.core.servlets.NoCacheDatabaseHTTPServlet" />
+	</servlet>
+	<servlet default-flag="N" enabled-flag="Y" id="CORE-SERV-4">
+		<name>MultipartPageServlet</name>
+		<class
+			name="com.corendal.netapps.framework.core.servlets.MultipartDatabaseHTTPServlet" />
+	</servlet>
+</servlets>

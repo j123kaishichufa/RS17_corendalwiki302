@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Version: $Id: buttons.xml,v 1.13 2007/12/21 21:27:30 tdanard Exp $ -->
+<buttons xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="../../schemas/buttons.xsd">
+	<button enabled-flag="Y" id="ADMN-BUTN-29">
+		<name>Submit</name>
+		<description>Add this warning</description>
+	</button>
+	<button enabled-flag="Y" id="ADMN-BUTN-30">
+		<name>Update</name>
+		<description>Updates this warning</description>
+	</button>
+	<button enabled-flag="Y" id="ADMN-BUTN-31">
+		<name>Remove</name>
+		<description>Removes this warning</description>
+	</button>
+	<button enabled-flag="Y" id="ADMN-BUTN-32">
+		<name>Search</name>
+		<description>Launches this entry logs search</description>
+	</button>
+	<button enabled-flag="Y" id="ADMN-BUTN-33">
+		<name>Search</name>
+		<description>Launches this error logs search</description>
+	</button>
+	<button enabled-flag="Y" id="ADMN-BUTN-34">
+		<name>Search</name>
+		<description>Launches this response logs search</description>
+	</button>
+	<button enabled-flag="Y" id="ADMN-BUTN-35">
+		<name>Search</name>
+		<description>Launches this files search</description>
+	</button>
+	<button enabled-flag="Y" id="ADMN-BUTN-36">
+		<name>Update Only</name>
+		<description>Update this email only</description>
+	</button>
+	<button enabled-flag="Y" id="ADMN-BUTN-37">
+		<name>Update And Send Now</name>
+		<description>Update and send this email now</description>
+	</button>
+	<button enabled-flag="Y" id="ADMN-BUTN-38">
+		<name>Disable</name>
+		<description>Disable this email</description>
+	</button>
+	<button enabled-flag="Y" id="ADMN-BUTN-39">
+		<name>Submit</name>
+		<description>Add this system account</description>
+	</button>
+	<button enabled-flag="Y" id="ADMN-BUTN-40">
+		<name>Submit</name>
+		<description>Add this system group</description>
+	</button>
+	<button enabled-flag="Y" id="ADMN-BUTN-41">
+		<name>Submit</name>
+		<description>Add this system LDAP control</description>
+	</button>
+	<button enabled-flag="Y" id="ADMN-BUTN-42">
+		<name>Submit</name>
+		<description>Add this system file</description>
+	</button>
+	<button enabled-flag="Y" id="ADMN-BUTN-43">
+		<name>Remove</name>
+		<description>
+			Remove the selected system accounts, groups, files or LDAP
+			controls
+		</description>
+	</button>
+	<button enabled-flag="Y" id="CORE-BUTN-1">
+		<name>Log In</name>
+		<description>
+			Submits these credentials for authentication
+		</description>
+	</button>
+	<button enabled-flag="Y" id="CORE-BUTN-2">
+		<name>Sign Up</name>
+		<description>
+			Submits these personal information to create a new account
+		</description>
+	</button>
+	<button enabled-flag="Y" id="CORE-BUTN-3">
+		<name>Reset Password</name>
+		<description>
+			Submits this login for immediate password reset
+		</description>
+	</button>
+	<button enabled-flag="Y" id="CORE-BUTN-4">
+		<name>Change Password</name>
+		<description>Submits this password change</description>
+	</button>
+	<button enabled-flag="Y" id="CORE-BUTN-5">
+		<name>Update Account</name>
+		<description>Submits this account for modification</description>
+	</button>
+	<button enabled-flag="Y" id="CORE-BUTN-6">
+		<name>Search</name>
+		<description>Launches this user account search</description>
+	</button>
+	<button enabled-flag="Y" id="CORE-BUTN-7">
+		<name>Export All</name>
+		<description>
+			Exports all results in the selected format
+		</description>
+	</button>
+	<button enabled-flag="Y" id="CORE-BUTN-8">
+		<name>
+			<![CDATA[>]]>
+		</name>
+		<description>
+			Changes the language used by this site
+		</description>
+	</button>
+	<button enabled-flag="Y" id="CORE-BUTN-9">
+		<name>
+			<![CDATA[>]]>
+		</name>
+		<description>Submits this search by keyword</description>
+	</button>
+	<button enabled-flag="Y" id="CORE-BUTN-10">
+		<name>Go</name>
+		<description>Submits this search by keyword</description>
+	</button>
+	<button enabled-flag="Y" id="CORE-BUTN-11">
+		<name>
+			<![CDATA[>]]>
+		</name>
+		<description>
+			Displays the days of the selected month
+		</description>
+	</button>
+	<button enabled-flag="Y" id="CORE-BUTN-12">
+		<name>
+			<![CDATA[>]]>
+		</name>
+		<description>
+			Reassigns the queues and roles of this user account
+		</description>
+	</button>
+	<button enabled-flag="Y" id="CORE-BUTN-13">
+		<name>Search</name>
+		<description>Launches this department search</description>
+	</button>
+	<button enabled-flag="Y" id="CORE-BUTN-14">
+		<name>Submit</name>
+		<description>Creates this account</description>
+	</button>
+	<button enabled-flag="Y" id="CORE-BUTN-15">
+		<name>Add Checked Departments</name>
+		<description>
+			Adds the checked departments to the list
+		</description>
+	</button>
+	<button enabled-flag="Y" id="CORE-BUTN-16">
+		<name>Submit</name>
+		<description>Creates this department</description>
+	</button>
+	<button enabled-flag="Y" id="CORE-BUTN-17">
+		<name>Update</name>
+		<description>Updates this department</description>
+	</button>
+	<button enabled-flag="Y" id="CORE-BUTN-18">
+		<name>Remove</name>
+		<description>Removes this department</description>
+	</button>
+	<button enabled-flag="Y" id="CORE-BUTN-19">
+		<name>Search</name>
+		<description>Launches this building search</description>
+	</button>
+	<button enabled-flag="Y" id="CORE-BUTN-20">
+		<name>Add Checked Buildings</name>
+		<description>
+			Adds the checked buildings to the list
+		</description>
+	</button>
+	<button enabled-flag="Y" id="CORE-BUTN-21">
+		<name>Submit</name>
+		<description>Creates this building</description>
+	</button>
+	<button enabled-flag="Y" id="CORE-BUTN-22">
+		<name>Update</name>
+		<description>Updates this building</description>
+	</button>
+	<button enabled-flag="Y" id="CORE-BUTN-23">
+		<name>Remove</name>
+		<description>Removes this building</description>
+	</button>
+	<button enabled-flag="Y" id="CORE-BUTN-24">
+		<name>Search</name>
+		<description>Launches this company search</description>
+	</button>
+	<button enabled-flag="Y" id="CORE-BUTN-25">
+		<name>Add Checked Companies</name>
+		<description>
+			Adds the checked companies to the list
+		</description>
+	</button>
+	<button enabled-flag="Y" id="CORE-BUTN-26">
+		<name>Submit</name>
+		<description>Creates this company</description>
+	</button>
+	<button enabled-flag="Y" id="CORE-BUTN-27">
+		<name>Update</name>
+		<description>Updates this company</description>
+	</button>
+	<button enabled-flag="Y" id="CORE-BUTN-28">
+		<name>Remove</name>
+		<description>Removes this company</description>
+	</button>
+	<button enabled-flag="Y" id="CORE-BUTN-32">
+		<name>Expire Password</name>
+		<description>Expires the password of this account</description>
+	</button>
+	<button enabled-flag="Y" id="CORE-BUTN-33">
+		<name>Disable Account</name>
+		<description>Disables this account</description>
+	</button>
+	<button enabled-flag="Y" id="CORE-BUTN-34">
+		<name>Unlock Account</name>
+		<description>Unlocks this account</description>
+	</button>
+	<button enabled-flag="Y" id="CORE-BUTN-35">
+		<name>Terminate Account</name>
+		<description>
+			Disables this account and parks it to a distinct
+			organizational unit
+		</description>
+	</button>
+	<button enabled-flag="Y" id="HLPD-BUTN-1">
+		<name>Submit</name>
+		<description>Creates this user group</description>
+	</button>
+	<button enabled-flag="Y" id="HLPD-BUTN-10">
+		<name>
+			<![CDATA[Next>>]]>
+		</name>
+		<description>
+			Submits your selection of proxy to edit
+		</description>
+	</button>
+	<button enabled-flag="Y" id="HLPD-BUTN-11">
+		<name>Update</name>
+		<description>Submits this grant for modification</description>
+	</button>
+	<button enabled-flag="Y" id="HLPD-BUTN-12">
+		<name>Remove</name>
+		<description>Removes this group</description>
+	</button>
+	<button enabled-flag="Y" id="HLPD-BUTN-13">
+		<name>
+			<![CDATA[Next>>]]>
+		</name>
+		<description>
+			Submits your selection of group to edit
+		</description>
+	</button>
+	<button enabled-flag="Y" id="HLPD-BUTN-14">
+		<name>
+			<![CDATA[>]]>
+		</name>
+		<description>Reassigns all queues and roles</description>
+	</button>
+	<button enabled-flag="Y" id="HLPD-BUTN-15">
+		<name>Update</name>
+		<description>Updates these preferences</description>
+	</button>
+	<button enabled-flag="Y" id="HLPD-BUTN-16">
+		<name>Add Checked Accounts</name>
+		<description>Adds the checked accounts to the list</description>
+	</button>
+	<button enabled-flag="Y" id="HLPD-BUTN-17">
+		<name>Submit</name>
+		<description>Adds this membership to this account</description>
+	</button>
+	<button enabled-flag="Y" id="HLPD-BUTN-18">
+		<name>Remove</name>
+		<description>
+			Removes this membership from this account
+		</description>
+	</button>
+	<button enabled-flag="Y" id="HLPD-BUTN-19">
+		<name>Submit</name>
+		<description>
+			Adds these memberships to this account
+		</description>
+	</button>
+	<button enabled-flag="Y" id="HLPD-BUTN-20">
+		<name>Remove</name>
+		<description>
+			Removes these memberships from this account
+		</description>
+	</button>
+	<button enabled-flag="Y" id="HLPD-BUTN-2">
+		<name>Update</name>
+		<description>Updates this user group</description>
+	</button>
+	<button enabled-flag="Y" id="HLPD-BUTN-3">
+		<name>Search</name>
+		<description>Launches this user group search</description>
+	</button>
+	<button enabled-flag="Y" id="HLPD-BUTN-4">
+		<name>Submit</name>
+		<description>Adds this member to this group</description>
+	</button>
+	<button enabled-flag="Y" id="HLPD-BUTN-5">
+		<name>Remove</name>
+		<description>Removes this member from this group</description>
+	</button>
+	<button enabled-flag="Y" id="HLPD-BUTN-6">
+		<name>Submit</name>
+		<description>Adds these members to this group</description>
+	</button>
+	<button enabled-flag="Y" id="HLPD-BUTN-7">
+		<name>Remove</name>
+		<description>Removes these members from this group</description>
+	</button>
+	<button enabled-flag="Y" id="HLPD-BUTN-8">
+		<name>Submit</name>
+		<description>Creates this grant</description>
+	</button>
+	<button enabled-flag="Y" id="HLPD-BUTN-9">
+		<name>Remove</name>
+		<description>Removes this grant</description>
+	</button>
+	<button enabled-flag="Y" id="WIKI-BUTN-1">
+		<name>Submit</name>
+		<description>
+			<![CDATA[Sends this addition request to the parent article's editor]]>
+		</description>
+	</button>
+	<button enabled-flag="Y" id="WIKI-BUTN-10">
+		<name>Submit</name>
+		<description>
+			Sends this image update request to the editor of the parent
+			article
+		</description>
+	</button>
+	<button enabled-flag="Y" id="WIKI-BUTN-11">
+		<name>Submit</name>
+		<description>
+			Sends this article update request to the editor of the
+			parent article
+		</description>
+	</button>
+	<button enabled-flag="Y" id="WIKI-BUTN-12">
+		<name>Search</name>
+		<description>Submits this advanced search</description>
+	</button>
+	<button enabled-flag="Y" id="WIKI-BUTN-13">
+		<name>Subscribe</name>
+		<description>
+			Adds this subscriber to the list of subscribers of this
+			content
+		</description>
+	</button>
+	<button enabled-flag="Y" id="WIKI-BUTN-14">
+		<name>Unsubscribe</name>
+		<description>
+			Removes this subscriber from the list of subscribers of this
+			content
+		</description>
+	</button>
+	<button enabled-flag="Y" id="WIKI-BUTN-15">
+		<name>Alphabetical Sort</name>
+		<description>
+			Reorders the content of this article using an alphabetical
+			order
+		</description>
+	</button>
+	<button enabled-flag="Y" id="WIKI-BUTN-16">
+		<name>Submit</name>
+		<description>
+			Adds this group to the list of access groups of this content
+		</description>
+	</button>
+	<button enabled-flag="Y" id="WIKI-BUTN-17">
+		<name>Remove</name>
+		<description>
+			Removes this group from the list of access groups of this
+			content
+		</description>
+	</button>
+	<button enabled-flag="Y" id="WIKI-BUTN-18">
+		<name>Remove</name>
+		<description>
+			Removes this version from the list of versions of this
+			article
+		</description>
+	</button>
+	<button enabled-flag="Y" id="WIKI-BUTN-19">
+		<name>Remove</name>
+		<description>
+			Removes this version from the list of versions of this image
+		</description>
+	</button>
+	<button enabled-flag="Y" id="WIKI-BUTN-2">
+		<name>Submit</name>
+		<description>
+			Sends this removal request to the editor of the parent
+			article
+		</description>
+	</button>
+	<button enabled-flag="Y" id="WIKI-BUTN-3">
+		<name>Approve</name>
+		<description>
+			Applies immediately the requested change to the wiki
+		</description>
+	</button>
+	<button enabled-flag="Y" id="WIKI-BUTN-4">
+		<name>Reject</name>
+		<description>
+			Indicates that the requested change should NOT be applied
+		</description>
+	</button>
+	<button enabled-flag="Y" id="WIKI-BUTN-5">
+		<name>Cancel</name>
+		<description>
+			Indicates that the request was incorrectly submitted
+		</description>
+	</button>
+	<button enabled-flag="Y" id="WIKI-BUTN-6">
+		<name>Update</name>
+		<description>Submits this request for modification</description>
+	</button>
+	<button enabled-flag="Y" id="WIKI-BUTN-7">
+		<name>
+			<![CDATA[Next>>]]>
+		</name>
+		<description>
+			Submits your selection of content to edit
+		</description>
+	</button>
+	<button enabled-flag="Y" id="WIKI-BUTN-8">
+		<name>Custom Sort</name>
+		<description>
+			Reorders the content of this article using a custom order
+		</description>
+	</button>
+	<button enabled-flag="Y" id="WIKI-BUTN-9">
+		<name>Submit</name>
+		<description>
+			Sends this update request to the editor of this article
+		</description>
+	</button>
+</buttons>

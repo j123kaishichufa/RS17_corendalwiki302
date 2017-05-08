@@ -1,0 +1,23 @@
+##
+## get the canvas line object
+##
+#set ($adjacentObjectsSize = $adjacentObjects.size())
+#set ($adjacentObjectsSizeMinusOne = $adjacentObjectsSize - 1)
+
+#if ($adjacentObjects.size() > 1)
+<td colspan="$adjacentColspan">@NOEOLAFTERTHIS
+<table summary="" border="0" cellpadding="0" cellspacing="0">
+<tr>
+
+#foreach ($i in [0..$adjacentObjectsSizeMinusOne])
+#set ($currentFormObject = $adjacentObjects.get($i))
+$currentFormObject.getHTML()
+#end
+
+</tr>
+</table>@NOEOLAFTERTHIS
+</td>
+#else
+$sfo.getHTML()
+#end
+## end of template. keep the empty line after this line.

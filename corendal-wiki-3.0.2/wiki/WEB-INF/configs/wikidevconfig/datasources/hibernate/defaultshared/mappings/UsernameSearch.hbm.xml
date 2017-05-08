@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Version: $Id: UsernameSearch.hbm.xml,v 1.6 2007/08/01 19:39:22 tdanard Exp $ -->
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping
+	package="com.corendal.netapps.framework.core.writedatamappings">
+	<class name="DefaultUsernameSearchMapping"
+		table="username_search">
+		<id column="id" name="Id" type="string" />
+
+		<property column="person_id" length="36" name="PersonId"
+			not-null="true" type="string" />
+		<property column="nam" length="255" name="Name" not-null="true"
+			type="string" />
+		<property column="enabled_flag" length="1" name="EnabledFlag"
+			not-null="true" type="string" />
+		<property column="account_id" length="255" name="AccountId"
+			not-null="false" type="string" />
+	</class>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractPerson.refreshUserNameSearch.1">
+		<![CDATA[
+    delete DefaultUsernameSearchMapping
+    where PersonId = :personId
+]]>
+	</query>
+</hibernate-mapping>

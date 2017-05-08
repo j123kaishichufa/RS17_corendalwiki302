@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Version: $Id: ContentType.xml,v 1.3 2006/07/17 02:23:37 tdanard Exp $ -->
+<xmlsource-mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../../../schemas/xmlsourcemapping.xsd"
+    package="com.corendal.netapps.wiki.readdatahandlers">
+    <class name="DefaultContentTypeLoadHandler" collection="contenttypes"
+        entity="contenttype">
+        <id attribute="id" name="Id" type="string" />
+        
+    </class>
+    <query
+        name="com.corendal.netapps.wiki.readdatabeans.AbstractContentType.findByEnabledFlag">
+        <![CDATA[for $result in /contenttypes/contenttype[@enabled-flag =
+		:enabledFlag] order by $result/@order return $result]]>
+    </query>
+    <query
+        name="com.corendal.netapps.wiki.readdatabeans.AbstractContentType.findEnabledByKeyword">
+        <![CDATA[for $result in /contenttypes/contenttype[(name |= :keyword or
+		description |= :keyword or comment |= :keyword) and
+		(@enabled-flag = "Y")] return $result]]>
+    </query>
+</xmlsource-mapping>

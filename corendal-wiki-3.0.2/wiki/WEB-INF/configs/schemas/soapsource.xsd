@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Version: $Id: soapsource.xsd,v 1.1 2006/07/08 21:15:56 tdanard Exp $ -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="soapsource">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="wsdl-url"/>
+                <xs:element ref="wsdl-end-point-url"/>
+                <xs:element ref="wsdl-user"/>
+                <xs:element ref="wsdl-password"/>
+                <xs:element ref="wsdl-service-name"/>
+                <xs:element ref="wsdl-namespace-uri"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="wsdl-url" type="xs:anyURI"/>
+    <xs:element name="wsdl-end-point-url" type="xs:anyURI"/>
+    <xs:element name="wsdl-user" type="xs:string"/>
+    <xs:element name="wsdl-password" type="xs:string"/>
+    <xs:element name="wsdl-service-name" type="xs:NCName"/>
+    <xs:element name="wsdl-namespace-uri" type="xs:anyURI"/>
+</xs:schema>

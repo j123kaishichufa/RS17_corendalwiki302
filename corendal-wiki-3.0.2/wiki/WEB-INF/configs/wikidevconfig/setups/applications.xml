@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Version: $Id: applications.xml,v 1.24 2008/11/06 19:19:51 tdanard Exp $ -->
+<applications xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="../../schemas/applications.xsd">
+	<application id="WIKI-DEV-1" enabled-flag="Y" main-flag="Y">
+		<properties>
+			<property name="framework.core.application.name">
+				Wiki
+			</property>
+			<property name="framework.core.company.name">
+				#CompanyName#
+			</property>
+            <property name="framework.core.webapp.protocol">
+                http
+            </property>
+            <property name="framework.core.webapp.host">
+                localhost
+            </property>
+            <property name="framework.core.webapp.port">8080</property>
+            <property name="framework.core.webapp.folder">
+                /wiki
+            </property>
+			<property name="framework.core.images.folder">
+				/images
+			</property>
+			<property name="framework.core.uploads.maxsize">200</property>
+			<property name="framework.core.smtp.host">
+				mailserverip.mycompany.com
+			</property>
+			<property name="framework.core.emails.domain">
+				mycompany.com
+			</property>
+			<property name="framework.core.cookies.domain">
+				mycompany.com
+			</property>
+			<property name="framework.core.accountproxy.enabled">
+				Y
+			</property>
+			<property name="framework.core.p3p.header">
+				<![CDATA[CP="ALL CURi ADMi DEVi TAIi CONi OUR DELi BUS IND PHY ONL UNI COM NAV STA"]]>
+			</property>
+			<property name="framework.core.ntlm.forceddespiteproxy">
+				Y
+			</property>
+			<property name="framework.core.signin.alwaysforced">
+				Y
+			</property>
+			<property name="framework.core.sessiontimeout.default">
+				120
+			</property>
+			<property name="framework.core.mirror.id">1</property>
+			<property name="framework.core.employeeid.defaultprefix" />
+			<property name="framework.core.employeeid.validprefixes" />
+			<property
+				name="framework.core.activedirectoryemployeeidformatting.enabled">
+				N
+			</property>
+			<property name="framework.core.responselog.pages">
+				CORE-PAGE-1
+			</property>
+			<property name="wiki.weeklydigest.day">6</property>
+			<property name="wiki.friendlyaddress.helpdesk">
+				helpdesk
+			</property>
+			<property name="wiki.friendlyaddress.releasenotes">
+				release-notes
+			</property>
+			<property name="wiki.friendlyaddress.onlinehelp">
+				online-help
+			</property>
+		</properties>
+		<ntlm-ip-address-ranges>
+			<ip-address-range>
+				<from>128.0.0.1</from>
+				<to>128.0.0.1</to>
+			</ip-address-range>
+		</ntlm-ip-address-ranges>
+		<patches>
+			<patch>
+				<old-class-name>
+					com.corendal.netapps.framework.core.managers.DefaultAccessManager
+				</old-class-name>
+				<new-class-name>
+					com.corendal.netapps.wiki.patches.CustomAccessManager
+				</new-class-name>
+			</patch>
+			<patch>
+				<old-class-name>
+					com.corendal.netapps.framework.core.writers.DefaultFormFieldWriter
+				</old-class-name>
+				<new-class-name>
+					com.corendal.netapps.wiki.patches.CustomFormFieldWriter
+				</new-class-name>
+			</patch>
+		</patches>
+	</application>
+</applications>

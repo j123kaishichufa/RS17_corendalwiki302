@@ -1,0 +1,47 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($icnm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultIconManager"))
+#set ($lm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultLocaleManager"))
+#set ($rm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultRequestManager"))
+
+##
+## get the writers used in this template
+##
+#set ($pws = $alc.getWriterSet())
+#set ($lw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultLinkWriter"))
+
+##
+## get the current locale
+##
+#set ($currentLocale = $lm.getPrimaryStandardLocale())
+
+##
+## get the current page
+##
+#set ($page = $rm.getStandardPage())
+
+##
+## get the template type
+##
+#set ($templateType = $page.getTemplateType())
+
+##
+## start the tables
+##
+<td valign="top">@NOEOLAFTERTHIS
+
+#if ($templateType.equals("FLOATING"))
+<table summary="" border="0" cellpadding="4" cellspacing="0" width="100%">
+#else
+<table summary="" border="0" cellpadding="0" cellspacing="0" width="100%">
+#end
+<tr>
+<td width="100%" valign="top">@NOEOLAFTERTHIS
+
+##
+## add the "content top" anchor
+##
+$lw.getContentTopAnchorHTML()
+## end of template. keep the empty line after this line.

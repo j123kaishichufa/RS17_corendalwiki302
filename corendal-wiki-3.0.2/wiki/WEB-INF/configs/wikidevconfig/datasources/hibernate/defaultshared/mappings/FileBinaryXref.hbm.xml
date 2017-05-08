@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Version: $Id: FileBinaryXref.hbm.xml,v 1.6 2007/08/01 19:39:22 tdanard Exp $ -->
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping
+	package="com.corendal.netapps.framework.core.writedatamappings">
+	<class name="DefaultFileBinaryXrefMapping"
+		table="file_obj_binary_obj_xref">
+		<id column="id" name="Id" type="string" />
+
+		<property column="binary_obj_id" length="36" name="BinaryId"
+			not-null="true" type="string" />
+		<property column="enabled_flag" length="1" name="EnabledFlag"
+			not-null="true" type="string" />
+		<property column="file_obj_id" length="36" name="FileId"
+			not-null="true" type="string" />
+		<property column="mirror_id" length="36" name="MirrorId"
+			not-null="true" type="string" />
+	</class>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractStoredFileBinaryXref.findEnabledByStoredFileAndBinaryPrimaryKeys">
+		<![CDATA[
+    from DefaultFileBinaryXrefMapping
+    where FileId = :fileId
+    and BinaryId = :binaryId
+    and EnabledFlag = :enabledFlag
+    order by Id asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractStoredFileBinaryXref.findEnabledByStoredFilePrimaryKey">
+		<![CDATA[
+    from DefaultFileBinaryXrefMapping
+    where FileId = :fileId
+    and EnabledFlag = :enabledFlag
+    order by Id asc
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractStoredFileBinaryXref.findEnabledByBinaryPrimaryKey">
+		<![CDATA[
+    from DefaultFileBinaryXrefMapping
+    where BinaryId = :binaryId
+    and EnabledFlag = :enabledFlag
+    order by Id asc
+]]>
+	</query>
+</hibernate-mapping>

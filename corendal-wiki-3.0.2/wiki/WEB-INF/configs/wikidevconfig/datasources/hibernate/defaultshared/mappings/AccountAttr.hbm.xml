@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Version: $Id: AccountAttr.hbm.xml,v 1.7 2007/08/01 19:39:22 tdanard Exp $ -->
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping
+	package="com.corendal.netapps.framework.core.writedatamappings">
+	<class name="DefaultAccountAttributeMapping" table="account_attr">
+		<id column="id" name="Id" type="string" />
+
+		<property column="attr_value" name="AttributeValue"
+			not-null="false" type="string" />
+		<property column="attr_id" length="36" name="AttributeId"
+			not-null="true" type="string" />
+		<property column="enabled_flag" length="1" name="EnabledFlag"
+			not-null="true" type="string" />
+		<property column="account_id" length="255" name="AccountId"
+			not-null="true" type="string" />
+	</class>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractAccount.getIntegerAttribute">
+		<![CDATA[
+    from DefaultAccountAttributeMapping
+    where AttributeId = :attributeId
+    and AccountId = :accountId
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractAccount.getStringAttribute">
+		<![CDATA[
+    from DefaultAccountAttributeMapping
+    where AttributeId = :attributeId
+    and AccountId = :accountId
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractAccount.storeIntegerAttribute">
+		<![CDATA[
+    delete DefaultAccountAttributeMapping
+    where AttributeId = :attributeId
+    and AccountId = :accountId
+]]>
+	</query>
+	<query
+		name="com.corendal.netapps.framework.core.writedatabeans.AbstractAccount.storeStringAttribute">
+		<![CDATA[
+    delete DefaultAccountAttributeMapping
+    where AttributeId = :attributeId
+    and AccountId = :accountId
+]]>
+	</query>
+</hibernate-mapping>

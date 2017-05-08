@@ -1,0 +1,31 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($clrm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultColorManager"))
+
+##
+## get the colors used in this template
+##
+#set ($evenRowColor = $clrm.getEvenRowStandardColor())
+#set ($unevenRowColor = $clrm.getUnevenRowStandardColor())
+#set ($yellowRowColor = $clrm.getYellowRowStandardColor())
+
+##
+## print the start
+##
+<tbody>
+#if ($rowNumber >= 0)
+#if (!($isRowHighlighted))
+#if (($rowNumber % 2) == 0)
+<tr bgcolor="$evenRowColor.getColor()">
+#else
+<tr bgcolor="$unevenRowColor.getColor()">
+#end
+#else
+<tr bgcolor="$yellowRowColor.getColor()">
+#end
+#else
+<tr>
+#end
+## end of template. keep the empty line after this line.

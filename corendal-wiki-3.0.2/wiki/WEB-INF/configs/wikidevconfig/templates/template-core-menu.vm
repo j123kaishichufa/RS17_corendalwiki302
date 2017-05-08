@@ -1,0 +1,307 @@
+##
+## get the managers used in this template
+##
+#set ($pms = $alc.getManagerSet())
+#set ($rm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultRequestManager"))
+#set ($am = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultAccessManager"))
+#set ($clrm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultColorManager"))
+#set ($icnm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultIconManager"))
+#set ($lclm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultLocaleManager"))
+#set ($stlm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultStyleManager"))
+#set ($cfgm = $pms.getManager("com.corendal.netapps.framework.core.managers.DefaultConfigManager"))
+
+##
+## get the writers used in this template
+##
+#set ($pws = $alc.getWriterSet())
+#set ($miw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultMenuItemWriter"))
+#set ($pw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultPageWriter"))
+#set ($lw = $pws.getWriter("com.corendal.netapps.framework.core.writers.DefaultLinkWriter"))
+
+##
+## get the location of the images folder
+##
+#set ($prop =  $cfgm.getStandardPropertySet())
+#set ($imagesFolder = $prop.getImagesFolder())
+
+##
+## get the current locale
+##
+#set ($currentLocale = $lclm.getPrimaryStandardLocale())
+
+##
+## get the styles used in this template
+##
+#set ($signInLinkStyle = $stlm.getSignInLinkStandardStyle())
+
+##
+## get the icons used in this template
+##
+#if ($currentLocale.getDirection().equals("LTR"))
+#set ($menuSelectedFirstIcon = $icnm.getMenuSelectedFirstLTRStandardIcon())
+#set ($menuFirstIcon = $icnm.getMenuFirstLTRStandardIcon())
+#set ($menuSelectedLeftIcon = $icnm.getMenuSelectedLeftLTRStandardIcon())
+#set ($menuSelectedRightIcon = $icnm.getMenuSelectedRightLTRStandardIcon())
+#set ($menuRightIcon = $icnm.getMenuRightLTRStandardIcon())
+#set ($menuSelectedMiddleTopIcon = $icnm.getMenuSelectedMiddleTopLTRStandardIcon())
+#set ($menuSelectedLastIcon = $icnm.getMenuSelectedLastLTRStandardIcon())
+#set ($menuLastIcon = $icnm.getMenuLastLTRStandardIcon())
+#else
+#set ($menuSelectedFirstIcon = $icnm.getMenuSelectedFirstRTLStandardIcon())
+#set ($menuFirstIcon = $icnm.getMenuFirstRTLStandardIcon())
+#set ($menuSelectedLeftIcon = $icnm.getMenuSelectedLeftRTLStandardIcon())
+#set ($menuSelectedRightIcon = $icnm.getMenuSelectedRightRTLStandardIcon())
+#set ($menuRightIcon = $icnm.getMenuRightRTLStandardIcon())
+#set ($menuSelectedMiddleTopIcon = $icnm.getMenuSelectedMiddleTopRTLStandardIcon())
+#set ($menuSelectedLastIcon = $icnm.getMenuSelectedLastRTLStandardIcon())
+#set ($menuLastIcon = $icnm.getMenuLastRTLStandardIcon())
+#end
+
+#set ($spacerIcon = $icnm.getSpacerStandardIcon())
+#set ($menuSelectedMiddleTopIcon = $icnm.getMenuSelectedMiddleTopStandardIcon())
+#set ($menuMiddleTopIcon = $icnm.getMenuMiddleTopStandardIcon())
+#set ($menuSelectedMiddleBottomIcon = $icnm.getMenuSelectedMiddleBottomStandardIcon())
+#set ($menuMiddleBottomIcon = $icnm.getMenuMiddleBottomStandardIcon())
+#set ($menuBackgroundIcon = $icnm.getMenuBackgroundStandardIcon())
+#set ($menuSelectedBackgroundIcon = $icnm.getMenuSelectedBackgroundStandardIcon())
+#set ($menuBarBackgroundIcon = $icnm.getMenuBarBackgroundStandardIcon())
+
+
+
+##
+## get the colors used in this template
+##
+#set ($menuItemColor = $clrm.getMenuItemStandardColor())
+#set ($pageMenuColor = $clrm.getPageMenuStandardColor())
+#set ($menuSelectedItemColor = $clrm.getMenuSelectedItemStandardColor())
+
+##
+## get the standard page
+##
+#set ($page = $rm.getStandardPage())
+
+##
+## get the current menu item
+##
+#set ($currentMenuItem = $sm.getCurrentMenuItem())
+
+##
+## print a comment
+##
+#set ($smPk = $sm.getPrimaryKey())
+<!-- start of the menu id $smPk.toString() -->@NOEOLAFTERTHIS
+
+##
+## start the master table
+##
+<table summary="" cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr bgcolor="$pageMenuColor.getColor()">
+<td>@NOEOLAFTERTHIS
+
+##
+## start the table
+<table summary="" cellpadding="0" cellspacing="0" border="0">
+<tr>
+
+##
+## set the isPreviousSelected boolean
+##
+#set ($isPreviousSelected = "FALSE")
+
+##
+## set other variables
+##
+#set ($menuItems = $sm.getMenuItems())
+#set ($size = $menuItems.size())
+#set ($sizeMinusOne = $size - 1)
+#set ($sizeMinusTwo = $size - 2)
+
+##
+## print the first line
+##
+#if ($size >1)
+#foreach($i in [0..$sizeMinusTwo])
+<td rowspan="3" valign="bottom">@NOEOLAFTERTHIS
+#set ($smi = $menuItems.get($i))
+
+#if ($i == 0)
+#if (($currentMenuItem) && ($smi.equals($currentMenuItem)))
+#set ($isPreviousSelected = "TRUE")
+#icon($menuSelectedFirstIcon $menuSelectedFirstIcon.getWidth() $menuSelectedFirstIcon.getHeight() $alc)@NOEOLAFTERTHIS
+#else
+#icon($menuFirstIcon $menuFirstIcon.getWidth() $menuFirstIcon.getHeight() $alc)@NOEOLAFTERTHIS
+#end
+#else
+#if (($currentMenuItem) && ($smi.equals($currentMenuItem)))
+#icon($menuSelectedLeftIcon $menuSelectedLeftIcon.getWidth() $menuSelectedLeftIcon.getHeight() $alc)@NOEOLAFTERTHIS
+#else
+#if ($isPreviousSelected == "TRUE")
+#icon($menuSelectedRightIcon $menuSelectedRightIcon.getWidth() $menuSelectedRightIcon.getHeight() $alc)@NOEOLAFTERTHIS
+#else
+#icon($menuRightIcon $menuRightIcon.getWidth() $menuRightIcon.getHeight() $alc)@NOEOLAFTERTHIS
+#end
+#end
+#end
+
+</td>
+<td valign="bottom">@NOEOLAFTERTHIS
+
+#if (($currentMenuItem) && ($smi.equals($currentMenuItem)))
+#iconmaxwidth($menuSelectedMiddleTopIcon $menuSelectedMiddleTopIcon.getHeight() $alc)@NOEOLAFTERTHIS
+#else
+#iconmaxwidth($menuMiddleTopIcon $menuMiddleTopIcon.getHeight() $alc)@NOEOLAFTERTHIS
+#end
+
+</td>
+
+#if (($currentMenuItem) && ($smi.equals($currentMenuItem)))
+#set ($isPreviousSelected = "TRUE")
+#else
+#set ($isPreviousSelected = "FALSE")
+#end
+
+#end
+#end
+
+<td rowspan="3" valign="bottom">@NOEOLAFTERTHIS
+
+#set ($smi = $menuItems.get($sizeMinusOne))
+
+#if (($currentMenuItem) && ($smi.equals($currentMenuItem)))
+#if ($size == 1)
+#icon($menuSelectedFirstIcon $menuSelectedFirstIcon.getWidth() $menuSelectedFirstIcon.getHeight() $alc)@NOEOLAFTERTHIS
+#else
+#icon($menuSelectedLeftIcon $menuSelectedLeftIcon.getWidth() $menuSelectedLeftIcon.getHeight() $alc)@NOEOLAFTERTHIS
+#end
+#else
+#if ($isPreviousSelected == "TRUE")
+#icon($menuSelectedRightIcon $menuSelectedRightIcon.getWidth() $menuSelectedRightIcon.getHeight() $alc)@NOEOLAFTERTHIS
+#else
+#if ($size == 1)
+#icon($menuFirstIcon $menuFirstIcon.getWidth() $menuFirstIcon.getHeight() $alc)@NOEOLAFTERTHIS
+#else
+#icon($menuRightIcon $menuRightIcon.getWidth() $menuRightIcon.getHeight() $alc)@NOEOLAFTERTHIS
+#end
+#end
+#end
+
+</td>
+<td valign="bottom">@NOEOLAFTERTHIS
+
+#if (($currentMenuItem) && ($smi.equals($currentMenuItem)))
+#iconmaxwidth($menuSelectedMiddleTopIcon $menuSelectedMiddleTopIcon.getHeight() $alc)@NOEOLAFTERTHIS
+</td>
+<td rowspan="3" valign="bottom">@NOEOLAFTERTHIS
+#icon($menuSelectedLastIcon $menuSelectedLastIcon.getWidth() $menuSelectedLastIcon.getHeight() $alc)@NOEOLAFTERTHIS
+#else
+#iconmaxwidth($menuMiddleTopIcon $menuMiddleTopIcon.getHeight() $alc)@NOEOLAFTERTHIS
+</td>
+<td rowspan="3" valign="bottom">@NOEOLAFTERTHIS
+#icon($menuLastIcon $menuLastIcon.getWidth() $menuLastIcon.getHeight() $alc)@NOEOLAFTERTHIS
+#end
+</td>
+</tr>
+
+##
+## print the second line
+##
+<tr>
+
+#foreach($i in [0..$sizeMinusOne])
+#set ($smi = $menuItems.get($i))
+
+#if (($currentMenuItem) && ($smi.equals($currentMenuItem)))
+<td bgcolor="$menuSelectedItemColor.getColor()" align="center" valign="bottom">@NOEOLAFTERTHIS
+#else
+<td bgcolor="$menuItemColor.getColor()" align="center" valign="bottom">@NOEOLAFTERTHIS
+#end
+#if ($miw)
+$miw.getHTML($smi, $currentMenuItem)@NOEOLAFTERTHIS
+#end
+</td>
+#end
+
+</tr>
+
+##
+## print the third line
+##
+<tr>
+#foreach($i in [0..$sizeMinusOne])
+<td valign="bottom">@NOEOLAFTERTHIS
+#set ($smi = $menuItems.get($i))
+#if (($currentMenuItem) && ($smi.equals($currentMenuItem)))
+#iconmaxwidth($menuSelectedMiddleBottomIcon $menuSelectedMiddleBottomIcon.getHeight() $alc)@NOEOLAFTERTHIS
+#else
+#iconmaxwidth($menuMiddleBottomIcon $menuMiddleBottomIcon.getHeight() $alc)@NOEOLAFTERTHIS
+#end
+</td>
+#end
+
+##
+## close the table
+##
+</tr>
+</table>@NOEOLAFTERTHIS
+
+##
+## put a maximum width cell
+##
+</td>
+<td width="100%">@NOEOLAFTERTHIS
+#iconmaxwidth($spacerIcon 1 $alc)@NOEOLAFTERTHIS
+</td>
+
+##
+## print the sign-in link
+##
+
+#if ($am.getIsAuthenticationLinkPrinted())
+#set ($signPage = $am.getSignStandardPage())
+#if ($signPage)
+
+#set ($signType = $am.getSignType())
+#if ($signType.equals("SIGNOUT"))
+<td>@NOEOLAFTERTHIS
+&nbsp;@NOEOLAFTERTHIS
+</td>
+#elseif ($signType.equals("SIGNIN"))
+<td>@NOEOLAFTERTHIS
+&nbsp;@NOEOLAFTERTHIS
+</td>
+#end
+
+<td>@NOEOLAFTERTHIS
+<span class="$signInLinkStyle.getName()">@NOEOLAFTERTHIS
+$lw.getNonBreakableLinkHTML($signPage.getDefaultLocationWithReferer(), $signPage.getCurrentLinkTitleEncoded(), $signPage.getNameHTML(), $signPage.getAccessKeyEncoded())@NOEOLAFTERTHIS
+</span>@NOEOLAFTERTHIS
+</td>
+<td>@NOEOLAFTERTHIS
+#icon($spacerIcon 12 1 $alc)@NOEOLAFTERTHIS
+</td>
+#end		
+#end
+
+##
+## close the master table
+##
+
+</tr>
+</table>@NOEOLAFTERTHIS
+
+##
+## print a comment
+##
+<!-- end of the menu id $smPk.toString() -->@NOEOLAFTERTHIS
+
+##
+## print a spacer
+## 
+<table summary="" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td>@NOEOLAFTERTHIS
+#iconmaxwidth($spacerIcon 2 $alc)@NOEOLAFTERTHIS
+</td>
+</tr>
+</table>@NOEOLAFTERTHIS
+## end of template. keep the empty line after this line.
